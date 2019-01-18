@@ -6,37 +6,37 @@
 // }
 
 // ติดต่อเรา
- if($content=="contact_us"){ 
+ if($content=="contact_us"){
     require_once("modules/contact_us/views/index.inc.php"); 
 }
 
 // ระบบจัดการข่าวสาร
-else if($content=="article"){ 
+else if($content=="article"){
     require_once("modules/article/views/index.inc.php"); 
 }
 
 // ระบบห้องพัก
-else if($content=="rooms"){ 
+else if($content=="rooms"){
     require_once("modules/rooms/views/index.inc.php"); 
 }
 
 // ระบบบริการ
-else if($content=="facilities"){ 
+else if($content=="facilities"){
     require_once("modules/facilities/views/index.inc.php"); 
 }
 
 // อัลบั้ม
-else if($content=="gallary"){ 
+else if($content=="gallary"){
     require_once("modules/gallary/views/index.inc.php"); 
 }
 
 // เกี่ยวกับเรา
-else if($content=="contact_us"){ 
-    require_once("modules/contact_us/views/index.inc.php"); 
+else if($content=="about_us"){
+    require_once("modules/about_us/views/index.inc.php"); 
 }
 
 // หน้าหลัก
-else { 
+else {
     require_once("modules/home/views/index.inc.php"); 
 }
 ?>
