@@ -1,0 +1,75 @@
+.section{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    padding: 3.5em 15%;
+}
+.form-control {
+    font-size: 0.7vw;
+    border: 1px solid #e7ebee;
+}
+.btn-yellow-contact{
+    font-family: 'Montserrat', sans-serif;
+    font-size: unset;
+    font-weight: 600;
+    background-color: #fec619;
+    padding: .8em 2.5em;
+}
+.gllpMap{
+    height: 30em;
+    width: 100%;
+}
+#contact_message{
+    min-height: 200;
+}
+.icon-circle {
+    display: inline-block;
+    color: #fff !important;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.5em;
+}
+.tr-social{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold;
+    color: #000;
+    opacity: .5;
+}
+.tr-social:hover{
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1600px){
+
+}
+
+@media only screen and (max-width: 1366px){
+
+}
+
+@media only screen and (max-width: 1024px){
+    .form-control {
+        font-size: 12px;
+    }
+    #contact_message {
+        min-height: 140px;
+    }
+}
+
+@media only screen and (max-width: 720px){
+
+}
+
+@media only screen and (max-width: 576px){
+    #contact_message {
+        min-height: 120px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .gllpMap{
+        height: 20em;
+    }
+}

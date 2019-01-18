@@ -1,0 +1,114 @@
+.primary-nav {
+    position: fixed;
+    z-index: 999;
+}
+.menu {
+    position: relative;
+}
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.primary-nav .menu li {
+    position: relative;
+}
+.menu,
+.menu a,
+.menu a:visited {
+    text-decoration: none !important;
+    position: relative;
+}
+.menu a {
+    display: block;
+    white-space: nowrap;
+    padding: 1em;
+    font-size: 14px;
+}
+.menu li:hover {
+    color: #fff;
+}
+.menu a:hover {
+    color: #fff;
+}
+.sub-menu-dropdown li a {
+    color: #fff;
+}
+.menu {
+    margin-bottom: 3em;
+}
+.menu label {
+    margin-bottom: 0;
+    display: block;
+}
+.menu label:hover {
+    cursor: pointer;
+}
+.menu input[type="checkbox"] {
+    display: none;
+}
+input#menu[type="checkbox"] {
+    display: none;
+}
+.sub-menu-dropdown {
+    display: none;
+}
+#menu:checked+ul.menu-dropdown {
+    left: 0;
+    -webkit-animation: all .45s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: all .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.sub-menu-checkbox:checked+ul.sub-menu-dropdown {
+    display: block !important;
+    -webkit-animation: grow .45s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: grow .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.downarrow {
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    display: block;
+    font-size: 28px;
+}
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.5s;
+    background-color: #fec619;
+    z-index: 999;
+}
+.menu-dropdown {
+    top: 0;
+    overflow-y: auto;
+}
+.overflow-container {
+    position: relative;
+    height: calc(100vh - 73px) !important;
+    z-index: -1;
+    display: block;
+}
+.sub-menu-dropdown {
+    background-color: #4d4c4c;
+}
+.primary-nav .openbtn {
+    font-size: 2em;
+    padding: 10px 15px;
+    background-color: #fec619;
+    cursor: pointer;
+}
+.primary-nav .closebtn {
+    font-size: 2em;
+    margin-left: 20px;
+    cursor: pointer;
+}
