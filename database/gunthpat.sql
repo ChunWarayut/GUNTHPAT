@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 18, 2019 at 08:43 AM
+-- Generation Time: Jan 18, 2019 at 10:37 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -23,45 +23,55 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_recommend_rooms`
+-- Table structure for table `tb_room`
 --
 
-CREATE TABLE `tb_recommend_rooms` (
-  `recommend_id` int(3) NOT NULL,
-  `recommend_img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_sub_title` text COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_price` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `tb_room` (
+  `room_id` int(5) NOT NULL,
+  `room_type_id` int(5) NOT NULL,
+  `room_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_price` decimal(7,2) NOT NULL,
+  `room_amout` int(3) NOT NULL,
+  `room_amout_total` int(3) NOT NULL,
+  `room_size` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_detail_1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_detail_2` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_detail_3` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_facility_1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `room_facility_2` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tb_recommend_rooms`
+-- Dumping data for table `tb_room`
 --
 
-INSERT INTO `tb_recommend_rooms` (`recommend_id`, `recommend_img`, `recommend_title`, `recommend_sub_title`, `recommend_price`) VALUES
-(1, '73118462.jpg', 'Delux Room', 'Bed to bangkok ที่จตุจักร ห้องนึงนอนได้ 6คน เป็นห้องนอนรวม นี่พัก1คืนกับเพื่อนอีกคน คืนละ588บาท หารกับเพื่อนคนละ200กว่าบาทฟรีอาหารเช้า ฟรีwifi เช็คอินเข้าได้ตั้งแต่14.00-00.00น. สภาพห้องดีมาก ห้องน้ำดีมากเช่นกัน มีน้ำอุ่นให้อาบด้วย 10 10 ไปเลย ?', '4000'),
-(2, '67735705.jpg', 'Dream Stateroom', 'Bed to bangkok ที่จตุจักร ห้องนึงนอนได้ 6คน เป็นห้องนอนรวม นี่พัก1คืนกับเพื่อนอีกคน คืนละ588บาท หารกับเพื่อนคนละ200กว่าบาทฟรีอาหารเช้า ฟรีwifi เช็คอินเข้าได้ตั้งแต่14.00-00.00น. สภาพห้องดีมาก ห้องน้ำดีมากเช่นกัน มีน้ำอุ่นให้อาบด้วย 10 10 ไปเลย ?', '5000'),
-(3, '5554565464.jpg', 'Family Suite', 'Bed to bangkok ที่จตุจักร ห้องนึงนอนได้ 6คน เป็นห้องนอนรวม นี่พัก1คืนกับเพื่อนอีกคน คืนละ588บาท หารกับเพื่อนคนละ200กว่าบาทฟรีอาหารเช้า ฟรีwifi เช็คอินเข้าได้ตั้งแต่14.00-00.00น. สภาพห้องดีมาก ห้องน้ำดีมากเช่นกัน มีน้ำอุ่นให้อาบด้วย 10 10 ไปเลย ?', '6000');
+INSERT INTO `tb_room` (`room_id`, `room_type_id`, `room_name`, `room_price`, `room_amout`, `room_amout_total`, `room_size`, `room_detail_1`, `room_detail_2`, `room_detail_3`, `room_facility_1`, `room_facility_2`) VALUES
+(1, 1, 'Deluxe Room', '4800.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี'),
+(2, 2, 'Duluxe Junior Suite', '4150.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี'),
+(3, 3, 'Deluxe River View Room', '5100.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี '),
+(4, 4, 'Anantara Riverfront Suite', '6100.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี'),
+(5, 2, 'Dream Stateroom', '12000.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี'),
+(6, 3, 'Family Suite', '9800.00', 5, 5, '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tb_recommend_rooms`
+-- Indexes for table `tb_room`
 --
-ALTER TABLE `tb_recommend_rooms`
-  ADD PRIMARY KEY (`recommend_id`);
+ALTER TABLE `tb_room`
+  ADD PRIMARY KEY (`room_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `tb_recommend_rooms`
+-- AUTO_INCREMENT for table `tb_room`
 --
-ALTER TABLE `tb_recommend_rooms`
-  MODIFY `recommend_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `tb_room`
+  MODIFY `room_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
