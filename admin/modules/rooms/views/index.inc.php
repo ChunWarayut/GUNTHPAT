@@ -14,5 +14,10 @@ $room_type = $room_type_model -> getRoomType();
 // echo "<pre>";
 // print_r($rooms);
 // echo "</pre>";
+
+if( !isset($_GET['action']) ) {
     require_once($path.'view.inc.php');
+} else if( $_GET['action'] == "edit") {
+    require_once($path.'edit.inc.php');
+}
 ?>
