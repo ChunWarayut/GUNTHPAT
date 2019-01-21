@@ -26,5 +26,32 @@ class Recommend_rooms extends BaseModel{
             return $data;
         }
     }
+    
+
+    function editRoom($recommend_id,$data = []) {
+        $data['recommend_img']=mysqli_real_escape_string(static::$db,$data['recommend_img']);
+        $data['recommend_id']=mysqli_real_escape_string(static::$db,$data['recommend_id']);
+        $data['recommend_title']=mysqli_real_escape_string(static::$db,$data['recommend_title']);
+        $data['recommend_sub_title']=mysqli_real_escape_string(static::$db,$data['recommend_sub_title']);
+        $data['recommend_price']=mysqli_real_escape_string(static::$db,$data['recommend_price']);
+
+        $sql = "UPDATE `tb_recommend_rooms` 
+        SET `recommend_img` = '".$data['recommend_img']."', 
+        `recommend_title` = '".$data['recommend_title']."', 
+        `recommend_sub_title` = '".$data['recommend_sub_title']."', 
+        `recommend_price` = '".$data['recommend_price']."' 
+        WHERE `tb_recommend_rooms`.`recommend_id` = '$recommend_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
 }
 ?>
