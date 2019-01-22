@@ -90,14 +90,27 @@ $id = $_GET['id'];
         }
         //------------------------------------------------------------------------------
         if($check == false){
-            ?>  <script>  alert('<?php echo $error_msg; ?>'); window.history.back(); </script>  <?php
+            ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
         }else{
             $result = $recommend_rooms_model-> editRoom($_POST['recommend_id'],$data);
 
             if($result){
-                ?> <script>window.location="index.php?content=home"</script> <?php
+                ?>
+<script>
+window.location = "index.php?content=home"
+</script>
+<?php
             }else{
-                ?>  <script> window.history.back(); </script> <?php
+                ?>
+<script>
+window.history.back();
+</script>
+<?php
             }
         }
     }else{

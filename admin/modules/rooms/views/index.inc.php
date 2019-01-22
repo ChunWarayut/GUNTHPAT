@@ -103,16 +103,29 @@ $target_dir = "../img_upload/rooms/";
         //------------------------------------------------------------------------------
         if($check == false){
            
-            ?>  <script>  alert('<?php echo $error_msg; ?>'); window.history.back(); </script>  <?php
+            ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
           
         }else{
            
             $result = $rooms_model-> editRoom($_POST['room_id'],$data);
            
             if($result){
-                ?> <script>window.location="index.php?content=rooms"</script> <?php
+                ?>
+<script>
+window.location = "index.php?content=rooms"
+</script>
+<?php
             }else{
-                ?>  <script> window.history.back(); </script> <?php
+                ?>
+<script>
+window.history.back();
+</script>
+<?php
             }
         }
     }else{
