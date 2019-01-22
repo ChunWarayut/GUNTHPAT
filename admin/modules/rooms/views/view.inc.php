@@ -62,7 +62,9 @@
 
 
 			<td>
-				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				<a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?> ">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				</a>
 			</td>
 		</tr>
 	</tbody>

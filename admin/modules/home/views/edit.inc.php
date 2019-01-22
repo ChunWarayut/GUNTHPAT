@@ -14,7 +14,7 @@
 
 </script>
 
-<form  id="form_target" role="form" method="post"  action="index.php?app=rooms&action=edit" enctype="multipart/form-data">  
+<form  id="form_target" role="form" method="post"  action="index.php?content=home&action=edit" enctype="multipart/form-data">  
 <div class="card">
     <div class="card-header">
     <div class="row">
@@ -62,7 +62,7 @@
                 <div class="row-lg-2">
                     <div class="form-group">
                         <label>Price  <font color="#F00"><b>*</b></font></label>
-                        <input id="recommend_price"  name="recommend_price" class="form-control" value="<?PHP echo number_format( $recommend_rooms[$id]['recommend_price']);?>"  />
+                        <input type="number" id="recommend_price"  name="recommend_price" class="form-control" value="<?PHP echo  $recommend_rooms[$id]['recommend_price'];?>"  />
                         <p class="help-block">Example : 2,000 </p>
                     </div>
                 </div>
