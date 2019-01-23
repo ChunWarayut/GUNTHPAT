@@ -1,22 +1,19 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
 require_once('../models/Facilities.php');
-require_once('../models/Facilities_type.php');
 
 $path = "modules/Facilities/views/";
 $img_path = "../img_upload/Facilities/";
 
-$Facilities_model = new Facilities;
-$Facilities_type_model = new Facilities_Type;
-$Facilities = $Facilities_model -> getFacilities();
-$Facilities_type = $Facilities_type_model -> getFacilitiesType();
-
-echo "<pre>";
-print_r($Facilities);
-echo "</pre>";
+$facilities_model = new Facilities;
+$facilities = $facilities_model -> getFacilities();
 
 // echo "<pre>";
-// print_r($recommend_Facilities);
+// print_r($facilities);
+// echo "</pre>";
+
+// echo "<pre>";
+// print_r($);
 // echo "</pre>";
 
 
@@ -42,25 +39,24 @@ $target_dir = "../img_upload/Facilities/";
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
-        $result = $Facilities_model-> deleteRooms($id);
+        $result = $facilities_model-> deleteFacilities($id);
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "insert") {
-    if(isset($_POST['Facilities_id'])){
+    if(isset($_POST['facilities_name'])){
         $check = true;
         $data = [];
-        $data['Facilities_id'] = $_POST['Facilities_id'];
-        $data['Facilities_name'] = $_POST['Facilities_name'];
-        $data['Facilities_type_id'] = $_POST['Facilities_type_id'];
-        $data['Facilities_detail'] = $_POST['Facilities_detail'];
+        $data['facilities_id'] = $_POST['facilities_id'];
+        $data['facilities_name'] = $_POST['facilities_name'];
+        $data['facilities_detail'] = $_POST['facilities_detail'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
-        if($_FILES['Facilities_img']['name'] == ""){
-             $data['Facilities_img'] = $_POST['Facilities_img_o'];
+        if($_FILES['facilities_img']['name'] == ""){
+             $data['facilities_img'] = $_POST['facilities_img_o'];
         }else {
             //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['Facilities_img']['name'],".");
+            $type = strrchr($_FILES['facilities_img']['name'],".");
             //--------------------------------------------------
             //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
             $newname = $date.$numrand.$type;
@@ -73,18 +69,18 @@ $target_dir = "../img_upload/Facilities/";
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["Facilities_img"]["size"] > 5000000) {
+            }else if ($_FILES["facilities_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
                 $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
                 $check = false;
-            }else if (move_uploaded_file($_FILES["Facilities_img"]["tmp_name"], $target_file)) {
+            }else if (move_uploaded_file($_FILES["facilities_img"]["tmp_name"], $target_file)) {
                 //-----------------------------------
-                $data['Facilities_img'] = $date.$newname;
+                $data['facilities_img'] = $date.$newname;
                 //-----------------------------------
-                if( $_POST['Facilities_img_o'] != null){
-                    $target_file = $target_dir . $_POST['Facilities_img_o'];
+                if( $_POST['facilities_img_o'] != null){
+                    $target_file = $target_dir . $_POST['facilities_img_o'];
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
@@ -106,12 +102,12 @@ window.history.back();
           
         }else{
            
-            $result = $Facilities_model-> addFacilities($data);
+            $result = $facilities_model-> addFacilities($data);
            
             if($result){
                 ?>
 <script>
-    window.location = "index.php?content=Facilities"
+    window.location = "index.php?content=facilities"
 </script>
 <?php
             }else{
@@ -128,21 +124,20 @@ window.history.back();
     
     } else if( $_GET['action'] == "edit") {
                
-    if(isset($_POST['Facilities_id'])){
+    if(isset($_POST['facilities_id'])){
         $check = true;
         $data = [];
-        $data['Facilities_id'] = $_POST['Facilities_id'];
-        $data['Facilities_name'] = $_POST['Facilities_name'];
-        $data['Facilities_type_id'] = $_POST['Facilities_type_id'];
-        $data['Facilities_detail'] = $_POST['Facilities_detail'];
+        $data['facilities_id'] = $_POST['facilities_id'];
+        $data['facilities_name'] = $_POST['facilities_name'];
+        $data['facilities_detail'] = $_POST['facilities_detail'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
-        if($_FILES['Facilities_img']['name'] == ""){
-             $data['Facilities_img'] = $_POST['Facilities_img_o'];
+        if($_FILES['facilities_img']['name'] == ""){
+             $data['facilities_img'] = $_POST['facilities_img_o'];
         }else {
             //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['Facilities_img']['name'],".");
+            $type = strrchr($_FILES['facilities_img']['name'],".");
             //--------------------------------------------------
             //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
             $newname = $date.$numrand.$type;
@@ -155,18 +150,18 @@ window.history.back();
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["Facilities_img"]["size"] > 5000000) {
+            }else if ($_FILES["facilities_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
                 $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
                 $check = false;
-            }else if (move_uploaded_file($_FILES["Facilities_img"]["tmp_name"], $target_file)) {
+            }else if (move_uploaded_file($_FILES["facilities_img"]["tmp_name"], $target_file)) {
                 //-----------------------------------
-                $data['Facilities_img'] = $date.$newname;
+                $data['facilities_img'] = $date.$newname;
                 //-----------------------------------
-                if( $_POST['Facilities_img_o'] != null){
-                    $target_file = $target_dir . $_POST['Facilities_img_o'];
+                if( $_POST['facilities_img_o'] != null){
+                    $target_file = $target_dir . $_POST['facilities_img_o'];
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
@@ -188,12 +183,12 @@ window.history.back();
           
         }else{
            
-            $result = $Facilities_model-> editFacilities($_POST['Facilities_id'],$data);
+            $result = $facilities_model-> editFacilities($_POST['facilities_id'],$data);
            
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=Facilities"
+window.location = "index.php?content=facilities"
 </script>
 <?php
             }else{

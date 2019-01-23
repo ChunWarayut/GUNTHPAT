@@ -13,12 +13,11 @@ class Facilities extends BaseModel{
     function getfacilities() {
         $sql = " SELECT *
         FROM `tb_facilities`
-        LEFT JOIN tb_facilities_type ON tb_facilities.facilities_id = tb_facilities_type.facilities_type_id
         WHERE 1
         ORDER BY tb_facilities.facilities_id
         ";
         // echo "<pre>";
-        // print_r();
+        // print_r($sql);
         // echo "</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
@@ -51,14 +50,12 @@ class Facilities extends BaseModel{
         $data['facilities_name']=mysqli_real_escape_string(static::$db,$data['facilities_name']);
         $data['facilities_img']=mysqli_real_escape_string(static::$db,$data['facilities_img']);
         $data['facilities_detail']=mysqli_real_escape_string(static::$db,$data['facilities_detail']);
-        $data['facilities_type_id']=mysqli_real_escape_string(static::$db,$data['facilities_type_id']);
 
-        $sql = "UPDATE `tb_room` 
+        $sql = "UPDATE `tb_facilities` 
         SET `facilities_name` = '".$data['facilities_name']."', 
-        SET `facilities_img` = '".$data['facilities_img']."', 
-        SET `facilities_detail` = '".$data['facilities_detail']."', 
-        `facilities_type_id` = '".$data['facilities_type_id']."', 
-        WHERE `tb_room`.`room_id` = '$room_id'
+         `facilities_img` = '".$data['facilities_img']."', 
+         `facilities_detail` = '".$data['facilities_detail']."'
+        WHERE `tb_facilities`.`facilities_id` = '$facilities_id'
         ";
         // echo "<pre>";
         // print_r( $sql);
@@ -75,21 +72,13 @@ class Facilities extends BaseModel{
         $data['facilities_name']=mysqli_real_escape_string(static::$db,$data['facilities_name']);
         $data['facilities_img']=mysqli_real_escape_string(static::$db,$data['facilities_img']);
         $data['facilities_detail']=mysqli_real_escape_string(static::$db,$data['facilities_detail']);
-        $data['facilities_type_id']=mysqli_real_escape_string(static::$db,$data['facilities_type_id']);
 
-        $sql = "INSERT INTO `tb_room` 
-        (`facilities_id`, 
-        `facilities_name`, 
-        `facilities_type_id`, 
-        `facilities_img`, 
-        `facilities_detail`, 
+        $sql = "INSERT INTO `tb_facilities` (`facilities_id`, `facilities_name`, `facilities_img`, `facilities_detail`)
         VALUES (
             NULL, 
-            '".$data['facilities_id']."', 
             '".$data['facilities_name']."', 
-            '".$data['facilities_type_id']."' ,
             '".$data['facilities_img']."' ,
-            '".$data['facilities_detail']."', 
+            '".$data['facilities_detail']."'
         )
         ";
         // echo "<pre>";

@@ -12,11 +12,10 @@
         <tr>
             <th width="12px">#</th>
             <th width="300px">Image</th>
-            <th width="300px">Name</th>
-            <th width="300px">Type</th>
+            <th width="150px">Name</th>
             <th width="500px"> Detail</th>
-            <th width=""></th>
-            <th width=""></th>
+            <th width="10px"></th>
+            <th width="10px"></th>
         </tr>
     </thead>
     <?PHP 
@@ -40,27 +39,22 @@
         </td>
 
         <td class="text-left">
-            <?PHP echo $facilities[$i]['facilities_type_name'];  ?>
-        </td>
-
-        <td class="text-right">
             <?PHP echo  $facilities[$i]['facilities_detail'];  ?>
         </td>
 
         <td>
-            <a href="?content=facilities&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo $facilities[$i]['facilities_type_id'];  ?> ">
+            <a href="?content=facilities&action=edit&id=<?PHP echo $i;  ?>">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 
         </td>
 
         <td>
-
             <a class="text-danger" href="?content=facilities&action=delete&id=<?PHP echo  $facilities[$i]['facilities_id'];?>">
                 <i class="fa fa-window-close" aria-hidden="true"></i>
             </a>
         </td>
-        
+
     </tr>
     </tbody>
     <?PHP 
