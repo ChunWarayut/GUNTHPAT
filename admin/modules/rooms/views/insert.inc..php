@@ -14,27 +14,25 @@
 
 </script>
 
-<form id="form_target" role="form" method="post" action="index.php?content=rooms&action=edit" enctype="multipart/form-data">
+<form id="form_target" role="form" method="post" action="index.php?content=rooms&action=insert" enctype="multipart/form-data">
     <div class="card">
         <div class="card-header">
             <div class="row">
                 <div class="col-lg-6">
                     <h1>
-                        หน้าแก้ไขข้อมูลห้อง
-                        <?PHP 
-use Monolog\Handler\PHPConsoleHandler;
-echo $rooms[$id]['room_name'];  ?>
+                        หน้าเพิ่มข้อมูลห้อง
+                        <?PHP echo $rooms[$id]['room_name'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
 
-                    <button type="submit" class="btn btn-primary float-right">แก้ไข</button>
+                    <button type="submit" class="btn btn-primary float-right">เพิ่ม</button>
                 </div>
             </div>
         </div>
         <div class="card-body">
-            <input type="hidden" id="room_img_o" name="room_img_o" value="<?php echo  $rooms[$id]['room_img']; ?>" />
-            <input type="hidden" id="room_id" name="room_id" value="<?php echo  $rooms[$id]['room_id']; ?>" />
+            <input type="hidden" id="room_img_o" name="room_img_o" value="" />
+            <input type="hidden" id="room_id" name="room_id" value="" />
 
             <div class="col-12">
 
@@ -50,7 +48,7 @@ echo $rooms[$id]['room_name'];  ?>
                             }  ?> "
                             class="img-fluid" alt="">
                         <input accept=".jpg , .png" type="file" id="room_img" name="room_img" class="form-control"
-                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);" value="<?php echo  $rooms[$id]['room_img']; ?>">
+                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);" value="">
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -59,7 +57,7 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Room Name <font color="#F00"><b>*</b></font></label>
-                                <input id="room_name" name="room_name" class="form-control" value="<?PHP echo $rooms[$id]['room_name'];?>" />
+                                <input id="room_name" name="room_name" class="form-control" value="" />
                                 <p class="help-block">Example : Delux Room</p>
                             </div>
                         </div>
@@ -67,18 +65,8 @@ echo $rooms[$id]['room_name'];  ?>
 
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Room Type <font color="#F00"><b>*</b></font></label> <br />
-                                <select class="form-control  custom-select" id="inputGroupSelect02">
-                                    <option selected value="<?PHP echo $room_type[$type-1]['room_type_id'];?>"><?PHP echo $room_type[$type-1]['room_type_name'];?></option>
-                                    <?PHP #endregion
-                                for ($i=0; $i < count($room_type); $i++) { 
-                                    # code...
-                                ?>
-                                    <option  value="<?PHP echo $room_type[$i]['room_type_id'];?>"><?PHP echo $room_type[$i]['room_type_name'];?></option>
-                                    <?PHP 
-                                }
-                                ?>
-                                </select>
+                                <label>Room Type <font color="#F00"><b>*</b></font></label>
+                                <input id="room_type_name" name="room_type_name" class="form-control" value="<?PHP echo $rooms[$id]['room_type_name'];?>" />
                                 <p class="help-block">Example : Deluxe Junior Suite </p>
                             </div>
                         </div>

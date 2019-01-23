@@ -1,6 +1,12 @@
-<h1>Edit rooms page</h1>
-<h2> หน้าแก้ไขข้อมูลห้องพัก</h2>
-
+<div class="row">
+    <div class="col-lg-6">
+        <h1> Rooms page</h1>
+        <h2> ข้อมูลห้องพัก</h2>
+    </div>
+    <div class="col-lg-6">
+        <a href="?content=rooms&action=insert" class="btn btn-primary float-right">เพิ่มข้อมูลห้องพัก</a>
+    </div>
+</div>
 <table>
     <thead>
         <tr>
@@ -68,7 +74,7 @@
 
 
         <td>
-            <a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?> ">
+            <a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
         </td>
