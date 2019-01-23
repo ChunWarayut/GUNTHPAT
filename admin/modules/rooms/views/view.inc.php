@@ -18,7 +18,8 @@
             <th width="50px"> Amout</th>
             <th width="500px"> Detail</th>
             <th width="500px"> Facility</th>
-            <th width="50px"></th>
+            <th width=""></th>
+            <th width=""></th>
         </tr>
     </thead>
     <?PHP 
@@ -78,7 +79,12 @@
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 
-            <a href="?content=rooms&action=delete&id=<?PHP echo  $rooms[$i]['room_id'];?>">
+        </td>
+
+
+        <td>
+        
+        <a class="text-danger" href="?content=rooms&action=delete&id=<?PHP echo  $rooms[$i]['room_id'];?>">
                 <i class="fa fa-window-close" aria-hidden="true"></i>
             </a>
         </td>
