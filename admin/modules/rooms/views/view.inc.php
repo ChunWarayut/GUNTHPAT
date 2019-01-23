@@ -83,8 +83,8 @@
 
 
         <td>
-        
-        <a class="text-danger" href="?content=rooms&action=delete&id=<?PHP echo  $rooms[$i]['room_id'];?>">
+
+            <a class="text-danger" href="?content=rooms&action=delete&id=<?PHP echo  $rooms[$i]['room_id'];?>">
                 <i class="fa fa-window-close" aria-hidden="true"></i>
             </a>
         </td>
