@@ -58,7 +58,7 @@ echo $facilities[$id]['facilities_name'];  ?>
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Room Name <font color="#F00"><b>*</b></font></label>
+                                <label>Facilities Name <font color="#F00"><b>*</b></font></label>
                                 <input id="facilities_name" name="facilities_name" class="form-control" value="<?PHP echo $facilities[$id]['facilities_name'];?>" />
                                 <p class="help-block">Example :CONTACT</p>
                             </div>
