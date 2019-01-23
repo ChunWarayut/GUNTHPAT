@@ -8,8 +8,7 @@
     </div>
     <div class="col-10" align="right">
         <div class="dropdown" style="cursor: pointer;">
-            <img src="../img_upload/user/<?php if($login_user['user_image'] != "" ){ echo $login_user['user_image']; } else { echo "
-                default.png"; }?>" class="avatar">
+            <img src="../img_upload/user/<?php if($login_user['user_image'] != "" ){ echo $login_user['user_image']; } else { echo "default.png"; }?>" class="avatar">
             <button class="dropbtn">
                 <?php echo $login_user['user_firstname']."  ". $login_user['user_lastname'];?>
                 <i class="fa fa-caret-down"></i>

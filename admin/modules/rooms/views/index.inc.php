@@ -41,8 +41,10 @@ $target_dir = "../img_upload/rooms/";
 
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
+    } else if( $_GET['action'] == "delete") {
+        $result = $rooms_model-> deleteRooms($id);
+        require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "insert") {
-        
     if(isset($_POST['room_id'])){
         $check = true;
         $data = [];
@@ -112,28 +114,28 @@ window.history.back();
           
         }else{
            
-            $result = $rooms_model-> editRoom($_POST['room_id'],$data);
+            $result = $rooms_model-> addRoom($data);
            
             if($result){
                 ?>
 <script>
-    // window.location = "index.php?content=rooms"
+    window.location = "index.php?content=rooms"
 </script>
 <?php
             }else{
                 ?>
 <script>
-    // window.history.back();
+    window.history.back();
 </script>
 <?php
             }
         }
     }else{
-        require_once($path . 'edit.inc.php');
+        require_once($path . 'insert.inc.php');
     }
     
     } else if( $_GET['action'] == "edit") {
-       
+               
     if(isset($_POST['room_id'])){
         $check = true;
         $data = [];

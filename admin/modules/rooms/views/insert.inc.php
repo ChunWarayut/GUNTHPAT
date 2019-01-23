@@ -8,7 +8,7 @@
         }
         reader.readAsDataURL(input.files[0]);
         }else{
-            $('#_img').attr('src',   '../img_upload/rooms/default.jpg');
+            $('#_img').attr('src',   '../img_upload/rooms/default.png');
         }
     }
 
@@ -40,12 +40,7 @@
             <div class="row ">
                 <div class="col-lg-3">
                     <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP 
-                        if ($rooms[$id]['room_img'] != "" || $rooms[$id]['room_img'] != null) { 
-                            echo $img_path . $rooms[$id]['room_img']; 
-                            } else {
-                                echo $img_path . 'default.jpg';
-                            }  ?> "
+                        <img id="_img" width="400" src="<?PHP echo $img_path . 'default.png';?>"
                             class="img-fluid" alt="">
                         <input accept=".jpg , .png" type="file" id="room_img" name="room_img" class="form-control"
                             style="margin: 14px 0 0 0 ;" onChange="readURL(this);" value="">
@@ -65,7 +60,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Room Type <font color="#F00"><b>*</b></font></label> <br />
-                                <select class="form-control  custom-select" id="inputGroupSelect02">
+                                <select class="form-control  custom-select" id="room_type_id" name="room_type_id">
                                     <?PHP #endregion
                                 for ($i=0; $i < count($room_type); $i++) { 
                                     # code...

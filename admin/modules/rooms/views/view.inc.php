@@ -28,7 +28,7 @@
     ?>
     <tr>
         <td>
-            <?PHP echo $rooms[$i]['room_id'];  ?>
+            <?PHP echo $i+1;  ?>
         </td>
         <td>
             <img src="<?PHP echo $img_path . $rooms[$i]['room_img'];  ?> " class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
@@ -76,6 +76,10 @@
         <td>
             <a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+
+            <a href="?content=rooms&action=delete&id=<?PHP echo  $rooms[$i]['room_id'];?>">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
             </a>
         </td>
     </tr>

@@ -29,6 +29,23 @@ class Rooms extends BaseModel{
             return $data;
         }
     }
+
+    function deleteRooms($room_id) {
+        $sql = "DELETE 
+        FROM `tb_room` 
+        WHERE `tb_room`.`room_id` = '$room_id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
     
     function editRoom($room_id,$data = []) {
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
@@ -57,6 +74,59 @@ class Rooms extends BaseModel{
         `room_facility_1` = '".$data['room_facility_1']."' ,
         `room_facility_2` = '".$data['room_facility_2']."' 
         WHERE `tb_room`.`room_id` = '$room_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    function addRoom($data = []) {
+        $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
+        $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
+        $data['room_name']=mysqli_real_escape_string(static::$db,$data['room_name']);
+        $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
+        $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
+        $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
+        $data['room_size']=mysqli_real_escape_string(static::$db,$data['room_size']);
+        $data['room_detail_1']=mysqli_real_escape_string(static::$db,$data['room_detail_1']);
+        $data['room_detail_2']=mysqli_real_escape_string(static::$db,$data['room_detail_2']);
+        $data['room_detail_3']=mysqli_real_escape_string(static::$db,$data['room_detail_3']);
+        $data['room_facility_1']=mysqli_real_escape_string(static::$db,$data['room_facility_1']);
+        $data['room_facility_2']=mysqli_real_escape_string(static::$db,$data['room_facility_2']);
+
+        $sql = "INSERT INTO `tb_room` 
+        (`room_id`, 
+        `room_type_id`, 
+        `room_name`, 
+        `room_price`, 
+        `room_amout`, 
+        `room_img`, 
+        `room_size`, 
+        `room_detail_1`, 
+        `room_detail_2`, 
+        `room_detail_3`, 
+        `room_facility_1`, 
+        `room_facility_2`) 
+        VALUES (
+            NULL, 
+            '".$data['room_type_id']."', 
+            '".$data['room_name']."', 
+            '".$data['room_price']."' ,
+            '".$data['room_amout']."' ,
+            '".$data['room_img']."', 
+            '".$data['room_size']."' , 
+            '".$data['room_detail_1']."' ,
+            '".$data['room_detail_2']."' ,
+            '".$data['room_detail_3']."' ,
+            '".$data['room_facility_1']."' ,
+            '".$data['room_facility_2']."' 
+        )
         ";
         echo "<pre>";
         print_r( $sql);
