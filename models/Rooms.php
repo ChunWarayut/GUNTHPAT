@@ -75,9 +75,9 @@ class Rooms extends BaseModel{
         `room_facility_2` = '".$data['room_facility_2']."' 
         WHERE `tb_room`.`room_id` = '$room_id'
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
@@ -128,9 +128,9 @@ class Rooms extends BaseModel{
             '".$data['room_facility_2']."' 
         )
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
