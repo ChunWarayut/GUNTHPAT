@@ -42,9 +42,9 @@ class Recommend_rooms extends BaseModel{
         `recommend_price` = '".$data['recommend_price']."' 
         WHERE `tb_recommend_rooms`.`recommend_id` = '$recommend_id'
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
