@@ -70,18 +70,16 @@ class Gallary extends BaseModel{
         $data['gallary_name']=mysqli_real_escape_string(static::$db,$data['gallary_name']);
         $data['gallary_type_id']=mysqli_real_escape_string(static::$db,$data['gallary_type_id']);
         $data['gallary_img']=mysqli_real_escape_string(static::$db,$data['gallary_img']);
-        $data['gallary_detail']=mysqli_real_escape_string(static::$db,$data['gallary_detail']);
 
         $sql = "UPDATE `tb_gallary` 
         SET `gallary_name` = '".$data['gallary_name']."', 
          `gallary_type_id` = '".$data['gallary_type_id']."', 
-         `gallary_img` = '".$data['gallary_img']."', 
-         `gallary_detail` = '".$data['gallary_detail']."'
+         `gallary_img` = '".$data['gallary_img']."'
         WHERE `tb_gallary`.`gallary_id` = '$gallary_id'
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
@@ -94,25 +92,24 @@ class Gallary extends BaseModel{
         $data['gallary_name']=mysqli_real_escape_string(static::$db,$data['gallary_name']);
         $data['gallary_type_id']=mysqli_real_escape_string(static::$db,$data['gallary_type_id']);
         $data['gallary_img']=mysqli_real_escape_string(static::$db,$data['gallary_img']);
-        $data['gallary_detail']=mysqli_real_escape_string(static::$db,$data['gallary_detail']);
 
-        $sql = "INSERT INTO `tb_gallary` 
-        (`gallary_id`, 
-        `gallary_name`, 
-        `gallary_type_id`, 
-        `gallary_img`, 
-        `gallary_detail`)
-        VALUES (
-            NULL, 
-            '".$data['gallary_name']."', 
-            '".$data['`gallary_type_id`,']."', 
-            '".$data['gallary_img']."' ,
-            '".$data['gallary_detail']."'
-        )
+        $sql = "INSERT INTO `tb_gallary`(
+            `gallary_id`, 
+            `gallary_name`, 
+            `gallary_img`, 
+            `gallary_type_id`) 
+            VALUES (
+                NULL, 
+                '".$data['gallary_name']."', 
+                '".$data['gallary_img']."' ,
+                '".$data['`gallary_type_id`,']."'
+                )
+        
+        
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;

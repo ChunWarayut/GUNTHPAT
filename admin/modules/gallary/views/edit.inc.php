@@ -8,7 +8,7 @@
         }
         reader.readAsDataURL(input.files[0]);
         }else{
-            $('#_img').attr('src',   '../img_upload/gallary/default.jpg');
+            $('#_img').attr('src',   '../img_upload/gallary/default.png');
         }
     }
 
@@ -46,7 +46,7 @@ echo $gallary[$id]['gallary_name'];  ?>
                         if ($gallary[$id]['gallary_img'] != "" || $gallary[$id]['gallary_img'] != null) { 
                             echo $img_path . $gallary[$id]['gallary_img']; 
                             } else {
-                                echo $img_path . 'default.jpg';
+                                echo $img_path . 'default.png';
                             }  ?> "
                             class="img-fluid" alt="">
                         <input accept=".jpg , .png" type="file" id="gallary_img" name="gallary_img" class="form-control"
@@ -69,9 +69,8 @@ echo $gallary[$id]['gallary_name'];  ?>
 
                                 <label>Gallary Type <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="gallary_type_id" name="gallary_type_id">
-                                    <option selected value="<?PHP echo $gallary[$type]['gallary_type_id'];?>">
-                                        <?PHP echo $gallary[$type]['gallary_type_name'];?>
-                                        <?PHP echo $type-1;?>
+                                    <option selected value="<?PHP echo $gallary_type[$type-1]['gallary_type_id'];?>">
+                                        <?PHP echo $gallary_type[$type-1]['gallary_type_name'];?>
                                     </option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($gallary_type); $i++) { 

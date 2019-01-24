@@ -41,6 +41,11 @@ $target_dir = "../img_upload/Facilities/";
     } else if( $_GET['action'] == "delete") {
         $result = $facilities_model-> deleteFacilities($id);
         require_once($path.'view.inc.php');
+        ?>
+<script>
+window.location = "index.php?content=gallary"
+</script>
+<?PHP
     } else if( $_GET['action'] == "insert") {
     if(isset($_POST['facilities_name'])){
         $check = true;
@@ -107,13 +112,13 @@ window.history.back();
             if($result){
                 ?>
 <script>
-    window.location = "index.php?content=facilities"
+window.location = "index.php?content=facilities"
 </script>
 <?php
             }else{
                 ?>
 <script>
-    window.history.back();
+window.history.back();
 </script>
 <?php
             }

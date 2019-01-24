@@ -2,20 +2,20 @@
 date_default_timezone_set("Asia/Bangkok");
 require_once('../models/Gallary.php');
 
-$path = "modules/Gallary/views/";
-$img_path = "../img_upload/Gallary/";
+$path = "modules/gallary/views/";
+$img_path = "../img_upload/gallary/";
 
 $gallary_model = new Gallary;
 $gallary = $gallary_model -> getGallary();
 $gallary_type = $gallary_model -> getGallaryType();
 
-echo "<pre>";
-print_r($gallary_type);
-echo "</pre>";
+// echo "<pre>";
+// print_r($gallary_type);
+// echo "</pre>";
 
-echo "<pre>";
-print_r($gallary);
-echo "</pre>";
+// echo "<pre>";
+// print_r($gallary);
+// echo "</pre>";
 
 
 $type = $_GET['type'];
@@ -42,6 +42,11 @@ $target_dir = "../img_upload/gallary/";
     } else if( $_GET['action'] == "delete") {
         $result = $gallary_model-> deleteGallary($id);
         require_once($path.'view.inc.php');
+        ?>
+<script>
+window.location = "index.php?content=gallary"
+</script>
+<?PHP
     } else if( $_GET['action'] == "insert") {
     if(isset($_POST['gallary_name'])){
         $check = true;
@@ -49,7 +54,6 @@ $target_dir = "../img_upload/gallary/";
         $data['gallary_id'] = $_POST['gallary_id'];
         $data['gallary_name'] = $_POST['gallary_name'];
         $data['gallary_type_id'] = $_POST['gallary_type_id'];
-        $data['gallary_detail'] = $_POST['gallary_detail'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -109,13 +113,13 @@ window.history.back();
             if($result){
                 ?>
 <script>
-    window.location = "index.php?content=gallary"
+window.location = "index.php?content=gallary"
 </script>
 <?php
             }else{
                 ?>
 <script>
-    window.history.back();
+window.history.back();
 </script>
 <?php
             }

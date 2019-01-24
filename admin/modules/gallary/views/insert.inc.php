@@ -8,19 +8,20 @@
         }
         reader.readAsDataURL(input.files[0]);
         }else{
-            $('#_img').attr('src',   '../img_upload/facilities/default.png');
+            $('#_img').attr('src',   '../img_upload/gallary/default.jpg');
         }
     }
 
 </script>
 
-<form id="form_target" role="form" method="post" action="index.php?content=facilities&action=insert" enctype="multipart/form-data">
+<form id="form_target" role="form" method="post" action="index.php?content=gallary&action=insert" enctype="multipart/form-data">
     <div class="card">
         <div class="card-header">
             <div class="row">
                 <div class="col-lg-6">
                     <h1>
-                        หน้าเพิ่มข้อมูลบริการต่างๆ
+                        หน้าเพิ่มข้อมูล Gallary
+                        <?PHP echo $gallary[$id]['gallary_name'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
@@ -30,8 +31,8 @@
             </div>
         </div>
         <div class="card-body">
-            <input type="hidden" id="facilities_img_o" name="facilities_img_o" value="" />
-            <input type="hidden" id="facilities_id" name="facilities_id" value="" />
+            <input type="hidden" id="gallary_img_o" name="gallary_img_o" />
+            <input type="hidden" id="gallary_id" name="gallary_id" />
 
             <div class="col-12">
 
@@ -39,9 +40,9 @@
             <div class="row ">
                 <div class="col-lg-3">
                     <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP echo $img_path . 'default.png';?>" class="img-fluid" alt="">
-                        <input accept=".jpg , .png" type="file" id="facilities_img" name="facilities_img" class="form-control"
-                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);" value="">
+                        <img id="_img" width="400" src="<?PHP  echo $img_path . 'default.png ';?> " class="img-fluid" alt="">
+                        <input accept=".jpg , .png" type="file" id="gallary_img" name="gallary_img" class="form-control"
+                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);">
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -49,19 +50,35 @@
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Facilities Name <font color="#F00"><b>*</b></font></label>
-                                <input id="facilities_name" name="facilities_name" class="form-control" value="" />
-                                <p class="help-block">Example : ...</p>
+                                <label>Gallary Name <font color="#F00"><b>*</b></font></label>
+                                <input id="gallary_name" name="gallary_name" class="form-control" />
+                                <p class="help-block">Example :CONTACT</p>
                             </div>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control" id="recommend_sub_title" name="recommend_sub_title" rows="6"></textarea>
-                                <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
+
+                                <label>Gallary Type <font color="#F00"><b>*</b></font></label> <br />
+                                <select class="form-control  custom-select" id="gallary_type_id" name="gallary_type_id">
+                                    <option selected value="<?PHP echo $gallary_type[0]['gallary_type_id'];?>">
+                                        เลือก Type Gallary
+                                    </option>
+                                    <?PHP #endregion
+                                for ($i=0; $i < count($gallary_type); $i++) { 
+                                    # code...
+                                ?>
+                                    <option value="<?PHP echo $gallary_type[$i]['gallary_type_id'];?>">
+                                        <?PHP echo $gallary_type[$i]['gallary_type_name'];?>
+                                    </option>
+                                    <?PHP 
+                                }
+                                ?>
+                                </select>
+                                <p class="help-block">Example : ที่พัก </p>
                             </div>
                         </div>
+
 
 
                     </div>
