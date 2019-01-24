@@ -12,7 +12,7 @@ $content = $_REQUEST['content'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administrators</title>
+    <title>GANTHPAT PLACE</title>
 
     <link rel="icon" href="../template/backend/images/logo/logo.png " type="image/png">
     <link href="../template/backend/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +22,8 @@ $content = $_REQUEST['content'];
 
     <script src="../template/backend/js/jquery.min.js"></script>
     <script src="../template/backend/js/bootstrap.min.js"></script>
+
+    
 </head>
 
 <body>

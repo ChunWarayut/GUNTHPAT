@@ -47,7 +47,7 @@ class Contact_us extends BaseModel{
     }
     
     function editContact_us($contact_us_id,$data = []) {
-        $data['contact_us_title ']=mysqli_real_escape_string(static::$db,$data['contact_us_title ']);
+        $data['contact_us_title']=mysqli_real_escape_string(static::$db,$data['contact_us_title']);
         $data['contact_us_sub_title']=mysqli_real_escape_string(static::$db,$data['contact_us_sub_title']);
         $data['contact_us_facebook']=mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
         $data['contact_us_tel']=mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
@@ -126,9 +126,9 @@ class Contact_us extends BaseModel{
             '".$data['contact_us_map']."' 
         )
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
