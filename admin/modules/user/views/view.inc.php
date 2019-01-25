@@ -24,7 +24,7 @@
     ?>
     <tr>
       <td><?php echo $i+1; ?></td>
-      <td><?php echo $user[$i]['user_firstname']; ?> <?php echo $user[$i]['user_lastname']; ?> </td>
+      <td class="text-left"><?php echo $user[$i]['user_firstname']; ?> <?php echo $user[$i]['user_lastname']; ?> </td>
       <td><?php echo $user[$i]['user_phone']; ?></td>
       <td class="center"><?php echo $user[$i]['user_type_name']; ?></td>
       <td>

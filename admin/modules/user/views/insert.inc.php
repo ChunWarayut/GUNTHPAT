@@ -61,7 +61,7 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label>เบอร์โทรศัพท์ </label>
-                        <input id="user_phone" name="user_phone" class="form-control" autocomplete="off">
+                        <input id="user_phone" name="user_phone"  type="tel" required    class="form-control" autocomplete="off">
                     </div>
                 </div>
                 <div class="col-lg-12">

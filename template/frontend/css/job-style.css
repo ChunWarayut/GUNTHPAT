@@ -1,46 +1,38 @@
-.section{
+.section {
     background-color: #fff;
     padding: 3.5em 15%;
 }
-.form-section{
+
+.form-section {
     background-color: #fff;
     padding: 3.5em 15%;
 }
-.job-detail{
+
+.job-detail {
     font-family: 'gothic', sans-serif;
     padding: .5rem 0;
 }
-.img-job{
-    border: solid 2px #fec619;
+
+.img-job {
+    border: solid 2px #f47322;
     height: 10em;
 }
-@media only screen and (max-width: 1600px){
 
-}
+@media only screen and (max-width: 1600px) {}
 
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 1366px) {}
 
-}
+@media only screen and (max-width: 1024px) {}
 
-@media only screen and (max-width: 1024px){
-
-}
-
-@media only screen and (max-width: 720px){
-    .form-section{
+@media only screen and (max-width: 720px) {
+    .form-section {
         background-color: #fff;
         padding: 2em 8%;
     }
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {}
 
-}
+@media only screen and (max-width: 375px) {}
 
-@media only screen and (max-width: 375px){
-
-}
-
-@media only screen and (max-width: 280px){
-
-}
+@media only screen and (max-width: 280px) {}

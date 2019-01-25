@@ -64,7 +64,6 @@ if(!isset($_GET['action'])){
         $data['user_zipcode'] = trim($_POST['user_zipcode']);
         $data['user_username'] = trim($_POST['user_username']);
         $data['user_password'] = trim($_POST['user_password']);
-        $data['addby'] = $login_user['user_id'];
 
         if($_FILES['user_image']['name'] == ""){
             $data['user_image'] = "";

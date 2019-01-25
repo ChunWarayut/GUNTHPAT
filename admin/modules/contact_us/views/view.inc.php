@@ -98,6 +98,10 @@
 
                 <td class="text-left">
                     <?PHP echo  $contact_us[0]['contact_us_address'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_address_1'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_address_2'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_address_3'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_address_4'];  ?>
                 </td>
 
             </tr>

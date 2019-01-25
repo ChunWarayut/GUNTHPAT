@@ -1,64 +1,70 @@
-.section{
+.section {
     padding: 3.5em 15%;
 }
-.member-section{
+
+.member-section {
     padding: 3.5em 15%;
 }
+
 .number_circle {
     border: 3px solid white;
     color: white;
     padding-left: 6px;
     padding-right: 6px;
 }
-.panel-sign-up{
+
+.panel-sign-up {
     position: relative;
     left: calc(50% - 210px);
     max-width: 420px;
 }
+
 .rounded-circle {
     border-radius: 50%;
 }
-.btn-sm{
+
+.btn-sm {
     display: inline-block;
     cursor: pointer;
     color: #000;
     padding: 6px 36px;
-    background-color: #fec619;
+    background-color: #f47322;
     border: 1px solid transparent;
 }
-.form-alert{
+
+.form-alert {
     border: 1px solid #ff2300;
 }
-.order-list-item{
+
+.order-list-item {
     border: solid 1px #f0ad4e;
     padding: 10px;
     margin-bottom: 8px;
 }
-.order-status-0{
+
+.order-status-0 {
     color: #eb008b;
 }
-.order-status-1{
+
+.order-status-1 {
     color: #f6921e;
 }
-.order-status-2{
+
+.order-status-2 {
     color: #00adee;
 }
-.order-status-3{
+
+.order-status-3 {
     color: #8bc53f;
 }
-@media only screen and (max-width: 1600px){
-   
-}
 
-@media only screen and (max-width: 1366px){
-   
-}
+@media only screen and (max-width: 1600px) {}
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1366px) {}
 
-}
+@media only screen and (max-width: 1024px) {}
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) {
     .number_circle {
         border: 2px solid white;
         padding-left: 5px;
@@ -66,12 +72,10 @@
     }
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px) {}
 
-}
-
-@media only screen and (max-width: 575px){
-    .member-section{
+@media only screen and (max-width: 575px) {
+    .member-section {
         padding: 1.2em 4%;
     }
     .number_circle {
@@ -81,13 +85,11 @@
     }
 }
 
-@media only screen and (max-width: 450px){
-    .panel-sign-up{
+@media only screen and (max-width: 450px) {
+    .panel-sign-up {
         position: unset;
         max-width: 420px;
     }
 }
 
-@media only screen and (max-width: 375px){
-
-}
+@media only screen and (max-width: 375px) {}

@@ -76,11 +76,47 @@ echo $contact_us[$id]['contact_us_title'];  ?>
                         </div>
                     </div>
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label> Address  <font color="#F00"><b>*</b></font></label>
                             <input id="contact_us_address" name="contact_us_address" class="form-control"
                                 value="<?PHP echo $contact_us[$id]['contact_us_address'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label> Address 1  <font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_address_1" name="contact_us_address_1" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_address_1'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <div class="form-group">
+                            <label> Address 2  <font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_address_2" name="contact_us_address_2" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_address_2'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label> Address 3  <font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_address_3" name="contact_us_address_3" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_address_3'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <div class="form-group">
+                            <label> Address 4  <font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_address_4" name="contact_us_address_4" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_address_4'];?>" />
                             <p class="help-block">Example : ...</p>
                         </div>
                     </div>

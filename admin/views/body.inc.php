@@ -45,7 +45,7 @@ else if($content=="user"){
 }
 
 // หน้าหลัก
-else {
+else if($content=="home"){
     require_once("modules/home/views/index.inc.php"); 
 }
 ?>
