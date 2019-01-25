@@ -1,10 +1,19 @@
-<?PHP  
+<?PHP
 session_start();
-if(!isset($_REQUEST['content'])){
-    $_REQUEST['content'] = "home";
+if(!isset($_SESSION['administrator_user'])){
+	require_once("modules/login/views/index.inc.php"); 
+}else{
+	$login_user = $_SESSION['administrator_user'];
+	if(!isset($_REQUEST['content'])){
+		$_REQUEST['content'] = "home";
+	}
+	$content = $_REQUEST['content'];
 }
-$content = $_REQUEST['content'];
+if(!isset($login_user)){
+	require_once("modules/login/views/index.inc.php"); 
+}else{
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,3 +53,5 @@ $content = $_REQUEST['content'];
 </body>
 
 </html>
+
+<?PHP }?>
