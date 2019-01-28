@@ -1,17 +1,17 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Recommend_rooms.php');
+require_once('../models/Slide.php');
 
 $path = "modules/home/views/";
-$img_path = "../img_upload/recommended_rooms/";
-$target_dir = "../img_upload/recommended_rooms/";
+$img_path = "../img_upload/slide/";
+$target_dir = "../img_upload/slide/";
 
-$recommend_rooms_model = new Recommend_rooms;
-$recommend_rooms = $recommend_rooms_model -> recommendRoom01();
+$slide_model = new Slide;
+$slide = $slide_model -> slideRoom01();
 $id = $_GET['id'];
 
 // echo "<pre>";
-// print_r($recommend_rooms);
+// print_r($slide);
 // echo "</pre>";
 
 
@@ -37,20 +37,20 @@ $id = $_GET['id'];
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "edit") {
         
-    if(isset($_POST['recommend_id'])){
+    if(isset($_POST['slide_id'])){
         $check = true;
         $data = [];
-        $data['recommend_id'] = $_POST['recommend_id'];
-        $data['recommend_title'] = $_POST['recommend_title'];
-        $data['recommend_sub_title'] = $_POST['recommend_sub_title'];
-        $data['recommend_price'] = $_POST['recommend_price'];
+        $data['slide_id'] = $_POST['slide_id'];
+        $data['slide_title'] = $_POST['slide_title'];
+        $data['slide_sub_title'] = $_POST['slide_sub_title'];
+        $data['slide_link'] = $_POST['slide_link'];
 
         //------------------ฟังชั่นแก้ไขรูป--------------------
-        if($_FILES['recommend_img']['name'] == ""){
-            $data['recommend_img'] = $_POST['img_recommend_o'];
+        if($_FILES['slide_img']['name'] == ""){
+            $data['slide_img'] = $_POST['img_slide_o'];
         }else {
             //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['recommend_img']['name'],".");
+            $type = strrchr($_FILES['slide_img']['name'],".");
             //--------------------------------------------------
             
             //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
@@ -65,20 +65,20 @@ $id = $_GET['id'];
             if (file_exists($target_file)) {
                 $error_msg =  "Sorry, file already exists.";
                 $check = false;
-            }else if ($_FILES["recommend_img"]["size"] > 5000000) {
+            }else if ($_FILES["slide_img"]["size"] > 5000000) {
                 $error_msg = "Sorry, your file is too large.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
                 $error_msg = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                 $check = false;
-            }else if (move_uploaded_file($_FILES["recommend_img"]["tmp_name"], $target_file)) {
+            }else if (move_uploaded_file($_FILES["slide_img"]["tmp_name"], $target_file)) {
 
                 //-----------------------------------
-                $data['recommend_img'] = $date.$newname;
+                $data['slide_img'] = $date.$newname;
                 //-----------------------------------
 
-                $target_file = $target_dir . $_POST["img_recommend_o"];
-                if($_POST["img_recommend_o"] != 'default.png'){
+                $target_file = $target_dir . $_POST["img_slide_o"];
+                if($_POST["img_slide_o"] != 'default.png'){
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
@@ -97,7 +97,7 @@ window.history.back();
 </script>
 <?php
         }else{
-            $result = $recommend_rooms_model-> editRoom($_POST['recommend_id'],$data);
+            $result = $slide_model-> editRoom($_POST['slide_id'],$data);
 
             if($result){
                 ?>

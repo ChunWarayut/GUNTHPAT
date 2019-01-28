@@ -9,6 +9,10 @@
  if($content=="contact_us"){
     require_once("modules/contact_us/views/index.inc.php"); 
 }
+// ติดต่อ
+ if($content=="contact"){
+    require_once("modules/contact/views/index.inc.php"); 
+}
 
 // ระบบจัดการข่าวสาร
 else if($content=="article"){
@@ -35,8 +39,13 @@ else if($content=="about_us"){
     require_once("modules/about_us/views/index.inc.php"); 
 }
 
+//  หน้าระบบจัดการผู้ดูเเลระบบ
+else if($content=="user"){
+    require_once("modules/user/views/index.inc.php"); 
+}
+
 // หน้าหลัก
-else {
+else if($content=="home"){
     require_once("modules/home/views/index.inc.php"); 
 }
 ?>

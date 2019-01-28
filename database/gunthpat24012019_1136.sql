@@ -109,22 +109,22 @@ INSERT INTO `tb_gallary_type` (`gallary_type_id`, `gallary_type_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_recommend_rooms`
+-- Table structure for table `tb_slide`
 --
 
-CREATE TABLE `tb_recommend_rooms` (
-  `recommend_id` int(3) NOT NULL,
-  `recommend_img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_sub_title` text COLLATE utf8_unicode_ci NOT NULL,
-  `recommend_price` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `tb_slide` (
+  `slide_id` int(3) NOT NULL,
+  `slide_img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `slide_title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `slide_sub_title` text COLLATE utf8_unicode_ci NOT NULL,
+  `slide_link` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tb_recommend_rooms`
+-- Dumping data for table `tb_slide`
 --
 
-INSERT INTO `tb_recommend_rooms` (`recommend_id`, `recommend_img`, `recommend_title`, `recommend_sub_title`, `recommend_price`) VALUES
+INSERT INTO `tb_slide` (`slide_id`, `slide_img`, `slide_title`, `slide_sub_title`, `slide_link`) VALUES
 (1, '2301201917094823012019170948498357758.jpg', 'Delux Room', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Bed to bangkok ที่จตุจักร ห้องนึงนอนได้ 6คน เป็นห้องนอนรวม นี่พัก1คืนกับเพื่อนอีกคน คืนละ588บาท หารกับเพื่อน                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ', '4000'),
 (2, '67735705.jpg', 'Dream Stateroom', '                                                                                                                                            Bed to bangkok ที่จตุจักร ห้องนึงนอนได้ 6คน เป็นห้องนอนรวม นี่พัก1คืนกับเพื่อนอีกคน คืนละ588บาท หารกับเพื่อน                                                                                                                       ', '5000'),
 (3, '5554565464.jpg', 'Family Suite', '                            สภาพห้องดีมาก ห้องน้ำดีมากเช่นกัน มีน้ำอุ่นให้อาบด้วย 10 10 ไปเลย ?                                                                                                ', '2000');
@@ -212,10 +212,10 @@ ALTER TABLE `tb_gallary_type`
   ADD PRIMARY KEY (`gallary_type_id`);
 
 --
--- Indexes for table `tb_recommend_rooms`
+-- Indexes for table `tb_slide`
 --
-ALTER TABLE `tb_recommend_rooms`
-  ADD PRIMARY KEY (`recommend_id`);
+ALTER TABLE `tb_slide`
+  ADD PRIMARY KEY (`slide_id`);
 
 --
 -- Indexes for table `tb_room`
@@ -254,10 +254,10 @@ ALTER TABLE `tb_gallary`
 ALTER TABLE `tb_gallary_type`
   MODIFY `gallary_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `tb_recommend_rooms`
+-- AUTO_INCREMENT for table `tb_slide`
 --
-ALTER TABLE `tb_recommend_rooms`
-  MODIFY `recommend_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `tb_slide`
+  MODIFY `slide_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_room`
 --

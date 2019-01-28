@@ -26,7 +26,7 @@ $html = '
 
 
 <b>Input Radio</b>
-<input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice 
+<input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice 
 <br /><br />
 
 
@@ -69,7 +69,7 @@ $html = '
 
 
 <b>Input Radio</b>
-<input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice 
+<input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice 
 <br /><br />
 
 
@@ -108,7 +108,7 @@ $html = '
 <tr><td valign="bottom" align="right"><b>Input Radio</b></td><td><input type="radio" name="pre_publication" value="0"  checked > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="pre_publication" value="1" > Yes </td></tr>
 
 
-<tr><td valign="top" align="right"><b>Input Radio</b></td><td><input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice </td></tr>
+<tr><td valign="top" align="right"><b>Input Radio</b></td><td><input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice </td></tr>
 
 <tr><td valign="top" align="right"><b>Input Text</b></td><td><input type="text" size="40" name="doi" value="10.1258/jrsm.100.5.211"> </td>
 </tr>
@@ -145,7 +145,7 @@ $html = '
 <input type="hidden" name="doi" value="10.1258/jrsm.100.5.211" /> 
 <br />
 <b>Input Radio</b>
-<input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice   
+<input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice   
 
 <br /><br />
 

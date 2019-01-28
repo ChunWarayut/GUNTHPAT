@@ -47,11 +47,15 @@ class Contact_us extends BaseModel{
     }
     
     function editContact_us($contact_us_id,$data = []) {
-        $data['contact_us_title ']=mysqli_real_escape_string(static::$db,$data['contact_us_title ']);
+        $data['contact_us_title']=mysqli_real_escape_string(static::$db,$data['contact_us_title']);
         $data['contact_us_sub_title']=mysqli_real_escape_string(static::$db,$data['contact_us_sub_title']);
         $data['contact_us_facebook']=mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
         $data['contact_us_tel']=mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
         $data['contact_us_address']=mysqli_real_escape_string(static::$db,$data['contact_us_address']);
+        $data['contact_us_address_1']=mysqli_real_escape_string(static::$db,$data['contact_us_address_1']);
+        $data['contact_us_address_2']=mysqli_real_escape_string(static::$db,$data['contact_us_address_2']);
+        $data['contact_us_address_3']=mysqli_real_escape_string(static::$db,$data['contact_us_address_3']);
+        $data['contact_us_address_4']=mysqli_real_escape_string(static::$db,$data['contact_us_address_4']);
         $data['contact_us_fax']=mysqli_real_escape_string(static::$db,$data['contact_us_fax']);
         $data['contact_us_email']=mysqli_real_escape_string(static::$db,$data['contact_us_email']);
         $data['contact_us_carry_title']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_title']);
@@ -68,6 +72,10 @@ class Contact_us extends BaseModel{
          `contact_us_facebook` = '".$data['contact_us_facebook']."', 
          `contact_us_tel` = '".$data['contact_us_tel']."', 
          `contact_us_address` = '".$data['contact_us_address']."', 
+         `contact_us_address_1` = '".$data['contact_us_address_1']."', 
+         `contact_us_address_2` = '".$data['contact_us_address_2']."', 
+         `contact_us_address_3` = '".$data['contact_us_address_3']."',  
+         `contact_us_address_4` = '".$data['contact_us_address_4']."',  
          `contact_us_fax` = '".$data['contact_us_fax']."', 
          `contact_us_email` = '".$data['contact_us_email']."', 
          `contact_us_carry_title` = '".$data['contact_us_carry_title']."', 
@@ -97,6 +105,10 @@ class Contact_us extends BaseModel{
         $data['contact_us_facebook']=mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
         $data['contact_us_tel']=mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
         $data['contact_us_address']=mysqli_real_escape_string(static::$db,$data['contact_us_address']);
+        $data['contact_us_address_1']=mysqli_real_escape_string(static::$db,$data['contact_us_address_1']);
+        $data['contact_us_address_2']=mysqli_real_escape_string(static::$db,$data['contact_us_address_2']);
+        $data['contact_us_address_3']=mysqli_real_escape_string(static::$db,$data['contact_us_address_3']);
+        $data['contact_us_address_4']=mysqli_real_escape_string(static::$db,$data['contact_us_address_4']);
         $data['contact_us_fax']=mysqli_real_escape_string(static::$db,$data['contact_us_fax']);
         $data['contact_us_email']=mysqli_real_escape_string(static::$db,$data['contact_us_email']);
         $data['contact_us_carry_title']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_title']);
@@ -107,7 +119,13 @@ class Contact_us extends BaseModel{
         $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
         $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
 
-        $sql = "INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title`, `contact_us_sub_title`, `contact_us_facebook`, `contact_us_tel`, `contact_us_address`, `contact_us_fax`, `contact_us_email`, `contact_us_carry_title`, `contact_us_carry_detail`, `contact_us_taxi_title`, `contact_us_taxi_detail`, `contact_us_car_titel`, `contact_us_car_detail`, `contact_us_map`) 
+        $sql = "INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title`, `contact_us_sub_title`, `contact_us_facebook`, `contact_us_tel`, 
+        `contact_us_address`, 
+        `contact_us_address_1`, 
+        `contact_us_address_2`, 
+        `contact_us_address_3`, 
+        `contact_us_address_4`, 
+        `contact_us_fax`, `contact_us_email`, `contact_us_carry_title`, `contact_us_carry_detail`, `contact_us_taxi_title`, `contact_us_taxi_detail`, `contact_us_car_titel`, `contact_us_car_detail`, `contact_us_map`) 
         VALUES (
             NULL, 
             '".$data['contact_us_title']."', 
@@ -115,6 +133,10 @@ class Contact_us extends BaseModel{
             '".$data['contact_us_facebook']."' ,
             '".$data['contact_us_tel']."' ,
             '".$data['contact_us_address']."' ,
+            '".$data['contact_us_address_1']."' ,
+            '".$data['contact_us_address_2']."' ,
+            '".$data['contact_us_address_3']."' ,
+            '".$data['contact_us_address_4']."' ,
             '".$data['contact_us_fax']."' ,
             '".$data['contact_us_email']."' ,
             '".$data['contact_us_carry_title']."' ,

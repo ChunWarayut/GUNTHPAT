@@ -21,7 +21,7 @@ All notable changes to `dropbox-api` will be documented in this file
 
 ## 1.5.3 - 2017-07-28
 
-- use recommended `move_v2` method to move files
+- use slideed `move_v2` method to move files
 
 ## 1.5.2 - 2017-07-17
 

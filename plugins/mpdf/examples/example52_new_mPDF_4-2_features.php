@@ -186,7 +186,7 @@ $mpdf->useSubstitutionsMB = true;
 $mpdf->useSubstitutions = true;
 </p>
 </div>
-It is not recommended to enable this for regular use, as it will add to the processing time. 
+It is not slideed to enable this for regular use, as it will add to the processing time. 
 </div>
 
 
@@ -332,7 +332,7 @@ and written to the document using:
 
 <pagebreak>
 <h4>Line-height inheritance</h4>
-Line-height inheritance has been altered to follow the CSS2 recommendation:
+Line-height inheritance has been altered to follow the CSS2 slideation:
 <ul>
 <li>normal is inherited as "normal"</li>
 <li>1.2 is inherited as a factor</li>

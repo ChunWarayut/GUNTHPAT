@@ -566,7 +566,7 @@ $config['cache'] = array(
 
 @subsection configuration_options_checkDoubleExtension checkDoubleExtension
 
-Whether to allow for files with double file extension. Due to security issues with Apache modules it is recommended to leave `checkDoubleExtension` enabled.
+Whether to allow for files with double file extension. Due to security issues with Apache modules it is slideed to leave `checkDoubleExtension` enabled.
 
 ### How Does It Work?
 
@@ -832,13 +832,13 @@ For more information about plugins and plugins directory structure please refer 
 $config['pluginsDirectory'] = __DIR__ . '/custom/path/to/plugins';
 ~~~
 
-**Note:** The safest and most recommended option is to provide the plugins directory as an absolute path.
+**Note:** The safest and most slideed option is to provide the plugins directory as an absolute path.
 
 @subsection configuration_options_privateDir privateDir
 
 Internal directories configuration.
 
-**Important:** CKFinder needs to access these directories frequently, so it is recommended to keep this folder on a local file system.
+**Important:** CKFinder needs to access these directories frequently, so it is slideed to keep this folder on a local file system.
 
 Option Name | Type | Description
 ----------- | ---- | -----------
@@ -895,9 +895,9 @@ Option Name | Type | Description
 `maxSize` @optional | String | The maximum size of the uploaded image defined in bytes. A shorthand notation is also supported: G, M, K (case insensitive). `1M` equals 1048576 bytes (one Megabyte), `1K` equals 1024 bytes (one Kilobyte), `1G` equals 1 Gigabyte.
 `allowedExtensions` | String | The file extensions you wish to be allowed for upload with CKFinder.
 `deniedExtensions` @optional | String | The file extensions you do not wish to be uploaded with CKFinder. Shall only be set if `allowedExtensions` is left empty.
-`lazyLoad` @optional | Boolean | If set to `true`, the `Init` command will not check if the resource type contains child folders. This option is especially useful for remote backends, as the `Init` command will be executed faster, and therefore CKFinder will start faster, too. It is recommended to set it to `true` for remote backends.
+`lazyLoad` @optional | Boolean | If set to `true`, the `Init` command will not check if the resource type contains child folders. This option is especially useful for remote backends, as the `Init` command will be executed faster, and therefore CKFinder will start faster, too. It is slideed to set it to `true` for remote backends.
 
-**Important**: It is recommended to always use the `allowedExtensions` setting, in favor of `deniedExtensions`. If you leave `allowedExtensions` empty and add an extension to the `deniedExtensions` list, for example `pdf`, the settings will allow the upload of all other files except the files with the `pdf` extension (e.g. `.php` or `.exe` files).
+**Important**: It is slideed to always use the `allowedExtensions` setting, in favor of `deniedExtensions`. If you leave `allowedExtensions` empty and add an extension to the `deniedExtensions` list, for example `pdf`, the settings will allow the upload of all other files except the files with the `pdf` extension (e.g. `.php` or `.exe` files).
 
 
 <h4>Example 1</h4>

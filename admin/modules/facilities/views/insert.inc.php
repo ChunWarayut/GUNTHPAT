@@ -58,7 +58,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control" id="recommend_sub_title" name="recommend_sub_title" rows="6"></textarea>
+                                <textarea class="form-control" id="slide_sub_title" name="slide_sub_title" rows="6"></textarea>
                                 <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
                             </div>
                         </div>

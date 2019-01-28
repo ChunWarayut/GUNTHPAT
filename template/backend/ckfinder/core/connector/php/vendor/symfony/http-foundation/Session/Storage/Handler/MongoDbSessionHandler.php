@@ -39,7 +39,7 @@ class MongoDbSessionHandler implements \SessionHandlerInterface
      *  * time_field: The field name for storing the timestamp [default: time]
      *  * expiry_field: The field name for storing the expiry-timestamp [default: expires_at]
      *
-     * It is strongly recommended to put an index on the `expiry_field` for
+     * It is strongly slideed to put an index on the `expiry_field` for
      * garbage-collection. Alternatively it's possible to automatically expire
      * the sessions in the database as described below:
      *

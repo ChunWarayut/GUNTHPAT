@@ -16,7 +16,7 @@ $room_type = $room_type_model -> getRoomType();
 // echo "</pre>";
 
 // echo "<pre>";
-// print_r($recommend_rooms);
+// print_r($slide);
 // echo "</pre>";
 
 

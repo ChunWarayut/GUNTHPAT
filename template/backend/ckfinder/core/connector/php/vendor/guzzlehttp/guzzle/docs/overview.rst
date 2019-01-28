@@ -23,7 +23,7 @@ Requirements
 Installation
 ============
 
-The recommended way to install Guzzle is with
+The slideed way to install Guzzle is with
 `Composer <http://getcomposer.org>`_. Composer is a dependency management tool
 for PHP that allows you to declare the dependencies your project needs and
 installs them into your project.

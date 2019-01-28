@@ -446,7 +446,7 @@ hyphens: manual | auto | none
 p.menu { text-align: justify; padding-right: 4em; }<br />
 dottab.menu { outdent: 4em; }
 </p>
-<p>NB It is recommended to use &amp;nbsp; after the dottab if a space is required before the following content.</p>
+<p>NB It is slideed to use &amp;nbsp; after the dottab if a space is required before the following content.</p>
 <p>NB This (outdent) is also used in the Table of Contents (see earlier in this document).</p>
 </div>
 

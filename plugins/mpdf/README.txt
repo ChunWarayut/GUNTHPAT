@@ -64,7 +64,7 @@ Note that the font-file names are case-sensitive and can contain capitals.
 
 If the folder /ttfontdata/ is writeable (CHMOD 644 or 755), mPDF will save files there which it can 
 re-use next time it accesses a particular font. This will significantly improve processing time
-and is strongly recommended. 
+and is strongly slideed. 
 
 mPDF should be able to read most TrueType Unicode font files with a .ttf extension
 Truetype fonts with .otf extension that are OpenType also work OK.

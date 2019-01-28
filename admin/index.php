@@ -1,10 +1,19 @@
-<?PHP  
+<?PHP
 session_start();
-if(!isset($_REQUEST['content'])){
-    $_REQUEST['content'] = "home";
+if(!isset($_SESSION['administrator_user'])){
+	require_once("modules/login/views/index.inc.php"); 
+}else{
+	$login_user = $_SESSION['administrator_user'];
+	if(!isset($_REQUEST['content'])){
+		$_REQUEST['content'] = "home";
+	}
+	$content = $_REQUEST['content'];
 }
-$content = $_REQUEST['content'];
+if(!isset($login_user)){
+	require_once("modules/login/views/index.inc.php"); 
+}else{
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +21,7 @@ $content = $_REQUEST['content'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administrators</title>
+    <title>GANTHPAT PLACE</title>
 
     <link rel="icon" href="../template/backend/images/logo/logo.png " type="image/png">
     <link href="../template/backend/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +31,8 @@ $content = $_REQUEST['content'];
 
     <script src="../template/backend/js/jquery.min.js"></script>
     <script src="../template/backend/js/bootstrap.min.js"></script>
+
+    
 </head>
 
 <body>
@@ -42,3 +53,5 @@ $content = $_REQUEST['content'];
 </body>
 
 </html>
+
+<?PHP }?>
