@@ -254,8 +254,8 @@ table.zebra tbody tr:nth-child(2n+1) td:nth-child(1n+0) { background-color: yell
 
 <div class="gradient text">
 <h4>Shadows<bookmark content="Shadows" level="1" /></h4>
-<p><span class="css">box-shadow</span> can be defined on any block-level element (P, DIV etc). It follows the CSS3 recommendation, but <i>inset</i> is not supported.</p>
-<p><span class="css">text-shadow</span> can be defined on any element. It follows the CSS3 recommendation, but <i>blur</i> is not supported.</p>
+<p><span class="css">box-shadow</span> can be defined on any block-level element (P, DIV etc). It follows the CSS3 slideation, but <i>inset</i> is not supported.</p>
+<p><span class="css">text-shadow</span> can be defined on any element. It follows the CSS3 slideation, but <i>blur</i> is not supported.</p>
 <p class="code">
 &lt;span style="text-shadow: 0.03em 0.03em #666, -0.015em -0.015em white;"&gt;<br />
 &lt;div style="box-shadow: 0.3em 0.3em #888888;"&gt;
@@ -437,7 +437,7 @@ $this->fonttrans = array(<br />
 <h3 style="page-break-before: left;">Spread tables<bookmark content="Spread Tables" level="0" /></h3>
 <div class="gradient text">
 Setting the CSS property "overflow: visible" on a table now has the effect of cancelling resizing, and allowing tables to split columns across multiple pages.
-The maximum width for a column (or group of columns set by colspan) is the page width. It is recommended to specify absolute values of width on each column (not percentages).
+The maximum width for a column (or group of columns set by colspan) is the page width. It is slideed to specify absolute values of width on each column (not percentages).
 </div>
 <br />
 <input type="button" name="javascriptButton" value="Show 2 pages" onClick="TwoPages()" />

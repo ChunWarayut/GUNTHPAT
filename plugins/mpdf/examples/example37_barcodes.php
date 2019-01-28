@@ -199,7 +199,7 @@ mpdf-->
 </table>
 
 <h3>Postcode Barcodes</h3>
-<p>These all have sizes fixed by their specification. Although they can be altered using \'size\' it is not recommended. \'height\' is ignored.</p>
+<p>These all have sizes fixed by their specification. Although they can be altered using \'size\' it is not slideed. \'height\' is ignored.</p>
 <table class="items" width="100%" cellpadding="8" border="1">
 <thead>
 <tr>
@@ -240,7 +240,7 @@ mpdf-->
 
 
 <h3>Variable width Barcodes</h3>
-<p>These barcodes are all of variable length depending on the code entered. There is no recommended maximum size for any of these specs, but all recommend a minimum X-dimension (width of narrowest bar) as 7.5mil (=0.19mm). The default used here is twice the minimum i.e. X-dim = 0.38mm.</p>
+<p>These barcodes are all of variable length depending on the code entered. There is no slideed maximum size for any of these specs, but all slide a minimum X-dimension (width of narrowest bar) as 7.5mil (=0.19mm). The default used here is twice the minimum i.e. X-dim = 0.38mm.</p>
 <p>The specifications give a minimum height of 15% of the barcode length (which can be variable). The bar height in mPDF is set to a default value of 10mm. </p>
 <p>\'size\' will scale the barcode in both dimensions. mPDF will accept any number, but bear in mind that size="0.5" will set the bar width to the minimum. The \'height\' attribute further allows scaling - this factor is applied to already scaled barcode. Thus size="2" height="0.5" will give a barcode twice the default width (X-dim=0.76mm) and at the default height set in mPDF i.e. 10mm.</p>
 <table class="items" width="100%" cellpadding="8" border="1">

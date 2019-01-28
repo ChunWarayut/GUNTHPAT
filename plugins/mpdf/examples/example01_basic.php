@@ -138,7 +138,7 @@ Level 3 subitem
 
 
 <b>Input Radio</b>
-<input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice 
+<input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice 
 <br /><br />
 
 

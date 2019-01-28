@@ -400,7 +400,7 @@ Level 3 subitem
 </tbody>
 </table>
 
-This paragraph has border-radius and background-gradient set. Minimum padding is recommended as 1/3rd of the border-radius. Or can use $mpdf->autoPadding.
+This paragraph has border-radius and background-gradient set. Minimum padding is slideed as 1/3rd of the border-radius. Or can use $mpdf->autoPadding.
 <p class="roundgradient">Sed bibendum. Nunc eleifend ornare velit. Sed consectetuer urna in erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris sodales semper metus. Maecenas justo libero, pretium at, malesuada eu, mollis et, arcu. Ut suscipit pede in nulla. Praesent elementum, dolor ac fringilla posuere, elit libero rutrum massa, vel tincidunt dui tellus a ante. Sed aliquet euismod dolor. Vestibulum sed dui. Duis lobortis hendrerit quam. Donec tempus orci ut libero. Pellentesque suscipit malesuada nisi. </p>
 
 
@@ -1542,7 +1542,7 @@ Etiam id libero at magna pellentesque aliquet. Nulla sit amet ipsum id enim temp
 <select size="1" name="status"><option value="A">Active</option><option value="W" >New item from auto_manager: pending validation</option><option value="I" selected="selected">Incomplete record - pending</option><option value="X" >Flagged for Deletion</option> </select> followed by text
 <br /><br />
 <b>Input Radio</b>
-<input type="radio" name="recommended" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="recommended" value="2"  checked="checked" > Choice 
+<input type="radio" name="slideed" value="0" > No &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="1" > Keep &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="slideed" value="2"  checked="checked" > Choice 
 <br /><br />
 <b>Input Text</b>
 <input type="text" size="190" name="doi" value="10.1258/jrsm.100.5.211"> 

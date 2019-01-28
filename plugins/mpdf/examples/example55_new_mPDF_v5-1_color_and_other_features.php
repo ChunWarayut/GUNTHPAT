@@ -146,7 +146,7 @@ On: AWAY To War.
 <pagebreak />
 <div style="font-family: Arial; font-size: 18pt; color: rgb(49,124,209)">Letter and word spacing & text justification</div>
 
-<div class="rounded text">Letter- and word-spacing can be set on almost all block and in-line style elements, using the CSS properties letter-spacing and word-spacing. Values of normal or a length can be specified (em or ex recommended).
+<div class="rounded text">Letter- and word-spacing can be set on almost all block and in-line style elements, using the CSS properties letter-spacing and word-spacing. Values of normal or a length can be specified (em or ex slideed).
 Note that setting the letter-spacing value (including setting it to zero) will prevent any additional letter-spacing to be added when full-justifying text. The word-spacing value, however, is a <i>minimum</i> value, and can be increased in order to justify text.
 <br />
 <br />

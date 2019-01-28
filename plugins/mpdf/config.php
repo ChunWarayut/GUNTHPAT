@@ -254,7 +254,7 @@ $this->justifyB4br = false;	// In justified text, <BR> does not cause the preced
 					// Change to true to force justification (as in MS Word)
 
 $this->tabSpaces = 8;	// Number of spaces to replace for a TAB in <pre> sections
-				// Notepad uses 6, HTML specification recommends 8
+				// Notepad uses 6, HTML specification slides 8
 $this->jSWord = 0.4;	// Proportion (/1) of space (when justifying margins) to allocate to Word vs. Character
 $this->jSmaxChar = 2;	// Maximum spacing to allocate to character spacing. (0 = no maximum)
 

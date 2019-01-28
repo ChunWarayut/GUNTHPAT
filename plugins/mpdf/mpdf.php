@@ -20,7 +20,7 @@ define('_MPDFK', (72/25.4));
 
 
 // Specify which font metrics to use:
-// 'winTypo' uses sTypoAscender etc from the OS/2 table and is the one usually recommended - BUT
+// 'winTypo' uses sTypoAscender etc from the OS/2 table and is the one usually slideed - BUT
 // 'win' use WinAscent etc from OS/2 and inpractice seems to be used more commonly in Windows environment
 // 'mac' uses Ascender etc from hhea table, and is used on Mac/OSX environment
 if (!defined('_FONT_DESCRIPTOR')) define("_FONT_DESCRIPTOR", 'win');	// Values: '' [BLANK] or 'win', 'mac', 'winTypo'
@@ -954,7 +954,7 @@ function mPDF($mode='',$format='A4',$default_font_size=0,$default_font='',$mgl=1
 	$this->baselineC = 0.35;	// Baseline for text
 	// mPDF 5.7.3  inline text-decoration parameters
 	$this->baselineSup = 0.5;	// Sets default change in baseline for <sup> text as factor of preceeding fontsize
-						// 0.35 has been recommended; 0.5 matches applications like MS Word
+						// 0.35 has been slideed; 0.5 matches applications like MS Word
 	$this->baselineSub = -0.2;	// Sets default change in baseline for <sub> text as factor of preceeding fontsize
 	$this->baselineS = 0.3;		// Sets default height for <strike> text as factor of fontsize
 	$this->baselineO = 1.1;		// Sets default height for overline text as factor of fontsize

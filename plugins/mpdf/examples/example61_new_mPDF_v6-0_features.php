@@ -544,7 +544,7 @@ TAI THAM
 </p>
 <p>should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF 6 however gives :lang priority over .class</p>
 
-<p><b>The use of the lang attribute and CSS selector is now the recommended method for handling multi-lingual documents in mPDF 6.</b></p>
+<p><b>The use of the lang attribute and CSS selector is now the slideed method for handling multi-lingual documents in mPDF 6.</b></p>
 
 <h3>lang HTML attribute</h3>
 <p>The HTML lang attribute has a number of uses:</p>
@@ -891,7 +891,7 @@ First Strong Isolate (FSI)
 
 <h4>Setting OTL use at runtime</h4>
 <p>mPDF caches some font information in the /ttfontdata/ folder to improve performance. This is regenerated if you change the value of useOTL for a font.</p>
-<p>There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in config_fonts.php:</p>
+<p>There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The slideed way to do this is to create 2 instances of the font e.g. in config_fonts.php:</p>
 <p class="code">
 	"freeserif" =&gt; array(<br />
 		\'R\' =&gt; "FreeSerif.ttf",<br />
@@ -1051,7 +1051,7 @@ Page break type determined by value of configurable variable: $this-&gt;defaultP
 
 <p>Options are set by configurable variables in the <span class="code">config.php</span> file:</p>
 
-<p>Default settings in mPDF versions 6 - recommended especially for complex scripts with marks used above or below characters:</p>
+<p>Default settings in mPDF versions 6 - slideed especially for complex scripts with marks used above or below characters:</p>
 <ul class="code">
 <li>$this-&gt;useFixedNormalLineHeight = false;</li>
 <li>$this-&gt;useFixedTextBaseline = false;</li>
@@ -1178,7 +1178,7 @@ although note that MS WordPad and Windows FireFox browser use the big line-heigh
 
 <p>You can change the font metrics used by mPDF, by editing the defined constant (_FONT_DESCRIPTOR) at the top of the <span classs="code">mpdf.php</span> file:</p>
 <ul>
-<li>\'winTypo\' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT</li>
+<li>\'winTypo\' uses sTypoAscender etc from the OS/2 table and is the one officially slideed - BUT</li>
 <li>\'win\' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;</li>
 <li>\'mac\' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.</li>
 </ul>
@@ -1213,7 +1213,7 @@ although note that MS WordPad and Windows FireFox browser use the big line-heigh
 <p>Indexes have been completely rewritten for mPDF 6, and are not backwards compatible:</p>
 <ul>
 <li>Reference() is now removed - use IndexEntry() instead.</li>
-<li>CreateReference() and CreateIndex() are both removed - replaced by: InsertIndex() [or recommend &lt;indexinsert&gt;] cf. below.</li>
+<li>CreateReference() and CreateIndex() are both removed - replaced by: InsertIndex() [or slide &lt;indexinsert&gt;] cf. below.</li>
 <li>&lt;indexinsert&gt; and InsertIndex() no longer set styles - appearance must be controlled using CSS, even if using function InsertIndex().</li>
 <li>&lt;indexinsert&gt; and InsertIndex() no longer control columns - these must be specified separately.</li>
 </ul>
@@ -1563,7 +1563,7 @@ they set the pagenumbering and pagenumbering style for the ToC, and whether to s
 
 <p>Backwards compatibility: page numbers are no longer suppressed by default in ToC.</p>
 
-<p>Although "suppress" and "toc-suppress" are supported, the recommended way to control whether page numbering appears is by using different headers and footers for each section.</p>
+<p>Although "suppress" and "toc-suppress" are supported, the slideed way to control whether page numbering appears is by using different headers and footers for each section.</p>
 
 <p>Note: If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</p>
 
@@ -1577,7 +1577,7 @@ they set the pagenumbering and pagenumbering style for the ToC, and whether to s
 <h3>Other changes from mPDF 5</h3>
 
 <h4>Setting up mPDF 6</h4>
-<p>mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You may wish to copy your previous config_* files and use them to update the new config files.</p>
+<p>mPDF 6 has changed significantly from earlier version and it is slideed that a fresh install is used. You may wish to copy your previous config_* files and use them to update the new config files.</p>
 
 <p><b>config_fonts.php</b> - values of "indic" and "unAglyphs" from previous versions are now redundant.</p>
 

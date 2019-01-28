@@ -79,7 +79,7 @@ class Pool implements PromisorInterface
      * and exceptions that uses the same ordering as the provided requests.
      *
      * IMPORTANT: This method keeps every request and response in memory, and
-     * as such, is NOT recommended when sending a large number or an
+     * as such, is NOT slideed when sending a large number or an
      * indeterminate number of requests concurrently.
      *
      * @param ClientInterface $client   Client used to send the requests

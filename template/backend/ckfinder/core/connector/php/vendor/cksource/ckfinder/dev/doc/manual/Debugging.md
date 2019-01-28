@@ -109,7 +109,7 @@ PHP has built-in features that can help you understand why code execution has fa
 When working on a development server, you may configure `error_reporting` and `display_errors` using the `php.ini` file that is loaded by the web server (make sure to restart the server after applying changes).
 In such case enabling [display-startup-errors](http://php.net/manual/en/errorfunc.configuration.php#ini.display-startup-errors) might be a good idea as well.
 
-On a production server it is highly unrecommended to leave the `display_errors` option enabled, so a more convenient way is to set PHP error reporting directly in the `config.php` file used by CKFinder.
+On a production server it is highly unslideed to leave the `display_errors` option enabled, so a more convenient way is to set PHP error reporting directly in the `config.php` file used by CKFinder.
 
 ### Example 4 &ndash; Production Environment Settings
 
