@@ -22,3 +22,6 @@
 
     <!-- Custom styles for this template -->
     <link href="template/frontend/css/menu.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="template/vendor/jquery/jquery.min.js"></script>
