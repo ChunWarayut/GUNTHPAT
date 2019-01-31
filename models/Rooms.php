@@ -30,6 +30,26 @@ class Rooms extends BaseModel{
         }
     }
 
+    function getRoomsRecommened() {
+        $sql = " SELECT *
+        FROM `tb_room`
+        LEFT JOIN tb_room_type ON tb_room.room_type_id = tb_room_type.room_type_id 
+        WHERE tb_room.room_recommened = 1
+        ORDER BY tb_room.room_id
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
     function deleteRooms($room_id) {
         $sql = "DELETE 
         FROM `tb_room` 
@@ -51,6 +71,7 @@ class Rooms extends BaseModel{
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
         $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
         $data['room_name']=mysqli_real_escape_string(static::$db,$data['room_name']);
+        $data['room_sub_title']=mysqli_real_escape_string(static::$db,$data['room_sub_title']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
         $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
@@ -64,6 +85,7 @@ class Rooms extends BaseModel{
         $sql = "UPDATE `tb_room` 
         SET `room_img` = '".$data['room_img']."', 
         `room_name` = '".$data['room_name']."', 
+        `room_sub_title` = '".$data['room_sub_title']."', 
         `room_type_id` = '".$data['room_type_id']."', 
         `room_price` = '".$data['room_price']."' ,
         `room_amout` = '".$data['room_amout']."' ,
@@ -85,11 +107,27 @@ class Rooms extends BaseModel{
             return 0;
         }
     }
+    
+    function editRoomRecommened($room_id,$room_recommened) {
+      
+        $sql = "UPDATE `tb_room` SET `room_recommened` = '$room_recommened' WHERE `tb_room`.`room_id` = '$room_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
 
     function addRoom($data = []) {
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
         $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
         $data['room_name']=mysqli_real_escape_string(static::$db,$data['room_name']);
+        $data['room_sub_title']=mysqli_real_escape_string(static::$db,$data['room_sub_title']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
         $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
@@ -104,6 +142,7 @@ class Rooms extends BaseModel{
         (`room_id`, 
         `room_type_id`, 
         `room_name`, 
+        `room_sub_title`, 
         `room_price`, 
         `room_amout`, 
         `room_img`, 
@@ -117,6 +156,7 @@ class Rooms extends BaseModel{
             NULL, 
             '".$data['room_type_id']."', 
             '".$data['room_name']."', 
+            '".$data['room_sub_title']."', 
             '".$data['room_price']."' ,
             '".$data['room_amout']."' ,
             '".$data['room_img']."', 

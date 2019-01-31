@@ -1,30 +1,31 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Gallary.php');
+require_once('../models/Gallery.php');
 
-$path = "modules/gallary/views/";
-$img_path = "../img_upload/gallary/";
+$path = "modules/gallery/views/";
+$img_path = "../img_upload/gallery/";
 
-$gallary_model = new Gallary;
-$gallary = $gallary_model -> getGallary();
-$gallary_type = $gallary_model -> getGallaryType();
+$gallery_model = new Gallery;
+$gallery = $gallery_model -> getGallery();
+$gallery_head = $gallery_model -> getgalleryHead();
+$gallery_type = $gallery_model -> getGalleryType();
 
 // echo "<pre>";
-// print_r($gallary_type);
+// print_r($gallery_type);
 // echo "</pre>";
 
 // echo "<pre>";
-// print_r($gallary);
+// print_r($gallery);
 // echo "</pre>";
 
 
 $type = $_GET['type'];
 $id = $_GET['id'];
 // ECHO "<PRE>";
-// print_r( $gallary);
+// print_r( $gallery);
 // ECHO "</PRE>";
 
-$target_dir = "../img_upload/gallary/";
+$target_dir = "../img_upload/gallery/";
 
     //---------------------ฟังก์ชั่นวันที่------------------------------------
     date_default_timezone_set("Asia/Bangkok");
@@ -40,29 +41,47 @@ $target_dir = "../img_upload/gallary/";
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
-        $result = $gallary_model-> deleteGallary($id);
+        $result = $gallery_model-> deleteGallery($id);
         require_once($path.'view.inc.php');
         ?>
 <script>
-window.location = "index.php?content=gallary"
+window.location = "index.php?content=gallery"
+</script>
+
+<?PHP
+    } else if( $_GET['action'] == "edit_head") {
+        $result = $gallery_model-> editGalleryHead($id, $_POST['gallery_head_sub_title']);
+        require_once($path.'view.inc.php');
+        ?>
+<script>
+window.location = "index.php?content=gallery"
+</script>
+<?PHP
+    } else if( $_GET['action'] == "recommened") {
+      
+            $result = $gallery_model-> editGalleryRecommened($id, $_GET['recommened']);        
+
+        ?>
+<script>
+window.location = "index.php?content=gallery"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
-    if(isset($_POST['gallary_name'])){
+    if(isset($_POST['gallery_name'])){
         $check = true;
         $data = [];
-        $data['gallary_id'] = $_POST['gallary_id'];
-        $data['gallary_name'] = $_POST['gallary_name'];
-        $data['gallary_type_id'] = $_POST['gallary_type_id'];
+        $data['gallery_id'] = $_POST['gallery_id'];
+        $data['gallery_name'] = $_POST['gallery_name'];
+        $data['gallery_type_id'] = $_POST['gallery_type_id'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
-        if($_FILES['gallary_img']['name'] == ""){
-             $data['gallary_img'] = $_POST['gallary_img_o'];
+        if($_FILES['gallery_img']['name'] == ""){
+             $data['gallery_img'] = $_POST['gallery_img_o'];
         }else {
             //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['gallary_img']['name'],".");
+            $type = strrchr($_FILES['gallery_img']['name'],".");
             //--------------------------------------------------
             //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
             $newname = $date.$numrand.$type;
@@ -75,18 +94,18 @@ window.location = "index.php?content=gallary"
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["gallary_img"]["size"] > 5000000) {
+            }else if ($_FILES["gallery_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
                 $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
                 $check = false;
-            }else if (move_uploaded_file($_FILES["gallary_img"]["tmp_name"], $target_file)) {
+            }else if (move_uploaded_file($_FILES["gallery_img"]["tmp_name"], $target_file)) {
                 //-----------------------------------
-                $data['gallary_img'] = $date.$newname;
+                $data['gallery_img'] = $date.$newname;
                 //-----------------------------------
-                if( $_POST['gallary_img_o'] != null){
-                    $target_file = $target_dir . $_POST['gallary_img_o'];
+                if( $_POST['gallery_img_o'] != null){
+                    $target_file = $target_dir . $_POST['gallery_img_o'];
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
@@ -108,12 +127,12 @@ window.history.back();
           
         }else{
            
-            $result = $gallary_model-> addGallary($data);
+            $result = $gallery_model-> addGallery($data);
            
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=gallary"
+window.location = "index.php?content=gallery"
 </script>
 <?php
             }else{
@@ -130,21 +149,21 @@ window.history.back();
     
     } else if( $_GET['action'] == "edit") {
                
-    if(isset($_POST['gallary_id'])){
+    if(isset($_POST['gallery_id'])){
         $check = true;
         $data = [];
-        $data['gallary_id'] = $_POST['gallary_id'];
-        $data['gallary_name'] = $_POST['gallary_name'];
-        $data['gallary_type_id'] = $_POST['gallary_type_id'];
-        $data['gallary_detail'] = $_POST['gallary_detail'];
+        $data['gallery_id'] = $_POST['gallery_id'];
+        $data['gallery_name'] = $_POST['gallery_name'];
+        $data['gallery_type_id'] = $_POST['gallery_type_id'];
+        $data['gallery_detail'] = $_POST['gallery_detail'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
-        if($_FILES['gallary_img']['name'] == ""){
-             $data['gallary_img'] = $_POST['gallary_img_o'];
+        if($_FILES['gallery_img']['name'] == ""){
+             $data['gallery_img'] = $_POST['gallery_img_o'];
         }else {
             //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['gallary_img']['name'],".");
+            $type = strrchr($_FILES['gallery_img']['name'],".");
             //--------------------------------------------------
             //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
             $newname = $date.$numrand.$type;
@@ -157,18 +176,18 @@ window.history.back();
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["gallary_img"]["size"] > 5000000) {
+            }else if ($_FILES["gallery_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
                 $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
                 $check = false;
-            }else if (move_uploaded_file($_FILES["gallary_img"]["tmp_name"], $target_file)) {
+            }else if (move_uploaded_file($_FILES["gallery_img"]["tmp_name"], $target_file)) {
                 //-----------------------------------
-                $data['gallary_img'] = $date.$newname;
+                $data['gallery_img'] = $date.$newname;
                 //-----------------------------------
-                if( $_POST['gallary_img_o'] != null){
-                    $target_file = $target_dir . $_POST['gallary_img_o'];
+                if( $_POST['gallery_img_o'] != null){
+                    $target_file = $target_dir . $_POST['gallery_img_o'];
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
@@ -190,12 +209,12 @@ window.history.back();
           
         }else{
            
-            $result = $gallary_model-> editGallary($_POST['gallary_id'],$data);
+            $result = $gallery_model-> editGallery($_POST['gallery_id'],$data);
            
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=gallary"
+window.location = "index.php?content=gallery"
 </script>
 <?php
             }else{

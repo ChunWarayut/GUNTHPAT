@@ -56,6 +56,15 @@
                                 <p class="help-block">Example : Delux Room</p>
                             </div>
                         </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label> Sub Title <font color="#F00"><b>*</b></font></label>
+                                <input id="room_sub_title" name="room_sub_title" class="form-control" value="<?PHP echo $rooms[$id]['room_sub_title'];?>" />
+                                <p class="help-block">Example : Delux Room</p>
+                            </div>
+                        </div>
+
 
                         <div class="col-lg-4">
                             <div class="form-group">

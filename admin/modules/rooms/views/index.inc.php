@@ -46,7 +46,16 @@ $target_dir = "../img_upload/rooms/";
         require_once($path.'view.inc.php');
         ?>
 <script>
-window.location = "index.php?content=gallary"
+window.location = "index.php?content=rooms"
+</script>
+<?PHP
+    } else if( $_GET['action'] == "recommened") {
+      
+            $result = $rooms_model-> editRoomRecommened($id, $_GET['recommened']);        
+
+        ?>
+<script>
+window.location = "index.php?content=rooms"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
@@ -55,6 +64,7 @@ window.location = "index.php?content=gallary"
         $data = [];
         $data['room_id'] = $_POST['room_id'];
         $data['room_name'] = $_POST['room_name'];
+        $data['room_sub_title'] = $_POST['room_sub_title'];
         $data['room_type_id'] = $_POST['room_type_id'];
         $data['room_price'] = $_POST['room_price'];
         $data['room_amout'] = $_POST['room_amout'];
@@ -146,6 +156,7 @@ window.history.back();
         $data = [];
         $data['room_id'] = $_POST['room_id'];
         $data['room_name'] = $_POST['room_name'];
+        $data['room_sub_title'] = $_POST['room_sub_title'];
         $data['room_type_id'] = $_POST['room_type_id'];
         $data['room_price'] = $_POST['room_price'];
         $data['room_amout'] = $_POST['room_amout'];
