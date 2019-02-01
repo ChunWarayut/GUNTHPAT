@@ -40,6 +40,12 @@ $target_dir = "../img_upload/Facilities/";
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
+        
+        $target_file = $target_dir . $_POST['facilities_img_o'];
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+        
         $result = $facilities_model-> deleteFacilities($id);
         require_once($path.'view.inc.php');
         ?>

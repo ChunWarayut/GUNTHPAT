@@ -41,6 +41,10 @@ $target_dir = "../img_upload/gallery/";
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
+        $target_file = $target_dir . $_POST['gallery_img_o'];
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
         $result = $gallery_model-> deleteGallery($id);
         require_once($path.'view.inc.php');
         ?>

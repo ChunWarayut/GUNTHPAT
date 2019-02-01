@@ -64,7 +64,7 @@
                     <?php if($content=="contact" ){echo "class='menu-active'" ;} else
                     {echo "class='menu'" ;}?>>
                     <i class="fa fa-commenting" style="font-size:24px"></i>
-                    <span style="padding:5px; font-size:15px; ">CONTACT </span>
+                    <span style="padding:5px; font-size:15px; "> CONTACT </span>
                 </div>
             </a></li>
 
@@ -73,7 +73,7 @@
                     <?php if($content=="news" ){echo "class='menu-active'" ;} else
                     {echo "class='menu'" ;}?>>
                     <i class="fa fa-newspaper-o" style="font-size:24px"></i>
-                    <span style="padding:5px; font-size:15px; ">ข่าวสาร </span>
+                    <span style="padding:5px; font-size:15px; "> NEWS </span>
                 </div>
             </a></li>
 
@@ -82,7 +82,7 @@
                     <?php if($content=="user" ){echo "class='menu-active'" ;} else
                     {echo "class='menu'" ;}?>>
                     <i class="fa fa-user" style="font-size:24px"></i>
-                    <span style="padding:5px; font-size:15px; "> ผู้ดูแลระบบ </span>
+                    <span style="padding:5px; font-size:15px; "> ADMINISTRATORS </span>
                 </div>
             </a></li>
 

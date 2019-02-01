@@ -5,6 +5,28 @@
     </div>
 
 </div>
+
+
+<form id="form_target" role="form" method="post" action="index.php?content=contact&action=edit_head">
+    <div class="row">
+        <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button>
+        <div class="col-lg-11">
+            <div class="form-group">
+                <label> </label>
+                <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
+                <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="6">
+                        <?PHP echo $contact_head[0]['contact_head_detail'];?>
+                    </textarea>
+            </div>
+        </div>
+        <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</form>
+<hr>
+
+
 <table>
     <thead>
         <tr>
@@ -30,7 +52,7 @@
 
 
         <td class="text-left">
-            <?PHP echo $contact[$i]['contact_title'];  ?>
+            <?PHP echo $contact[$i]['contact_title_id'];  ?>
         </td>
 
         <td class="text-left">

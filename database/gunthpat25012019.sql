@@ -48,7 +48,7 @@ INSERT INTO `tb_about_us` (`about_us_id`, `about_us_title`, `about_us_sub_title`
 
 CREATE TABLE `tb_contact` (
   `contact_id` int(5) NOT NULL,
-  `contact_title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `contact_title_id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `contact_firstname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `contact_lastname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `contact_email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `tb_contact` (
 -- Dumping data for table `tb_contact`
 --
 
-INSERT INTO `tb_contact` (`contact_id`, `contact_title`, `contact_firstname`, `contact_lastname`, `contact_email`, `contact_tel`, `contact_country`, `contact_text`) VALUES
+INSERT INTO `tb_contact` (`contact_id`, `contact_title_id`, `contact_firstname`, `contact_lastname`, `contact_email`, `contact_tel`, `contact_country`, `contact_text`) VALUES
 (1, 'ที่พัก', 'ส้มฉุน', 'เที่ยงกระโทก', 'Som@gmail.com', '089-958-8747', 'ประเทศไทย', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน'),
 (2, 'สถานที่', 'สมใจ', 'ใจดี', 'Test@gmail.com', '085-965-9587', 'ประเทศไทย', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน'),
 (3, 'การเดินทาง', 'มนัสวี', 'เข่งพิมล', 'Manadsawee@hotmail.com', '098-218-9498', 'ประเทศไทย', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน');
