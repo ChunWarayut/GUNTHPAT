@@ -1,5 +1,6 @@
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top "  id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="
+    z-index: 50; "id="mainNav">
         <div class="container">
             <a href="index.php" class="navbar-brand js-scroll-trigger "><img src="template/backend/images/logo/logo.png"
                     width="130px" class="img-icon float-right"></a>
@@ -58,6 +59,8 @@
         </div>
     </nav>
 
+    <!-- Custom scripts for this template -->
+    <script src="template/frontend/js/agency.min.js"></script>
 <?PHP
 require_once('slide.php');
 ?>
