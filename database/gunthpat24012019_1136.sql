@@ -65,21 +65,21 @@ INSERT INTO `tb_facilities` (`facilities_id`, `facilities_name`, `facilities_img
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_gallary`
+-- Table structure for table `tb_gallery`
 --
 
-CREATE TABLE `tb_gallary` (
-  `gallary_id` int(5) NOT NULL,
-  `gallary_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `gallary_img` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `gallary_type_id` int(5) NOT NULL
+CREATE TABLE `tb_gallery` (
+  `gallery_id` int(5) NOT NULL,
+  `gallery_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `gallery_img` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `gallery_type_id` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tb_gallary`
+-- Dumping data for table `tb_gallery`
 --
 
-INSERT INTO `tb_gallary` (`gallary_id`, `gallary_name`, `gallary_img`, `gallary_type_id`) VALUES
+INSERT INTO `tb_gallery` (`gallery_id`, `gallery_name`, `gallery_img`, `gallery_type_id`) VALUES
 (1, 'Deluxe Junior Suiteแอปแอ', 'hotel-1330841_1920.jpg', 3),
 (2, 'Deluxe Room', 'hotel-1979406_1920.jpg', 1),
 (3, 'Deliicious foods555', '24012019095132240120190951321461156926.jpg', 2),
@@ -89,19 +89,19 @@ INSERT INTO `tb_gallary` (`gallary_id`, `gallary_name`, `gallary_img`, `gallary_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_gallary_type`
+-- Table structure for table `tb_gallery_type`
 --
 
-CREATE TABLE `tb_gallary_type` (
-  `gallary_type_id` int(5) NOT NULL,
-  `gallary_type_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `tb_gallery_type` (
+  `gallery_type_id` int(5) NOT NULL,
+  `gallery_type_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tb_gallary_type`
+-- Dumping data for table `tb_gallery_type`
 --
 
-INSERT INTO `tb_gallary_type` (`gallary_type_id`, `gallary_type_name`) VALUES
+INSERT INTO `tb_gallery_type` (`gallery_type_id`, `gallery_type_name`) VALUES
 (1, 'ที่พัก'),
 (2, 'สิ่งอำนวยความสะดวก'),
 (3, 'สิ่งแวดล้อมด้วยรอบ');
@@ -200,16 +200,16 @@ ALTER TABLE `tb_facilities`
   ADD PRIMARY KEY (`facilities_id`);
 
 --
--- Indexes for table `tb_gallary`
+-- Indexes for table `tb_gallery`
 --
-ALTER TABLE `tb_gallary`
-  ADD PRIMARY KEY (`gallary_id`);
+ALTER TABLE `tb_gallery`
+  ADD PRIMARY KEY (`gallery_id`);
 
 --
--- Indexes for table `tb_gallary_type`
+-- Indexes for table `tb_gallery_type`
 --
-ALTER TABLE `tb_gallary_type`
-  ADD PRIMARY KEY (`gallary_type_id`);
+ALTER TABLE `tb_gallery_type`
+  ADD PRIMARY KEY (`gallery_type_id`);
 
 --
 -- Indexes for table `tb_slide`
@@ -244,15 +244,15 @@ ALTER TABLE `tb_about_us`
 ALTER TABLE `tb_facilities`
   MODIFY `facilities_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `tb_gallary`
+-- AUTO_INCREMENT for table `tb_gallery`
 --
-ALTER TABLE `tb_gallary`
-  MODIFY `gallary_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `tb_gallery`
+  MODIFY `gallery_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `tb_gallary_type`
+-- AUTO_INCREMENT for table `tb_gallery_type`
 --
-ALTER TABLE `tb_gallary_type`
-  MODIFY `gallary_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `tb_gallery_type`
+  MODIFY `gallery_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_slide`
 --

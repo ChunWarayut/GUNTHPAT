@@ -21,8 +21,9 @@
             <tr>
 
 
-                <td class="text-left">
-                    <?PHP echo $contact_us[0]['contact_us_title'];  ?>
+                <td class="text-center">
+                    <?PHP echo $contact_us[0]['contact_us_title'];  ?><br><hr>
+                   <img src="<?PHP echo $img_path . $contact_us[0]['contact_us_img'];  ?>" width="800px" alt=""> 
                 </td>
 
                 <td class="text-left">

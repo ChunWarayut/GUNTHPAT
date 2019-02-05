@@ -30,8 +30,8 @@ else if($content=="facilities"){
 }
 
 // อัลบั้ม
-else if($content=="gallary"){
-    require_once("modules/gallary/views/index.inc.php"); 
+else if($content=="gallery"){
+    require_once("modules/gallery/views/index.inc.php"); 
 }
 
 // เกี่ยวกับเรา
@@ -42,6 +42,11 @@ else if($content=="about_us"){
 //  หน้าระบบจัดการผู้ดูเเลระบบ
 else if($content=="user"){
     require_once("modules/user/views/index.inc.php"); 
+}
+
+//  ข่าวสาร
+else if($content=="news"){
+    require_once("modules/news/views/index.inc.php"); 
 }
 
 // หน้าหลัก

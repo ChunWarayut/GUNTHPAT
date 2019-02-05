@@ -36,7 +36,7 @@
                 <?PHP echo $slide[$i]['slide_link'];  ?>
             </td>
             <td>
-                <a href="?content=home&action=edit&id=<?PHP echo$i  ?>">
+                <a href="?content=home&action=edit&id=<?PHP echo $i  ?>">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
             </td>

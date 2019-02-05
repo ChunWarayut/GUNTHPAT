@@ -65,6 +65,7 @@ class Contact_us extends BaseModel{
         $data['contact_us_car_titel']=mysqli_real_escape_string(static::$db,$data['contact_us_car_titel']);
         $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
         $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
+        $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
 
         $sql = "UPDATE `tb_contact_us` 
         SET `contact_us_title` = '".$data['contact_us_title']."', 
@@ -85,7 +86,8 @@ class Contact_us extends BaseModel{
          `contact_us_car_titel` = '".$data['contact_us_car_titel']."', 
          `contact_us_taxi_detail` = '".$data['contact_us_taxi_detail']."', 
          `contact_us_car_detail` = '".$data['contact_us_car_detail']."', 
-         `contact_us_map` = '".$data['contact_us_map']."'
+         `contact_us_map` = '".$data['contact_us_map']."',
+         `contact_us_img` = '".$data['contact_us_img']."'
         WHERE `tb_contact_us`.`contact_us_id` = '$contact_us_id'
         ";
         // echo "<pre>";

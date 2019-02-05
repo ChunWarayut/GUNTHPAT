@@ -7,10 +7,11 @@ $img_path = "../img_upload/contact/";
 
 $contact_model = new Contact;
 $contact = $contact_model -> getContact();
+$contact_head = $contact_model -> getContact_head();
 
 
 // echo "<pre>";
-// print_r($contact);
+// print_r($contact_head);
 // echo "</pre>";
 
 
@@ -37,6 +38,14 @@ $target_dir = "../img_upload/contact/";
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
         $result = $contact_model-> deleteContact($id);
+        require_once($path.'view.inc.php');
+        ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?PHP
+    } else if( $_GET['action'] == "edit_head") {
+        $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail']);
         require_once($path.'view.inc.php');
         ?>
 <script>

@@ -1,16 +1,16 @@
 <script>
-    //---------ฟังชั่นแสดงรูป----------------
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#_img').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-        } else {
-            $('#_img').attr('src', '../img_upload/contact_us/default.jpg');
+//---------ฟังชั่นแสดงรูป----------------
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#_img').attr('src', e.target.result);
         }
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        $('#_img').attr('src', '../img_upload/contact_us/default.jpg');
     }
+}
 </script>
 
 <form id="form_target" role="form" method="post" action="index.php?content=contact_us&action=edit"
@@ -39,106 +39,125 @@ echo $contact_us[$id]['contact_us_title'];  ?>
 
 
             <div class="row ">
-                
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Title <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_title" name="contact_us_title" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_title'];?>" />
-                            <p class="help-block">Example : ...</p>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label> Sub Title <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_sub_title" name="contact_us_sub_title" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_sub_title'];?>" />
-                            <p class="help-block">Example : ...</p>
-                        </div>
+                <div class="col-lg-2">
+                    <div class="form-group" align="center">
+                        <img id="_img" width="400"
+                            src="<?PHP 
+                        if ($contact_us[$id]['contact_us_img'] != "" || $contact_us[$id]['contact_us_img'] != null) { 
+                            echo $img_path . $contact_us[$id]['contact_us_img']; 
+                            } else {
+                                echo $img_path . 'default.png';
+                            }  ?> "
+                            class="img-fluid" alt="">
+                        <input accept=".jpg , .png" type="file" id="contact_us_img" name="contact_us_img" class="form-control"
+                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);"
+                            value="<?php echo  $contact_us[$id]['contact_us_img']; ?>">
                     </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Title <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_title" name="contact_us_title" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_title'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
 
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label> Facebook <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_facebook" name="contact_us_facebook" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_facebook'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label> Sub Title <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_sub_title" name="contact_us_sub_title" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_sub_title'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
-                
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label> Tel <font color="#F00"><b>*</b></font></label>
-                            <input  id="contact_us_tel" name="contact_us_tel" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_tel'];?>" />
-                            <p class="help-block">Example : ...</p>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Address  <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_address" name="contact_us_address" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_address'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label> Facebook <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_facebook" name="contact_us_facebook" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_facebook'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Address 1  <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_address_1" name="contact_us_address_1" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_address_1'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label> Tel <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_tel" name="contact_us_tel" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_tel'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-1">
-                        <div class="form-group">
-                            <label> Address 2  <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_address_2" name="contact_us_address_2" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_address_2'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Address <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_address" name="contact_us_address" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_address'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Address 3  <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_address_3" name="contact_us_address_3" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_address_3'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Address 1 <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_address_1" name="contact_us_address_1" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_address_1'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-1">
-                        <div class="form-group">
-                            <label> Address 4  <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_address_4" name="contact_us_address_4" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_address_4'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label> Address 2 <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_address_2" name="contact_us_address_2" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_address_2'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Fax <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_fax" name="contact_us_fax" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_fax'];?>" />
-                            <p class="help-block">Example : ...</p>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Address 3 <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_address_3" name="contact_us_address_3" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_address_3'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
                         </div>
-                    </div>
-                
-                    <div class="col-lg-2">
-                        <div class="form-group">
-                            <label> Email <font color="#F00"><b>*</b></font></label>
-                            <input id="contact_us_email" name="contact_us_email" class="form-control"
-                                value="<?PHP echo $contact_us[$id]['contact_us_email'];?>" />
-                            <p class="help-block">Example : ...</p>
-                        </div>
-                    </div>
 
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label> Address 4 <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_address_4" name="contact_us_address_4" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_address_4'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Fax <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_fax" name="contact_us_fax" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_fax'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label> Email <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_email" name="contact_us_email" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_email'];?>" />
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
                             <label> Carry Title <font color="#F00"><b>*</b></font></label>
@@ -156,7 +175,7 @@ echo $contact_us[$id]['contact_us_title'];  ?>
                             <p class="help-block">Example : ...</p>
                         </div>
                     </div>
-                
+
                     <div class="col-lg-4">
                         <div class="form-group">
                             <label> Taxi Title <font color="#F00"><b>*</b></font></label>
@@ -183,7 +202,7 @@ echo $contact_us[$id]['contact_us_title'];  ?>
                             <p class="help-block">Example : ...</p>
                         </div>
                     </div>
-                
+
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label> Car Detail <font color="#F00"><b>*</b></font></label>
@@ -203,9 +222,7 @@ echo $contact_us[$id]['contact_us_title'];  ?>
                     </div>
 
                 </div>
-
+            </div>
         </div>
     </div>
-
-
 </form>

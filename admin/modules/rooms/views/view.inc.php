@@ -20,6 +20,7 @@
             <th width="500px"> Facility</th>
             <th width=""></th>
             <th width=""></th>
+            <th width=""></th>
         </tr>
     </thead>
     <?PHP 
@@ -32,7 +33,8 @@
             <?PHP echo $i+1;  ?>
         </td>
         <td>
-            <img src="<?PHP echo $img_path . $rooms[$i]['room_img'];  ?> " class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            <img src="<?PHP echo $img_path . $rooms[$i]['room_img'];  ?> "
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
                 width="500px" alt="">
         </td>
         <td class="text-left">
@@ -81,6 +83,25 @@
 
         </td>
 
+        <td>
+            <a href="?content=rooms&action=recommened&id=<?PHP echo $rooms[$i]['room_id'];?>&recommened=0">
+                <?PHP #endregion
+            if ($rooms[$i]['room_recommened'] == 1) {
+                ?>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </a>
+            <?PHP        
+            }else{
+           
+                ?>
+            <a href="?content=rooms&action=recommened&id=<?PHP echo $rooms[$i]['room_id'];  ?>&recommened=1">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </a>
+            <?PHP
+            }
+            ?>
+
+        </td>
 
         <td>
 

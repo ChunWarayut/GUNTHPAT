@@ -7,9 +7,10 @@ $img_path = "../img_upload/Facilities/";
 
 $facilities_model = new Facilities;
 $facilities = $facilities_model -> getFacilities();
+$facilities_head = $facilities_model -> getFacilitiesHead();
 
 // echo "<pre>";
-// print_r($facilities);
+// print_r($facilities_head);
 // echo "</pre>";
 
 // echo "<pre>";
@@ -39,11 +40,25 @@ $target_dir = "../img_upload/Facilities/";
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
+        
+        $target_file = $target_dir . $_POST['facilities_img_o'];
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+        
         $result = $facilities_model-> deleteFacilities($id);
         require_once($path.'view.inc.php');
         ?>
 <script>
-window.location = "index.php?content=gallary"
+window.location = "index.php?content=facilities"
+</script>
+<?PHP
+    } else if( $_GET['action'] == "edit_head") {
+        $result = $facilities_model-> editFacilitiesHead($id, $_POST['facilities_head_sub_title']);
+        require_once($path.'view.inc.php');
+        ?>
+<script>
+window.location = "index.php?content=facilities"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {

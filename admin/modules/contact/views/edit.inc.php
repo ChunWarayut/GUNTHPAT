@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h1>
-                        หน้าแก้ไขข้อมูล Gallary
+                        หน้าแก้ไขข้อมูล Gallery
                         <?PHP 
 use Monolog\Handler\PHPConsoleHandler;
 echo $contact[$id]['contact_name'];  ?>
@@ -58,7 +58,7 @@ echo $contact[$id]['contact_name'];  ?>
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Gallary Name <font color="#F00"><b>*</b></font></label>
+                                <label>Gallery Name <font color="#F00"><b>*</b></font></label>
                                 <input id="contact_name" name="contact_name" class="form-control" value="<?PHP echo $contact[$id]['contact_name'];?>" />
                                 <p class="help-block">Example :CONTACT</p>
                             </div>
@@ -67,7 +67,7 @@ echo $contact[$id]['contact_name'];  ?>
                         <div class="col-lg-12">
                             <div class="form-group">
 
-                                <label>Gallary Type <font color="#F00"><b>*</b></font></label> <br />
+                                <label>Gallery Type <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="contact_type_id" name="contact_type_id">
                                     <option selected value="<?PHP echo $contact_type[$type-1]['contact_type_id'];?>">
                                         <?PHP echo $contact_type[$type-1]['contact_type_name'];?>

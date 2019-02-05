@@ -2,7 +2,7 @@
     <ul class="sidebar-nav">
         <li class="logo">
             <div align="center">
-                <img src="../template/backend/images/logo/logo_header.png" class="img-responsive" width="200px">
+                <img src="../template/backend/images/logo/logo_header.png" class="img-responsive" style=" padding-top: 10%" width="170px">
             </div>
         </li>
         <li>
@@ -34,8 +34,8 @@
                 </div>
             </a></li>
 
-        <li><a href="index.php?content=gallary">
-                <div <?php if($content=="gallary" ){echo "class='menu-active'" ;} else {echo "class='menu'" ;}?>>
+        <li><a href="index.php?content=gallery">
+                <div <?php if($content=="gallery" ){echo "class='menu-active'" ;} else {echo "class='menu'" ;}?>>
                     <i class="fa fa-picture-o" style="font-size:24px"></i>
                     <span style="padding:5px; font-size:15px; ">GALLARY</span>
                 </div>
@@ -58,12 +58,22 @@
                     <span style="padding:5px; font-size:15px; ">CONTACT US</span>
                 </div>
             </a></li>
+            
         <li><a href="index.php?content=contact">
                 <div
                     <?php if($content=="contact" ){echo "class='menu-active'" ;} else
                     {echo "class='menu'" ;}?>>
                     <i class="fa fa-commenting" style="font-size:24px"></i>
-                    <span style="padding:5px; font-size:15px; ">CONTACT </span>
+                    <span style="padding:5px; font-size:15px; "> CONTACT </span>
+                </div>
+            </a></li>
+
+        <li><a href="index.php?content=news">
+                <div
+                    <?php if($content=="news" ){echo "class='menu-active'" ;} else
+                    {echo "class='menu'" ;}?>>
+                    <i class="fa fa-newspaper-o" style="font-size:24px"></i>
+                    <span style="padding:5px; font-size:15px; "> NEWS </span>
                 </div>
             </a></li>
 
@@ -72,7 +82,7 @@
                     <?php if($content=="user" ){echo "class='menu-active'" ;} else
                     {echo "class='menu'" ;}?>>
                     <i class="fa fa-user" style="font-size:24px"></i>
-                    <span style="padding:5px; font-size:15px; "> ผู้ดูแลระบบ </span>
+                    <span style="padding:5px; font-size:15px; "> ADMINISTRATORS </span>
                 </div>
             </a></li>
 

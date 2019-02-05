@@ -29,6 +29,25 @@ class Facilities extends BaseModel{
         }
     }
 
+    function getfacilitiesHead() {
+        $sql = " SELECT *
+        FROM `tb_facilities_head`
+        WHERE 1
+        ORDER BY tb_facilities_head.facilities_head_id
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
     function deleteFacilities($facilities_id) {
         $sql = "DELETE 
         FROM `tb_facilities` 
@@ -41,6 +60,21 @@ class Facilities extends BaseModel{
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
+    
+    function editFacilitiesHead($facilities_head_id, $facilities_head_sub_title) {
+        
+        $sql = "UPDATE `tb_facilities_head` SET `facilities_head_sub_title` = '$facilities_head_sub_title' WHERE `tb_facilities_head`.`facilities_head_id` = 1 
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
         }else {
             return 0;
         }

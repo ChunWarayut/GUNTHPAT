@@ -19,7 +19,7 @@
     </head>
     <style type="text/css">
         body{
-            background-image: url('../template/frontend/images/background/bg_home.jpg');
+            background-image: url('../template/backend/images/travel.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -50,8 +50,8 @@
         <div class="container">
             <iframe id="checklogin" name="checklogin" src="" hidden></iframe>
             <form class="login-panel" action="check_login.php" method="post" target="checklogin">
-                <div align="center"><img style="width:180px; height:180px;" src="../template/backend/images/logo/logo.png"></div>
-                <div style="padding: 0px 40px;">
+                <div align="center"  style="padding-top: 10%"><img style="width:180px; height:110px;"   style="padding-top: 10%" src="../template/backend/images/logo/logo.png"></div>
+                <div style="padding: 10% 40px;">
                     <input required name="username" id="username" type="text" class="form-control form-control-sm" autocomplete="false" placeholder="Username" autofocus>
                     <input required name="password" id="password" type="password" style="margin-top:10px;" class="form-control form-control-sm" autocomplete="false" placeholder="Password">
                     <div style="padding-top:15px;" align="right">

@@ -64,17 +64,24 @@ echo $rooms[$id]['room_name'];  ?>
                             </div>
                         </div>
 
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label> Sub Title <font color="#F00"><b>*</b></font></label>
+                                <input id="room_sub_title" name="room_sub_title" class="form-control" value="<?PHP echo $rooms[$id]['room_sub_title'];?>" />
+                                <p class="help-block">Example : Delux Room</p>
+                            </div>
+                        </div>
+
 
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Room Type <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="room_type_id" name="room_type_id">
-                                    <option selected value="<?PHP echo $room_type[$type-1]['room_type_id'];?>"><?PHP echo $room_type[$type-1]['room_type_name'];?></option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($room_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option  value="<?PHP echo $room_type[$i]['room_type_id'];?>"><?PHP echo $room_type[$i]['room_type_name'];?></option>
+                                    <option selected  value="<?PHP echo $room_type[$i]['room_type_id'];?>"><?PHP echo $room_type[$i]['room_type_name'];?></option>
                                     <?PHP 
                                 }
                                 ?>
