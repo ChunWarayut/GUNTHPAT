@@ -6,6 +6,7 @@
 filter: blur(0.5px);
 ">
     <div class="row" style="padding-top: 10%; padding-bottom: 10%">
+    <div class="container">
         <div class="col-lg-1">
 
         </div>
@@ -44,6 +45,7 @@ filter: blur(0.5px);
         </div>
 
         <div class="col-lg-1">
+        </div>
 
         </div>
     </div>
