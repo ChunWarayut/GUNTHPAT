@@ -20,11 +20,5 @@ $gallery = $gallery_model -> getgallery() ;
     <?PHP require_once('view/about_us/index.inc.php');?>
     <?PHP require_once('view/footer.inc.php'); ?>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="template/frontend/vendor/jquery/jquery.min.js"></script>
-    <script src="template/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="template/frontend/js/agency.min.js"></script>
 </body>
-<script src="template/frontend/js/agency.min.js"></script>
 <html>

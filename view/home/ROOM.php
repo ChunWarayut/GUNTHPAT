@@ -8,7 +8,7 @@ for ($i=0; $i < count($rooms); $i++){
         ?>
 <div class="container">
     <div class="row">
-        <div class="col-xl-6">
+        <div class="col-xl-4">
             <h1 class="text-left">
             <?PHP  echo $i+1;  ?>
             </h1>
@@ -32,7 +32,7 @@ for ($i=0; $i < count($rooms); $i++){
                     class="btn btn-primary text-uppercase js-scroll-trigger"> เพิ่มเติม </a>
             </div>
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-8">
             <img src="
             <?PHP
            echo $pathImg .  $rooms[$i]['room_img']; 
@@ -55,7 +55,7 @@ for ($i=0; $i < count($rooms); $i++){
 
 <div class="container">
     <div class="row">
-        <div class="col-xl-6">
+        <div class="col-xl-8">
             <img src="
             <?PHP
            echo $pathImg .  $rooms[$i]['room_img']; 
@@ -63,7 +63,7 @@ for ($i=0; $i < count($rooms); $i++){
         "
                 class="img-fluid" alt="">
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-4">
             <h1 class="text-left">
                 <?PHP  echo $i+1;  ?>
             </h1>

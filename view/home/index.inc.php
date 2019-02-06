@@ -17,6 +17,7 @@ $pathImgGallery = "img_upload/gallery/";
 require_once('models/Gallery.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
+$gallery_head = $gallery_model -> getgalleryHead();
 
 
 require_once('models/Contact_us.php');
