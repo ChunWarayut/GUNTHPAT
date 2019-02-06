@@ -20,8 +20,8 @@ $room_type = $room_type_model -> getRoomType();
 // echo "</pre>";
 
 
-$type = $_GET['type'];
-$id = $_GET['id'];
+$type = isset($_GET['type']);
+$id = isset($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $rooms);
 // ECHO "</PRE>";

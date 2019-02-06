@@ -5,7 +5,7 @@ $path = "modules/news/views/";
 
 $news_model = new News;
 
-$news_id = $_GET['id'];
+$news_id = isset($_GET['id']);
 
 
 

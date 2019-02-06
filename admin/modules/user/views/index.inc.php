@@ -22,7 +22,7 @@ $user_id = $_GET['id'];
 }
 
 if(!isset($_GET['action'])){
-    $user = $user_model->getUserBy($_GET['name'],$_GET['type'],$_GET['email']);
+    $user = $user_model->getUserBy(isset($_GET['name']),isset($_GET['type']),isset($_GET['email']));
     require_once($path.'view.inc.php');
 }else if ($_GET['action'] == 'insert'){
     $user_type = $user_type_model->getUserTypeBy();
