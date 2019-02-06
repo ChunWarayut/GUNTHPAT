@@ -1,6 +1,6 @@
 
 <!-- FACILITIES -->
-<div class="container"
+<div class=""
     style="background-image: url('img_upload/facilities/blogger-336371_1920.jpg');
 -webkit-filter: blur(0.5px);
 filter: blur(0.5px);
