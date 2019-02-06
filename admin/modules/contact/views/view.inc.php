@@ -19,7 +19,7 @@
                     </textarea>
             </div>
         </div>
-        <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button>
+        <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button> -->
         <div class="col-lg-6">
         </div>
     </div>

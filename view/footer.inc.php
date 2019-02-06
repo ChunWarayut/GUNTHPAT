@@ -11,8 +11,8 @@ $img_path = "img_upload/news/";
 
 <div class="row text-white" style="background-color: #212529; padding-right: 3%;">
 
-        <div class="col-xl-3 text-center align-self-center ">
-    <div class="">
+    <div class="col-xl-3 text-center align-self-center ">
+        <div class="container">
             <img src="img_upload/logo/logo.png" class="img-fluid " width="400">
         </div>
     </div>
@@ -41,7 +41,7 @@ $img_path = "img_upload/news/";
 
     </div>
     <div class="col-xl-3" style="padding-top: 5%; padding-bottom: 5%">
-        <div class="">
+        <div class="container">
             <h4>
                 <span>
                     LASTEST NEWS
@@ -65,7 +65,7 @@ $img_path = "img_upload/news/";
         </div>
     </div>
     <div class="col-xl-3 " style="padding-top: 5%; padding-bottom: 5%">
-        <div class="">
+        <div class="container">
             <h4>
                 <span>
                     CONTACT US
