@@ -9,6 +9,7 @@ $about_us_model = new About_us;
 $about_us = $about_us_model -> getabout_us() ;
 
 
+$pathImgFacilities = "img_upload/facilities/";
 require_once('models/Facilities.php');
 $facilities_model = new Facilities;
 $facilities = $facilities_model -> getfacilities()  ;
@@ -17,6 +18,7 @@ $pathImgGallery = "img_upload/gallery/";
 require_once('models/Gallery.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
+$gallery_head = $gallery_model -> getgalleryHead();
 
 // echo "<pre>";
 // print_r($about_us);

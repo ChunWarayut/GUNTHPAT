@@ -1,9 +1,11 @@
-
-<section class="slide" style="margin-top: -350;">
-    <?PHP for($i=0;$i<count($slide );$i++){ ?>
-        <img src="img_upload/slide/<?PHP echo $slide[$i]['slide_img']; ?>" > 
-    <?PHP } ?>
+<section class="slide" style="margin-top: -350; " >
+    <?php for ($i = 0; $i < count($slide); ++$i) {
+    ?>
+        <img style=" width: 200px; height: 900px; object-fit: cover;" src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>" > 
+    <?php
+} ?>
 </section>
+
 
 <script type="text/javascript">
     $(document).on('ready', function() {
@@ -11,8 +13,8 @@
             arrows: false,
             dots: false,
             infinite: true,
-            // autoplay: true,
-            // autoplaySpeed: 5000,
+            autoplay: true,
+            autoplaySpeed: 2500,
         });
     });
 </script>

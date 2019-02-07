@@ -7,8 +7,8 @@ $pathImg = "img_upload/rooms/";
 require_once('models/Rooms.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRoomsRecommened();
-$pathImgFacilities = "img_upload/facilities/";
 
+$pathImgFacilities = "img_upload/facilities/";
 require_once('models/Facilities.php');
 $facilities_model = new Facilities;
 $facilities = $facilities_model -> getfacilities()  ;
