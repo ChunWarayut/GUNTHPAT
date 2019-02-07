@@ -17,8 +17,8 @@ $contact_us = $contact_us_model -> getContact_us();
 // echo "</pre>";
 
 
-$type = $_GET['type'];
-$id = $_GET['id'];
+$type = isset($_GET['type']);
+$id = isset($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $Contact_us);
 // ECHO "</PRE>";

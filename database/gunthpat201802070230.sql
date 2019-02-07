@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2019 at 10:43 AM
+-- Generation Time: Feb 06, 2019 at 04:27 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -138,7 +138,7 @@ CREATE TABLE `tb_contact_us` (
 --
 
 INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title`, `contact_us_sub_title`, `contact_us_facebook`, `contact_us_tel`, `contact_us_address`, `contact_us_address_1`, `contact_us_address_2`, `contact_us_address_3`, `contact_us_address_4`, `contact_us_fax`, `contact_us_email`, `contact_us_carry_title`, `contact_us_carry_detail`, `contact_us_taxi_title`, `contact_us_taxi_detail`, `contact_us_car_titel`, `contact_us_car_detail`, `contact_us_map`, `contact_us_img`) VALUES
-(8, 'GUNTHPAT PLACE', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.     Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'https://m.facebook.com/gunthpatplace', '098-652-9851', '263/3 Soi King-Sa wai rieng', 'Nai Muang', 'Muang', 'Nakhornratchasima ', '30000', '098-652-9851, 025-658-965', 'gunthpatplace@hotmail.com', 'ระบบขนส่งสาธารณะ', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', 'แท็กซี่โดยสาร', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', 'รถรับส่งของโรงแรม', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', '\'35.0', '01022019104456010220191044561485768162.jpg');
+(8, 'GUNTHPAT PLACE', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.     Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'https://m.facebook.com/gunthpatplace', '098-652-9851', '263/3 Soi King-Sa wai rieng', 'Nai Muang', 'Muang', 'Nakhornratchasima ', '30000', '098-652-9851, 025-658-965', 'gunthpatplace@hotmail.com', 'ระบบขนส่งสาธารณะ', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', 'แท็กซี่โดยสาร', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', 'รถรับส่งของโรงแรม', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน', '\'35.0', '06022019102446060220191024461752050763.jpg');
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,10 @@ INSERT INTO `tb_gallery` (`gallery_id`, `gallery_name`, `gallery_img`, `gallery_
 (1, 'Deluxe Junior Suiteแอปแอ', 'hotel-1330841_1920.jpg', 3, 1),
 (2, 'Deluxe Room', 'hotel-1979406_1920.jpg', 1, 0),
 (3, 'Deliicious foods555', '24012019095132240120190951321461156926.jpg', 2, 0),
-(5, '\r\nthe bridge', 'bangkok-1178693_1920.jpg', 3, 0);
+(5, '\r\nthe bridge', 'bangkok-1178693_1920.jpg', 3, 0),
+(6, 'ระเบียง', '06022019102358060220191023582031698422.JPG', 3, 0),
+(7, 'บันได', '06022019102406060220191024061847635412.JPG', 1, 0),
+(8, 'โครมไฟ', '0602201910241906022019102419791969612.JPG', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -222,7 +225,7 @@ CREATE TABLE `tb_gallery_head` (
 --
 
 INSERT INTO `tb_gallery_head` (`gallery_head_id`, `gallery_head_title`, `gallery_head_sub_title`) VALUES
-(1, 'GUNTHPAT PLACE', '                                                t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.');
+(1, 'GUNTHPAT PLACE', '                                                                                                                                                                                                                        ค้นดูรูปภาพในแกลเลอรีของเราและเริ่มจินตนาการภาพวันหยุดพักผ่อนของท่านค้นดูรูปภาพในแกลเลอรีของเราและเริ่มจินตนาการภาพวันหยุดพักผ่อนของท่าน                                                                                                                                                                                                    ');
 
 -- --------------------------------------------------------
 
@@ -301,12 +304,12 @@ CREATE TABLE `tb_room` (
 --
 
 INSERT INTO `tb_room` (`room_id`, `room_type_id`, `room_name`, `room_sub_title`, `room_price`, `room_amout`, `room_img`, `room_size`, `room_detail_1`, `room_detail_2`, `room_detail_3`, `room_facility_1`, `room_facility_2`, `room_recommened`) VALUES
-(1, 4, 'Deluxe Room', '\r\nt hotel  urban hotel, sardinia\r\n\r\nA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.\r\n', '4000.00', 5, '22012019164823220120191648231602616181.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 0),
-(2, 2, 'Duluxe Junior Suite', '\r\nt hotel  urban hotel, sardinia\r\n\r\nA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.\r\n', '4150.00', 5, '002.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 0),
-(3, 4, 'Deluxe River View Room', 'dmin/index.php?content=roomsel  urban hotel, sardiniaA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.', '5100.00', 5, '003.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี ', 1),
-(4, 4, 'Anantara Riverfront Suite', '\r\nt hotel  urban hotel, sardinia\r\n\r\nA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.\r\n', '6100.00', 5, '004.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1),
-(5, 2, 'Dream Stateroom', '\r\nt hotel  urban hotel, sardinia\r\n\r\nA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.\r\n', '12000.00', 5, '005.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 0),
-(6, 4, 'Family Suite', '\r\nt hotel  urban hotel, sardinia\r\n\r\nA dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and contemporary elegant design. Our branding approach reflects the vitality of this urban hotel with a vibrant colour palette, clean design and engaging photography which highlights the sophistication and modern luxuries offered to the hotel guest.\r\n', '9800.00', 5, '006.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1);
+(1, 4, 'Deluxe Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '4000.00', 5, '22012019164823220120191648231602616181.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 0),
+(2, 4, 'Duluxe Junior Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '4150.00', 5, '002.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1),
+(3, 4, 'Deluxe River View Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '5100.00', 5, '003.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี ', 1),
+(4, 4, 'Anantara Riverfront Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '6100.00', 5, '004.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1),
+(5, 4, 'Dream Stateroom', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '12000.00', 5, '005.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1),
+(6, 4, 'Family Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', '9800.00', 5, '006.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', 1);
 
 -- --------------------------------------------------------
 
@@ -348,8 +351,8 @@ CREATE TABLE `tb_slide` (
 --
 
 INSERT INTO `tb_slide` (`slide_id`, `slide_img`, `slide_title`, `slide_sub_title`, `slide_link`) VALUES
-(1, '29012019110615290120191106151398175927.jpg', 'Delux Room', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                                                                                                                                                                                                                                                                                     ', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
-(2, '29012019110632290120191106321811532773.jpg', 'Dream Stateroom', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                              ', 'https://youtu.be/JZKlSYWlW54'),
+(1, '06022019102303060220191023031740682243.jpg', 'Delux Room', '                                                                                                                other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
+(2, '29012019110632290120191106321811532773.jpg', 'Dream Stateroom', '                            other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                      ', 'https://youtu.be/JZKlSYWlW54'),
 (3, '29012019110639290120191106391581324248.jpg', 'Family Suite', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                                                                                        ', 'https://youtu.be/aUSfFtSmZJk');
 
 -- --------------------------------------------------------
@@ -549,7 +552,7 @@ ALTER TABLE `tb_facilities_head`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `gallery_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `gallery_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tb_gallery_head`
 --

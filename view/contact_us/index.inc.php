@@ -17,7 +17,7 @@ $contact = $contact_model -> getContact();
 $contact_head = $contact_model -> getContact_head();
 
 // print_r($contact_head);
-if ($_GET['action'] == "add"):
+if (isset($_GET['action']) == "add"):
 
     if(isset($_POST['contact_title_id'])){
         $check = true;
