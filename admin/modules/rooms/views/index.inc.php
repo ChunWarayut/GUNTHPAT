@@ -20,8 +20,8 @@ $room_type = $room_type_model -> getRoomType();
 // echo "</pre>";
 
 
-$type = isset($_GET['type']);
-$id = isset($_GET['id']);
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $rooms);
 // ECHO "</PRE>";
@@ -60,7 +60,7 @@ window.location = "index.php?content=rooms"
 
         ?>
 <script>
-window.location = "index.php?content=rooms"
+// window.location = "index.php?content=rooms"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {

@@ -15,8 +15,8 @@ $contact_head = $contact_model -> getContact_head();
 // echo "</pre>";
 
 
-$type = isset($_GET['type']);
-$id = isset($_GET['id']);
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $contact);
 // ECHO "</PRE>";

@@ -84,10 +84,10 @@
         </td>
 
         <td>
+            <?PHP 
+                    if ($rooms[$i]['room_recommened'] == 1) {
+                        ?>
             <a href="?content=rooms&action=recommened&id=<?PHP echo $rooms[$i]['room_id'];?>&recommened=0">
-                <?PHP #endregion
-            if ($rooms[$i]['room_recommened'] == 1) {
-                ?>
                 <i class="fa fa-star" aria-hidden="true"></i>
             </a>
             <?PHP        

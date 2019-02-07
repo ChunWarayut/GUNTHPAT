@@ -18,8 +18,8 @@ $facilities_head = $facilities_model -> getFacilitiesHead();
 // echo "</pre>";
 
 
-$type = isset($_GET['type']);
-$id = isset($_GET['id']);
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $Facilities);
 // ECHO "</PRE>";

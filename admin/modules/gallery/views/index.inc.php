@@ -19,8 +19,8 @@ $gallery_type = $gallery_model -> getGalleryType();
 // echo "</pre>";
 
 
-$type = isset($_GET['type']);
-$id = isset($_GET['id']);
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $gallery);
 // ECHO "</PRE>";

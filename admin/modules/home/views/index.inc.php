@@ -8,7 +8,7 @@ $target_dir = "../img_upload/slide/";
 
 $slide_model = new Slide;
 $slide = $slide_model -> slideRoom01();
-$id = isset($_GET['id']);
+$id =($_GET['id']);
 
 // echo "<pre>";
 // print_r($slide);
