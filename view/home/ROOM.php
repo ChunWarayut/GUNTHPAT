@@ -1,48 +1,39 @@
 <br>
 <br>
-<?PHP
-for ($i=0; $i < count($rooms); $i++){
-
-    if ($i % 2 == 0 ) {
-
+<?php
+for ($i = 0; $i < count($rooms); ++$i) {
+    if ($i % 2 == 0) {
         ?>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4" style="padding-bottom: 10%">
-            <h1 class="text-left">
-                <?PHP  echo $i+1;  ?>
-            </h1>
-            <p class="text-left">
-                |
-            </p>
-            <h3>
-                <?PHP
-           echo $rooms[$i]['room_name'];
-        ?>
-            </h3>
-            <p>
-                <?PHP
-           echo $rooms[$i]['room_sub_title'];
-        ?>
-            </p>
-            <div class="container">
-                <div class="row">
-                    <h4>$
-                        <?PHP echo $rooms[$i]['room_price']; ?> / วัน </h4>
-                    &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                        เพิ่มเติม
-                    </a>
+        <div class="col-sm-4" style="position: relative;padding-bottom: 10%">
+            <div style="bottom: 0;position: absolute;">
+                <h1 class="text-left">
+                    <?php  echo $i + 1; ?>
+                </h1>
+                <p class="text-left">
+                    |
+                </p>
+                <h3>
+                    <?php
+            echo $rooms[$i]['room_name']; ?>
+                </h3>
+                <p>
+                    <?php
+            echo $rooms[$i]['room_sub_title']; ?>
+                </p>
+                <div class="container">
+                    <div class="row">
+                        <h4>$
+                            <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
+                        &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
+                            เพิ่มเติม
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-8">
-            <img src="
-            <?PHP
-           echo $pathImg .  $rooms[$i]['room_img']; 
-        ?>
-        "
-                class="img-fluid" alt="">
-        </div>
+      .
     </div>
 </div>
 
@@ -50,46 +41,43 @@ for ($i=0; $i < count($rooms); $i++){
 <br>
 <br>
 <br>
-<?PHP 
-        
-    }
-    else {
+<?php
+    } else {
         ?>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8"  style="padding-bottom: 10%">
-            <img src="
-            <?PHP
-           echo $pathImg .  $rooms[$i]['room_img']; 
-        ?>
+        <div class="col-sm-8">
+            <img style=" width: 800px; height: 400px; object-fit: cover;" src="
+            <?php
+           echo $pathImg.$rooms[$i]['room_img']; ?>
         "
                 class="img-fluid" alt="">
         </div>
         <div class="col-sm-4">
-            <h1 class="text-left">
-                <?PHP  echo $i+1;  ?>
-            </h1>
-            <p class="text-left">
-                |
-            </p>
-            <h3>
-                <?PHP
-           echo $rooms[$i]['room_name'];
-        ?>
-            </h3>
-            <p>
-                <?PHP
-           echo $rooms[$i]['room_sub_title'];
-        ?>
-            </p>
-            <div class="container">
-                <div class="row">
-                    <h4>$
-                        <?PHP echo $rooms[$i]['room_price']; ?> / วัน </h4>
-                    &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                        เพิ่มเติม
-                    </a>
+            <div style="bottom: 0;position: absolute;">
+                <h1 class="text-left">
+                    <?php  echo $i + 1; ?>
+                </h1>
+                <p class="text-left">
+                    |
+                </p>
+                <h3>
+                    <?php
+            echo $rooms[$i]['room_name']; ?>
+                </h3>
+                <p>
+                    <?php
+            echo $rooms[$i]['room_sub_title']; ?>
+                </p>
+                <div class="container">
+                    <div class="row">
+                        <h4>$
+                            <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
+                        &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
+                            เพิ่มเติม
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,14 +88,12 @@ for ($i=0; $i < count($rooms); $i++){
 <br>
 <br>
 <br>
-<?PHP
-    }
-
-?>
+<?php
+    } ?>
 
 
 
-<?PHP
+<?php
 }
 ?>
 
