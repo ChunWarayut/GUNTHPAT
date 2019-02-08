@@ -7,11 +7,11 @@ filter: blur(0.5px);
 ">
 <div class="container"   style="margin-top: -160; ">
     <div class="row" style="padding-top: 10%; padding-bottom: 10%">
-        <div class="col-lg-1">
+        <div class="col-md-1">
 
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <h3>
                 <?php
            echo $facilities[0]['facilities_name'];
@@ -26,7 +26,7 @@ filter: blur(0.5px);
 
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <img src="
             <?php
            echo $pathImgFacilities.$facilities[0]['facilities_img'];
@@ -34,7 +34,7 @@ filter: blur(0.5px);
         "
                 class="img-fluid" alt="">
         </div>
-        <div class="col-lg-2">
+        <div class="col-md-2">
             <div class="  border border-warning" width="200" height="200 "
                 style="border-warning: #ffffff; padding-top: 10%; padding-bottom: 30%">
                 <p style="color: #ffffff;">
@@ -44,7 +44,7 @@ filter: blur(0.5px);
             </div>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-md-1">
         </div>
 
         </div>
