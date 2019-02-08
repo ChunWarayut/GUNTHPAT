@@ -60,17 +60,15 @@
                             <div class="form-group">
 
                                 <label>Gallery Type <font color="#F00"><b>*</b></font></label> <br />
-                                <select class="form-control  custom-select" id="gallery_type_id" name="gallery_type_id">
-                                    <option selected value="<?PHP echo $gallery_type[0]['gallery_type_id'];?>">
+                               <select class="form-control  custom-select" id="gallery_type_id" name="gallery_type_id">
+                                    <option  value="<?PHP echo $gallery_type[0]['gallery_type_id'];?>">
                                         เลือก Type Gallery
                                     </option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
-                                        <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
-                                    </option>
+                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"><?PHP echo $gallery_type[$i]['gallery_type_id'];?></option>
                                     <?PHP 
                                 }
                                 ?>
