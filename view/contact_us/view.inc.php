@@ -1,4 +1,4 @@
-<div class="container" style=" padding-bottom:8%">
+<div class="container" style=" padding-bottom:8%; margin-top: -170;">
 
     <div class="text-center" style="padding-top: 8%; padding-bottom:8%">
         <h1>
@@ -14,8 +14,8 @@
     <div class="row">
 
         <div class="col-lg-4">
-            <img src=" <?PHP
-                        echo $pathImgContact_us . $contact_us[0]['contact_us_img'];
+            <img src=" <?php
+                        echo $pathImgContact_us.$contact_us[0]['contact_us_img'];
                         ?>"
                 style=" padding-bottom:8%"
                 class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
@@ -24,12 +24,12 @@
         <div class="col-lg-8" style="padding-bottom:8%;">
             <h4 class="font-weight-light">
                 <span>
-                    <?PHP echo $contact_us[0]['contact_us_title']; ?>
+                    <?php echo $contact_us[0]['contact_us_title']; ?>
                 </span>
             </h4>
             <p class="font-weight-light">
                 <span>
-                    <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
+                    <?php echo $contact_us[0]['contact_us_sub_title']; ?>
                 </span>
             </p>
             <hr>
@@ -41,9 +41,9 @@
                                 <i class="fab fa-facebook-square" style="font-size:30px"></i> &nbsp;
                             </div>
                             <div class="col-10">
-                                <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                                <a href="<?php echo $contact_us[0]['contact_us_facebook']; ?>">
                                     <p class="font-weight-light">
-                                        <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
+                                        <?php echo $contact_us[0]['contact_us_facebook']; ?>
                                     </p>
                                 </a>
                             </div>
@@ -53,9 +53,9 @@
                         <div class="container">
                             <div class="row">
                                 <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
-                                <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
+                                <a href="tel:<?php echo $contact_us[0]['contact_us_tel']; ?>">
                                     <p class="font-weight-light">
-                                        <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                                        <?php echo $contact_us[0]['contact_us_tel']; ?>
                                     </p>
                                 </a>
                             </div>
@@ -72,11 +72,11 @@
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light"> &nbsp;
-                            <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
-                            <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
+                            <?php echo $contact_us[0]['contact_us_address']; ?><br>
+                            <?php echo $contact_us[0]['contact_us_address_1']; ?>
+                            <?php echo $contact_us[0]['contact_us_address_2']; ?>
+                            <?php echo $contact_us[0]['contact_us_address_3']; ?>
+                            <?php echo $contact_us[0]['contact_us_address_4']; ?>
                         </p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light"> &nbsp;
-                            <?PHP echo $contact_us[0]['contact_us_fax']; ?>
+                            <?php echo $contact_us[0]['contact_us_fax']; ?>
                         </p>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
                         <i class="fas fa-envelope" style="font-size:40px"></i>
                     </div>
                     <div class="col-auto">
-                        <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
+                        <a href="mailto:<?php echo $contact_us[0]['contact_us_email']; ?>">
                             <p class="font-weight-light"> &nbsp;
-                                <?PHP echo $contact_us[0]['contact_us_email']; ?>
+                                <?php echo $contact_us[0]['contact_us_email']; ?>
                             </p>
                         </a>
                     </div>
@@ -155,7 +155,7 @@
 
 
                 <div style="">
-                    <fieldset class="gllpLatlonPicker">
+                    <fieldset class="gllpLatlonPicker" style="margin: -16;">
                         <div class="gllpMap" style="width: 100%; height: 60%;">Google Maps</div>
                         <input type="text" class="gllpLatitude form-control" name="location_lat" value="14.9764223"
                             hidden />
@@ -179,7 +179,7 @@
                     </p>
                 </h4>
                 <p class="font-weight-light">
-                    <?PHP echo $contact_head[0]['contact_head_detail']; ?>
+                    <?php echo $contact_head[0]['contact_head_detail']; ?>
                 </p>
             </div>
             <div class="col-md-6">
