@@ -140,8 +140,8 @@ class Gallery extends BaseModel{
     }
     function editGallery($gallery_id,$data = []) {
         $data['gallery_name']=mysqli_real_escape_string(static::$db,$data['gallery_name']);
-        $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
         $data['gallery_img']=mysqli_real_escape_string(static::$db,$data['gallery_img']);
+        $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
 
         $sql = "UPDATE `tb_gallery` 
         SET `gallery_name` = '".$data['gallery_name']."', 
@@ -162,8 +162,8 @@ class Gallery extends BaseModel{
 
     function addGallery($data = []) {
         $data['gallery_name']=mysqli_real_escape_string(static::$db,$data['gallery_name']);
-        $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
         $data['gallery_img']=mysqli_real_escape_string(static::$db,$data['gallery_img']);
+        $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
 
         $sql = "INSERT INTO `tb_gallery`(
             `gallery_id`, 
@@ -174,7 +174,7 @@ class Gallery extends BaseModel{
                 NULL, 
                 '".$data['gallery_name']."', 
                 '".$data['gallery_img']."' ,
-                '".$data['`gallery_type_id`,']."'
+                '".$data['gallery_type_id']."'
                 )
         
         

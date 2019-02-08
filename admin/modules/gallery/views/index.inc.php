@@ -77,7 +77,7 @@ window.location = "index.php?content=gallery"
         $data['gallery_id'] = $_POST['gallery_id'];
         $data['gallery_name'] = $_POST['gallery_name'];
         $data['gallery_type_id'] = $_POST['gallery_type_id'];
-
+print_r ($data);
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------

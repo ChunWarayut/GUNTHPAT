@@ -66,6 +66,24 @@ class Contact extends BaseModel{
             return $data;
         }
     }
+    function getContactTitle() {
+        $sql = " SELECT *
+        FROM `tb_contact_title`
+        WHERE 1
+        ORDER BY tb_contact_title.contact_title_id
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
 
     function addContact($data = []) {
         $data['contact_title_id']=mysqli_real_escape_string(static::$db,$data['contact_title_id']);
@@ -75,16 +93,10 @@ class Contact extends BaseModel{
         $data['contact_tel']=mysqli_real_escape_string(static::$db,$data['contact_tel']);
         $data['contact_country']=mysqli_real_escape_string(static::$db,$data['contact_country']);
         $data['contact_text']=mysqli_real_escape_string(static::$db,$data['contact_text']);
+        $data['contact_type_id']=mysqli_real_escape_string(static::$db,$data['contact_type_id']);
 
-        $sql = "INSERT INTO `tb_contact`(
-            `contact_id`, 
-            `contact_title_id`, 
-            `contact_firstname`, 
-            `contact_lastname`, 
-            `contact_email`, 
-            `contact_tel`, 
-            `contact_country`, 
-            `contact_text`) 
+
+        $sql = "INSERT INTO `tb_contact`(`contact_id`, `contact_title_id`, `contact_firstname`, `contact_lastname`, `contact_email`, `contact_tel`, `contact_country`, `contact_type_id`, `contact_text`)
             VALUES (
                 NULL, 
                 '".$data['contact_title_id']."', 
@@ -93,14 +105,13 @@ class Contact extends BaseModel{
                 '".$data['contact_email']."' ,
                 '".$data['contact_tel']."' ,
                 '".$data['contact_country']."' ,
-                '".$data['`contact_text`,']."'
+                '".$data['contact_type_id']."' ,
+                '".$data['contact_text']."'
                 )
-        
-        
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;

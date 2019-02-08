@@ -5,20 +5,20 @@
 -webkit-filter: blur(0.5px);
 filter: blur(0.5px);
 ">
-<div class="container">
+<div class="container"   style="margin-top: -160; ">
     <div class="row" style="padding-top: 10%; padding-bottom: 10%">
-        <div class="col-lg-1">
+        <div class="col-md-1">
 
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <h3>
-                <?PHP
+                <?php
            echo $facilities[0]['facilities_name'];
         ?>
             </h3>
             <p style="color: #ffffff;">
-                <?PHP
+                <?php
            echo $facilities[0]['facilities_detail'];
         ?>
             </p>
@@ -26,17 +26,17 @@ filter: blur(0.5px);
 
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <img src="
-            <?PHP
-           echo $pathImgFacilities .  $facilities[0]['facilities_img']; 
+            <?php
+           echo $pathImgFacilities.$facilities[0]['facilities_img'];
         ?>
         "
                 class="img-fluid" alt="">
         </div>
-        <div class="col-lg-2">
+        <div class="col-md-2">
             <div class="  border border-warning" width="200" height="200 "
-                style="border-warning: #ffffff; padding-top: 30%; padding-bottom: 30%">
+                style="border-warning: #ffffff; padding-top: 10%; padding-bottom: 30%">
                 <p style="color: #ffffff;">
                 Delichious <br>
                 Foods <br>
@@ -44,7 +44,7 @@ filter: blur(0.5px);
             </div>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-md-1">
         </div>
 
         </div>

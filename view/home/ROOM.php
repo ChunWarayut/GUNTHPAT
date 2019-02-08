@@ -4,8 +4,8 @@
 for ($i = 0; $i < count($rooms); ++$i) {
     if ($i % 2 == 0) {
         ?>
-<div class="container">
-    <div class="row" style="position: relative;padding-bottom: 10%">
+<div class="container" style="margin-top: -250;">
+    <div class="row" style="position: relative;padding-bottom: 15%">
         <div class="col-sm-4" >
             <div style="bottom: 0;position: absolute;">
                 <h1 class="text-left">
@@ -52,8 +52,8 @@ for ($i = 0; $i < count($rooms); ++$i) {
     } else {
         ?>
 
-<div class="container">
-    <div class="row" style="position: relative;padding-bottom: 10%">
+<div class="container"  style="margin-top: -130; ">
+    <div class="row" style="position: relative;padding-bottom: 25%">
         <div class="col-sm-8">
             <img style=" width: 800px; height: 400px; object-fit: cover;"
                 src="
