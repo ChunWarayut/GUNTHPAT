@@ -32,8 +32,8 @@ $contact_us = $contact_us_model -> getContact_us();
 
 
 
-require_once($path . 'ROOM.php');
-require_once($path . 'FACILITIES.php');
-require_once($path . 'GALLERY.php');
+require_once($path . 'room.php');
+require_once($path . 'facilities.php');
+require_once($path . 'gallery.php');
 
 ?>
