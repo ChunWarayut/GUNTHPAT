@@ -10,16 +10,20 @@
         </p>
     </div>
 </div>
-<div class="text-center" id="image_fixed">
-    <?php for ($i = 0; $i < count($gallery); ++$i) {
-    // code...?>
-    <img src="
-            <?php
-           echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>
-        "
-        class="img-fluid" style="margin:-0.5%" width="400em" alt="">
+<div class="container-fluid px-0 no-padding">
+
+    <div class="text-center" id="image_fixed">
+        <div class="row" mx-0>
+            <?php for ($i = 0; $i < count($gallery); ++$i) {
+                // code...?>
+        <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 no-padding">
+            <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid w-100" style="margin:-0.5%" width="100%" alt="">
+    </div>
+    
     <?php
 } ?>
+</div>
+</div>
 </div>
 <style>
 /* fixed height img */
@@ -27,5 +31,9 @@
     width: auto;
     height: 30em;
     overflow: hidden;
+}
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
 </style>
