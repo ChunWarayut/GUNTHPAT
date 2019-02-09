@@ -27,7 +27,7 @@ $img_path = "img_upload/news/";
                 </h4>
                 <br>
                 <?PHP #endregion
-        for ($i=0; $i < 3; $i++) { 
+        for ($i=0; $i < 4; $i++) { 
             # code...
             ?>
                 <p class="text-truncate ">
@@ -49,8 +49,8 @@ $img_path = "img_upload/news/";
             </h4>
             <br>
             <div class="row">
-                <div class="container">
-                    <?PHP for ($i=0; $i < count($news) && $i<4; $i++) { 
+                <div class="container" id="image_footer_fixed">
+                    <?PHP for ($i=0; $i < count($news); $i++) { 
                     # code...
                     ?>
                     <img src="
@@ -96,3 +96,12 @@ $img_path = "img_upload/news/";
         </div>
     </div>
 </div>
+
+<style>
+/* fixed height img */
+#image_footer_fixed {
+    width: auto;
+    height: 15em;
+    overflow: hidden;
+}
+</style>
