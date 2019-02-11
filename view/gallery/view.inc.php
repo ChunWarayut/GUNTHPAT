@@ -18,11 +18,45 @@ require_once('view/menu.inc.php');
     width: 100%;
     object-fit: cover;
 }
+
 </style>
+<div class="container" style="">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="text-left" style=" margin-left:150">
+                <h1>
+                    <span>
+                        OUR
+                    </span>
+                    <span style="color:#f47322; ">
+                        GALLERY
+                    </span>
+                </h1>
+                <p class="text-right">
+                    <span>
+
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="" style="padding-bottom:8%;">
+
+                <h4 class="font-weight-light">
+                    <span>
+                        GUNTHPAT PLACE
+                    </span>
+                </h4>
+                <p class="font-weight-light">
+                    <span>
+                    Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>    
 <div class="container">
-    <header class="text-center">
-        <h1>Mesonry Image gallery</h1>
-    </header>
+
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
 
 ?>
