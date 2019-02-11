@@ -46,15 +46,15 @@ class Contact extends BaseModel{
         }
     }
 
-    function editContactTitle($contact_title_id, $contact_head_detail) {
+    function editContactTitle($contact_title_id, $contact_title_name) {
         $sql = "UPDATE `tb_contact_title` 
         SET 
         `contact_title_name` = '$contact_title_name'
         WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
@@ -67,10 +67,11 @@ class Contact extends BaseModel{
 
 
     function getContact() {
-        $sql = " SELECT *
-        FROM `tb_contact`
-        WHERE 1
-        ORDER BY tb_contact.contact_id
+        $sql = " SELECT * FROM `tb_contact` 
+        LEFT JOIN tb_contact_title ON tb_contact.contact_title_id = tb_contact_title.contact_title_id 
+        LEFT JOIN tb_country ON tb_contact.contact_country = tb_country.ct_code
+        LEFT JOIN tb_contact_type ON tb_contact.contact_type_id = tb_contact_type.contact_type_id
+        WHERE 1 ORDER BY tb_contact.contact_id
         ";
         // echo "<pre>";
         // print_r($sql);
@@ -164,6 +165,21 @@ class Contact extends BaseModel{
                 '".$data['contact_type_id']."' ,
                 '".$data['contact_text']."'
                 )
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    function insertContactTitle($contact_title_name) {
+
+        $sql = "INSERT INTO `tb_contact_title`(`contact_title_id`, `contact_title_name`) VALUES (NULL,'$contact_title_name')
         ";
         // echo "<pre>";
         // print_r( $sql);

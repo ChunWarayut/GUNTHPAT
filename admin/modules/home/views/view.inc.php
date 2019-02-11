@@ -16,6 +16,7 @@
             <th width="500px">Sub Title</th>
             <th width="50px">ลิงค์</th>
             <th width="50px"></th>
+            <th width="50px"></th>
         </tr>
     </thead>
     <?PHP 
@@ -45,6 +46,10 @@
                 <a href="?content=home&action=edit&id=<?PHP echo $i  ?>">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
+            <td>
+            <a class="text-danger" href="?content=home&action=delete&id=<?PHP echo  $slide[$i]['slide_id'];?>">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </a>
             </td>
         </tr>
     </tbody>

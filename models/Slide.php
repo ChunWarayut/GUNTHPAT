@@ -10,6 +10,22 @@ class Slide extends BaseModel{
         }
     }
 
+    function deleteSlide($id) {
+        $sql = "DELETE 
+        FROM `tb_slide` 
+        WHERE `tb_slide`.`slide_id` = '$id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
     function slideRoom01() {
         $sql = " SELECT *
         FROM `tb_slide`

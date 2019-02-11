@@ -112,6 +112,18 @@ window.history.back();
     }else{
         require_once($path . 'insert.inc.php');
     }
+    } else if( $_GET['action'] == "delete") {
+    $target_file = $target_dir . $_POST['slide_img_o'];
+    if (file_exists($target_file)) {
+        unlink($target_file);
+    }
+    $result = $slide_model-> deleteSlide($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=slide"
+</script>
+<?PHP
     } else if( $_GET['action'] == "edit") {
         
     if(isset($_POST['slide_id'])){

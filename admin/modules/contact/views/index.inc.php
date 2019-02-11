@@ -54,16 +54,45 @@ window.location = "index.php?content=contact"
 </script>
 <?PHP
 
-} else if( $_GET['action'] == "edit_title") {
-if(isset($_POST['contact_title_id'])){
+} else if( $_GET['action'] == "insert_title") {
+    echo $_POST['contact_title_name'];
+if(isset($_POST['contact_title_name'])){
     $check = true;
-    $data = [];
-    $data['contact_title_id'] = $_POST['contact_title_id'];
-    $data['contact_title_name'] = $_POST['contact_title_name'];
     if($check == false){ ?>
 <script>
 alert('<?php echo $error_msg; ?>');
-// window.history.back();
+window.history.back();
+</script>
+<?php
+        
+    }else{
+        
+        $result = $contact_model-> insertContactTitle($_POST['contact_title_name']);
+        
+        if($result){
+            ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?php
+            }else{
+                ?>
+<script>
+window.history.back();
+</script>
+<?php
+            }
+        }
+    }else{
+        require_once($path . 'insert.inc.php');
+    }
+} else if( $_GET['action'] == "edit_title") {
+if(isset($_POST['contact_title_id'])){
+    $check = true;
+    if($check == false){ ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
 </script>
 <?php
         
@@ -74,13 +103,13 @@ alert('<?php echo $error_msg; ?>');
         if($result){
             ?>
 <script>
-// window.location = "index.php?content=contact"
+window.location = "index.php?content=contact"
 </script>
 <?php
             }else{
                 ?>
 <script>
-// window.history.back();
+window.history.back();
 </script>
 <?php
             }
@@ -88,5 +117,5 @@ alert('<?php echo $error_msg; ?>');
     }else{
         require_once($path . 'edit.inc.php');
     }
-    }
+}
 ?>
