@@ -1,5 +1,6 @@
-<?PHP 
-$menu = "room";
-require_once('view/menu.inc.php');
+<?php
 
-?>
+$menu = 'room';
+$path = 'view/room/';
+
+require_once $path.'view.inc.php';

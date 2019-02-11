@@ -1,7 +1,8 @@
-<?PHP 
-require_once('view/menu.inc.php');
-$path = "view/room/";
+<?php
 
-
-require_once($path . 'view.inc.php')
+require_once 'view/menu.inc.php';
 ?>
+
+<div class="col-2">
+
+</div>
