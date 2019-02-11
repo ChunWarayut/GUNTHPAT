@@ -181,7 +181,7 @@
 
             <div class="col-md-6">
                 <div style="">
-                    <fieldset class="gllpLatlonPicker" style="margin: -14;">
+                    <fieldset class="gllpLatlonPicker" style="margin: -14; height: 130%;">
                         <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div>
                         <input type="text" class="gllpLatitude form-control" name="location_lat" value="14.9764223"
                             hidden />
