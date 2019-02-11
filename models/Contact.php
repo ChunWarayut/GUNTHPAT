@@ -46,6 +46,24 @@ class Contact extends BaseModel{
         }
     }
 
+    function editContactTitle($contact_title_id, $contact_head_detail) {
+        $sql = "UPDATE `tb_contact_title` 
+        SET 
+        `contact_title_name` = '$contact_title_name'
+        WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    
 
 
     function getContact() {

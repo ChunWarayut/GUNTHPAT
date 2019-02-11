@@ -1,6 +1,12 @@
+<div class="row">
+    <div class="col-lg-6">
 <h1>Slide</h1>
 <h2>เเก้ไข Slide</h2>
-
+</div>
+<div class="col-lg-6">
+        <a href="?content=home&action=insert" class="btn btn-primary float-right">เพิ่มข้อมูล</a>
+    </div>
+    </div>
 <table>
     <thead>
         <tr>

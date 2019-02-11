@@ -5,8 +5,8 @@
 <hr>
 <form  id="form_target" role="form" method="post" action="index.php?content=facilities&action=edit_head">
     <div class="row">
+            <div class="col-lg-12">
 <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button>
-            <div class="col-lg-11">
                 <div class="form-group">
                     <label> </label>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
