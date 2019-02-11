@@ -181,8 +181,9 @@
 
             <div class="col-md-6">
                 <div style="">
-                    <fieldset class="gllpLatlonPicker" style="margin: -14; height: 130%;">
-                        <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div>
+                    <fieldset class="gllpLatlonPicker" style="margin: -14; height: auto;">
+                        <div class="gllpMap" style="width: 100%;  height: 50%;">Google Maps</div>
+                        <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->
                         <input type="text" class="gllpLatitude form-control" name="location_lat" value="14.9764223"
                             hidden />
                         <input type="text" class="gllpLongitude form-control" name="location_long" value="102.0701143"
@@ -244,17 +245,21 @@
                         <div class="col-lg-6">
                             <label>ประเทศ <font color="#F00"><b>*</b></font></label>
                             <select class="form-control  custom-select" id="contact_country" name="contact_country">
-                            
-                                <option value="Afghanistan">Afghanistan</option>
+                            <?PHP for ($i=0; $i < count($country); $i++) { 
+                                # code...
+                            ?>
+                                <option value="<?PHP echo $country[$i]['ct_code'];?>"><?PHP echo $country[$i]['ct_nameTHA'];?></option>
+                        <?PHP } ?>
                             </select>
                         </div>
                         <div class="col-lg-6">
                             <label>ประเภทของคำถาม <font color="#F00"><b>*</b></font></label>
                             <select class="form-control  custom-select" id="contact_type_id" name="contact_type_id">
-                                <option selected value="0">สำคัญ</option>
-                                <option value="1">ด่วน</option>
-                                <option value="2">เฉยๆ</option>
-                                <option value="3">ปกติ</option>
+                            <?PHP for ($i=0; $i < count($contact_type); $i++) { 
+                                # code...
+                            ?>
+                                <option value="<?PHP echo $contact_type[$i]['contact_type_id'];?>"><?PHP echo $contact_type[$i]['contact_type_name'];?></option>
+                        <?PHP } ?>
                             </select>
                         </div>
                         <div class="col-lg-12">

@@ -66,11 +66,49 @@ class Contact extends BaseModel{
             return $data;
         }
     }
+
+    function getCountry() {
+        $sql = " SELECT *
+        FROM `tb_country`
+        WHERE 1
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+    
     function getContactTitle() {
         $sql = " SELECT *
         FROM `tb_contact_title`
         WHERE 1
         ORDER BY tb_contact_title.contact_title_id
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+    function getContactType() {
+        $sql = " SELECT *
+        FROM `tb_contact_type`
+        WHERE 1
+        ORDER BY tb_contact_type.contact_type_id
         ";
         // echo "<pre>";
         // print_r($sql);
