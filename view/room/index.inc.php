@@ -8,3 +8,4 @@ if( $_GET['action'] == "detail") {
 }else{
 require_once $path.'view.inc.php';
 }
+?>

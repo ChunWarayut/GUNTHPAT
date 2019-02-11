@@ -160,11 +160,13 @@ require_once 'view/menu.inc.php';
                         </button>
                     </div>
                     <div class="col-6">
+                        <a href="room.php?action=detail">
                         <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                             <span>
                                 ดูเพิ่มเติม
                             </span>
                         </button>
+                            </a>
                     </div>
                 </div>
                 <br>
