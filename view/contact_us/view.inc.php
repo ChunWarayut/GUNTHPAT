@@ -10,7 +10,8 @@
             </span>
         </h1>
     </div>
-
+</div>
+<div class="container" style="">
     <div class="row">
 
         <div class="col-lg-4">
@@ -38,7 +39,7 @@
                     <div class="col-sm-auto">
                         <div class="row">
                             <div class="col-1">
-                                <i class="fab fa-facebook-square" style="font-size:30px"></i> &nbsp;
+                                <i class="fab fa-facebook-square" style="font-size:20px"></i> &nbsp;
                             </div>
                             <div class="col-10">
                                 <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
@@ -52,7 +53,7 @@
                     <div class="col-sm-auto">
                         <div class="container">
                             <div class="row">
-                                <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
+                                <i class="fas fa-phone-volume" style="font-size:20px"></i>&nbsp;
                                 <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
                                     <p class="font-weight-light">
                                         <?PHP echo $contact_us[0]['contact_us_tel']; ?>
@@ -63,12 +64,19 @@
                     </div>
                 </div>
             </div>
-            <p class="font-weight-light"><u>รายละเอีย</u>ดการติดต่อ</p>
+            <h4 class="font-weight-light;" style="margin-top: 25;">
+                    <span>
+                        รายละเอียดการติดต่อ
+                    </span>
+                </h4>
+            <div class="col-2">
+                <hr style="border-top: 2px solid #f47322" >
+                </div>
             <div class="container">
 
                 <div class="row">
                     <div class="col-1">
-                        <i class="fas fa-map-marker" style="font-size:40px"></i>
+                        <i class="fas fa-map-marker" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light"> &nbsp;
@@ -83,7 +91,7 @@
                 <br>
                 <div class="row">
                     <div class="col-auto">
-                        <i class="fas fa-phone-volume" style="font-size:40px"></i>
+                        <i class="fas fa-phone-volume" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light"> &nbsp;
@@ -94,7 +102,7 @@
                 <br>
                 <div class="row">
                     <div class="col-auto">
-                        <i class="fas fa-envelope" style="font-size:40px"></i>
+                        <i class="fas fa-envelope" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
                         <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
@@ -114,7 +122,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
     <div class="p-3 mb-2 bg-light text-dark">
         <div class="row">
@@ -122,9 +130,12 @@
 
                 <h4>
                     <p class="font-weight-light">
-                        <u>การเดินทางมา</u>ยังโรงแรม
+                        การเดินทางมายังโรงแรม
                     </p>
                 </h4>
+                <div class="col-2">
+                <hr style="border-top: 2px solid #f47322" >
+                </div>
                 <div class="dropdown" style="padding-left:10%;padding-bottom:3%;">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -202,9 +213,12 @@
             <div class="col-md-6">
                 <h4>
                     <p class="font-weight-light">
-                        <u>พูดคุยกั</u>บเรา
+                        พูดคุยกับเรา
                     </p>
                 </h4>
+                <div class="col-2">
+                <hr style="border-top: 2px solid #f47322" >
+                </div>
                 <p class="font-weight-light">
                     <?PHP echo $contact_head[0]['contact_head_detail']; ?>
                 </p>
@@ -280,7 +294,7 @@
         </div>
     </div>
 
-</div>
+
 
 
 
