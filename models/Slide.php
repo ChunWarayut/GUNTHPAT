@@ -28,6 +28,34 @@ class Slide extends BaseModel{
     }
     
 
+    function insertSlide($data = []) {
+        $data['slide_title']=mysqli_real_escape_string(static::$db,$data['slide_title']);
+        $data['slide_sub_title']=mysqli_real_escape_string(static::$db,$data['slide_sub_title']);
+        $data['slide_link']=mysqli_real_escape_string(static::$db,$data['slide_link']);
+        $data['slide_img']=mysqli_real_escape_string(static::$db,$data['slide_img']);
+
+
+        $sql = "INSERT INTO `tb_slide`(`slide_id`, `slide_img`, `slide_title`, `slide_sub_title`, `slide_link`) 
+        VALUES (
+            NULL, 
+            '".$data['slide_img']."', 
+            '".$data['slide_title']."', 
+            '".$data['slide_sub_title']."', 
+            '".$data['slide_link']."'
+            )
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+
     function editRoom($slide_id,$data = []) {
         $data['slide_img']=mysqli_real_escape_string(static::$db,$data['slide_img']);
         $data['slide_id']=mysqli_real_escape_string(static::$db,$data['slide_id']);

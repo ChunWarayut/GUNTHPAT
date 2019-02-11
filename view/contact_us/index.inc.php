@@ -11,9 +11,11 @@ require_once('models/Contact.php');
 $contact_model = new Contact;
 $contact_us = $contact_us_model -> getContact_us() ;
 $contact_title = $contact_model -> getContactTitle() ;
+$country = $contact_model -> getCountry() ;
+$contact_type = $contact_model -> getContactType() ;
 
 // echo"<pre>";
-// print_r($contact_title);
+// print_r($contact_type);
 // echo"</pre>";
 
 require_once('models/Contact.php');
@@ -45,19 +47,19 @@ if (isset($_GET['action']) == "add"):
             if($user){
                 ?> 
                 <script>
-                    window.location="contact_us.php?"
+                    // window.location="contact_us.php?"
                 </script> 
                 <?php
             }else{
                 ?>  
                 <script> 
-                    window.history.back(); 
+                    // window.history.back(); 
                 </script> <?php
             }
         }
     }else{
         ?> <script> 
-            window.history.back(); 
+            // window.history.back(); 
         </script> <?php
     }
 endif;

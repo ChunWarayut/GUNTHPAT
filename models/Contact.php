@@ -46,6 +46,24 @@ class Contact extends BaseModel{
         }
     }
 
+    function editContactTitle($contact_title_id, $contact_head_detail) {
+        $sql = "UPDATE `tb_contact_title` 
+        SET 
+        `contact_title_name` = '$contact_title_name'
+        WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    
 
 
     function getContact() {
@@ -66,11 +84,49 @@ class Contact extends BaseModel{
             return $data;
         }
     }
+
+    function getCountry() {
+        $sql = " SELECT *
+        FROM `tb_country`
+        WHERE 1
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+    
     function getContactTitle() {
         $sql = " SELECT *
         FROM `tb_contact_title`
         WHERE 1
         ORDER BY tb_contact_title.contact_title_id
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+    function getContactType() {
+        $sql = " SELECT *
+        FROM `tb_contact_type`
+        WHERE 1
+        ORDER BY tb_contact_type.contact_type_id
         ";
         // echo "<pre>";
         // print_r($sql);
