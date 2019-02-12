@@ -15,13 +15,14 @@ require_once 'view/menu.inc.php';
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <section class="slide" style="margin-top: -230; margin-left:150 ">
-
-                <?php for ($i = 0; $i < count($slide); ++$i) {
-?>
-                <img style=" width: 100%; height: 50%; object-fit: cover;"
-                    src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
-                <?php
-} ?>
+                    <?php for ($j = 0; $j < count($roomBy); ++$j) {    ?>
+                    <img style=" width: 100px; height: 200px; object-fit: cover;"
+                        src="<?php if ($roomBy[$j]['gallery_img'] == null ) {
+                            echo $img_path_room . $roomBy[$j]['room_img'];
+                        }else {
+                            echo $img_path_gallery. $roomBy[$j]['gallery_img'];
+                         } ?>">
+                    <?php } ?>                
 
             </section>
 
@@ -45,7 +46,11 @@ require_once 'view/menu.inc.php';
                         THB
                     </span>
                     <span class="text" style=" margin-left:40">
-                        48,000
+                        <?PHP if ($rooms[$i]['room_price'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_price'];
+                        }  ?>
                     </span>
                     <a href="" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
                         <span class="text">
@@ -61,11 +66,19 @@ require_once 'view/menu.inc.php';
                 <hr>
                 <i class="fas fa-phone" style="font-size:20px"></i>
                 <span class="text">
-                    บริการ WiFi ฟรี
+                        <?PHP if ($rooms[$i]['room_facility_2'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_facility_2'];
+                        }  ?>
                 </span>
                 <i class="fas fa-wifi" style="font-size:20px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    บริการโทรศัพท์ห้อง
+                        <?PHP if ($rooms[$i]['room_facility_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_facility_1'];
+                        }  ?>
                 </span>
                 <br>
                 <br>
@@ -79,23 +92,39 @@ require_once 'view/menu.inc.php';
                 </div>
                 <i class="fas fa-home" style="font-size:15px; margin-top: 15; "></i>
                 <span class="text">
-                    38 ตารางเมตร
+                        <?PHP if ($rooms[$i]['room_size'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_size'];
+                        }  ?>
                 </span>
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-top: 15; "></i>
                 <span class="text">
-                    ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน
+                        <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_1'];
+                        }  ?>
                 </span>
                 <br>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-top: 15; "></i>
                 <span class="text">
-                    ระเบียงส่วนตัว
+                        <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_1'];
+                        }  ?>
                 </span>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-top: 15; "></i>
                 <span class="text">
-                    วิวเมืองหรือสวน
+                        <?PHP if ($rooms[$i]['room_detail_3'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_3'];
+                        }  ?>
                 </span>
             </div>
         </div>

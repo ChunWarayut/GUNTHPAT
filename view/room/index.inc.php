@@ -13,6 +13,8 @@ $img_path_room = "img_upload/rooms/";
 
 if( $_GET['action'] == "detail") {
     $roomBy = $rooms_model -> getRoomsBy($_GET['id']);
+    // print_r($roomBy);
+    // echo"555";
     require_once($path.'detail.inc.php');
 }else{
 require_once $path.'view.inc.php';

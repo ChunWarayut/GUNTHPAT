@@ -100,43 +100,71 @@ require_once 'view/menu.inc.php';
                 </script>
                 <h4 class="font-weight-light;" style="margin-top: 25;">
                     <span class="text">
-                        Deluxe Room
+                        <?PHP if ($rooms[$i]['room_name'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_name'];
+                        }  ?>
                     </span>
                 </h4>
                 <i class="fas fa-home" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    38 ตารางเมตร
+                        <?PHP if ($rooms[$i]['room_size'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_size'];
+                        }  ?>
                 </span>
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน
+                        <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_1'];
+                        }  ?>
                 </span>
                 <br>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    ระเบียงส่วนตัว
+                        <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_1'];
+                        }  ?>
                 </span>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    วิวเมืองหรือสวน
+                        <?PHP if ($rooms[$i]['room_detail_3'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_detail_3'];
+                        }  ?>
                 </span>
                 <br>
                 <br>
                 <span class="text">
-                    ห้องพักทุกห้องประกอปด้วย
+                บริการโทรศัพท์ห้อง
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    บริการ WiFi ฟรี
+                        <?PHP if ($rooms[$i]['room_facility_1'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_facility_1'];
+                        }  ?>
                 </span>
                 <br>
                 <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
-                    บริการโทรศัพท์ห้อง
+                        <?PHP if ($rooms[$i]['room_facility_2'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_facility_2'];
+                        }  ?>
                 </span>
                 <br>
                 <br>
@@ -148,7 +176,11 @@ require_once 'view/menu.inc.php';
                                     THB
                                 </span>
                                 <span style=" margin-left:40">
-                                    48,000
+                        <?PHP if ($rooms[$i]['room_price'] == "") {
+                            echo "ไม่ระบุ";
+                        }else{
+                            echo $rooms[$i]['room_price'];
+                        }  ?>
                                 </span>
                             </h5>
                         </div>
@@ -163,7 +195,7 @@ require_once 'view/menu.inc.php';
                         </button>
                     </div>
                     <div class="col-6">
-                        <a href="room.php?action=detail">
+                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                                 <span class="text">
                                     ดูเพิ่มเติม
