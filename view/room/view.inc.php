@@ -72,15 +72,18 @@ require_once 'view/menu.inc.php';
 </div>
 <div class="container" style="">
     <div class="row">
+<?PHP for ($i=0; $i < count($rooms); $i++) { ?>
         <div class="col-4">
             <div class="shadow-lg p-3 mb-5 bg-white rounded;">
                 <section class="slide" style="padding:0%; margin:-16">
-                    <?php for ($i = 0; $i < count($slide); ++$i) {
-    ?>
+                    <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$i]['room_id'])); ++$j) {    ?>
                     <img style=" width: 100px; height: 200px; object-fit: cover;"
-                        src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
-                    <?php
-} ?>
+                        src="<?php if ($roomBy[$j]['gallery_img'] == null ) {
+                            echo $img_path_room . $roomBy[$j]['room_img'];
+                        }else {
+                            echo $img_path_gallery. $roomBy[$j]['gallery_img'];
+                         } ?>">
+                    <?php } ?>                
                 </section>
 
 
@@ -182,6 +185,6 @@ require_once 'view/menu.inc.php';
                 </div>
             </div>
         </div>
+<?PHP } ?>
     </div>
-</div>
 </div>
