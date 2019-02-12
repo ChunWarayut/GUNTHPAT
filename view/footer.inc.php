@@ -112,3 +112,10 @@ $img_path = "img_upload/news/";
     font-family: 'Kanit', sans-serif;
 }
 </style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kanit:200');
+
+.text2{
+    font-family: 'Kanit', sans-serif;
+}
+</style>
