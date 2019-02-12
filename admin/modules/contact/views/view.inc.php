@@ -55,6 +55,7 @@
                     <th width="10">#</th>
                     <th width="80">Title</th>
                     <th width="10"></th>
+                    <th width="10"></th>
                 </tr>
             </thead>
             <?PHP 
@@ -76,6 +77,13 @@
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </a>
                 </td>
+                
+                <td>
+                    <a class="text-danger" href="?content=contact&action=delete_title&id=<?PHP echo $i  ?>">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </a>
+                </td>
+
 
             </tr>
             </tbody>
@@ -90,7 +98,7 @@
                 <h2> ข้อมูลประเภทของคำถาม </h2>
             </div>
             <div class="col-lg-6">
-                <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_title">
+                <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_type">
                     <button type="submit" name="" id="" class="btn btn-primary btn-xs float-right"
                         btn-block>เพิ่ม</button>
                 </form>
@@ -103,10 +111,11 @@
                     <th width="10">#</th>
                     <th width="80">Title</th>
                     <th width="10"></th>
+                    <th width="10"></th>
                 </tr>
             </thead>
             <?PHP 
-    for ($i=0; $i < count($contact_title); $i++) { 
+    for ($i=0; $i < count($contact_type); $i++) { 
         # code...
         
         ?>
@@ -117,11 +126,17 @@
                 </td>
 
                 <td class="text-left">
-                    <?PHP echo $contact_title[$i]['contact_title_name'];  ?>
+                    <?PHP echo $contact_type[$i]['contact_type_name'];  ?>
                 </td>
                 <td>
-                    <a href="?content=contact&action=edit_title&id=<?PHP echo $i  ?>">
+                    <a href="?content=contact&action=edit_type&id=<?PHP echo $i  ?>">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                </td>
+
+                <td>
+                    <a class="text-danger" href="?content=contact&action=delete_type&id=<?PHP echo $i  ?>">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
                 </td>
 

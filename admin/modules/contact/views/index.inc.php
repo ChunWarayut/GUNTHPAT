@@ -9,10 +9,11 @@ $contact_model = new Contact;
 $contact = $contact_model -> getContact();
 $contact_head = $contact_model -> getContact_head();
 $contact_title = $contact_model -> getContactTitle();
+$contact_type = $contact_model -> getContactType();
 
 
 // echo "<pre>";
-// print_r($contact_title);
+// print_r($contact_type);
 // echo "</pre>";
 
 
@@ -45,6 +46,23 @@ if( !isset($_GET['action']) ) {
 window.location = "index.php?content=contact"
 </script>
 <?PHP
+} else if( $_GET['action'] == "delete_title") {
+    $result = $contact_model-> deleteContactTitle($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?PHP
+} else if( $_GET['action'] == "delete_type") {
+    $result = $contact_model-> deleteContactType($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?PHP
+
 } else if( $_GET['action'] == "edit_head") {
     $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail']);
     require_once($path.'view.inc.php');
@@ -86,8 +104,10 @@ window.history.back();
     }else{
         require_once($path . 'insert.inc.php');
     }
-} else if( $_GET['action'] == "edit_title") {
-if(isset($_POST['contact_title_id'])){
+
+} else if( $_GET['action'] == "insert_type") {
+    echo $_POST['contact_type_name'];
+if(isset($_POST['contact_type_name'])){
     $check = true;
     if($check == false){ ?>
 <script>
@@ -98,7 +118,7 @@ window.history.back();
         
     }else{
         
-        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_title_name']);
+        $result = $contact_model-> insertContactType($_POST['contact_type_name']);
         
         if($result){
             ?>
@@ -115,7 +135,58 @@ window.history.back();
             }
         }
     }else{
+        require_once($path . 'insert_type.inc.php');
+    }
+
+} else if( $_GET['action'] == "edit_title") {
+if(isset($_POST['contact_title_id'])){
+    $check = true;
+    if($check == false){ ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
+    }else{
+        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_title_name']);
+        if($result){
+            ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?php }else{    ?>
+<script>
+window.history.back();
+</script>
+<?php  }
+    }
+    }else{
         require_once($path . 'edit.inc.php');
+    }
+} else if( $_GET['action'] == "edit_type") {
+if(isset($_POST['contact_type_id'])){
+    $check = true;
+    if($check == false){ ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
+    }else{
+        $result = $contact_model-> editContactType($_POST['contact_type_id'],$_POST['contact_type_name']);
+        if($result){
+            ?>
+<script>
+window.location = "index.php?content=contact"
+</script>
+<?php }else{    ?>
+<script>
+window.history.back();
+</script>
+<?php  }
+    }
+    }else{
+        require_once($path . 'edit_type.inc.php');
     }
 }
 ?>
