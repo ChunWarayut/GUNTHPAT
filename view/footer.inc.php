@@ -19,7 +19,7 @@ $img_path = "img_upload/news/";
 
     <div class="col-xl-3" style="padding-top: 5%; padding-bottom: 5%">
         <div class="col-12 ">
-            <div class=" ">
+            <div class="container">
                 <h4>
                     <span class="text">
                         LASTEST NEWS
