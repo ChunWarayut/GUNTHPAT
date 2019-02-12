@@ -25,7 +25,7 @@
     <tbody>
         <tr>
             <td>
-                <?PHP echo $slide[$i]['slide_id'];  ?>
+                <?PHP echo $i+1 ;  ?>
             </td>
             <td>
                 <img src="<?PHP echo $img_path . $slide[$i]['slide_img'];  ?> "

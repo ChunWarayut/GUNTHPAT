@@ -60,9 +60,9 @@ class Slide extends BaseModel{
             '".$data['slide_link']."'
             )
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
