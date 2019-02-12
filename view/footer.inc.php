@@ -21,7 +21,7 @@ $img_path = "img_upload/news/";
         <div class="col-12 ">
             <div class=" ">
                 <h4>
-                    <span>
+                    <span class="text">
                         LASTEST NEWS
                     </span>
                 </h4>
@@ -30,7 +30,7 @@ $img_path = "img_upload/news/";
         for ($i=0; $i < 4; $i++) { 
             # code...
             ?>
-                <p class="text-truncate ">
+                <p class="text">
                     <?PHP  echo    $news[$i]['news_name'];?>
                 </p>
                 <hr class="border-white">
@@ -43,7 +43,7 @@ $img_path = "img_upload/news/";
     <div class="col-xl-3" style="padding-top: 5%; padding-bottom: 5%">
         <div class="container">
             <h4>
-                <span>
+                <span class="text">
                     LASTEST NEWS
                 </span>
             </h4>
@@ -67,13 +67,13 @@ $img_path = "img_upload/news/";
     <div class="col-xl-3 " style="padding-top: 5%; padding-bottom: 5%">
         <div class="container">
             <h4>
-                <span>
+                <span class="text">
                     CONTACT US
                 </span>
             </h4>
             <br>
             <span style="color: #f47322;">Address :</span>
-            <p>
+            <p class="text">
                 <?PHP 
             echo    $contact_us[0]['contact_us_address'];
             echo    $contact_us[0]['contact_us_address_1'];
@@ -85,12 +85,12 @@ $img_path = "img_upload/news/";
             ?>
             </p>
             <span style="color: #f47322;">Call us :</span>
-            <p>
+            <p class="text">
                 <?PHP  echo    $contact_us[0]['contact_us_fax'];?>
-            </p>
-            <span style="color: #f47322;">Email us :</span>
+            </p class="text">
+            <span style="text color: #f47322;">Email us :</span>
 
-            <p>
+            <p class="text">
                 <?PHP  echo    $contact_us[0]['contact_us_email'];?>
             </p>
         </div>
@@ -103,5 +103,12 @@ $img_path = "img_upload/news/";
     width: auto;
     height: 15em;
     overflow: hidden;
+}
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+.text{
+    font-family: 'Kanit', sans-serif;
 }
 </style>

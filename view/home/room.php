@@ -18,16 +18,18 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     <?php
             echo $rooms[$i]['room_name']; ?>
                 </h3>
-                <p>
+                <p class="text">
                     <?php
             echo $rooms[$i]['room_sub_title']; ?>
                 </p>
                 <div class="container">
                     <div class="row">
-                        <h4>$
+                        <h4 class="text">$
                             <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
                         &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                            เพิ่มเติม
+                        <span class="text">
+                                เพิ่มเติม
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -70,23 +72,25 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 <h1 class="text-left">
                     <?php  echo $i + 1; ?>
                 </h1>
-                <p class="text-left">
+                <p class="text-left;">
                     |
                 </p>
                 <h3>
                     <?php
             echo $rooms[$i]['room_name']; ?>
                 </h3>
-                <p>
+                <p class="text">
                     <?php
             echo $rooms[$i]['room_sub_title']; ?>
                 </p>
                 <div class="container">
                     <div class="row">
-                        <h4>$
+                        <h4 class="text">$
                             <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
                         &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                            เพิ่มเติม
+                        <span class="text">
+                                เพิ่มเติม
+                            </span>
                         </a>
                     </div>
                 </div>

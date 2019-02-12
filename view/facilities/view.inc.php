@@ -5,7 +5,7 @@
                 <h1>
                     <span>FACILITI</span><span style="color:#f47322;">ES</span>
                 </h1>
-                <p>
+                <p class="text">
                     <?php echo $facilities_head[0]['facilities_head_sub_title']; ?>
                 </p>
             </div>
@@ -27,12 +27,12 @@
                         <div style=" padding-top: 10%; padding-bottom: 10%; ">
                             <div  style=" padding-top: 20%; padding-bottom: 20% ">
                                 <h4>
-                                    <span style="color:#FFFFFF">
+                                    <span class="text" style="color:#FFFFFF">
                                         <?php echo    $facilities[$i]['facilities_name']; ?>
                                     </span>
                                 </h4>
                                 <p>
-                                    <span style="color:#FFFFFF">
+                                    <span class="text" style="color:#FFFFFF">
                                     <?php echo    $facilities[$i]['facilities_detail']; ?>
                                     </span>
                                 </p>

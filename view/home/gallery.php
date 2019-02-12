@@ -6,7 +6,7 @@
             <span>OUR</span> <span style="color: #f47322;">GALLERY</span>
         </h1>
         <p>
-            <span><?php echo $gallery_head[0]['gallery_head_sub_title']; ?></span>
+            <span class="text" ><?php echo $gallery_head[0]['gallery_head_sub_title']; ?></span>
         </p>
     </div>
 </div>

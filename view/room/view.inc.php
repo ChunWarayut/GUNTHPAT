@@ -96,43 +96,43 @@ require_once 'view/menu.inc.php';
                 });
                 </script>
                 <h4 class="font-weight-light;" style="margin-top: 25;">
-                    <span>
+                    <span class="text">
                         Deluxe Room
                     </span>
                 </h4>
                 <i class="fas fa-home" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     38 ตารางเมตร
                 </span>
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน
                 </span>
                 <br>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     ระเบียงส่วนตัว
                 </span>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     วิวเมืองหรือสวน
                 </span>
                 <br>
                 <br>
-                <span>
+                <span class="text">
                     ห้องพักทุกห้องประกอปด้วย
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     บริการ WiFi ฟรี
                 </span>
                 <br>
                 <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span>
+                <span class="text">
                     บริการโทรศัพท์ห้อง
                 </span>
                 <br>
@@ -141,7 +141,7 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <div class="p-3 mb-2 bg-light text-dark" style="padding:0%; margin:-16">
                             <h5 style=" margin-left:30">
-                                <span>
+                                <span class="text">
                                     THB
                                 </span>
                                 <span style=" margin-left:40">
@@ -154,26 +154,29 @@ require_once 'view/menu.inc.php';
                 <div class="row">
                     <div class="col-6">
                         <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                            <span>
+                            <span class="text">
                                 Share
                             </span>
                         </button>
                     </div>
                     <div class="col-6">
                         <a href="room.php?action=detail">
-                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
-                            <span>
-                                ดูเพิ่มเติม
-                            </span>
-                        </button>
-                            </a>
+                            <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
+                                <span class="text">
+                                    ดูเพิ่มเติม
+                                </span>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-12">
                         <a href="" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
-                            จองเดียวนี้
+                            <span class="text">
+                                จองเดียวนี้
+                            </span>
+
                         </a>
                     </div>
                 </div>

@@ -18,7 +18,6 @@ require_once('view/menu.inc.php');
     width: 100%;
     object-fit: cover;
 }
-
 </style>
 <div class="container" style="">
     <div class="row">
@@ -47,14 +46,26 @@ require_once('view/menu.inc.php');
                         GUNTHPAT PLACE
                     </span>
                 </h4>
-                <p class="font-weight-light">
-                    <span>
-                    Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,
+                    <span class="font-weight-light">
+                        Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
+                        system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima
+                        Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV,
+                        Refrigerator, Closet, sink, bed light, etc,
                     </span>
             </div>
         </div>
     </div>
-</div>    
+</div>
+<div class="container" style="">
+
+    <div class="text-center" style="">
+        <h4>
+            <span class="text">
+                แสดงให้ฉันดู
+            </span>
+        </h4>
+    </div>
+</div>
 <div class="container">
 
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
@@ -77,7 +88,7 @@ require_once('view/menu.inc.php');
                             <?PHP }  ?>
                             <?PHP if (!$gallery[$i+1]) {}else{?>
                             <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-                                <div class="box" >
+                                <div class="box">
                                     <img src="<?PHP echo $path_img . $gallery[$i+1]['gallery_img']?>"
                                         class="img-ht img-fluid rounded">
                                 </div>
@@ -160,3 +171,10 @@ require_once('view/menu.inc.php');
     </div>
     <?PHP } ?>
 </div>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+.text{
+    font-family: 'Kanit', sans-serif;
+}
+</style>
