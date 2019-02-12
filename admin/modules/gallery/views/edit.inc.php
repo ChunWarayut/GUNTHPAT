@@ -69,14 +69,13 @@ echo $gallery[$id]['gallery_name'];  ?>
 
                                 <label>Gallery Type <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="gallery_type_id" name="gallery_type_id">
-                                    <option selected value="<?PHP echo $gallery_type[$type-1]['gallery_type_id'];?>">
                                         <?PHP echo $gallery_type[$type-1]['gallery_type_name'];?>
                                     </option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
+                                    <option selected value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
                                         <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
                                     </option>
                                     <?PHP 
@@ -84,6 +83,29 @@ echo $gallery[$id]['gallery_name'];  ?>
                                 ?>
                                 </select>
                                 <p class="help-block">Example : ที่พัก </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+
+                                <label> ROOM <font color="#F00"><b>*</b></font></label> <br />
+                                <select class="form-control  custom-select" id="room_id" name="room_id">
+                                <option  value=""> อื่น ๆ </option>
+                                        <?PHP echo $rooms[$type-1]['rooms_name'];?>
+                                    </option>
+                                    <?PHP #endregion
+                                for ($i=0; $i < count($rooms); $i++) { 
+                                    # code...
+                                ?>
+                                    <option selected value="<?PHP echo $rooms[$i]['room_id'];?>">
+                                        <?PHP echo $rooms[$i]['room_name'];?>
+                                    </option>
+                                    <?PHP 
+                                }
+                                ?>
+                                </select>
+                                <p class="help-block">Example : Delux Room </p>
                             </div>
                         </div>
 

@@ -139,19 +139,21 @@ class Gallery extends BaseModel{
         }
     }
     function editGallery($gallery_id,$data = []) {
+        $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
         $data['gallery_name']=mysqli_real_escape_string(static::$db,$data['gallery_name']);
         $data['gallery_img']=mysqli_real_escape_string(static::$db,$data['gallery_img']);
         $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
 
         $sql = "UPDATE `tb_gallery` 
-        SET `gallery_name` = '".$data['gallery_name']."', 
+        SET `room_id` = '".$data['room_id']."', 
+         `gallery_name` = '".$data['gallery_name']."', 
          `gallery_type_id` = '".$data['gallery_type_id']."', 
          `gallery_img` = '".$data['gallery_img']."'
         WHERE `tb_gallery`.`gallery_id` = '$gallery_id'
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
@@ -161,17 +163,20 @@ class Gallery extends BaseModel{
     }
 
     function addGallery($data = []) {
+        $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
         $data['gallery_name']=mysqli_real_escape_string(static::$db,$data['gallery_name']);
         $data['gallery_img']=mysqli_real_escape_string(static::$db,$data['gallery_img']);
         $data['gallery_type_id']=mysqli_real_escape_string(static::$db,$data['gallery_type_id']);
 
         $sql = "INSERT INTO `tb_gallery`(
             `gallery_id`, 
+            `room_id`, 
             `gallery_name`, 
             `gallery_img`, 
             `gallery_type_id`) 
             VALUES (
                 NULL, 
+                '".$data['room_id']."', 
                 '".$data['gallery_name']."', 
                 '".$data['gallery_img']."' ,
                 '".$data['gallery_type_id']."'

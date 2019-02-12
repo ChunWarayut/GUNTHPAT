@@ -1,29 +1,27 @@
 <script>
-    //---------ฟังชั่นแสดงรูป----------------
-    function readURL(input) {
-        if (input.files && input.files[0]) {
+//---------ฟังชั่นแสดงรูป----------------
+function readURL(input) {
+    if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
             $('#_img').attr('src', e.target.result);
         }
         reader.readAsDataURL(input.files[0]);
-        }else{
-            $('#_img').attr('src',   '../img_upload/rooms/default.jpg');
-        }
+    } else {
+        $('#_img').attr('src', '../img_upload/rooms/default.jpg');
     }
-
+}
 </script>
 
-<form id="form_target" role="form" method="post" action="index.php?content=rooms&action=edit" enctype="multipart/form-data">
+<form id="form_target" role="form" method="post" action="index.php?content=rooms&action=edit"
+    enctype="multipart/form-data">
     <div class="card">
         <div class="card-header">
             <div class="row">
                 <div class="col-lg-6">
                     <h1>
                         หน้าแก้ไขข้อมูลห้อง
-                        <?PHP 
-use Monolog\Handler\PHPConsoleHandler;
-echo $rooms[$id]['room_name'];  ?>
+                        <?PHP echo $roomBy[0]['room_name'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
@@ -33,8 +31,8 @@ echo $rooms[$id]['room_name'];  ?>
             </div>
         </div>
         <div class="card-body">
-            <input type="hidden" id="room_img_o" name="room_img_o" value="<?php echo  $rooms[$id]['room_img']; ?>" />
-            <input type="hidden" id="room_id" name="room_id" value="<?php echo  $rooms[$id]['room_id']; ?>" />
+            <input type="hidden" id="room_img_o" name="room_img_o" value="<?php echo  $roomBy[0]['room_img']; ?>" />
+            <input type="hidden" id="room_id" name="room_id" value="<?php echo  $roomBy[0]['room_id']; ?>" />
 
             <div class="col-12">
 
@@ -42,15 +40,17 @@ echo $rooms[$id]['room_name'];  ?>
             <div class="row ">
                 <div class="col-lg-3">
                     <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP 
-                        if ($rooms[$id]['room_img'] != "" || $rooms[$id]['room_img'] != null) { 
-                            echo $img_path . $rooms[$id]['room_img']; 
+                        <img id="_img" width="400"
+                            src="<?PHP 
+                        if ($roomBy[0]['room_img'] != "" || $roomBy[0]['room_img'] != null) { 
+                            echo $img_path . $roomBy[0]['room_img']; 
                             } else {
                                 echo $img_path . 'default.jpg';
                             }  ?> "
                             class="img-fluid" alt="">
                         <input accept=".jpg , .png" type="file" id="room_img" name="room_img" class="form-control"
-                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);" value="<?php echo  $rooms[$id]['room_img']; ?>">
+                            style="margin: 14px 0 0 0 ;" onChange="readURL(this);"
+                            value="<?php echo  $roomBy[0]['room_img']; ?>">
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -59,7 +59,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Room Name <font color="#F00"><b>*</b></font></label>
-                                <input id="room_name" name="room_name" class="form-control" value="<?PHP echo $rooms[$id]['room_name'];?>" />
+                                <input id="room_name" name="room_name" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_name'];?>" />
                                 <p class="help-block">Example : Delux Room</p>
                             </div>
                         </div>
@@ -67,7 +68,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label> Sub Title <font color="#F00"><b>*</b></font></label>
-                                <input id="room_sub_title" name="room_sub_title" class="form-control" value="<?PHP echo $rooms[$id]['room_sub_title'];?>" />
+                                <input id="room_sub_title" name="room_sub_title" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_sub_title'];?>" />
                                 <p class="help-block">Example : Delux Room</p>
                             </div>
                         </div>
@@ -81,7 +83,9 @@ echo $rooms[$id]['room_name'];  ?>
                                 for ($i=0; $i < count($room_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option selected  value="<?PHP echo $room_type[$i]['room_type_id'];?>"><?PHP echo $room_type[$i]['room_type_name'];?></option>
+                                    <option selected value="<?PHP echo $room_type[$i]['room_type_id'];?>">
+                                        <?PHP echo $room_type[$i]['room_type_name'];?>
+                                    </option>
                                     <?PHP 
                                 }
                                 ?>
@@ -94,7 +98,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label>Price <font color="#F00"><b>*</b></font></label>
-                                <input type="number" id="room_price" name="room_price" class="form-control" value="<?PHP echo  $rooms[$id]['room_price'];?>" />
+                                <input type="number" id="room_price" name="room_price" class="form-control"
+                                    value="<?PHP echo  $roomBy[0]['room_price'];?>" />
                                 <p class="help-block">Example : 2,000 </p>
                             </div>
                         </div>
@@ -103,7 +108,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label>Amout <font color="#F00"><b>*</b></font></label>
-                                <input id="room_amout" name="room_amout" class="form-control" value="<?PHP echo number_format( $rooms[$id]['room_amout']);?>" />
+                                <input id="room_amout" name="room_amout" class="form-control"
+                                    value="<?PHP echo number_format( $roomBy[0]['room_amout']);?>" />
                                 <p class="help-block">Example : 5 </p>
                             </div>
                         </div>
@@ -112,7 +118,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label>Size <font color="#F00"><b>*</b></font></label>
-                                <input id="room_size" name="room_size" class="form-control" value="<?PHP echo $rooms[$id]['room_size'];?>" />
+                                <input id="room_size" name="room_size" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_size'];?>" />
                                 <p class="help-block">Example : 50 ตารางเมตร </p>
                             </div>
                         </div>
@@ -121,7 +128,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Detail 1 <font color="#F00"><b>*</b></font></label>
-                                <input id="room_detail_1" name="room_detail_1" class="form-control" value="<?PHP echo $rooms[$id]['room_detail_1'];?>" />
+                                <input id="room_detail_1" name="room_detail_1" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_detail_1'];?>" />
                                 <p class="help-block">Example : ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน </p>
                             </div>
                         </div>
@@ -129,7 +137,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label>Detail 2 <font color="#F00"><b>*</b></font></label>
-                                <input id="room_detail_2" name="room_detail_2" class="form-control" value="<?PHP echo $rooms[$id]['room_detail_2'];?>" />
+                                <input id="room_detail_2" name="room_detail_2" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_detail_2'];?>" />
                                 <p class="help-block">Example : ระเบียงส่วนตัว </p>
                             </div>
                         </div>
@@ -137,7 +146,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label>Detail 3 <font color="#F00"><b>*</b></font></label>
-                                <input id="room_detail_3" name="room_detail_3" class="form-control" value="<?PHP echo $rooms[$id]['room_detail_3'];?>" />
+                                <input id="room_detail_3" name="room_detail_3" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_detail_3'];?>" />
                                 <p class="help-block">Example : วิวห้องหรือสวน </p>
                             </div>
                         </div>
@@ -145,7 +155,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label>Facility 1 <font color="#F00"><b>*</b></font></label>
-                                <input id="room_facility_1" name="room_facility_1" class="form-control" value="<?PHP echo $rooms[$id]['room_facility_1'];?>" />
+                                <input id="room_facility_1" name="room_facility_1" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_facility_1'];?>" />
                                 <p class="help-block">Example : บริการโทรศัพท์ห้อง </p>
                             </div>
                         </div>
@@ -153,7 +164,8 @@ echo $rooms[$id]['room_name'];  ?>
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label>Facility 2 <font color="#F00"><b>*</b></font></label>
-                                <input id="room_facility_2" name="room_facility_2" class="form-control" value="<?PHP echo $rooms[$id]['room_facility_2'];?>" />
+                                <input id="room_facility_2" name="room_facility_2" class="form-control"
+                                    value="<?PHP echo $roomBy[0]['room_facility_2'];?>" />
                                 <p class="help-block">Example : บริการ WiFi ฟรี </p>
                             </div>
                         </div>
@@ -168,3 +180,18 @@ echo $rooms[$id]['room_name'];  ?>
 
 
 </form>
+<br>
+<hr>
+<h1>
+    Gallery
+</h1>
+<br>
+<div class="row">
+<?PHP for ($i=0; $i < count($roomBy); $i++) { 
+    # code...
+?>
+    <div class="col-md-3">
+        <img id="_img" width="400" src="<?PHP echo $img_path_gallery . $roomBy[$i]['gallery_img']; ?>" class="img-fluid" alt="">
+    </div>
+    <?PHP }  ?>
+</div>

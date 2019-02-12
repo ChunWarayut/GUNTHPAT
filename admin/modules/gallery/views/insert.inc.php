@@ -68,7 +68,7 @@
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"><?PHP echo $gallery_type[$i]['gallery_type_id'];?></option>
+                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"><?PHP echo $gallery_type[$i]['gallery_type_name'];?></option>
                                     <?PHP 
                                 }
                                 ?>
@@ -77,6 +77,30 @@
                             </div>
                         </div>
 
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+
+                                <label>ROOM <font color="#F00"><b>*</b></font></label> <br />
+                                <select class="form-control  custom-select" id="room_id" name="room_id">
+                                <option  value="">เลือก Rom</option>
+                                        <?PHP echo $rooms[$type-1]['rooms_name'];?>
+                                    </option>
+                                    <?PHP #endregion
+                                for ($i=0; $i < count($rooms); $i++) { 
+                                    # code...
+                                ?>
+                                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>">
+                                        <?PHP echo $rooms[$i]['room_name'];?>
+                                    </option>
+                                    <?PHP 
+                                }
+                                ?>
+                                <option  value=""> อื่น ๆ </option>
+                                </select>
+                                <p class="help-block">Example : Delux Room </p>
+                            </div>
+                        </div>
 
 
                     </div>
