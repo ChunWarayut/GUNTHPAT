@@ -15,6 +15,8 @@ if( $_GET['action'] == "detail") {
     $roomBy = $rooms_model -> getRoomsBy($_GET['id']);
     // print_r($roomBy);
     // echo"555";
+    
+    $id = $_GET['id'];
     require_once($path.'detail.inc.php');
 }else{
 require_once $path.'view.inc.php';
