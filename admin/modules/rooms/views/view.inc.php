@@ -77,7 +77,7 @@
 
 
         <td>
-            <a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
+            <a href="?content=rooms&action=edit&id=<?PHP echo $rooms[$i]['room_id'];?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 

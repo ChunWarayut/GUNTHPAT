@@ -11,6 +11,57 @@ class Contact extends BaseModel{
     }
 
     
+    function deleteContact($contact_id) {
+        $sql = "DELETE 
+        FROM `tb_contact` 
+        WHERE `tb_contact`.`contact_id` = '$contact_id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
+    
+    function deleteContactType($contact_type_id) {
+        $sql = "DELETE 
+        FROM `tb_contact_type` 
+        WHERE `tb_contact_type`.`contact_type_id` = '$contact_type_id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
+    
+    function deleteContactTitle($contact_title_id) {
+        $sql = "DELETE 
+        FROM `tb_contact_title` 
+        WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
+    
     function getContact_head() {
         $sql = " SELECT *
         FROM `tb_contact_head`
@@ -51,6 +102,23 @@ class Contact extends BaseModel{
         SET 
         `contact_title_name` = '$contact_title_name'
         WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    function editContactType($contact_type_id, $contact_type_name) {
+        $sql = "UPDATE `tb_contact_type` 
+        SET 
+        `contact_type_name` = '$contact_type_name'
+        WHERE `tb_contact_type`.`contact_type_id` = '$contact_type_id'
         ";
         // echo "<pre>";
         // print_r( $sql);
@@ -180,6 +248,21 @@ class Contact extends BaseModel{
     function insertContactTitle($contact_title_name) {
 
         $sql = "INSERT INTO `tb_contact_title`(`contact_title_id`, `contact_title_name`) VALUES (NULL,'$contact_title_name')
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    function insertContactType($contact_type_name) {
+
+        $sql = "INSERT INTO `tb_contact_type`(`contact_type_id`, `contact_type_name`) VALUES (NULL,'$contact_type_name')
         ";
         // echo "<pre>";
         // print_r( $sql);

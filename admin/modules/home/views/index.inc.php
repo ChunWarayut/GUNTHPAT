@@ -121,7 +121,7 @@ window.history.back();
     require_once($path.'view.inc.php');
     ?>
 <script>
-window.location = "index.php?content=slide"
+window.location = "index.php?content=home"
 </script>
 <?PHP
     } else if( $_GET['action'] == "edit") {

@@ -29,7 +29,7 @@
 /* fixed height img */
 #image_fixed {
     width: auto;
-    height: 30em;
+    height: 420px;
     overflow: hidden;
 }
 .no-padding {

@@ -4,7 +4,7 @@ require_once('../models/Rooms.php');
 require_once('../models/Room_Type.php');
 
 $path = "modules/rooms/views/";
-$img_path = "../img_upload/rooms/";
+$img_path = "../img_upload/rooms/"; 
 
 $rooms_model = new Rooms;
 $room_type_model = new Room_Type;
@@ -243,6 +243,10 @@ window.history.back();
             }
         }
     }else{
+        // echo $_GET['id'];
+        $img_path_gallery = "../img_upload/gallery/"; 
+        $roomBy = $rooms_model -> getRoomsBy($_GET['id']);
+        // print_r($roomBy);
         require_once($path . 'edit.inc.php');
     }
     
