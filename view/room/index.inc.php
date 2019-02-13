@@ -15,14 +15,17 @@ $book_model = new BookModel;
 
 
 if( $_GET['action'] == "detail") {
-    $id = ($_GET['id']-1);
+    $id = ($_GET['id']);
     $roomBy = $rooms_model -> getRoomsBy($id);
     require_once($path.'detail.inc.php');
 } else if( $_GET['action'] == "book") {
-    $id = ($_GET['id']-1);
+    $id = ($_GET['id']);
+    $room_id = $_GET['id'];
+
     $roomBy = $rooms_model -> getRoomsBy($id);
     
     if(isset($_POST['book_id'])){
+        $room_id = $_GET['id'];
         $check = true;
         $data = [];
         $data['book_firstname'] = trim($_POST['book_firstname']);
@@ -34,24 +37,25 @@ if( $_GET['action'] == "detail") {
         $data['book_tel'] = trim($_POST['book_tel']);
         
         if($check == false){
-            ?>  <script>  window.history.back(); </script>  <?php
+            ?>  <script>
+              window.history.back(); 
+              </script>  <?php
         }else{
             $result = $book_model->insertBook($data);
 
             if($result){?> 
                 <script>
-                    // window.location="contact_us.php?"
+                    window.location="room.php?"
                     alert('จองสำเร็จ');
                 </script> <?php 
             } else { ?>  
                 <script> 
-                    // window.history.back(); 
+                    window.history.back(); 
                     alert('จองล้มเหลว');
                 </script> <?php
             }
         }
     }
-
     require_once($path.'book.inc.php');
 }else{
 require_once $path.'view.inc.php';

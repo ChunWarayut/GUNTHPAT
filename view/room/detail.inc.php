@@ -51,7 +51,7 @@ require_once 'view/menu.inc.php';
                             echo $rooms[$id]['room_price'];
                         }  ?>
                     </span>
-                    <a href="" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
+                    <a href="room.php?action=book&id=<?PHP echo $rooms[$id]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
                         <span class="text">
                             จองเดียวนี้
                         </span>
