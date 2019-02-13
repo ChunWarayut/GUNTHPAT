@@ -26,10 +26,13 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     <div class="row">
                         <h4 class="text">$
                             <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
-                        &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                        <span class="text">
-                                เพิ่มเติม
-                            </span>
+                        &nbsp; &nbsp; &nbsp;
+                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
+                                <span class="text">
+                                    ดูเพิ่มเติม
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>
@@ -87,10 +90,13 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     <div class="row">
                         <h4 class="text">$
                             <?php echo $rooms[$i]['room_price']; ?> / วัน </h4>
-                        &nbsp; &nbsp; &nbsp;<a href="" class="btn btn-primary text-uppercase js-scroll-trigger">
-                        <span class="text">
-                                เพิ่มเติม
-                            </span>
+                        &nbsp; &nbsp; &nbsp;
+                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
+                                <span class="text">
+                                    ดูเพิ่มเติม
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>

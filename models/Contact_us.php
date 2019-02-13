@@ -65,6 +65,8 @@ class Contact_us extends BaseModel{
         $data['contact_us_car_titel']=mysqli_real_escape_string(static::$db,$data['contact_us_car_titel']);
         $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
         $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
+        $data['contact_us_map_latitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
+        $data['contact_us_map_longitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
         $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
 
         $sql = "UPDATE `tb_contact_us` 
@@ -87,6 +89,8 @@ class Contact_us extends BaseModel{
          `contact_us_taxi_detail` = '".$data['contact_us_taxi_detail']."', 
          `contact_us_car_detail` = '".$data['contact_us_car_detail']."', 
          `contact_us_map` = '".$data['contact_us_map']."',
+         `contact_us_map_latitude` = '".$data['contact_us_map_latitude']."',
+         `contact_us_map_longitude` = '".$data['contact_us_map_longitude']."',
          `contact_us_img` = '".$data['contact_us_img']."'
         WHERE `tb_contact_us`.`contact_us_id` = '$contact_us_id'
         ";
@@ -120,6 +124,10 @@ class Contact_us extends BaseModel{
         $data['contact_us_car_titel']=mysqli_real_escape_string(static::$db,$data['contact_us_car_titel']);
         $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
         $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
+        $data['contact_us_map_latitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
+        $data['contact_us_map_longitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
+        $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
+
 
         $sql = "INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title`, `contact_us_sub_title`, `contact_us_facebook`, `contact_us_tel`, 
         `contact_us_address`, 

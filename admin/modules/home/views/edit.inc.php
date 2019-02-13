@@ -75,9 +75,7 @@
                     <div class="form-group">
                         <label>Sub Title <font color="#F00"><b>*</b></font></label>
                         <textarea class="form-control" id="slide_sub_title" name="slide_sub_title" aria-label="With textarea"
-                            rows="6">
-                            <?PHP echo $slide[$id]['slide_sub_title'];?>
-                        </textarea>
+                            rows="6"><?PHP echo $slide[$id]['slide_sub_title'];?></textarea>
                         <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
                     </div>
                 </div>

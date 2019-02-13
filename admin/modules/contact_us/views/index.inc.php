@@ -166,6 +166,8 @@ $id =($_GET['id']);
         $data['contact_us_car_titel'] = $_POST['contact_us_car_titel'];
         $data['contact_us_car_detail'] = $_POST['contact_us_car_detail'];
         $data['contact_us_map'] = $_POST['contact_us_map'];
+        $data['contact_us_map_latitude'] = $_POST['contact_us_map_latitude'];
+        $data['contact_us_map_longitude'] = $_POST['contact_us_map_longitude'];
 
 
         $target_dir = "../img_upload/contact_us/";

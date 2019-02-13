@@ -11,9 +11,7 @@
                     <label> </label>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
                     <textarea class="form-control " id="gallery_head_sub_title" name="gallery_head_sub_title"
-                        rows="6">
-                        <?PHP echo $gallery_head[0]['gallery_head_sub_title'];?>
-                    </textarea>
+                        rows="6"><?PHP echo $gallery_head[0]['gallery_head_sub_title'];?></textarea>
                 </div>
             </div>
 <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
