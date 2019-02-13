@@ -2,7 +2,7 @@
 require_once 'view/menu.inc.php';
 ?>
 <div class="container">
-    <div class="text-center" style=" padding-bottom:8%; margin-top:-50 ">
+    <div class="text-center" style=" padding-bottom:3%; margin-top:-50 ">
     <i class="far fa-edit" style="font-size:60px"></i>
         <h1>
             <span class="text">
@@ -58,7 +58,7 @@ require_once 'view/menu.inc.php';
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
-                <a name="" id="" class="btn btn-primary form-control" href="#" role="button"> ย้อนกลับ </a>
+                <a name="" id="" class="btn btn-primary form-control" href="room.php" role="button"> ย้อนกลับ </a>
             </div>
             <div class="col-md-6">
                 <label class="text">

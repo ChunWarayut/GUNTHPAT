@@ -30,7 +30,7 @@ $img_path = "img_upload/news/";
         for ($i=0; $i < 4; $i++) { 
             # code...
             ?>
-                <p class="text">
+                <p class="text text-truncate ">
                     <?PHP  echo    $news[$i]['news_name'];?>
                 </p>
                 <hr class="border-white">

@@ -36,7 +36,7 @@
                                     <?php echo    $facilities[$i]['facilities_detail']; ?>
                                     </span>
                                 </p>
-                                <button type="button" class="btn btn-outline-light">MORE</button>
+                                <!-- <button type="button" class="btn btn-outline-light">MORE</button> -->
                             </div>
                         </div>
                     </div>

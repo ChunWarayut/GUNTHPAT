@@ -211,7 +211,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <div class="row">
                     <div class="col-12">
-                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
+                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
                             <span class="text">
                                 จองเดียวนี้
                             </span>

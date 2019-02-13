@@ -78,17 +78,8 @@ function readURL(input) {
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Room Type <font color="#F00"><b>*</b></font></label> <br />
-                                <select class="form-control  custom-select" id="room_type_id" name="room_type_id">
-                                    <?PHP #endregion
-                                for ($i=0; $i < count($room_type); $i++) { 
-                                    # code...
-                                ?>
-                                    <option selected value="<?PHP echo $room_type[$i]['room_type_id'];?>">
-                                        <?PHP echo $room_type[$i]['room_type_name'];?>
-                                    </option>
-                                    <?PHP 
-                                }
-                                ?>
+                                <select class="form-control  custom-select" id="room_type_id" name="room_type_id"> <?PHP  for ($i=0; $i < count($room_type); $i++) {  ?>
+                                    <option selected value="<?PHP echo $room_type[$i]['room_type_id'];?>"><?PHP echo $room_type[$i]['room_type_name'];?></option><?PHP }?>
                                 </select>
                                 <p class="help-block">Example : Deluxe Junior Suite </p>
                             </div>
