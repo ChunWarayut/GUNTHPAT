@@ -151,15 +151,12 @@
                 <hr style="border-top: 2px solid #f47322">
             </div>
             <div class="dropdown" style="padding-left:10%;padding-bottom:3%;">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="text">
-                        ดาวโหลดแผนที่
-                    </span> </a>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                </div>
+                <a class="btn btn-secondary dropdown-toggle" href="<?PHP echo $contact_us[0]['contact_us_map']; ?>">
+                  
+                        <span class="text">
+                            ดาวโหลดแผนที่
+                        </span> 
+                </a>
             </div>
 
 
@@ -223,9 +220,9 @@
                 <fieldset class="gllpLatlonPicker" style="margin: -14; height: auto;">
                     <div class="gllpMap" style="width: 100%;  height: 50%;">Google Maps</div>
                     <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->
-                    <input type="text" class="gllpLatitude form-control" name="location_lat" value="14.9764223"
+                    <input type="text" class="gllpLatitude form-control" name="contact_us_map_latitude" value="<?PHP echo $contact_us[0]['contact_us_map_latitude']; ?>"
                         hidden />
-                    <input type="text" class="gllpLongitude form-control" name="location_long" value="102.0701143"
+                    <input type="text" class="gllpLongitude form-control" name="contact_us_map_longitude" value="<?PHP echo $contact_us[0]['contact_us_map_longitude']; ?>"
                         hidden />
                     <input type="hidden" class="gllpZoom" value="14" />
                 </fieldset>
