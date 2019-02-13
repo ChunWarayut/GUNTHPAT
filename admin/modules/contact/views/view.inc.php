@@ -16,7 +16,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2> เพิ่มแก้ไขข้อมูล TITLE</h2>
+                            <h2> เพิ่ม แก้ไข ข้อมูล TITLE</h2>
                         </div>
                         <div class="col-lg-6">
                             <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"
@@ -26,7 +26,7 @@
                     <div class="form-group">
                         <label> </label>
                         <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                        <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="6">
+                        <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="10">
                         <?PHP echo $contact_head[0]['contact_head_detail'];?>
                     </textarea>
                     </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-lg-6">
                 <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_title">
-                    <button type="submit" name="" id="" class="btn btn-primary btn-xs float-right"
+                    <button type="submit" name="" id="" class="button  float-right"
                         btn-block>เพิ่ม</button>
                 </form>
             </div>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-lg-6">
                 <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_type">
-                    <button type="submit" name="" id="" class="btn btn-primary btn-xs float-right"
+                    <button type="submit" name="" id="" class="button float-right"
                         btn-block>เพิ่ม</button>
                 </form>
             </div>
