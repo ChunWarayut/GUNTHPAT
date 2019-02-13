@@ -21,12 +21,10 @@ function readURL(input) {
                 <div class="col-lg-6">
                     <h1>
                         หน้าแก้ไขข้อมูล Contact Us
-                        <?PHP 
-echo $contact_us[$id]['contact_us_title'];  ?>
+                        <?PHP echo $contact_us[$id]['contact_us_title'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
-
                     <button type="submit" class="btn btn-primary float-right">แก้ไข</button>
                 </div>
             </div>
@@ -221,8 +219,41 @@ echo $contact_us[$id]['contact_us_title'];  ?>
                         </div>
                     </div>
 
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label> Map Latitude <font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_map_latitude" name="contact_us_map_latitude" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_map_latitude'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label> Map Longitude<font color="#F00"><b>*</b></font></label>
+                            <input id="contact_us_map_longitude" name="contact_us_map_longitude" class="form-control"
+                                value="<?PHP echo $contact_us[$id]['contact_us_map_longitude'];?>" />
+                            <p class="help-block">Example : ...</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </form>
+
+
+<fieldset class="gllpLatlonPicker" style="height: auto;">
+                            <div class="gllpMap" style="width: 13809em;  height: 25em;">Google Maps</div>
+                            <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->
+                            <input type="text" class="gllpLatitude form-control" name="contact_us_map_latitude" value="<?PHP echo $contact_us[0]['contact_us_map_latitude']; ?>"
+                                hidden />
+                            <input type="text" class="gllpLongitude form-control" name="contact_us_map_longitude" value="<?PHP echo $contact_us[0]['contact_us_map_longitude']; ?>"
+                                hidden />
+                            <input type="hidden" class="gllpZoom" value="14" />
+                        </fieldset>
+
+<script src="https://maps-api-ssl.google.com/maps/api/js?key=AIzaSyBPYt_mZGd-2iotzhpiZKw1_GpZ6H9w3vs&sensor=false">
+</script>
+<script src="../template/map/js/jquery-gmaps-latlon-picker.js"></script>
