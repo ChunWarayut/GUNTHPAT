@@ -1,9 +1,22 @@
 <?php
 require_once 'view/menu.inc.php';
 ?>
+<div class="container">
+    <div class="text-center" style=" padding-bottom:8%; margin-top:-50 ">
+    <i class="far fa-edit" style="font-size:60px"></i>
+        <h1>
+            <span class="text">
+                รายละเอียด
+            </span>
+            <span class="text" style="color:#f47322; ">
+                การจอง
+            </span>
+        </h1>
+    </div>
+</div>
 <form action="room.php?action=book" method="post">
-    
-<input type="hidden" id="book_id" name="book_id" value="" />
+
+    <input type="hidden" id="book_id" name="book_id" value="" />
     <div class="container">
         <div class="row" style="padding-bottom: 100;">
             <div class="col-md-6">
@@ -20,8 +33,12 @@ require_once 'view/menu.inc.php';
             </div>
             <div class="col-md-6">
                 <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
-                <select class="form-control  custom-select" id="room_id" name="room_id"><?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <option SELECTED value="<?PHP echo $rooms[$i]['room_id'];?>"><?PHP echo $rooms[$i]['room_name'];?></option><?PHP 
+                <select class="form-control  custom-select" id="room_id" name="room_id">
+                    <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                    <option SELECTED value="<?PHP echo $rooms[$i]['room_id'];?>">
+                        <?PHP echo $rooms[$i]['room_name'];?>
+                    </option>
+                    <?PHP 
                     }?>
                 </select>
             </div>

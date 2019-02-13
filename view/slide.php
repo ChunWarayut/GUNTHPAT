@@ -92,15 +92,15 @@
                 </div>
                 <br>
                 <div class="row">
-                        <div class="class col-lg-12">
-                            <a href="" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
-                                <span class="text">
-                                    BOOK NOW
-                                </span>
-
-                            </a>
-                        </div>
+                    <div class="class col-lg-12">
+                        <a href="" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
+                            <span class="text">
+                                BOOK NOW
+                            </span>
+                        </a>
                     </div>
+                    <div class="input-group date" data-provide="datepicker">
+                </div>
             </div>
         </div>
     </div>
@@ -115,8 +115,6 @@
 } ?>
 
 </section>
-
-
 <script type="text/javascript">
 $(document).on('ready', function() {
     $(".slide").slick({
