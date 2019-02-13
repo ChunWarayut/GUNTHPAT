@@ -77,7 +77,7 @@ require_once 'view/menu.inc.php';
 <div class="container" style="">
     <div class="row">
         <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-6">
             <div class="shadow-lg p-3 mb-5 bg-white rounded;">
                 <section class="slide" style="padding:0%; margin:-16">
                     <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$i]['room_id'])); ++$j) {    ?>
