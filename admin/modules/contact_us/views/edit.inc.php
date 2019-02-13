@@ -224,7 +224,7 @@ function readURL(input) {
                             <label> Map Latitude <font color="#F00"><b>*</b></font></label>
                             <input id="contact_us_map_latitude" name="contact_us_map_latitude" class="form-control"
                                 value="<?PHP echo $contact_us[$id]['contact_us_map_latitude'];?>" />
-                            <p class="help-block">Example : ...</p>
+                            <p class="help-block">Example : 14.9763853</p>
                         </div>
                     </div>
 
@@ -233,7 +233,7 @@ function readURL(input) {
                             <label> Map Longitude<font color="#F00"><b>*</b></font></label>
                             <input id="contact_us_map_longitude" name="contact_us_map_longitude" class="form-control"
                                 value="<?PHP echo $contact_us[$id]['contact_us_map_longitude'];?>" />
-                            <p class="help-block">Example : ...</p>
+                            <p class="help-block">Example : 102.0680571</p>
                         </div>
                     </div>
 
@@ -245,7 +245,7 @@ function readURL(input) {
 
 
 <fieldset class="gllpLatlonPicker" style="height: auto;">
-                            <div class="gllpMap" style="width: 13809em;  height: 25em;">Google Maps</div>
+                            <div class="gllpMap" style="width: 138.5em;  height: 70em;">Google Maps</div>
                             <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->
                             <input type="text" class="gllpLatitude form-control" name="contact_us_map_latitude" value="<?PHP echo $contact_us[0]['contact_us_map_latitude']; ?>"
                                 hidden />
