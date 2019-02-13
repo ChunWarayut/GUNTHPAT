@@ -18,6 +18,7 @@
             </div>
         </div>
     </div>
+</div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="
     z-index: 50; margin-right: 100; margin-left: 100  "
         id="mainNav">
