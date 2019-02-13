@@ -2,12 +2,12 @@
 .slide-detail {
     position: absolute;
     top: 30%;
-
     max-width: 100%;
     z-index: 999;
     margin-left: -90
 }
 </style>
+
 <div class="slide-item">
     <div class="slide-detail" style="padding-left: 200px;">
         <div class="slide-header" style="color: #fff">
@@ -35,7 +35,7 @@
         <br>
         <div class="slide-text-detail" style="color: #fff">
             <div class="font-weight-light">
-                <i class="far fa-play-circle"style="font-size:100px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="far fa-play-circle" style="font-size:100px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </div>
         <div class="slide-text-detail" style="color: #fff; padding-left: 130px; margin-top: -75">

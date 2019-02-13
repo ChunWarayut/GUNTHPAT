@@ -59,8 +59,8 @@ require_once('view/menu.inc.php');
 <div class="container" style="">
 
     <div class="text-center" style="">
-        <h4>
-            <span class="text">
+        <h4 class="font-weight-light">
+            <span class="text2">
                 แสดงให้ฉันดู
             </span>
         </h4>
