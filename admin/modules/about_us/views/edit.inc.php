@@ -68,10 +68,7 @@ function readURL(input) {
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>About Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control " id="about_us_sub_title" name="about_us_sub_title"
-                                    rows="8">
-                                    <?PHP echo $about_us[$id]['about_us_sub_title'];?>
-                                </textarea>
+                                <textarea class="form-control " id="about_us_sub_title" name="about_us_sub_title"rows="8"><?PHP echo $about_us[$id]['about_us_sub_title'];?></textarea>
                             </div>
                         </div>
 

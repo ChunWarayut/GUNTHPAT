@@ -26,9 +26,7 @@
                     <div class="form-group">
                         <label> </label>
                         <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                        <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="10">
-                        <?PHP echo $contact_head[0]['contact_head_detail'];?>
-                    </textarea>
+                        <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="10"><?PHP echo $contact_head[0]['contact_head_detail'];?></textarea>
                     </div>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button> -->
                 </div>

@@ -10,10 +10,7 @@
                 <div class="form-group">
                     <label> </label>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                    <textarea class="form-control " id="facilities_head_sub_title" name="facilities_head_sub_title"
-                        rows="6">
-                        <?PHP echo $facilities_head[0]['facilities_head_sub_title'];?>
-                    </textarea>
+                    <textarea class="form-control " id="facilities_head_sub_title" name="facilities_head_sub_title"rows="6"><?PHP echo $facilities_head[0]['facilities_head_sub_title'];?></textarea>
                 </div>
             </div>
 <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->

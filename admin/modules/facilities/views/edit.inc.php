@@ -71,10 +71,7 @@ echo $facilities[$id]['facilities_name'];  ?>
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control " id="facilities_detail" name="facilities_detail"
-                                    rows="6">
-                                    <?PHP echo $facilities[$id]['facilities_detail'];?>
-                                </textarea>
+                                <textarea class="form-control " id="facilities_detail" name="facilities_detail"rows="6"><?PHP echo $facilities[$id]['facilities_detail'];?></textarea>
                                 <p class="help-block">Example : </p>
                             </div>
                         </div>

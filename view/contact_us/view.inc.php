@@ -306,8 +306,7 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="text"> ข้อความ <font color="#F00"><b>*</b></font></label>
-                            <textarea class="form-control " id="contact_text" name="contact_text" rows="6">
-                                </textarea>
+                            <textarea class="form-control " id="contact_text" name="contact_text" rows="6"></textarea>
                         </div>
                     </div>
                     <div class="col-lg-12" align="center">
