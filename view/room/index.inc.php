@@ -1,14 +1,17 @@
 <?php
-require_once('models/Rooms.php');
 
 $menu = 'room';
 $path = 'view/room/';
-
+require_once('models/Rooms.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRooms();
 $img_path_gallery = "img_upload/gallery/"; 
 $img_path_room = "img_upload/rooms/"; 
 // print_r($rooms);
+require_once('models/BookModel.php');
+$book_model = new BookModel;
+// $book = $book_model -> getBook();
+// print_r($book);
 
 
 if( $_GET['action'] == "detail") {
@@ -19,43 +22,36 @@ if( $_GET['action'] == "detail") {
     $id = ($_GET['id']-1);
     $roomBy = $rooms_model -> getRoomsBy($id);
     
-    if(isset($_POST['contact_title_id'])){
+    if(isset($_POST['book_id'])){
         $check = true;
         $data = [];
-        $data['contact_id'] = trim($_POST['contact_id']);
-        $data['contact_title_id'] = trim($_POST['contact_title_id']);
-        $data['contact_firstname'] = trim($_POST['contact_firstname']);
-        $data['contact_lastname'] = trim($_POST['contact_lastname']);
-        $data['contact_email'] = trim($_POST['contact_email']);
-        $data['contact_tel'] = trim($_POST['contact_tel']);
-        $data['contact_country'] = trim($_POST['contact_country']);
-        $data['contact_text'] = trim($_POST['contact_text']);
-        $data['contact_type_id'] = trim($_POST['contact_type_id']);
-
+        $data['book_firstname'] = trim($_POST['book_firstname']);
+        $data['book_lastname'] = trim($_POST['book_lastname']);
+        $data['book_person'] = trim($_POST['book_person']);
+        $data['room_id'] = trim($_POST['room_id']);
+        $data['book_date_start'] = trim($_POST['book_date_start']);
+        $data['book_date_end'] = trim($_POST['book_date_end']);
+        $data['book_tel'] = trim($_POST['book_tel']);
+        
         if($check == false){
             ?>  <script>  window.history.back(); </script>  <?php
         }else{
-            $user = $contact_model->addContact($data);
+            $result = $book_model->insertBook($data);
 
-            if($user){
-                ?> 
+            if($result){?> 
                 <script>
                     // window.location="contact_us.php?"
-                </script> 
-                <?php
-            }else{
-                ?>  
+                    alert('จองสำเร็จ');
+                </script> <?php 
+            } else { ?>  
                 <script> 
                     // window.history.back(); 
+                    alert('จองล้มเหลว');
                 </script> <?php
             }
         }
-    }else{
-        ?> <script> 
-            // window.history.back(); 
-        </script> <?php
     }
-    
+
     require_once($path.'book.inc.php');
 }else{
 require_once $path.'view.inc.php';

@@ -43,6 +43,27 @@ class Slide extends BaseModel{
         }
     }
     
+    function getSlideHeader() {
+        $sql = " SELECT
+        *
+    FROM
+        `tb_slide_header`
+    WHERE
+        1
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+    
 
     function insertSlide($data = []) {
         $data['slide_title']=mysqli_real_escape_string(static::$db,$data['slide_title']);
@@ -90,6 +111,29 @@ class Slide extends BaseModel{
         // print_r( $sql);
         // echo "</pre>";
 
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    function editSlideHeader($slide_header_id,$data = []) {
+        $data['slide_header_title']=mysqli_real_escape_string(static::$db,$data['slide_header_title']);
+        $data['slide_header_title_2']=mysqli_real_escape_string(static::$db,$data['slide_header_title_2']);
+        $data['slide_header_title_3']=mysqli_real_escape_string(static::$db,$data['slide_header_title_3']);
+        $data['slide_header_video']=mysqli_real_escape_string(static::$db,$data['slide_header_video']);
+
+        $sql = "UPDATE `tb_slide_header` 
+        SET `slide_header_title` = '".$data['slide_header_title']."', 
+        `slide_header_title_2` = '".$data['slide_header_title_2']."', 
+        `slide_header_title_3` = '".$data['slide_header_title_3']."', 
+        `slide_header_video` = '".$data['slide_header_video']."' 
+        WHERE `tb_slide_header`.`slide_header_id` = '$slide_header_id'
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
         }else {
