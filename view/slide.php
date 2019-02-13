@@ -7,6 +7,26 @@
     margin-left: -90
 }
 </style>
+<style type="text/css">
+.ui-datepicker {
+    background: #333;
+    border: 1px solid #555;
+    color: #EEE;
+}
+</style>
+<link type="text/css" rel="Stylesheet"
+href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/
+smoothness/jquery-ui.css" />
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datestart" ).datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#dateend" ).datepicker({dateFormat: "dd/mm/yy"});
+    
+
+  } );
+  </script>
 
 <div class="slide-item">
     <div class="slide-detail" style="padding-left: 200px; padding-right: 50px; width: 100%; ">
@@ -55,8 +75,8 @@
                         Arrival Date
                     </span>
                     <br>
-                    <input class="form-control" autocomplete="off"
-                        style="background-color: #00000078; border: 0.5px solid #ffffff45; ">
+                    <input class="form-control" autocomplete="off" id = "datestart"
+                        style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; >
                 </div>
                 <br>
                 <div class="font-weight-light">
@@ -64,8 +84,8 @@
                         Depature Date
                     </span>
                     <br>
-                    <input class="form-control" autocomplete="off"
-                        style="background-color: #00000078; border: 0.5px solid #ffffff45; ">
+                    <input class="form-control" autocomplete="off" id = "dateend"
+                        style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
                 <br>
                 <div class="row">
@@ -76,7 +96,7 @@
                             </span>
                             <br>
                             <input class="form-control" autocomplete="off"
-                                style="background-color: #00000078; border: 0.5px solid #ffffff45; ">
+                                style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -86,7 +106,7 @@
                             </span>
                             <br>
                             <input class="form-control" autocomplete="off"
-                                style="background-color: #00000078; border: 0.5px solid #ffffff45; ">
+                                style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                         </div>
                     </div>
                 </div>
