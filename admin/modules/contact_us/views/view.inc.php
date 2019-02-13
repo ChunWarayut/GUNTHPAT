@@ -73,6 +73,8 @@
 
                 <td class="text-left">
                     <?PHP echo  $contact_us[0]['contact_us_map'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_map_latitude'];  ?>
+                    <?PHP echo  $contact_us[0]['contact_us_map_longitude'];  ?>
                 </td>
 
 
