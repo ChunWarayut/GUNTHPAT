@@ -4,7 +4,7 @@
         <div class="text-right">
             <div class="font-weight-light">
                 <i class='fas fa-mobile-alt' style='font-size:15px; color: #f47322;'></i>&nbsp;&nbsp;
-                <span class="text; font-weight-light" style='color: #ffffff; '>
+                <span class="text2; font-weight-light" style='color: #ffffff; '>
                     084-958-8954
                 </span>
                 &nbsp;
@@ -12,7 +12,7 @@
                 &nbsp;
                 &nbsp;
                 <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>&nbsp;&nbsp;
-                <span class="text" style='color: #ffffff; '>
+                <span class="text2" style='color: #ffffff; '>
                     Nakhonratchasima Thailand
                 </span>
             </div>

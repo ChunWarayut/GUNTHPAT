@@ -24,12 +24,12 @@
 
         <div class="col-lg-8" style="padding-bottom:8%;">
             <h4 class="font-weight-light">
-                <span>
+                <span class="text2">
                     <?PHP echo $contact_us[0]['contact_us_title']; ?>
                 </span>
             </h4>
             <p class="font-weight-light">
-                <span>
+                <span class="text2">
                     <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
                 </span>
             </p>
@@ -42,11 +42,13 @@
                                 <i class="fab fa-facebook-square" style="font-size:20px"></i> &nbsp;
                             </div>
                             <div class="col-10">
-                                <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                    <p class="font-weight-light">
-                                        <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
-                                    </p>
-                                </a>
+                                <span class="text2">
+                                    <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                                        <p class="font-weight-light">
+                                            <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
+                                        </p>
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -54,10 +56,12 @@
                         <div class="container">
                             <div class="row">
                                 <i class="fas fa-phone-volume" style="font-size:20px"></i>&nbsp;
-                                <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                    <p class="font-weight-light">
-                                        <?PHP echo $contact_us[0]['contact_us_tel']; ?>
-                                    </p>
+                                <span class="text2">
+                                    <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
+                                        <p class="font-weight-light">
+                                            <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                                        </p>
+                                </span>
                                 </a>
                             </div>
                         </div>
@@ -80,11 +84,14 @@
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light">
-                            <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
-                            <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
-                            <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
+                            <span class="text2">
+                                <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
+                                <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
+                            </span>
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -95,7 +102,9 @@
                     </div>
                     <div class="col-auto">
                         <p class="font-weight-light"> &nbsp;
-                            <?PHP echo $contact_us[0]['contact_us_fax']; ?>
+                            <span class="text2">
+                                <?PHP echo $contact_us[0]['contact_us_fax']; ?>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -107,7 +116,9 @@
                     <div class="col-auto">
                         <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
                             <p class="font-weight-light"> &nbsp;
-                                <?PHP echo $contact_us[0]['contact_us_email']; ?>
+                                <span class="text2">
+                                    <?PHP echo $contact_us[0]['contact_us_email']; ?>
+                                </span>
                             </p>
                         </a>
                     </div>
