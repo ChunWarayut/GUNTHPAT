@@ -16,7 +16,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2> เพิ่ม แก้ไข ข้อมูล TITLE</h2>
+                            <h2> เพิ่ม แก้ไข ข้อมูล </h2>
                         </div>
                         <div class="col-lg-6">
                             <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"
