@@ -66,7 +66,7 @@ require_once('view/menu.inc.php');
         </h4>
     </div>
 </div>
-<div class="container">
+<div style="padding-left: 150px; padding-right: 150px;">
 
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
 
