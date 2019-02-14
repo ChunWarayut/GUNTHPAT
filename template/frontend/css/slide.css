@@ -1,10 +1,5 @@
 
 
-
-
-
-@media (max-width: 1900px) {
-    
     .slide-detail {
         position: absolute;
         top: 30%;
@@ -21,6 +16,8 @@
     .slide-detail .slide-text-detail{
         color: #fff;
     }
+
+@media (max-width: 1900px) {
 }
 @media (max-width: 991px) {
     
