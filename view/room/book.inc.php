@@ -1,6 +1,8 @@
+
 <?php
 require_once 'view/menu.inc.php';
 ?>
+
 <div class="container">
     <div class="text-center" style=" padding-bottom:3%; margin-top:-50 ">
     <i class="far fa-edit" style="font-size:60px"></i>
@@ -35,7 +37,9 @@ require_once 'view/menu.inc.php';
                 <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
                 <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>">
+                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; 
+                        # code...
+                    } ?>>
                         <?PHP echo $rooms[$i]['room_name'];?>
                     </option>
                     <?PHP 
@@ -65,11 +69,11 @@ require_once 'view/menu.inc.php';
             
             <div class="col-md-3">
                 <label class="text"> วันที่เข้าพัก <font color="#F00"><b>*</b></font></label>
-                <input id="book_date_start" value="<?PHP echo $book_date_start;?>" name="book_date_start" class="form-control" autocomplete="off">
+                <input id="calendar_start"   value="<?PHP echo $book_date_start;?>" name="book_date_start" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-3">
                 <label class="text"> ถึงวันที่ <font color="#F00"><b>*</b></font></label>
-                <input id="book_date_end" value="<?PHP echo $book_date_end;?>" name="book_date_end" class="form-control" autocomplete="off">
+                <input id="calendar_end"   value="<?PHP echo $book_date_end;?>" name="book_date_end" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label class="text"> เบอร์โทรศัพท์ <font color="#F00"><b>*</b></font></label>

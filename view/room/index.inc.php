@@ -43,13 +43,13 @@ if( $_GET['action'] == "detail") {
 
             if($result){?> 
                 <script>
-                    window.location="room.php?"
                     alert('จองสำเร็จ');
+                    window.location="room.php?"
                 </script> <?php 
             } else { ?>  
                 <script> 
-                    window.history.back(); 
                     alert('จองล้มเหลว');
+                    window.history.back(); 
                 </script> <?php
             }
         }
@@ -59,7 +59,6 @@ if( $_GET['action'] == "detail") {
     $book_date_start = $_GET['book_date_start'];
     $book_date_end = $_GET['book_date_end'];
     $room_by_id = $rooms_model -> getRoomsByID($room_id);
-    print_r( $room_by_id);
     require_once($path.'book.inc.php');
 }else{
 require_once $path.'view.inc.php';

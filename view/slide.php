@@ -4,8 +4,8 @@ require_once('models/Rooms.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRooms();
 ?>
-<script>
 
+<script>
 function search() {
     var room_id = $("#room_id").val();
     var book_person = $("#book_person").val();
@@ -15,6 +15,7 @@ function search() {
 
 }
 </script>
+
 <style>
 .slide-detail {
     position: absolute;
@@ -24,27 +25,6 @@ function search() {
     margin-left: -90
 }
 </style>
-<style type="text/css">
-.ui-datepicker {
-    background: #333;
-    border: 1px solid #555;
-    color: #EEE;
-}
-</style>
-<link type="text/css" rel="Stylesheet"
-href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/
-smoothness/jquery-ui.css" />
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datestart" ).datepicker({dateFormat: 'dd/mm/yy'});
-    $( "#dateend" ).datepicker({dateFormat: "dd/mm/yy"});
-    
-
-  } );
-  </script>
-
 <div class="slide-item">
     <div class="slide-detail" style="padding-left: 200px; padding-right: 50px; width: 100%; ">
         <div class="row">

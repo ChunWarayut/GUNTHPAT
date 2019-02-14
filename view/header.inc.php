@@ -33,3 +33,16 @@
 <script src="template/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="template/slick/slick.min.js" type ="text/javascript" charset="utf-8"></script>
+
+
+<link type="text/css" rel="Stylesheet"href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#calendar_start" ).datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#calendar_end" ).datepicker({dateFormat: "dd/mm/yy"});
+    $( "#book_date_start" ).datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#book_date_end" ).datepicker({dateFormat: "dd/mm/yy"});
+  } );
+  </script>

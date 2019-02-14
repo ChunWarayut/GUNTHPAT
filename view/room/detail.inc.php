@@ -4,12 +4,12 @@ require_once 'view/menu.inc.php';
 <div class="container">
     <div class="text-center" style=" padding-bottom:8%; margin-top:-50 ">
         <h1>
-            <span class="text">
-                Deluxe
-            </span>
             <span class="text" style="color:#f47322; ">
-                Room
-            </span>
+                <?PHP if ($rooms[$id]['room_name'] == "") {
+                    echo "ไม่ระบุ";
+                }else{
+                    echo $rooms[$id]['room_name'];
+                }  ?>
         </h1>
     </div>
     <div class="row">
@@ -51,7 +51,7 @@ require_once 'view/menu.inc.php';
                             echo $rooms[$id]['room_price'];
                         }  ?>
                     </span>
-                    <a href="room.php?action=book&id=<?PHP echo $rooms[$id]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
+                    <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
                         <span class="text">
                             จองเดียวนี้
                         </span>

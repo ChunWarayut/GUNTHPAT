@@ -156,7 +156,7 @@ require_once 'view/menu.inc.php';
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text">
                     <?PHP if ($rooms[$i]['room_facility_1'] == "") {
-                            echo "ไม่ระบุ";
+                            echo "ไม่ระ บุ";
                         }else{
                             echo $rooms[$i]['room_facility_1'];
                         }  ?>
@@ -192,11 +192,13 @@ require_once 'view/menu.inc.php';
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                            <span class="text">
-                                Share
-                            </span>
-                        </button>
+                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block ">
+                                <span class="text">
+                                    Share
+                                </span>
+                            </button>
+                        </a>
                     </div>
                     <div class="col-6">
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
