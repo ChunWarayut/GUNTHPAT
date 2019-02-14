@@ -30,6 +30,29 @@ class Rooms extends BaseModel{
         }
     }
 
+    function getRoomsByID($room_id) {
+        $sql = " SELECT
+                room_id,
+                room_name
+            FROM
+                `tb_room`
+            WHERE
+                tb_room.room_id = '$room_id'
+                
+            ORDER BY tb_room.room_id
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
     function getRoomsBy($room_id) {
         $sql = " SELECT
             *

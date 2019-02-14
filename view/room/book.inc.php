@@ -29,26 +29,47 @@ require_once 'view/menu.inc.php';
             </div>
             <div class="col-md-6">
                 <label class="text"> จำนวน <font color="#F00"><b>*</b></font></label>
-                <input id="book_person" name="book_person" class="form-control" autocomplete="off">
+                <input id="book_person" name="book_person" value="<?PHP echo $book_person;?>" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
-                <select class="form-control  custom-select" id="room_id" name="room_id">
+                <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <option SELECTED value="<?PHP echo $rooms[$i]['room_id'];?>">
+                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>">
                         <?PHP echo $rooms[$i]['room_name'];?>
                     </option>
                     <?PHP 
                     }?>
                 </select>
             </div>
+
+<!--        <div class="col-md-6">
+                <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
+                <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
+                    <?PHP if ($room_id == null || $room_id == "") {
+                        # code...
+                   for ($i=0; $i < count($rooms); $i++) { ?>
+                    <option SELECTED value="<?PHP echo $rooms[$i]['room_id'];?>">
+                        <?PHP echo $rooms[$i]['room_name'];?>
+                    </option>
+                    <?PHP 
+                    }
+                    }  else {  for ($i=0; $i < count($room_by_id); $i++) {?>
+                    <option SELECTED value="<?PHP echo $room_by_id[0]['room_id'];?>">
+                        <?PHP echo $room_by_id[0]['room_name'];?>
+                    </option>
+                    <?PHP }} ?>
+                </select>
+            </div> 
+-->
+            
             <div class="col-md-3">
                 <label class="text"> วันที่เข้าพัก <font color="#F00"><b>*</b></font></label>
-                <input id="book_date_start" name="book_date_start" class="form-control" autocomplete="off">
+                <input id="book_date_start" value="<?PHP echo $book_date_start;?>" name="book_date_start" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-3">
                 <label class="text"> ถึงวันที่ <font color="#F00"><b>*</b></font></label>
-                <input id="book_date_end" name="book_date_end" class="form-control" autocomplete="off">
+                <input id="book_date_end" value="<?PHP echo $book_date_end;?>" name="book_date_end" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-6">
                 <label class="text"> เบอร์โทรศัพท์ <font color="#F00"><b>*</b></font></label>

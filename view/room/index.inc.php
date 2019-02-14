@@ -13,14 +13,12 @@ $book_model = new BookModel;
 // $book = $book_model -> getBook();
 // print_r($book);
 
-
 if( $_GET['action'] == "detail") {
     $id = ($_GET['id']);
     $roomBy = $rooms_model -> getRoomsBy($id);
     require_once($path.'detail.inc.php');
 } else if( $_GET['action'] == "book") {
     $id = ($_GET['id']);
-    $room_id = $_GET['id'];
 
     $roomBy = $rooms_model -> getRoomsBy($id);
     
@@ -56,6 +54,12 @@ if( $_GET['action'] == "detail") {
             }
         }
     }
+    $room_id = $_GET['room_id'];
+    $book_person = $_GET['book_person'];
+    $book_date_start = $_GET['book_date_start'];
+    $book_date_end = $_GET['book_date_end'];
+    $room_by_id = $rooms_model -> getRoomsByID($room_id);
+    print_r( $room_by_id);
     require_once($path.'book.inc.php');
 }else{
 require_once $path.'view.inc.php';
