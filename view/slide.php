@@ -19,10 +19,10 @@ function search() {
 
 <div class="slide-item">
     <div class="slide-detail">
-        <div class="row">
-            <div class="col-lg-10">
+        <div class="row header-header">
+            <div class="col-lg-8 header-slide">
                 <div class="slide-header" >
-                    <span class="text" style="">
+                    <span class="text" >
                         Welcome to
                     </span>
                 </div>
@@ -57,7 +57,7 @@ function search() {
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2" style="background-color: #00000036 ">
+            <div class="col-lg-4 " style="background-color: #00000036 ">
                 <br>
                 <div class="font-weight-light">
                     <span class="text2" style="font-size:15px; color: #fff">
@@ -107,7 +107,7 @@ function search() {
                 <div class="row">
                     <div class="class col-lg-12">
                         <button onclick="search();" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
-                            <span class="text">
+                            <span class="text ">
                                 BOOK NOW
                             </span>
                         </button>

@@ -16,11 +16,25 @@
     .slide-detail .slide-text-detail{
         color: #fff;
     }
-
+    
+    .header-slide-mobile{
+        display: none;
+    }
+    .btn-primary {
+        background-color: #f47322;
+        border-color: #f47322;
+    }
+    .btn-primary:hover {
+        background-color: #f47322;
+        border-color: #f47322;
+    }
 @media (max-width: 1900px) {
+
 }
 @media (max-width: 991px) {
-    
+    .header-slide{
+        display: none;
+    }
     .slide-detail {
         position: absolute;
         top: 30%;
@@ -45,6 +59,9 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     
+    .header-header{
+        display: none;
+    }
 }
