@@ -19,6 +19,7 @@ $gallery = $gallery_model -> getgallery() ;
 <html>
 <head>
     <?PHP require_once('view/header.inc.php'); ?>
+    <link href="template/frontend/css/room.css" rel="stylesheet">
 </head>
 <body>
     <?PHP require_once('view/room/index.inc.php');?>

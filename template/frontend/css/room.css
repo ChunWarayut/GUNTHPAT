@@ -1,6 +1,19 @@
-.facilities-header{
-    color: #f47322;
+span{
+    color: #000;
 }
 .room-header{
     color: #f47322;
+}
+.rooms-center{
+    margin-left:150;
+}
+
+@media (max-width: 767px) {
+    .rooms {
+        padding-top: 20%
+    }
+
+    .rooms-center{
+        margin-left:0;
+    }            
 }

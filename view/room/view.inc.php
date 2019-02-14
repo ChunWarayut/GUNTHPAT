@@ -3,10 +3,10 @@
 require_once 'view/menu.inc.php';
 ?>
 
-<div class="container" style="">
+<div class="container rooms" >
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="text-left" style=" margin-left:150">
+            <div class="text-left rooms-center" style=" ">
                 <h1>
                     <span>
                         ROOM

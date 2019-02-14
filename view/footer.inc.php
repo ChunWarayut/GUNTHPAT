@@ -1,3 +1,5 @@
+<link href="template/frontend/css/footer.css" rel="stylesheet">
+
 <?PHP
 
 require_once('models/News.php');
@@ -21,7 +23,7 @@ $img_path = "img_upload/news/";
         <div class="col-12 ">
             <div class="container">
                 <h4>
-                    <span class="text">
+                    <span class="text-header">
                         LASTEST NEWS
                     </span>
                 </h4>
@@ -30,7 +32,7 @@ $img_path = "img_upload/news/";
         for ($i=0; $i < 4; $i++) { 
             # code...
             ?>
-                <p class="text text-truncate ">
+                <p class="text-detail text-truncate ">
                     <?PHP  echo    $news[$i]['news_name'];?>
                 </p>
                 <hr class="border-white">
@@ -43,7 +45,7 @@ $img_path = "img_upload/news/";
     <div class="col-xl-3" style="padding-top: 5%; padding-bottom: 5%">
         <div class="container">
             <h4>
-                <span class="text">
+                <span class="text-header">
                     LASTEST NEWS
                 </span>
             </h4>
@@ -67,13 +69,13 @@ $img_path = "img_upload/news/";
     <div class="col-xl-3 " style="padding-top: 5%; padding-bottom: 5%">
         <div class="container">
             <h4>
-                <span class="text">
+                <span class="text-header">
                     CONTACT US
                 </span>
             </h4>
             <br>
-            <span style="color: #f47322;">Address :</span>
-            <p class="text">
+            <span class="text-header">Address :</span>
+            <p class="text-detail">
                 <?PHP 
             echo    $contact_us[0]['contact_us_address'];
             echo    $contact_us[0]['contact_us_address_1'];
@@ -84,38 +86,15 @@ $img_path = "img_upload/news/";
             echo    $contact_us[0]['contact_us_address_4'];
             ?>
             </p>
-            <span style="color: #f47322;">Call us :</span>
-            <p class="text">
+            <span class="text-header">Call us :</span>
+            <p class="text-detail">
                 <?PHP  echo    $contact_us[0]['contact_us_fax'];?>
             </p class="text">
-            <span style="text color: #f47322;">Email us :</span>
 
-            <p class="text">
+            <span class="text-header">Email us :</span>
+            <p class="text-detail">
                 <?PHP  echo    $contact_us[0]['contact_us_email'];?>
             </p>
         </div>
     </div>
 </div>
-
-<style>
-/* fixed height img */
-#image_footer_fixed {
-    width: auto;
-    height: 15em;
-    overflow: hidden;
-}
-</style>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Kanit');
-
-.text{
-    font-family: 'Kanit', sans-serif;
-}
-</style>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Kanit:200');
-
-.text2{
-    font-family: 'Kanit', sans-serif;
-}
-</style>
