@@ -1,5 +1,5 @@
 <!--  OUR GALLERY  -->
-<div class="container" style=" padding-top: 8%; padding-bottom: 3%">
+<div class="container" style=" padding-top: 8%; padding-bottom: 3%; margin-top: -200">
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>
         <h1>
