@@ -6,7 +6,7 @@ require_once 'view/menu.inc.php';
 <div class="container rooms" >
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="text-left rooms-center" style=" ">
+            <div class="text-left rooms-center">
                 <h1>
                     <span>
                         ROOM
@@ -26,12 +26,12 @@ require_once 'view/menu.inc.php';
             <div class="" style="padding-bottom:8%;">
 
                 <h4 class="font-weight-light">
-                    <span class="text2">
+                    <span class="text-detail-room">
                         <?PHP echo $contact_us[0]['contact_us_title']; ?>
                     </span>
                 </h4>
                 <p class="font-weight-light">
-                    <span class="text2">
+                    <span class="text-detail-room">
                         <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
                     </span>
                 </p>
@@ -44,9 +44,9 @@ require_once 'view/menu.inc.php';
                                     <i class="fab fa-facebook-square" style="font-size:30px"></i> &nbsp;
                                 </div>
                                 <div class="col-10">
-                                    <span class="text2">
+                                    <span class="text-detail-room">
                                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                            <p class="font-weight-light">
+                                            <p class="font-weight-light text-truncate">
                                                 <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
                                             </p>
                                         </a>
@@ -58,7 +58,7 @@ require_once 'view/menu.inc.php';
                             <div class="container">
                                 <div class="row">
                                     <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
-                                    <span class="text2">
+                                    <span class="text-detail-room">
                                         <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
                                             <p class="font-weight-light">
                                                 <?PHP echo $contact_us[0]['contact_us_tel']; ?>
@@ -102,17 +102,17 @@ require_once 'view/menu.inc.php';
                     });
                 });
                 </script>
-                <h4 class="font-weight-light;" style="margin-top: 25;">
-                    <span class="text">
+                <h5 class="font-weight-light;" style="margin-top: 25;">
+                    <span class="text-detail-room">
                         <?PHP if ($rooms[$i]['room_name'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             echo $rooms[$i]['room_name'];
                         }  ?>
                     </span>
-                </h4>
+                </h5>
                 <i class="fas fa-home" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_size'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -121,7 +121,7 @@ require_once 'view/menu.inc.php';
                 </span>
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_detail_1'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -131,7 +131,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_detail_1'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -140,7 +140,7 @@ require_once 'view/menu.inc.php';
                 </span>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_detail_3'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -149,12 +149,12 @@ require_once 'view/menu.inc.php';
                 </span>
                 <br>
                 <br>
-                <span class="text">
+                <span class="text-detail-room">
                     บริการโทรศัพท์ห้อง
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_facility_1'] == "") {
                             echo "ไม่ระ บุ";
                         }else{
@@ -163,7 +163,7 @@ require_once 'view/menu.inc.php';
                 </span>
                 <br>
                 <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
-                <span class="text">
+                <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_facility_2'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -176,7 +176,7 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <div class="p-3 mb-2 bg-light text-dark" style="padding:0%; margin:-16">
                             <h5 style=" margin-left:30">
-                                <span class="text">
+                                <span class="text-detail-room">
                                     THB
                                 </span>
                                 <span style=" margin-left:40">
@@ -203,7 +203,7 @@ require_once 'view/menu.inc.php';
                     <div class="col-6">
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
-                                <span class="text">
+                                <span class="text-black">
                                     ดูเพิ่มเติม
                                 </span>
                             </button>

@@ -46,7 +46,7 @@ function search() {
                 <br>
                 <div class="slide-text-detail" >
                     <div class="font-weight-light">
-                        <i class="far fa-play-circle" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="slide-text-detail" style="color: #fff; padding-left: 130px; margin-top: -75">
@@ -128,6 +128,7 @@ function search() {
 } ?>
 
 </section>
+
 <script type="text/javascript">
 $(document).on('ready', function() {
     $(".slide").slick({

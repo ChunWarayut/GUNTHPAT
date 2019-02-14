@@ -2,7 +2,7 @@
 
     .slide-detail {
         position: absolute;
-        top: 30%;
+        top: 25%;
         max-width: 100%;
         z-index: 999;
         margin-left: -90;
@@ -10,10 +10,13 @@
         padding-right: 50px; 
         width: 100%; 
     }
-    .slide-detail .slide-header{
+    .text{
         color: #fff;
     }
-    .slide-detail .slide-text-detail{
+    .text2{
+        color: #fff;
+    }
+    .slide-text-detail{
         color: #fff;
     }
     
@@ -37,7 +40,7 @@
     }
     .slide-detail {
         position: absolute;
-        top: 30%;
+        top: 25%;
         max-width: 100%;
         z-index: 999;
         margin-left: -90;
@@ -61,7 +64,10 @@
 
 @media (max-width: 767px) {
     
-    .header-header{
+    .slide-detail{
+        display: none;
+    }
+    .slide{
         display: none;
     }
 }
