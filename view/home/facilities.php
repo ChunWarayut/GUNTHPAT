@@ -10,7 +10,7 @@
 <!-- FACILITIES -->
 <div class=""style="background-image: url('img_upload/facilities/blogger-336371_1920.jpg');-webkit-filter: blur(0.5px);filter: blur(0.5px);">
     <div class="container">
-        <section class="slide" style="margin-top: -350; ">
+        <section class="slide" style="margin-top: -200; ">
             <?php for ($i=0; $i < count($facilities); $i++) { ?>
                 <div class="row" >
                     <div class="col-md-4">
