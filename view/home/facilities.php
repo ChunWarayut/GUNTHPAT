@@ -17,7 +17,7 @@
         <div class="slide-detail" style="padding-left: 200px; padding-right: 50px; width:100%;">
             <div class="row">
                 <div class="col-lg-4" style="padding-left: 200px">
-                    <h3 class="text"><?php echo $facilities[$i]['facilities_name'];?></h3>
+                    <h3 class="facilities-header"><?php echo $facilities[$i]['facilities_name'];?></h3>
                     <p class="text" style="color: #ffffff;"><?php echo $facilities[$i]['facilities_detail'];?></p>
                 </div>
 

@@ -22,9 +22,6 @@
     type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-<!-- Custom styles for this template -->
-<link href="template/frontend/css/menu.css" rel="stylesheet">
-
 <!-- Bootstrap core JavaScript -->
 <script src="template/frontend/vendor/jquery/jquery.min.js"></script>
 <script src="template/frontend/js/jquery-2.2.0.min.js" type="text/javascript"></script>

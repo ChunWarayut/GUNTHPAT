@@ -14,7 +14,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 <p class="text-left">
                     |
                 </p>
-                <h3>
+                <h3 class="room-header">
                     <?php
             echo $rooms[$i]['room_name']; ?>
                 </h3>
@@ -78,7 +78,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 <p class="text-left;">
                     |
                 </p>
-                <h3>
+                <h3 class="room-header">
                     <?php
             echo $rooms[$i]['room_name']; ?>
                 </h3>

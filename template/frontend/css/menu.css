@@ -1,4 +1,6 @@
-
+.font-weight-light{
+    color: #f47322; 
+}
 a {
     color: #f47322;
 }
@@ -23,6 +25,7 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
+
 
 #mainNav {
     background-color: #212529;
