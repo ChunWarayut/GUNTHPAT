@@ -1,38 +1,48 @@
-<h1>ระบบจัดการข่าวสาร</h1>
-<h2>เพิ่ม ลบ เเก้ไข ข่าวสาร</h2>
-<div align=right>
-    <a class="button" href="?content=news&action=insert">
+<h1>ระบบจอง</h1>
+<h2> จองห้องพัก </h2>
+<!-- <div align=right>
+    <a class="button" href="?content=book&action=insert">
         เพิ่ม
     </a>
-</div>
+</div> -->
 <table>
     <thead>
         <tr>
             <th>#</th>
-            <th> หัวข้อข่าว </th>
-            <th></th>
-            <th></th>
+            <th> ชื่อ </th>
+            <th> จำนวน </th>
+            <th>ห้อง </th>
+            <th>วันที่เข้าพัก </th>
+            <th>ถึงวันที่ </th>
+            <th> Tel </th>
 
         </tr>
     </thead>
     <tbody>
         <?php 
-    for($i=0; $i < count($news); $i++){
+    for($i=0; $i < count($book); $i++){
     ?>
         <tr>
             <td><?php echo $i+1; ?></td>
-            <td class="text-left"><?php echo $news[$i]['news_name']; ?> </td>
-            <!-- <td class="text-left"><?php echo $news[$i]['news_detail']; ?></td> -->
-            <td>
-                <a href="?content=news&action=update&id=<?php echo $news[$i]['news_id'];?>" style="font-size: 20px;">
+            <td class="text-left">
+            <?php echo $book[$i]['book_firstname']; ?> 
+            <?php echo $book[$i]['book_lastname']; ?> 
+            </td>
+            <td class="text-left"><?php echo $book[$i]['book_person']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['room_name']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['book_date_start']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['book_date_end']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['book_tel']; ?></td>
+            <!-- <td>
+                <a href="?content=book&action=update&id=<?php echo $book[$i]['book_id'];?>" style="font-size: 20px;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
             </td>
             <td>
-                <a class="text-danger" href="?content=news&action=delete&id=<?PHP echo  $news[$i]['news_id'];?>">
+                <a class="text-danger" href="?content=book&action=delete&id=<?PHP echo  $book[$i]['book_id'];?>">
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </a>
-            </td>
+            </td> -->
         </tr>
         <?php } ?>
     </tbody>

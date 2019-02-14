@@ -1,5 +1,5 @@
 <?php
-require_once('../models/Book.php');
+require_once('../models/BookModel.php');
 
 $path = "modules/book/views/";
 
@@ -9,7 +9,7 @@ $book_id = isset($_GET['id']);
 
 $book = $book_model ->getBook();
     
-print_r($book);
+// print_r($book);
 if(!isset($_GET['action'])){
     $book = $book_model ->getBook();
     

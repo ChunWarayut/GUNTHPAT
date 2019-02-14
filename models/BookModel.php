@@ -11,9 +11,7 @@ class BookModel extends BaseModel{
     }
 
     function getBook() {
-        $sql = " SELECT *
-        FROM `tb_book`
-        WHERE 1
+        $sql = " SELECT * FROM `tb_book` LEFT JOIN tb_room ON tb_book.room_id = tb_room.room_id WHERE 1
         ORDER BY tb_book.book_id
         ";
         // echo "<pre>";
