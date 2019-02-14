@@ -1,3 +1,4 @@
+<link href="template/frontend/css/slide.css" rel="stylesheet">
 
 <?PHP
 require_once('models/Rooms.php');
@@ -16,33 +17,24 @@ function search() {
 }
 </script>
 
-<style>
-.slide-detail {
-    position: absolute;
-    top: 30%;
-    max-width: 100%;
-    z-index: 999;
-    margin-left: -90
-}
-</style>
 <div class="slide-item">
-    <div class="slide-detail" style="padding-left: 200px; padding-right: 50px; width: 100%; ">
+    <div class="slide-detail">
         <div class="row">
             <div class="col-lg-10">
-                <div class="slide-header" style="color: #fff">
-                    <span class="text" style="font-size:20px">
+                <div class="slide-header" >
+                    <span class="text" style="">
                         Welcome to
                     </span>
                 </div>
                 <br>
-                <div class="slide-text-detail" style="color: #fff">
+                <div class="slide-text-detail" >
                     <h1>
                         <span class="text" style="font-size:80px">
                             GUNTHPAT PLACE
                         </span>
                 </div>
                 <br>
-                <div class="slide-text-detail" style="color: #fff">
+                <div class="slide-text-detail" >
                     <div class="font-weight-light">
                         <span class="text2" style="font-size:30px">
                             A place to experience and enjoy life
@@ -52,9 +44,9 @@ function search() {
                 <br>
                 <br>
                 <br>
-                <div class="slide-text-detail" style="color: #fff">
+                <div class="slide-text-detail" >
                     <div class="font-weight-light">
-                        <i class="far fa-play-circle" style="font-size:100px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="far fa-play-circle" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="slide-text-detail" style="color: #fff; padding-left: 130px; margin-top: -75">

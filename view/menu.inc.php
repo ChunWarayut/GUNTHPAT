@@ -1,9 +1,10 @@
     <!-- Navigation -->
-    <div style="z-index: 50; position:relative;  margin-right: 135 ; margin-top: 20">
+    
+    <div style="z-index: 50; position:relative; ">
 
-        <div class="text-right">
-            <div class="font-weight-light">
-                <i class='fas fa-mobile-alt' style='font-size:15px; color: #f47322;'></i>&nbsp;&nbsp;
+        <div class="text-right contact_header">
+            <div class="font-weight-light contact_list">
+                <i class='fas fa-mobile-alt' ></i>&nbsp;&nbsp;
                 <span class="text2; font-weight-light" style='color: #ffffff; '>
                     084-958-8954
                 </span>
@@ -20,7 +21,7 @@
     </div>
 </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="
-    z-index: 50; margin-right: 100; margin-left: 100  "
+    z-index: 50; "
         id="mainNav">
         <a href="index.php" class="navbar-brand js-scroll-trigger "><img src="template/backend/images/logo/logo.png"
                 width="130px" class="img-icon float-right"></a>
