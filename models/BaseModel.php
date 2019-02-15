@@ -2,12 +2,14 @@
 
 abstract class BaseModel{
     public static $db;
-	protected $host="localhost";
-    
+    // protected $host="localhost";
+    // protected $username="root";
+	// protected $password="root123456";
+    protected $db_name="gunthpat";
+
+    protected $host="192.168.0.168";
     protected $username="root";
 	protected $password="root123456";
-	protected $db_name="gunthpat";
-
 
 	function __construct(){
         static::$db = mysqli_connect($host, $username, $password, $db_name);
