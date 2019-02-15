@@ -11,6 +11,8 @@ $slide = $slide_model -> slideRoom01();
 <html>
     <head>
         <link href="template/frontend/css/home.css" rel="stylesheet">
+        <link href="template/frontend/css/room-book.css" rel="stylesheet">
+
         <?PHP require_once('view/header.inc.php'); ?>
     </head>
     <body>
