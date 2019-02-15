@@ -8,7 +8,7 @@ $target_dir = "../img_upload/slide/";
 
 $slide_model = new Slide;
 $slide = $slide_model -> slideRoom01();
-$id = $_GET['id'];
+$id =($_GET['id']);
 
 // echo "<pre>";
 // print_r($slide);
@@ -35,6 +35,95 @@ $id = $_GET['id'];
 
     if( !isset($_GET['action']) ) {
         require_once($path.'view.inc.php');
+    } else if( $_GET['action'] == "insert") {
+        
+    if(isset($_POST['slide_id'])){
+        $check = true;
+        $data = [];
+        $data['slide_id'] = $_POST['slide_id'];
+        $data['slide_title'] = $_POST['slide_title'];
+        $data['slide_sub_title'] = $_POST['slide_sub_title'];
+        $data['slide_link'] = $_POST['slide_link'];
+
+        //------------------ฟังชั่นแก้ไขรูป--------------------
+        if($_FILES['slide_img']['name'] == ""){
+            $data['slide_img'] = $_POST['img_slide_o'];
+        }else {
+            //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
+            $type = strrchr($_FILES['slide_img']['name'],".");
+            //--------------------------------------------------
+            
+            //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
+            $newname = $date.$numrand.$type;
+            $path_copy=$path.$newname;
+            $path_link=$target_dir.$newname;
+            //-------------------------------------------------
+
+            $target_file = $target_dir .$date.$newname;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                $error_msg =  "Sorry, file already exists.";
+                $check = false;
+            }else if ($_FILES["slide_img"]["size"] > 5000000) {
+                $error_msg = "Sorry, your file is too large.";
+                $check = false;
+            }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
+                $error_msg = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                $check = false;
+            }else if (move_uploaded_file($_FILES["slide_img"]["tmp_name"], $target_file)) {
+
+                //-----------------------------------
+                $data['slide_img'] = $date.$newname;
+                //-----------------------------------
+
+                $target_file = $target_dir . $_POST["img_slide_o"];
+                
+            } else {
+                $error_msg =  "Sorry, there was an error uploading your file.";
+                $check = false;
+            } 
+        }
+        //------------------------------------------------------------------------------
+        if($check == false){
+            ?>
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
+        }else{
+            $result = $slide_model-> insertSlide($data);
+
+            if($result){
+                ?>
+<script>
+window.location = "index.php?content=home"
+</script>
+<?php
+            }else{
+                ?>
+<script>
+window.history.back();
+</script>
+<?php
+            }
+        }
+    }else{
+        require_once($path . 'insert.inc.php');
+    }
+    } else if( $_GET['action'] == "delete") {
+    $target_file = $target_dir . $_POST['slide_img_o'];
+    if (file_exists($target_file)) {
+        unlink($target_file);
+    }
+    $result = $slide_model-> deleteSlide($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=home"
+</script>
+<?PHP
     } else if( $_GET['action'] == "edit") {
         
     if(isset($_POST['slide_id'])){

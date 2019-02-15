@@ -20,6 +20,12 @@
                 </div>
             </a></li>
 
+        <li><a href="index.php?content=book">
+                <div <?php if($content=="book" ){echo "class='menu-active '" ;} else {echo "class='menu'" ;}?>>
+                    <i class="fa fa-book" style="font-size:24px"></i>
+                    <span style="padding:5px; font-size:15px;">BOOK</span>
+                </div>
+            </a></li>
         <li><a href="index.php?content=rooms">
                 <div <?php if($content=="rooms" ){echo "class='menu-active '" ;} else {echo "class='menu'" ;}?>>
                     <i class="fa fa-bed" style="font-size:24px"></i>

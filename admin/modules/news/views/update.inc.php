@@ -33,7 +33,7 @@ function readURL(input) {
 <br>
 <hr>
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
@@ -51,10 +51,10 @@ function readURL(input) {
                 </div>
             </div>
             
-        </div><div class="col-lg-2">
+        </div><div class="col-lg-4">
                 <div class="col-lg-12">
                     <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP 
+                        <img id="_img" width="500" src="<?PHP 
                         if ($news[0]['news_img'] != "" || $news[0]['news_img'] != null) { 
                             echo $img_path . $news[0]['news_img']; 
                             } else {

@@ -77,17 +77,17 @@
 
 
         <td>
-            <a href="?content=rooms&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
+            <a href="?content=rooms&action=edit&id=<?PHP echo $rooms[$i]['room_id'];?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 
         </td>
 
         <td>
+            <?PHP 
+                    if ($rooms[$i]['room_recommened'] == 1) {
+                        ?>
             <a href="?content=rooms&action=recommened&id=<?PHP echo $rooms[$i]['room_id'];?>&recommened=0">
-                <?PHP #endregion
-            if ($rooms[$i]['room_recommened'] == 1) {
-                ?>
                 <i class="fa fa-star" aria-hidden="true"></i>
             </a>
             <?PHP        

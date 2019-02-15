@@ -18,6 +18,10 @@
 else if($content=="article"){
     require_once("modules/article/views/index.inc.php"); 
 }
+// ระบบจอง
+else if($content=="book"){
+    require_once("modules/book/views/index.inc.php"); 
+}
 
 // ระบบห้องพัก
 else if($content=="rooms"){

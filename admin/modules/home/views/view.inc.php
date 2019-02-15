@@ -1,6 +1,12 @@
+<div class="row">
+    <div class="col-lg-6">
 <h1>Slide</h1>
 <h2>เเก้ไข Slide</h2>
-
+</div>
+<div class="col-lg-6">
+        <a href="?content=home&action=insert" class="btn btn-primary float-right">เพิ่มข้อมูล</a>
+    </div>
+    </div>
 <table>
     <thead>
         <tr>
@@ -10,6 +16,7 @@
             <th width="500px">Sub Title</th>
             <th width="50px">ลิงค์</th>
             <th width="50px"></th>
+            <th width="50px"></th>
         </tr>
     </thead>
     <?PHP 
@@ -18,7 +25,7 @@
     <tbody>
         <tr>
             <td>
-                <?PHP echo $slide[$i]['slide_id'];  ?>
+                <?PHP echo $i+1 ;  ?>
             </td>
             <td>
                 <img src="<?PHP echo $img_path . $slide[$i]['slide_img'];  ?> "
@@ -39,6 +46,10 @@
                 <a href="?content=home&action=edit&id=<?PHP echo $i  ?>">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
+            <td>
+            <a class="text-danger" href="?content=home&action=delete&id=<?PHP echo  $slide[$i]['slide_id'];?>">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </a>
             </td>
         </tr>
     </tbody>

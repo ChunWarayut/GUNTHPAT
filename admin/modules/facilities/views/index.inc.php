@@ -2,8 +2,8 @@
 date_default_timezone_set("Asia/Bangkok");
 require_once('../models/Facilities.php');
 
-$path = "modules/Facilities/views/";
-$img_path = "../img_upload/Facilities/";
+$path = "modules/facilities/views/";
+$img_path = "../img_upload/facilities/";
 
 $facilities_model = new Facilities;
 $facilities = $facilities_model -> getFacilities();
@@ -18,13 +18,13 @@ $facilities_head = $facilities_model -> getFacilitiesHead();
 // echo "</pre>";
 
 
-$type = $_GET['type'];
-$id = $_GET['id'];
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $Facilities);
 // ECHO "</PRE>";
 
-$target_dir = "../img_upload/Facilities/";
+$target_dir = "../img_upload/facilities/";
 
     //---------------------ฟังก์ชั่นวันที่------------------------------------
     date_default_timezone_set("Asia/Bangkok");

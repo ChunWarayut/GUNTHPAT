@@ -8,7 +8,7 @@ $target_dir = "../img_upload/about_us/";
 
 $about_us_model = new About_us;
 $about_us = $about_us_model -> getAbout_us();
-$id = $_GET['id'];
+$id =($_GET['id']);
 
 // echo "<pre>";
 // print_r($about_us);

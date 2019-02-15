@@ -48,7 +48,7 @@
                 <th width="100">Tel</th>
                 <th width="100">Fax</th>
                 <th width="100">Email</th>
-                <th width="200">Map </th>
+                <th width="100">Map </th>
             </tr>
         </thead>
         <tbody>
@@ -71,8 +71,16 @@
                 </td>
 
 
-                <td class="text-left">
-                    <?PHP echo  $contact_us[0]['contact_us_map'];  ?>
+                <td>
+                        <fieldset class="gllpLatlonPicker" style="height: auto;">
+                            <div class="gllpMap" style="width: 40em;  height: 25em;">Google Maps</div>
+                            <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->
+                            <input type="text" class="gllpLatitude form-control" name="contact_us_map_latitude" value="<?PHP echo $contact_us[0]['contact_us_map_latitude']; ?>"
+                                hidden />
+                            <input type="text" class="gllpLongitude form-control" name="contact_us_map_longitude" value="<?PHP echo $contact_us[0]['contact_us_map_longitude']; ?>"
+                                hidden />
+                            <input type="hidden" class="gllpZoom" value="14" />
+                        </fieldset>
                 </td>
 
 
@@ -188,3 +196,9 @@
         </tbody>
     </table>
 </div>
+
+
+
+<script src="https://maps-api-ssl.google.com/maps/api/js?key=AIzaSyBPYt_mZGd-2iotzhpiZKw1_GpZ6H9w3vs&sensor=false">
+</script>
+<script src="../template/map/js/jquery-gmaps-latlon-picker.js"></script>

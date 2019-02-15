@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
+
 require_once('../models/Gallery.php');
 
 $path = "modules/gallery/views/";
@@ -10,8 +11,12 @@ $gallery = $gallery_model -> getGallery();
 $gallery_head = $gallery_model -> getgalleryHead();
 $gallery_type = $gallery_model -> getGalleryType();
 
+
+require_once('../models/Rooms.php');
+$rooms_model = new Rooms;
+$rooms = $rooms_model -> getRooms();
 // echo "<pre>";
-// print_r($gallery_type);
+// print_r($rooms[0]['room_id']);
 // echo "</pre>";
 
 // echo "<pre>";
@@ -19,8 +24,8 @@ $gallery_type = $gallery_model -> getGalleryType();
 // echo "</pre>";
 
 
-$type = $_GET['type'];
-$id = $_GET['id'];
+$type =($_GET['type']);
+$id =($_GET['id']);
 // ECHO "<PRE>";
 // print_r( $gallery);
 // ECHO "</PRE>";
@@ -75,9 +80,9 @@ window.location = "index.php?content=gallery"
         $check = true;
         $data = [];
         $data['gallery_id'] = $_POST['gallery_id'];
+        $data['room_id'] = $_POST['room_id'];
         $data['gallery_name'] = $_POST['gallery_name'];
         $data['gallery_type_id'] = $_POST['gallery_type_id'];
-
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
@@ -157,6 +162,7 @@ window.history.back();
         $check = true;
         $data = [];
         $data['gallery_id'] = $_POST['gallery_id'];
+        $data['room_id'] = $_POST['room_id'];
         $data['gallery_name'] = $_POST['gallery_name'];
         $data['gallery_type_id'] = $_POST['gallery_type_id'];
         $data['gallery_detail'] = $_POST['gallery_detail'];
