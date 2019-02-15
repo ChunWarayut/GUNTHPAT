@@ -22,21 +22,21 @@ function search() {
         <div class="row header-header">
             <div class="col-lg-8 header-slide">
                 <div class="slide-header" >
-                    <span class="text" >
+                    <span class="slide-text" >
                         Welcome to
                     </span>
                 </div>
                 <br>
                 <div class="slide-text-detail" >
                     <h1>
-                        <span class="text" style="font-size:80px">
+                        <span class="slide-text" style="font-size:80px">
                             GUNTHPAT PLACE
                         </span>
                 </div>
                 <br>
                 <div class="slide-text-detail" >
                     <div class="font-weight-light">
-                        <span class="text2" style="font-size:30px">
+                        <span class="slide-text2" style="font-size:30px">
                             A place to experience and enjoy life
                         </span>
                     </div>
@@ -51,7 +51,7 @@ function search() {
                 </div>
                 <div class="slide-text-detail" style="color: #fff; padding-left: 130px; margin-top: -75">
                     <div class="font-weight-light">
-                        <span class="text2" style="font-size:40px;">
+                        <span class="slide-text2" style="font-size:40px;">
                             Watch Video
                         </span>
                     </div>
@@ -60,7 +60,7 @@ function search() {
             <div class="col-lg-4 " style="background-color: #00000036 ">
                 <br>
                 <div class="font-weight-light">
-                    <span class="text2" style="font-size:15px; color: #fff">
+                    <span class="slide-text2" style="font-size:15px; color: #fff">
                         Arrival Date
                     </span>
                     <br>
@@ -69,7 +69,7 @@ function search() {
                 </div>
                 <br>
                 <div class="font-weight-light">
-                    <span class="text2" style="font-size:15px; color: #fff">
+                    <span class="slide-text2" style="font-size:15px; color: #fff">
                         Depature Date
                     </span>
                     <br>
@@ -80,7 +80,7 @@ function search() {
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="font-weight-light">
-                            <span class="text2" style="font-size:15px; color: #fff">
+                            <span class="slide-text2" style="font-size:15px; color: #fff">
                                 Persons
                             </span>
                             <br>
@@ -90,7 +90,7 @@ function search() {
                     </div>
                     <div class="col-lg-6">
                         <div class="font-weight-light">
-                            <span class="text2" style="font-size:15px; color: #fff">
+                            <span class="slide-text2" style="font-size:15px; color: #fff">
                                 Room
                             </span>
                             <br>
@@ -107,7 +107,7 @@ function search() {
                 <div class="row">
                     <div class="class col-lg-12">
                         <button onclick="search();" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
-                            <span class="text ">
+                            <span class="slide-text ">
                                 BOOK NOW
                             </span>
                         </button>
