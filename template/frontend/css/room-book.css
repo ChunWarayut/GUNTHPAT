@@ -1,13 +1,21 @@
 
+    .book-title{
+        margin-top: -100px;
+        padding-bottom:8%;
+        font-size:40px
+    }
+
 @media (max-width: 767px) {
     .book-title{
-        padding-bottom:3%;
-        padding-top:3%;
-        font-size:60px
+        margin-top: 0px;
+        padding-bottom: 8%;
+        padding-top: 8%;
+        font-size: 40px
     }
 }
 @media (max-width: 739px) {
     .book-title{
+        margin-top: 0px;
         padding-bottom:3%;
         padding-top:3%;
         font-size:25px

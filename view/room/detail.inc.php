@@ -1,7 +1,7 @@
 <?php
 require_once 'view/menu.inc.php';
 ?>
-<div class="container">
+<div class="container" id="detail">
     <div class="text-center room-detail-style" >
         <h1>
             <span class="text-black-title">
@@ -43,7 +43,7 @@ require_once 'view/menu.inc.php';
                 <h5 class="room-thb-button">
                     <span >THB</span> &nbsp; <span ><?PHP if ($rooms[$id]['room_price'] == "") {  echo "ไม่ระบุ"; }else{ echo $rooms[$id]['room_price']; }  ?>
                     </span>
-                    <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
+                    <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>#book" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
                         <span class="text-white-button">
                             จองเดียวนี้
                         </span>

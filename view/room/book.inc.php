@@ -4,7 +4,7 @@
 require_once 'view/menu.inc.php';
 ?>
 
-<div class="container">
+<div class="container" id="book">
     <div class="text-center book-title">
     <i class="far fa-edit" ></i>
         <h1>
@@ -80,13 +80,13 @@ require_once 'view/menu.inc.php';
                 <label class="text"> เบอร์โทรศัพท์ <font color="#F00"><b>*</b></font></label>
                 <input id="book_tel" name="book_tel" class="form-control" autocomplete="off">
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
                 <a name="" id="" class="btn btn-primary form-control" href="room.php" role="button"> ย้อนกลับ </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>

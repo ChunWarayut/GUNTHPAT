@@ -1,8 +1,8 @@
 
 
-    .slide-detail {
+    .slide-detail-detail {
         position: absolute;
-        top: 25%;
+        top: 24%;
         max-width: 100%;
         z-index: 999;
         margin-left: -90;
@@ -31,16 +31,11 @@
         background-color: #f47322;
         border-color: #f47322;
     }
-@media (max-width: 1900px) {
+@media (max-width: 1024px) {
 
-}
-@media (max-width: 991px) {
-    .header-slide{
-        display: none;
-    }
-    .slide-detail {
+    .slide-detail-detail {
         position: absolute;
-        top: 25%;
+        top: 19%;
         max-width: 100%;
         z-index: 999;
         margin-left: -90;
@@ -48,23 +43,59 @@
         padding-right: 50px; 
         width: 100%; 
     }
-    .slide-detail .slide-header .text{
-        font-size:20px;
-    }
-    .slide-detail .slide-header{
+    .slide-text{
         color: #fff;
     }
-    .slide-detail .slide-text-detail .font-weight-light{
-        font-size:100px;
+    .slide-text2{
+        color: #fff;
     }
-    .slide-detail .slide-text-detail{
+    .slide-text-detail{
+        color: #fff;
+    }
+    
+    .header-slide-mobile{
+        display: none;
+    }
+    .btn-primary {
+        background-color: #f47322;
+        border-color: #f47322;
+    }
+    .btn-primary:hover {
+        background-color: #f47322;
+        border-color: #f47322;
+    }
+
+}
+@media (max-width: 991px) {
+    .header-slide{
+        display: none;
+    }
+    .slide-detail-detail {
+        position: absolute;
+        top: 24%;
+        max-width: 100%;
+        z-index: 999;
+        margin-left: -90;
+        padding-left: 200px; 
+        width: 100%; 
+    }
+    .slide-detail-detail .slide-header .text{
+        font-size:20px;
+    }
+    .slide-detail-detail .slide-header{
+        color: #fff;
+    }
+    .slide-detail-detail .slide-text-detail .font-weight-light{
+        font-size:90px;
+    }
+    .slide-detail-detail .slide-text-detail{
         color: #fff;
     }
 }
 
 @media (max-width: 767px) {
     
-    .slide-detail{
+    .slide-detail-detail{
         display: none;
     }
     .slide{

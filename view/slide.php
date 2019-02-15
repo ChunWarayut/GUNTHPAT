@@ -12,13 +12,13 @@ function search() {
     var book_person = $("#book_person").val();
     var book_date_start = $("#book_date_start").val();
     var book_date_end = $("#book_date_end").val();
-        window.location = "room.php?action=book&room_id="+room_id+"&book_person="+book_person+"&book_date_start="+book_date_start+"&book_date_end="+book_date_end;
+        window.location = "room.php?action=book&room_id="+room_id+"&book_person="+book_person+"&book_date_start="+book_date_start+"&book_date_end="+book_date_end+"#book";
 
 }
 </script>
 
 <div class="slide-item">
-    <div class="slide-detail">
+    <div class="slide-detail-detail">
         <div class="row header-header">
             <div class="col-lg-8 header-slide">
                 <div class="slide-header" >

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'anakotmai-bold';
+    src: url('.././anakotmai-bold.eot');
+    src: url('./anakotmai-bold.eot?#iefix') format('embedded-opentype'),
+         url('./anakotmai-bold.woff2') format('woff2'),
+         url('./anakotmai-bold.woff') format('woff'),
+         url('./anakotmai-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmai-light';
+    src: url('./anakotmai-light.eot');
+    src: url('./anakotmai-light.eot?#iefix') format('embedded-opentype'),
+         url('./anakotmai-light.woff2') format('woff2'),
+         url('./anakotmai-light.woff') format('woff'),
+         url('./anakotmai-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmai-medium';
+    src: url('./anakotmai-medium.eot');
+    src: url('./anakotmai-medium.eot?#iefix') format('embedded-opentype'),
+         url('./anakotmai-medium.woff2') format('woff2'),
+         url('./anakotmai-medium.woff') format('woff'),
+         url('./anakotmai-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 
+    'anakotmai-light', 
+    'anakotmai-medium';
+}

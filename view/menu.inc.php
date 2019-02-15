@@ -7,7 +7,7 @@
             <div class="font-weight-light contact_list">
                 <i class='fas fa-mobile-alt' ></i>&nbsp;&nbsp;
                 <span class="text2; font-weight-light" style='color: #ffffff; '>
-                    084-958-8954
+                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>"><?PHP echo $contact_us[0]['contact_us_tel']; ?></a>
                 </span>
                 &nbsp;
                 &nbsp;
@@ -15,7 +15,7 @@
                 &nbsp;
                 <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>&nbsp;&nbsp;
                 <span class="text2" style='color: #ffffff; '>
-                    Nakhonratchasima Thailand
+                    <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
                 </span>
             </div>
         </div>
@@ -46,35 +46,35 @@
                     </a>
                 </li>
                 <li class="nav-item <?php if($menu == 'room'){ echo 'active'; }?>">
-                    <a class="nav-link" href="room.php">
+                    <a class="nav-link" href="room.php#room">
 
                         <?php  echo "ROOM";?>
 
                     </a>
                 </li>
                 <li class="nav-item <?php if($menu == 'facilities'){ echo 'active'; }?>">
-                    <a class="nav-link" href="facilities.php">
+                    <a class="nav-link" href="facilities.php#facilities">
 
                         <?php  echo "FACILITIES";?>
 
                     </a>
                 </li>
                 <li class="nav-item <?php if($menu == 'gallery'){ echo 'active'; }?>">
-                    <a class="nav-link" href="gallery.php">
+                    <a class="nav-link" href="gallery.php#gallery">
 
                         <?php  echo "GALLERY";?>
 
                     </a>
                 </li>
                 <li class="nav-item <?php if($menu == 'about_us'){ echo 'active'; }?>">
-                    <a class="nav-link" href="about_us.php">
+                    <a class="nav-link" href="about_us.php#about_us">
 
                         <?php  echo "ABOUT US";  ?>
 
                     </a>
                 </li>
                 <li class="nav-item <?php if($menu == 'contact_us'){ echo 'active'; }?>">
-                    <a class="nav-link" href="contact_us.php">
+                    <a class="nav-link" href="contact_us.php#contact_us">
 
                         <?php  echo "CONTACT US"; ?>
                     </a>

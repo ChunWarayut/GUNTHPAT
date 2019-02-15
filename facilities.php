@@ -15,6 +15,7 @@ $gallery = $gallery_model -> getgallery() ;
 ?>
 <html>
 <head>
+    <link href="template/frontend/css/facilities.css" rel="stylesheet">
     <?PHP require_once('view/header.inc.php'); ?>
 </head>
 <body>

@@ -6,10 +6,29 @@
     z-index: 999;
     /* margin-left: -90 */
 }
+.home-facilities-top {
+    margin-top: -350; 
+}
+
+@media (max-width: 767px) {
+    .home-facilities-top {
+        margin-top: -200; 
+    }
+}
+@media (max-width: 739px) {
+    .home-facilities-top {
+        margin-top: -200; 
+    }
+}
+@media (max-width: 600px) {
+    .home-facilities-top {
+        margin-top: -200; 
+    }
+}
 </style>
 
 
-<section class="facilities" style="margin-top: -350; ">
+<section class="facilities home-facilities-top" >
 
     <?php for ($i = 0; $i <2; ++$i) {
     ?>

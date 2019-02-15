@@ -3,7 +3,7 @@
 require_once 'view/menu.inc.php';
 ?>
 
-<div class="container rooms" >
+<div class="container rooms" id="room" >
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="text-left rooms-center">
@@ -201,7 +201,7 @@ require_once 'view/menu.inc.php';
                         </a>
                     </div>
                     <div class="col-6">
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                                 <span class="text-black">
                                     ดูเพิ่มเติม
@@ -213,7 +213,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <div class="row">
                     <div class="col-12">
-                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
+                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
                             <span class="text">
                                 จองเดียวนี้
                             </span>

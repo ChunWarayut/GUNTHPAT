@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'anakotmai-bold';
-    src: url('../../fonts/anakotmai-bold.eot');
+    src: url('../fonts/anakotmai-bold.eot');
     src: url('../fonts/anakotmai-bold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/anakotmai-bold.woff2') format('woff2'),
          url('../fonts/anakotmai-bold.woff') format('woff'),
