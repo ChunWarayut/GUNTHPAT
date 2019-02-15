@@ -2,7 +2,7 @@
 
 <?PHP
 
-require_once('models/News.php');
+require_once('models/NewsModel.php');
 $news_model = new News;
 $news = $news_model -> getNews();
 $img_path = "img_upload/news/";
@@ -11,7 +11,7 @@ $img_path = "img_upload/news/";
 ?>
 
 
-<div class="row text-white" style="background-color: #212529; padding-right: 3%;">
+<div class="row row-no-margin text-white" style="background-color: #212529; padding-right: 3%;">
 
     <div class="col-xl-3 text-center align-self-center ">
         <div class="container">

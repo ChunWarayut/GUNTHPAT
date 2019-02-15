@@ -9,7 +9,7 @@
 </style>
 
 
-<section class="facilities" style="margin-top: -350; ">
+<section class="facilities">
 
     <?php for ($i = 0; $i <2; ++$i) {
     ?>

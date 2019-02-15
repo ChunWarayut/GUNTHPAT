@@ -2,10 +2,12 @@ body{
     font-family: 'anakotmai-bold';
 }
 .list-one{
-    margin-top: -250px;
+    margin-top: -10%;
+
 }
 .list-two{
-    margin-top: -130px;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 .room-text{
     color: #000;
@@ -16,7 +18,7 @@ body{
 }
 
 .list-br{
-    padding-bottom: 10%;
+    margin-bottom: 10%;
 }
 .room-detail-text{
     position: absolute;
@@ -34,30 +36,42 @@ body{
 }
 
 @media only screen and (max-width: 991px){
-    .list-one {
-        margin-top: -10%;
-
-    }
-    .list-two{
-        margin-top: -5%;
+    .container {
+        max-width: 90%;
     }
     .room-text-name{
         font-size: 1.25rem;
     }
     .room-text h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .room-text h4{
         font-size: 1rem;
     }
     .img-room-show{
-        height: 300px;
+        height: 375px;
+    }
+    p {
+       font-size: 0.8rem;
     }
 }
 @media only screen and (max-width: 768px) {
+    .list-one {
+        margin-top: 0;
+    }
     .room-detail-text {
         position: unset;
         margin-bottom: 5%;
+    }
+    .img-room-show{
+        height: 300px;
+    }
+    .list-two {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    p.text-left{
+        display: none;
     }
 }
 @media only screen and (max-width: 480px) {
