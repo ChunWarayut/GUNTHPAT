@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+.text-header{
+    font-family: 'Kanit', sans-serif;
+    color: #f47322;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:200');
+.text-detail{
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+}
+/* fixed height img */
+#image_footer_fixed {
+    width: auto;
+    height: 15em;
+    overflow: hidden;
+}

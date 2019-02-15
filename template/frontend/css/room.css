@@ -1,0 +1,45 @@
+span{
+    color: #000;
+}
+.room-header{
+    color: #f47322;
+}
+.rooms-center{
+    margin-left:150;
+}
+.text-detail-room{
+    color: #000;
+}
+.text-black{
+    color: rgb(102, 102, 102);
+}
+.room-detail-style {
+padding-bottom:8%; margin-top:-50 
+}
+.slide-room-detail {
+    margin-top: -200; 
+}
+.img-room-detail {
+    width: 100%; height: auto; object-fit: cover;
+}
+.room-detail-thb {
+    margin-top:-70 
+}
+@media (max-width: 767px) {
+    .rooms {
+        padding-top: 20%
+    }
+    .slide-room-detail {
+        margin-top: 0; margin-left:0
+    }
+    .rooms-center{
+        margin-left:0;
+    }            
+    .room-detail-style {
+        padding-top: 30%;
+        padding-bottom:8%;
+    }
+    .room-detail-thb {
+       padding-top: 0%;
+    }
+}
