@@ -1,16 +1,17 @@
+<link href="template/frontend/css/room-book.css" rel="stylesheet">
 
 <?php
 require_once 'view/menu.inc.php';
 ?>
 
 <div class="container">
-    <div class="text-center" style=" padding-bottom:3%; margin-top:-50 ">
-    <i class="far fa-edit" style="font-size:60px"></i>
+    <div class="text-center book-title">
+    <i class="far fa-edit" ></i>
         <h1>
-            <span class="text">
+            <span class=" book-title">
                 รายละเอียด
             </span>
-            <span class="text" style="color:#f47322; ">
+            <span class=" book-title" style="color:#f47322; ">
                 การจอง
             </span>
         </h1>

@@ -1,0 +1,15 @@
+
+@media (max-width: 767px) {
+    .book-title{
+        padding-bottom:3%;
+        padding-top:3%;
+        font-size:60px
+    }
+}
+@media (max-width: 739px) {
+    .book-title{
+        padding-bottom:3%;
+        padding-top:3%;
+        font-size:25px
+    }
+}
