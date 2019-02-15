@@ -6,7 +6,7 @@ abstract class BaseModel{
     
     protected $username="root";
 	protected $password="root123456";
-	protected $db_name="revelsotf_gunthpat";
+	protected $db_name="revelsoft_gunthpat";
 
 
 	function __construct(){
