@@ -7,7 +7,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
     <div class="row">
         <div class="col-md-4 room-text">
             <div class="room-detail-text">
-            <span class="h2 text-left"><?php  echo $i + 1; ?></span>
+                <span class="h2 text-left"><?php  echo $i + 1; ?></span>
                 <p class="text-left">
                     |
                 </p>
@@ -41,7 +41,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
     } else {
         ?>
 
-<div class="container list-two" >
+<div class="container list-two">
     <div class="row">
         <div class="col-md-8 order-2 order-md-1 ">
             <img class="img-room-show"

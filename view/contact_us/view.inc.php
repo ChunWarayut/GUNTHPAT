@@ -1,11 +1,32 @@
+<style>
+.facilities-page-title {
+    padding-bottom:8%;
+    margin-top:50;
+}
+.facilities-page-header {
+    padding-bottom:8%;
+}
+.facilities-page-title-img {
+    padding-bottom:8%
+}
+.text-gunthpat {
+    color:#f47322; 
+}
+.contact_us_sub_title{
+    color:#000;
+}
+.contact-address{
+    padding-bottom:8%
+}
+</style>
 <div class="container" id="contact_us">
 
-    <div class="text-center" style=" padding-bottom:8%">
+    <div class="text-center facilities-page-title" >
         <h1>
             <span class="text">
                 CONTACT
             </span>
-            <span class="text" style="color:#f47322; ">
+            <span class="text-gunthpat" style="">
                 US
             </span>
         </h1>
@@ -18,18 +39,18 @@
             <img src=" <?PHP
                         echo $pathImgContact_us . $contact_us[0]['contact_us_img'];
                         ?>"
-                style=" padding-bottom:8%"
-                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+               
+                class="img-fluid facilities-page-title-img" alt="">
         </div>
 
-        <div class="col-lg-8" style="padding-bottom:8%;">
+        <div class="col-lg-8 facilities-page-header" style="">
             <h4 class="font-weight-light">
                 <span class="text2">
                     <?PHP echo $contact_us[0]['contact_us_title']; ?>
                 </span>
             </h4>
             <p class="font-weight-light">
-                <span class="text2">
+                <span class="contact_us_sub_title">
                     <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
                 </span>
             </p>
@@ -44,7 +65,7 @@
                             <div class="col-10">
                                 <span class="text2">
                                     <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                        <p class="font-weight-light">
+                                        <p class="contact_us_sub_title text-truncate">
                                             <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
                                         </p>
                                     </a>
@@ -58,7 +79,7 @@
                                 <i class="fas fa-phone-volume" style="font-size:20px"></i>&nbsp;
                                 <span class="text2">
                                     <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                        <p class="font-weight-light">
+                                        <p class="contact_us_sub_title">
                                             <?PHP echo $contact_us[0]['contact_us_tel']; ?>
                                         </p>
                                 </span>
@@ -83,7 +104,7 @@
                         <i class="fas fa-map-marker-alt" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
-                        <p class="font-weight-light">
+                        <p class="contact_us_sub_title">
                             <span class="text2">
                                 <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
                                 <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
@@ -101,7 +122,7 @@
                         <i class="fas fa-phone-volume" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
-                        <p class="font-weight-light"> &nbsp;
+                        <p class="contact_us_sub_title"> &nbsp;
                             <span class="text2">
                                 <?PHP echo $contact_us[0]['contact_us_fax']; ?>
                             </span>
@@ -115,7 +136,7 @@
                     </div>
                     <div class="col-auto">
                         <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
-                            <p class="font-weight-light"> &nbsp;
+                            <p class="contact_us_sub_title"> &nbsp;
                                 <span class="text2">
                                     <?PHP echo $contact_us[0]['contact_us_email']; ?>
                                 </span>
@@ -126,7 +147,7 @@
                 <br>
                 <div class="container">
                     <div class="col">
-                        <a href="" class="btn btn-primary text-uppercase js-scroll-trigger"
+                        <a href="#contact" class="btn btn-primary text-uppercase js-scroll-trigger"
                             style="padding-left:8%; padding-right:8%">
                             <span class="text">
                                 ติดต่อเรา
@@ -140,7 +161,7 @@
 
 <div class="p-3 mb-2 bg-light text-dark">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 contact-address">
 
             <h4>
                 <p class="text">
@@ -214,7 +235,6 @@
             </div>
         </div>
 
-
         <div class="col-md-6">
             <div style="">
                 <fieldset class="gllpLatlonPicker" style="margin: -14; height: auto;">
@@ -232,7 +252,7 @@
 </div>
 
 
-<div class="container" style="padding-top:8%">
+<div class="container"id="contact" style="padding-top:8%">
     <div class="row">
 
         <div class="col-md-6">
@@ -262,7 +282,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-6">
                         <label class="text">ชื่อ <font color="#F00"><b>*</b></font></label>
                         <input id="contact_firstname" name="contact_firstname" class="form-control" autocomplete="off">

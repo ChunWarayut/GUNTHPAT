@@ -1,7 +1,7 @@
 <!--  OUR GALLERY  -->
 <style>
 .home-gallery-title {
-    padding-top: 8%; padding-bottom: 3%; margin-top: -200
+    padding-top: 8%; padding-bottom: 3%; margin-top: 0
 }
 
 @media (max-width: 767px) {

@@ -1,5 +1,5 @@
 .facilities-header{
-    padding-top: 150;
+    padding-top: 200;
     padding-bottom: 8%; 
     margin-top: -200; 
 }
@@ -21,7 +21,7 @@
 }
 @media (max-width: 767px) {
     .facilities-header{
-        padding-top: 50 ;
+        padding-top: 200 ;
         padding-bottom: 8%; 
         margin-top: 0; 
     }
