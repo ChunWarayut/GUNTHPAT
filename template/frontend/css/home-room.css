@@ -16,7 +16,9 @@ body{
     color: #f47322;
     font-family:anakotmai-bold;
 }
-
+.room-text-detail{
+    height: 5em;
+}
 .list-br{
     margin-bottom: 10%;
 }
@@ -28,13 +30,27 @@ body{
     object-fit: cover;
     width: 100%;
 }
+.text-content-room{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
+.no-pand{
+    padding-right: 0px;
+    align-self: center;
+}
 @media (min-width: 992px){
     .img-room-show {
         height: 400px;
     }
 }
-
+@media only screen and (max-width: 1200px){
+    span.h4{
+        font-size: 1.2rem;
+    }
+}
 @media only screen and (max-width: 991px){
     .container {
         max-width: 90%;
@@ -54,10 +70,15 @@ body{
     p {
        font-size: 0.8rem;
     }
+    span.h4{
+        font-size: 1rem;
+    }
 }
 @media only screen and (max-width: 768px) {
     .list-one {
         margin-top: 0;
+        margin-bottom: 10%;
+
     }
     .room-detail-text {
         position: unset;

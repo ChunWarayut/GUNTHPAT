@@ -1,4 +1,4 @@
-<link href="template/frontend/css/home_room.css" rel="stylesheet">
+<link href="template/frontend/css/home-room.css" rel="stylesheet">
 <?php
 for ($i = 0; $i < count($rooms); ++$i) {
     if ($i % 2 == 0) {
@@ -12,16 +12,16 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     |
                 </p>
                 <span class="h3 room-text-name"><?php echo $rooms[$i]['room_name']; ?></span>
-                <p><?php echo $rooms[$i]['room_sub_title']; ?></p>
-                <div class="container">
-                    <div class="row">
-                        <span class="h4">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
-                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
-                                <span>
+                <div class="room-text-detail">
+                    <div class="text-content-room" style="overflow-wrap: break-word;">
+                        <?php echo $rooms[$i]['room_sub_title']; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div  class="col-12 justify-content-end d-flex align-items-center">
+                        <span class="h4 m-0 mr-2">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
+                        <a class="btn btn-orange" href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
                                     ดูเพิ่มเติม
-                                </span>
-                            </button>
                         </a>
                     </div>
                 </div>
@@ -58,20 +58,16 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     |
                 </p>
                 <span class="h3 room-text-name"><?php echo $rooms[$i]['room_name']; ?></span>
-                <p>
-                    <?php
-            echo $rooms[$i]['room_sub_title']; ?>
-                </p>
-                <div class="container">
-                    <div class="row">
-                        <span class="h4">$
-                            <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
-                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
-                                <span>
+                <div class="room-text-detail">
+                    <div class="text-content-room" style="overflow-wrap: break-word;">
+                        <?php echo $rooms[$i]['room_sub_title']; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div  class="col-12 justify-content-end d-flex align-items-center">
+                        <span class="h4 m-0 mr-2">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
+                        <a class="btn btn-orange" href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
                                     ดูเพิ่มเติม
-                                </span>
-                            </button>
                         </a>
                     </div>
                 </div>
@@ -82,12 +78,8 @@ for ($i = 0; $i < count($rooms); ++$i) {
 
 
 
-
 <?php
     } ?>
-
-
-
 <?php
 }
 ?>

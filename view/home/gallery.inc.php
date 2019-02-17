@@ -11,7 +11,7 @@
 
 }
 </style>
-<div class="container home-gallery-title">
+<div class="container">
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>
         <h1>

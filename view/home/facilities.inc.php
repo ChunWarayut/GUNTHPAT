@@ -28,7 +28,7 @@
 </style>
 
 
-<section class="facilities home-facilities-top" >
+<section class="facilities" >
 
     <?php for ($i = 0; $i <2; ++$i) {
     ?>

@@ -106,7 +106,7 @@ function search() {
                 <br>
                 <div class="row">
                     <div class="class col-lg-12">
-                        <button onclick="search();" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
+                        <button onclick="search();" class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block">
                             <span class="slide-text ">
                                 BOOK NOW
                             </span>
