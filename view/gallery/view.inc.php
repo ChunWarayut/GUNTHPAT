@@ -1,28 +1,10 @@
 <?PHP
 require_once('view/menu.inc.php');
 ?>
-<style>
-.gal-item {
-    overflow: hidden;
-    padding-top: 4px;
-    padding-bottom: 8px;
-}
-
-.gal-item .box {
-    /* height: 100%; */
-    overflow: hidden;
-}
-
-.box img {
-    /* height: 100%; */
-    width: 100%;
-    object-fit: cover;
-}
-</style>
-<div class="container" style="">
-    <div class="row">
+<div class="container" id="gallery">
+    <div class="row gallery-title">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="text-left" style=" margin-left:150">
+            <div class="text-left gallery-header" >
                 <h1>
                     <span>
                         OUR
@@ -46,7 +28,7 @@ require_once('view/menu.inc.php');
                         GUNTHPAT PLACE
                     </span>
                 </h4>
-                <span class="font-weight-light">
+                <span class=" gallery-detail">
                     Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
                     system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima
                     Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV,
@@ -56,9 +38,9 @@ require_once('view/menu.inc.php');
         </div>
     </div>
 </div>
-<div class="container" style="">
+<div class="container">
 
-    <div class="text-center" style="">
+    <div class="text-center ">
         <h4 class="font-weight-light">
             <span class="text2">
                 แสดงให้ฉันดู
@@ -66,7 +48,8 @@ require_once('view/menu.inc.php');
         </h4>
     </div>
 </div>
-<div style="padding-left: 150px; padding-right: 150px;">
+
+<div class="gallery-show " >
 
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
 
@@ -173,10 +156,29 @@ require_once('view/menu.inc.php');
     </div>
     <?PHP } ?>
 </div>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Kanit');
 
-.text {
-    font-family: 'Kanit', sans-serif;
-}
-</style>
+
+<div class="gallery-slide">
+
+<section class="slide-galery" >
+    <?php for ($i=0; $i < count($gallery); $i++) {    ?>
+    <img class="img-fluid" style=" width: 100px; height: 200px; object-fit: cover;"
+        src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>">
+    <?php } ?>
+</section>
+
+</div>
+
+
+<script type="text/javascript">
+$(document).on('ready', function() {
+    $(".slide-galery").slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+    });
+});
+</script>
+

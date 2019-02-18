@@ -1,16 +1,17 @@
+<link href="template/frontend/css/room-book.css" rel="stylesheet">
 
 <?php
 require_once 'view/menu.inc.php';
 ?>
 
-<div class="container">
-    <div class="text-center" style=" padding-bottom:3%; margin-top:-50 ">
-    <i class="far fa-edit" style="font-size:60px"></i>
+<div class="container" id="book">
+    <div class="text-center book-title">
+    <i class="far fa-edit" ></i>
         <h1>
-            <span class="text">
+            <span class=" book-title">
                 รายละเอียด
             </span>
-            <span class="text" style="color:#f47322; ">
+            <span class=" book-title" style="color:#f47322; ">
                 การจอง
             </span>
         </h1>
@@ -79,13 +80,13 @@ require_once 'view/menu.inc.php';
                 <label class="text"> เบอร์โทรศัพท์ <font color="#F00"><b>*</b></font></label>
                 <input id="book_tel" name="book_tel" class="form-control" autocomplete="off">
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
                 <a name="" id="" class="btn btn-primary form-control" href="room.php" role="button"> ย้อนกลับ </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>

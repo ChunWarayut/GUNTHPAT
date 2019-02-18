@@ -22,9 +22,6 @@
     type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-<link href='template/frontend/fonts/anakotmai/font.css' rel='stylesheet'>
-
-
 <!-- Bootstrap core JavaScript -->
 <script src="template/frontend/vendor/jquery/jquery.min.js"></script>
 <script src="template/frontend/js/jquery-2.2.0.min.js" type="text/javascript"></script>
@@ -33,7 +30,9 @@
 <script src="template/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="template/slick/slick.min.js" type ="text/javascript" charset="utf-8"></script>
+<link href='template/frontend/anakotmai/font.css' rel='stylesheet'>
 
+<link href="template/frontend/css/font-gunthpat.css" rel="stylesheet">
 
 <link type="text/css" rel="Stylesheet"href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->

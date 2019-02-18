@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Slide.php');
+require_once('../models/SlideModel.php');
 
 $path = "modules/home/views/";
 $img_path = "../img_upload/slide/";

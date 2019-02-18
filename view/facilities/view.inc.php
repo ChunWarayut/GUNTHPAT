@@ -1,11 +1,12 @@
-<div class="container" style=" padding-top: 8%; padding-bottom: 8%; margin-top: -200; ">
+
+<div class="container facilities-header" id="facilities">
     <div class="row">
-        <div class="col-lg-auto">
+        <div class="col-lg-auto facilities-header">
             <div class="text-center">
                 <h1>
                     <span>FACILITI</span><span style="color:#f47322;">ES</span>
                 </h1>
-                <p class="text">
+                <p class="facilities-text-back">
                     <?php echo $facilities_head[0]['facilities_head_sub_title']; ?>
                 </p>
             </div>
@@ -14,14 +15,7 @@
     ?>
                 <div class="col-lg-4">
                     <div class="text-center"
-                        style="background-image: url('<?php echo    $pathImgFacilities.$facilities[$i]['facilities_img']; ?>'); 
-  background-repeat: no-repeat;
-  background-size: contain;  
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  ">
+                        style="background-image: url('<?php echo    $pathImgFacilities.$facilities[$i]['facilities_img']; ?>');   background-repeat: no-repeat;  background-size: contain;   /* background-attachment: fixed; */  background-position: center;  background-repeat: no-repeat;  /* background-attachment: fixed; */  ">
                         <!-- <img src="<?php echo    $pathImgFacilities.$facilities[$i]['facilities_img']; ?>"
                             class="img-responsive" width="300px" height="300px" alt=""> -->
                         <div style=" padding-top: 10%; padding-bottom: 10%; ">
@@ -41,8 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <?php
-}?>
+                <?php } ?>
             </div>
         </div>
     </div>

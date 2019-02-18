@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Contact.php');
+require_once('../models/ContactModel.php');
 
 $path = "modules/contact/views/";
 $img_path = "../img_upload/contact/";

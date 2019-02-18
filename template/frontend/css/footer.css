@@ -16,7 +16,7 @@
     height: 15em;
     overflow: hidden;
 }
-.row-no-margin{
-    margin-right: 0px;
-    margin-left: 0px;
+.row-footer{
+    margin-right: 0;
+    margin-left: 0;
 }

@@ -1,5 +1,17 @@
 <!--  OUR GALLERY  -->
-<div class="container" style=" padding-top: 8%; padding-bottom: 3%; margin-top: -200">
+<style>
+.home-gallery-title {
+    padding-top: 8%; padding-bottom: 3%; margin-top: -200
+}
+
+@media (max-width: 767px) {
+.home-gallery-title {
+    margin-top: 0;
+}
+
+}
+</style>
+<div class="container home-gallery-title">
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>
         <h1>
@@ -10,7 +22,8 @@
         </p>
     </div>
 </div>
-<div class="container-fluid px-0 no-padding">
+
+<div class="container-fluid px-0 no-padding gallery-show">
 
     <div class="text-center" id="image_fixed">
         <div class="row" mx-0>
@@ -25,6 +38,35 @@
 </div>
 </div>
 </div>
+
+
+<div class="gallery-slide">
+
+<section class="slide-galery" >
+    <?php for ($i=0; $i < count($gallery); $i++) {    ?>
+    <img class="img-fluid" style=" width: 100px; height: 200px; object-fit: cover;"
+        src="<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>">
+    <?php } ?>
+</section>
+
+</div>
+
+
+<script type="text/javascript">
+$(document).on('ready', function() {
+    $(".slide-galery").slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+    });
+});
+</script>
+
+
+
+
 <style>
 /* fixed height img */
 #image_fixed {
@@ -35,5 +77,54 @@
 .no-padding {
   padding-left: 0;
   padding-right: 0;
+}
+
+.gallery-slide {
+    display: none;
+}
+.gallery-show {
+    display: inherit;
+    padding-left: 150px; 
+    padding-right: 150px;
+}
+@media (max-width: 768px) {
+    /* fixed height img */
+    #image_fixed {
+        width: auto;
+        height: 500px;
+        overflow: hidden;
+    }
+    .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    
+}
+@media (max-width: 739px) {
+    /* fixed height img */
+    #image_fixed {
+        width: auto;
+        height: 500px;
+        overflow: hidden;
+    }
+    .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    
+    .gallery-show {
+        display: none;
+    }
+    .gallery-slide {
+        display: inline;
+        padding-top: 50;
+        padding-bottom: 50;
+    }
+}
+@media (max-width: 600px) {
+    .gallery-slide {
+        display: inline;
+        padding-bottom: 50;
+    }
 }
 </style>

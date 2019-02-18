@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Rooms.php');
-require_once('../models/Room_Type.php');
+require_once('../models/RoomsModel.php');
+require_once('../models/Room_TypeModel.php');
 
 $path = "modules/rooms/views/";
 $img_path = "../img_upload/rooms/"; 

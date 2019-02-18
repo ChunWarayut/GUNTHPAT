@@ -1,5 +1,5 @@
 <?php
-require_once('../models/News.php');
+require_once('../models/NewsModel.php');
 
 $path = "modules/news/views/";
 

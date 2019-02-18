@@ -5,9 +5,9 @@ $path = "view/contact_us/";
 
 
 $pathImgContact_us = "img_upload/contact_us/";
-require_once('models/Contact_us.php');
+require_once('models/Contact_usModel.php');
 $contact_us_model = new Contact_us;
-require_once('models/Contact.php');
+require_once('models/ContactModel.php');
 $contact_model = new Contact;
 $contact_us = $contact_us_model -> getContact_us() ;
 $contact_title = $contact_model -> getContactTitle() ;
@@ -18,7 +18,7 @@ $contact_type = $contact_model -> getContactType() ;
 // print_r($contact_type);
 // echo"</pre>";
 
-require_once('models/Contact.php');
+require_once('models/ContactModel.php');
 $contact_model = new Contact;
 $contact = $contact_model -> getContact();
 $contact_head = $contact_model -> getContact_head();

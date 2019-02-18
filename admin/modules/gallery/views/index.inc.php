@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
 
-require_once('../models/Gallery.php');
+require_once('../models/GalleryModel.php');
 
 $path = "modules/gallery/views/";
 $img_path = "../img_upload/gallery/";
