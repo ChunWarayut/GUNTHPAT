@@ -12,7 +12,7 @@ $gallery_head = $gallery_model -> getgalleryHead();
 $gallery_type = $gallery_model -> getGalleryType();
 
 
-require_once('../models/Rooms.php');
+require_once('../models/RoomsModel.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRooms();
 // echo "<pre>";
