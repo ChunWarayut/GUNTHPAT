@@ -1,5 +1,5 @@
 <style>
-.slide-detail {
+.facilities-slide-detail {
     position: absolute;
     top: 30%;
     max-width: 100%;
@@ -9,7 +9,7 @@
     padding-right: 50px; 
     width:100%;
 }
-.slide-item{
+.facilities-slide-item{
     position:relative;
 }
 .home-facilities-top {
@@ -34,7 +34,7 @@
     .home-facilities-top {
         /* margin-top: 100;  */
     }
-    .slide-detail{
+    .facilities-slide-detail{
         /* display: none; */
     }
     .facilities-header{
@@ -62,7 +62,7 @@
     .home-facilities-top {
         margin-top: 100; 
     }
-    .slide-detail{
+    .facilities-slide-detail{
         /* display: none; */
     padding-left: 50px; 
     padding-right: 50px; 
@@ -105,8 +105,8 @@
 
     <?php for ($i = 0; $i <2; ++$i) {
     ?>
-    <div class="slide-item" >
-        <div class="slide-detail" >
+    <div class="facilities-slide-item" >
+        <div class="facilities-slide-detail" >
             <div class="row">
                 <div class="col-lg-4 home-facilities-title" style="">
                     <h3 class="facilities-header"><?php echo $facilities[$i]['facilities_name'];?></h3>
