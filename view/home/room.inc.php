@@ -7,22 +7,28 @@ for ($i = 0; $i < count($rooms); ++$i) {
     <div class="row">
         <div class="col-md-4 room-text">
             <div class="room-detail-text">
-            <span class="h2 text-left"><?php  echo $i + 1; ?></span>
+                <span class="h2 text-left"><?php  echo $i + 1; ?></span>
                 <p class="text-left">
                     |
                 </p>
                 <span class="h3 room-text-name"><?php echo $rooms[$i]['room_name']; ?></span>
-                <p><?php echo $rooms[$i]['room_sub_title']; ?></p>
-                <div class="container">
+                <p class="home-room-sub-title"><?php echo $rooms[$i]['room_sub_title']; ?></p>
+                <div class="">
                     <div class="row">
-                        <span class="h4">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
-                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
-                                <span>
-                                    ดูเพิ่มเติม
-                                </span>
-                            </button>
-                        </a>
+                        <div class="col-7">
+
+                            <span class=" price-size">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
+                        </div>
+                        <div class="col-5">
+
+                            <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                                <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger btn-sm">
+                                    <span>
+                                        ดูเพิ่มเติม
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,7 +47,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
     } else {
         ?>
 
-<div class="container list-two" >
+<div class="container list-two">
     <div class="row">
         <div class="col-md-8 order-2 order-md-1 ">
             <img class="img-room-show"
@@ -58,21 +64,26 @@ for ($i = 0; $i < count($rooms); ++$i) {
                     |
                 </p>
                 <span class="h3 room-text-name"><?php echo $rooms[$i]['room_name']; ?></span>
-                <p>
+                <p class="home-room-sub-title">
                     <?php
             echo $rooms[$i]['room_sub_title']; ?>
                 </p>
-                <div class="container">
+                <div class="">
                     <div class="row">
-                        <span class="h4">$
-                            <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
-                            <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger">
-                                <span>
-                                    ดูเพิ่มเติม
-                                </span>
-                            </button>
-                        </a>
+                        <div class="col-6">
+
+                            <span class="price-size">$ <?php echo $rooms[$i]['room_price']; ?> / วัน </span>
+                        </div>
+                        <div class="col-6">
+
+                            <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                                <button type="button" class="btn btn-primary text-uppercase js-scroll-trigger btn-sm">
+                                    <span>
+                                        ดูเพิ่มเติม
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
