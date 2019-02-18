@@ -18,6 +18,12 @@
 .home-facilities-title {
     padding-left: 0px
 }
+.facilities-header{
+    color: #f47322;
+}
+.room-header{
+    color: #f47322;
+}
 .home-facilities-img{
     margin-top: -100;
     padding-top: 100; width: 400; object-fit: cover;
