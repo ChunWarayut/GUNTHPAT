@@ -65,7 +65,7 @@
                             <div class="col-10">
                                 <span class="text2">
                                     <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                        <p class="contact_us_sub_title">
+                                        <p class="contact_us_sub_title text-truncate">
                                             <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
                                         </p>
                                     </a>
@@ -147,7 +147,7 @@
                 <br>
                 <div class="container">
                     <div class="col">
-                        <a href="" class="btn btn-primary text-uppercase js-scroll-trigger"
+                        <a href="#contact" class="btn btn-primary text-uppercase js-scroll-trigger"
                             style="padding-left:8%; padding-right:8%">
                             <span class="text">
                                 ติดต่อเรา
@@ -252,7 +252,7 @@
 </div>
 
 
-<div class="container" style="padding-top:8%">
+<div class="container"id="contact" style="padding-top:8%">
     <div class="row">
 
         <div class="col-md-6">
@@ -282,7 +282,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-6">
                         <label class="text">ชื่อ <font color="#F00"><b>*</b></font></label>
                         <input id="contact_firstname" name="contact_firstname" class="form-control" autocomplete="off">

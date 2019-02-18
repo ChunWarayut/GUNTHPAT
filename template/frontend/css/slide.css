@@ -35,7 +35,7 @@
 
     .slide-detail-detail {
         position: absolute;
-        top: 19%;
+        top: 15%;
         max-width: 100%;
         z-index: 10;
         margin-left: -90;
@@ -99,7 +99,7 @@
     }
     .slide-detail-detail {
         position: absolute;
-        top: 19%;
+        top: 15%;
         max-width: 100%;
         z-index: 10;
         margin-left: -90;
