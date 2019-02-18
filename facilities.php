@@ -12,6 +12,14 @@ $pathImgGallery = "img_upload/gallery/";
 require_once('models/GalleryModel.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
+
+
+if(isset($_COOKIE['language'])){
+    $lng = $_COOKIE['language'];
+}
+
+
+
 ?>
 <html>
 <head>

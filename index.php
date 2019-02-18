@@ -7,6 +7,13 @@ $contact_us = $contact_us_model -> getContact_us();
 $slide_model = new Slide;
 $slide = $slide_model -> slideRoom01();
 
+
+if(isset($_COOKIE['language'])){
+    $lng = $_COOKIE['language'];
+}
+
+
+
 ?>
 <html>
     <head>
