@@ -26,7 +26,8 @@
                     <div class="form-group">
                         <label> </label>
                         <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                        <textarea class="form-control " id="contact_head_detail" name="contact_head_detail" rows="10"><?PHP echo $contact_head[0]['contact_head_detail'];?></textarea>
+                        <textarea class="form-control " id="contact_head_detail_en" name="contact_head_detail_en" rows="5"><?PHP echo $contact_head[0]['contact_head_detail_en'];?></textarea>
+                        <textarea class="form-control " id="contact_head_detail_th" name="contact_head_detail_th" rows="5"><?PHP echo $contact_head[0]['contact_head_detail_th'];?></textarea>
                     </div>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button> -->
                 </div>
@@ -68,7 +69,8 @@
                 </td>
 
                 <td class="text-left">
-                    <?PHP echo $contact_title[$i]['contact_title_name'];  ?>
+                    <?PHP echo $contact_title[$i]['contact_title_name_th'];  ?>
+                    <?PHP echo $contact_title[$i]['contact_title_name_en'];  ?>
                 </td>
                 <td>
                     <a href="?content=contact&action=edit_title&id=<?PHP echo $i  ?>">
@@ -124,7 +126,8 @@
                 </td>
 
                 <td class="text-left">
-                    <?PHP echo $contact_type[$i]['contact_type_name'];  ?>
+                    <?PHP echo $contact_type[$i]['contact_type_name_th'];  ?>
+                    <?PHP echo $contact_type[$i]['contact_type_name_en'];  ?>
                 </td>
                 <td>
                     <a href="?content=contact&action=edit_type&id=<?PHP echo $i  ?>">

@@ -29,7 +29,15 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label> Title  <font color="#F00"><b>*</b></font></label>
-                                <input id="contact_type_name" name="contact_type_name" class="form-control" value="<?PHP echo $contact_type[$id]['contact_type_name'];?>" />
+                                <input id="contact_type_name_th" name="contact_type_name_th" class="form-control" value="<?PHP echo $contact_type[$id]['contact_type_name_th'];?>" />
+                                <p class="help-block">Example : Title </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label> Title  <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_type_name_en" name="contact_type_name_en" class="form-control" value="<?PHP echo $contact_type[$id]['contact_type_name_en'];?>" />
                                 <p class="help-block">Example : Title </p>
                             </div>
                         </div>

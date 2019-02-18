@@ -64,7 +64,7 @@ window.location = "index.php?content=contact"
 <?PHP
 
 } else if( $_GET['action'] == "edit_head") {
-    $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail']);
+    $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail_th'], $_POST['contact_head_detail_en']);
     require_once($path.'view.inc.php');
     ?>
 <script>
@@ -73,8 +73,8 @@ window.location = "index.php?content=contact"
 <?PHP
 
 } else if( $_GET['action'] == "insert_title") {
-    echo $_POST['contact_title_name'];
-if(isset($_POST['contact_title_name'])){
+    // echo $_POST['contact_title_name'];
+if(isset($_POST['contact_title_name_th'])){
     $check = true;
     if($check == false){ ?>
 <script>
@@ -85,7 +85,7 @@ window.history.back();
         
     }else{
         
-        $result = $contact_model-> insertContactTitle($_POST['contact_title_name']);
+        $result = $contact_model-> insertContactTitle($_POST['contact_title_name_th'], $_POST['contact_title_name_en']);
         
         if($result){
             ?>
@@ -106,8 +106,8 @@ window.history.back();
     }
 
 } else if( $_GET['action'] == "insert_type") {
-    echo $_POST['contact_type_name'];
-if(isset($_POST['contact_type_name'])){
+    // echo $_POST['contact_type_name'];
+if(isset($_POST['contact_type_name_th'])){
     $check = true;
     if($check == false){ ?>
 <script>
@@ -118,7 +118,7 @@ window.history.back();
         
     }else{
         
-        $result = $contact_model-> insertContactType($_POST['contact_type_name']);
+        $result = $contact_model-> insertContactType($_POST['contact_type_name_th'], $_POST['contact_type_name_en']);
         
         if($result){
             ?>
@@ -148,7 +148,7 @@ window.history.back();
 </script>
 <?php
     }else{
-        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_title_name']);
+        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_type_name_th'],$_POST['contact_type_name_en']);
         if($result){
             ?>
 <script>
@@ -173,7 +173,7 @@ window.history.back();
 </script>
 <?php
     }else{
-        $result = $contact_model-> editContactType($_POST['contact_type_id'],$_POST['contact_type_name']);
+        $result = $contact_model-> editContactType($_POST['contact_type_id'],$_POST['contact_type_name_th'],$_POST['contact_type_name_en']);
         if($result){
             ?>
 <script>
