@@ -265,14 +265,14 @@
                 <hr style="border-top: 2px solid #f47322">
             </div>
             <p class="text">
-                <?PHP echo $contact_head[0]['contact_head_detail']; ?>
+                <?php if ($lng == TH) {  echo $contact_head[0]['contact_head_detail_th'];  } else{  echo $contact_head[0]['contact_head_detail_en'];  } ?>
             </p>
         </div>
         <div class="col-md-6">
             <form id="form_target" role="form" method="post" action="contact_us.php?&action=add">
                 <div class="row">
                     <div class="col-lg-6">
-                        <label class="text">ชื่อเรื่อง <font color="#F00"><b>*</b></font></label>
+                        <label class="text"><?php if ($lng == TH) {echo "ชื่อเรื่อง";} else { echo "Title";} ?>  <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_title_id" name="contact_title_id">
                             <?PHP for ($i=0; $i < count($contact_title); $i++) { ?>
                             <option selected value="<?PHP echo $contact_title[$i]['contact_title_id'];   ?>">
@@ -284,11 +284,11 @@
                 </div>
                 <div class="row" >
                     <div class="col-lg-6">
-                        <label class="text">ชื่อ <font color="#F00"><b>*</b></font></label>
+                        <label class="text"> <?php if ($lng == TH) {echo "ชื่อ";} else { echo "Firstname";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_firstname" name="contact_firstname" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">นามสกุล <font color="#F00"><b>*</b></font></label>
+                        <label class="text"><?php if ($lng == TH) {echo "นามสกุล";} else { echo "Lastname";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_lastname" name="contact_lastname" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
@@ -296,23 +296,27 @@
                         <input id="contact_email" name="contact_email" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">หมายลขโทรศัพท์ <font color="#F00"><b>*</b></font></label>
+                        <label class="text">  <?php if ($lng == TH) {echo "หมายลขโทรศัพท์";} else { echo "Tel";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_tel" name="contact_tel" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">ประเทศ <font color="#F00"><b>*</b></font></label>
+                        <label class="text">  <?php if ($lng == TH) {echo "ประเทศ";} else { echo "Country";} ?> <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_country" name="contact_country">
                             <?PHP for ($i=0; $i < count($country); $i++) { 
                                 # code...
                             ?>
                             <option value="<?PHP echo $country[$i]['ct_code'];?>">
-                                <?PHP echo $country[$i]['ct_nameTHA'];?>
+                                <?PHP if ($lng == TH) {
+                                    echo $country[$i]['ct_nameTHA'];
+                                }else{
+                                    echo $country[$i]['ct_nameENG'];
+                                } ?>
                             </option>
                             <?PHP } ?>
                         </select>
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">ประเภทของคำถาม <font color="#F00"><b>*</b></font></label>
+                        <label class="text"> <?php if ($lng == TH) {echo "ประเภทของคำถาม";}else{ echo "Type";}?><font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_type_id" name="contact_type_id">
                             <?PHP for ($i=0; $i < count($contact_type); $i++) { 
                                 # code...
@@ -325,7 +329,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="text"> ข้อความ <font color="#F00"><b>*</b></font></label>
+                            <label class="text"> <?php if ($lng == TH) {echo "ข้อความ";} else { echo "Massenger";} ?><font color="#F00"><b>*</b></font></label>
                             <textarea class="form-control " id="contact_text" name="contact_text" rows="6"></textarea>
                         </div>
                     </div>
@@ -334,7 +338,7 @@
                         <button type="submit" name="" id="" class="btn btn-primary btn-md" btn-block
                             style="width: 150px; text-align: center; margin:0 auto;">
                             <span class="text">
-                                ส่ง
+                            <?php if ($lng == TH) { echo "ส่ง";}else{ echo "send"; }   ?>
                             </span></button>
                     </div>
                 </div>  

@@ -14,13 +14,13 @@
         <div class="text-center" style=" padding-top: 15%; padding-bottom: 15%">  
             <h1>
                 <span class="text" style="color:#ffffff; ">
-                    GUNTHPAT PLACE
+                    <?php if ($lng == TH) {  echo $about_us[0]['about_us_title_th'];}else{  echo $about_us[0]['about_us_title_en'];} ?>
                 </span>
             </h1>
         </div>
     </div>
     <p class="text" style=" padding-top: 2%;">
-    <?php echo $about_us[0]['about_us_sub_title']; ?>
+        <?php if ($lng == TH) {  echo $about_us[0]['about_us_sub_title_th'];}else{  echo $about_us[0]['about_us_sub_title_en'];} ?>
     </p>
 </div>
 <br>

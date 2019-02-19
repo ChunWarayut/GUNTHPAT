@@ -80,10 +80,11 @@ class Contact extends BaseModel{
     }
     
 
-    function editContact_head($contact_head_id, $contact_head_detail) {
+    function editContact_head($contact_head_id, $contact_head_detail_th, $contact_head_detail_en) {
         $sql = "UPDATE `tb_contact_head` 
         SET 
-        `contact_head_detail` = '$contact_head_detail'
+        `contact_head_detail_th` = '$contact_head_detail_th',
+        `contact_head_detail_en` = '$contact_head_detail_en'
         WHERE `tb_contact_head`.`contact_head_id` = '$contact_head_id'
         ";
         // echo "<pre>";
@@ -97,10 +98,11 @@ class Contact extends BaseModel{
         }
     }
 
-    function editContactTitle($contact_title_id, $contact_title_name) {
+    function editContactTitle($contact_title_id, $contact_title_name_th, $contact_title_name_en) {
         $sql = "UPDATE `tb_contact_title` 
         SET 
-        `contact_title_name` = '$contact_title_name'
+        `contact_title_name_th` = '$contact_title_name_th',
+        `contact_title_name_en` = '$contact_title_name_en'
         WHERE `tb_contact_title`.`contact_title_id` = '$contact_title_id'
         ";
         // echo "<pre>";
@@ -114,15 +116,16 @@ class Contact extends BaseModel{
         }
     }
 
-    function editContactType($contact_type_id, $contact_type_name) {
+    function editContactType($contact_type_id, $contact_type_name_th, $contact_type_name_en) {
         $sql = "UPDATE `tb_contact_type` 
         SET 
-        `contact_type_name` = '$contact_type_name'
+        `contact_type_name_th` = '$contact_type_name_th',
+        `contact_type_name_en` = '$contact_type_name_en'
         WHERE `tb_contact_type`.`contact_type_id` = '$contact_type_id'
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
@@ -245,9 +248,13 @@ class Contact extends BaseModel{
         }
     }
 
-    function insertContactTitle($contact_title_name) {
+    function insertContactTitle($contact_title_name_th, $contact_title_name_en) {
 
-        $sql = "INSERT INTO `tb_contact_title`(`contact_title_id`, `contact_title_name`) VALUES (NULL,'$contact_title_name')
+        $sql = "INSERT INTO `tb_contact_title`(`contact_title_id`, 
+        `contact_title_name_th`,
+        `contact_title_name_en`
+        
+        ) VALUES (NULL,'$contact_title_name_th', '$contact_title_name_en)
         ";
         // echo "<pre>";
         // print_r( $sql);
@@ -260,9 +267,12 @@ class Contact extends BaseModel{
         }
     }
 
-    function insertContactType($contact_type_name) {
+    function insertContactType($contact_type_name_th, $contact_type_name_en) {
 
-        $sql = "INSERT INTO `tb_contact_type`(`contact_type_id`, `contact_type_name`) VALUES (NULL,'$contact_type_name')
+        $sql = "INSERT INTO `tb_contact_type`(`contact_type_id`, 
+        `contact_type_name_th`,
+        `contact_type_name_en`
+        ) VALUES (NULL,'$contact_type_name_th', '$contact_type_name_en')
         ";
         // echo "<pre>";
         // print_r( $sql);

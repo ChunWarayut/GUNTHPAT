@@ -6,7 +6,7 @@
                 <div class="col-lg-6">
                     <h1>
                         หน้าแก้ไขข้อมูล 
-                        <?PHP echo $contact_title[$id]['contact_title_name'];  ?>
+                        <?PHP echo $contact_title[$id]['contact_title_name_th'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
@@ -28,8 +28,16 @@
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label> Title  <font color="#F00"><b>*</b></font></label>
-                                <input id="contact_title_name" name="contact_title_name" class="form-control" value="<?PHP echo $contact_title[$id]['contact_title_name'];?>" />
+                                <label> Title TH  <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_title_name_th" name="contact_title_name_th" class="form-control" value="<?PHP echo $contact_title[$id]['contact_title_name_th'];?>" />
+                                <p class="help-block">Example : Title </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label> Title EN  <font color="#F00"><b>*</b></font></label>
+                                <input id="contact_title_name_en" name="contact_title_name_en" class="form-control" value="<?PHP echo $contact_title[$id]['contact_title_name_en'];?>" />
                                 <p class="help-block">Example : Title </p>
                             </div>
                         </div>
