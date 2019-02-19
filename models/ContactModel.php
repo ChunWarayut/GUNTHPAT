@@ -250,15 +250,16 @@ class Contact extends BaseModel{
 
     function insertContactTitle($contact_title_name_th, $contact_title_name_en) {
 
-        $sql = "INSERT INTO `tb_contact_title`(`contact_title_id`, 
-        `contact_title_name_th`,
-        `contact_title_name_en`
+        $sql = "INSERT INTO `tb_contact_title`(
+            `contact_title_id`, 
+            `contact_title_name_th`,
+            `contact_title_name_en`
         
-        ) VALUES (NULL,'$contact_title_name_th', '$contact_title_name_en)
+        ) VALUES (NULL,'$contact_title_name_th', '$contact_title_name_en')
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
