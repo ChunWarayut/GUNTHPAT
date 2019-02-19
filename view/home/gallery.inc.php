@@ -1,16 +1,7 @@
 <!--  OUR GALLERY  -->
-<style>
-.home-gallery-title {
-    padding-top: 8%; padding-bottom: 3%; margin-top: 0
-}
 
-@media (max-width: 767px) {
-.home-gallery-title {
-    margin-top: 0;
-}
+<link href="template/frontend/css/home-gallery.css" rel="stylesheet">
 
-}
-</style>
 <div class="container">
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>
@@ -24,19 +15,15 @@
 </div>
 
 <div class="container-fluid px-0 no-padding gallery-show">
-
     <div class="text-center" id="image_fixed">
         <div class="row" mx-0>
-            <?php for ($i = 0; $i < count($gallery); ++$i) {
-                // code...?>
-        <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 no-padding">
-            <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid w-100" style="margin:-0.5%" width="100%" alt="">
+            <?php for ($i = 0; $i < count($gallery); ++$i) { ?>
+            <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 no-padding">
+                <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid w-100" style="margin:-0.5%" width="100%" alt="">
+            </div>
+            <?php } ?>
+        </div>
     </div>
-    
-    <?php
-} ?>
-</div>
-</div>
 </div>
 
 
@@ -63,68 +50,3 @@ $(document).on('ready', function() {
     });
 });
 </script>
-
-
-
-
-<style>
-/* fixed height img */
-#image_fixed {
-    width: auto;
-    height: 420px;
-    overflow: hidden;
-}
-.no-padding {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.gallery-slide {
-    display: none;
-}
-.gallery-show {
-    display: inherit;
-    padding-left: 150px; 
-    padding-right: 150px;
-}
-@media (max-width: 768px) {
-    /* fixed height img */
-    #image_fixed {
-        width: auto;
-        height: 500px;
-        overflow: hidden;
-    }
-    .no-padding {
-    padding-left: 0;
-    padding-right: 0;
-    }
-    
-}
-@media (max-width: 739px) {
-    /* fixed height img */
-    #image_fixed {
-        width: auto;
-        height: 500px;
-        overflow: hidden;
-    }
-    .no-padding {
-    padding-left: 0;
-    padding-right: 0;
-    }
-    
-    .gallery-show {
-        display: none;
-    }
-    .gallery-slide {
-        display: inline;
-        padding-top: 50;
-        padding-bottom: 50;
-    }
-}
-@media (max-width: 600px) {
-    .gallery-slide {
-        display: inline;
-        padding-bottom: 50;
-    }
-}
-</style>

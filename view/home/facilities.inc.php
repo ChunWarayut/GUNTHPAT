@@ -1,10 +1,12 @@
 <style>
+    section{
+        padding-bottom: 5%;
+    }
 .facilities-slide-detail {
     position: absolute;
     top: 30%;
     max-width: 100%;
     z-index: 999;
-    /* margin-left: -90 */
     padding-left: 200px; 
     padding-right: 50px; 
     width:100%;

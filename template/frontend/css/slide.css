@@ -76,6 +76,9 @@
 }
 
 @media (max-width: 767px) {
+    .slide{
+        padding-bottom: 10%;
+    }
     .header-slide{
         display: none;
     }
