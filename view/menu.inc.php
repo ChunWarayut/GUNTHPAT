@@ -15,23 +15,14 @@
 
         <div class="text-right contact_header">
             <div class="font-weight-light contact_list">
-                <i class='fas fa-mobile-alt' ></i>&nbsp;&nbsp;
+                <i class='fas fa-mobile-alt' ></i>
                 <span class="text2; font-weight-light" style='color: #ffffff; '>
-                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>"><?PHP echo $contact_us[0]['contact_us_tel']; ?></a>
+                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us['contact_us_tel']; ?>"><?PHP echo $contact_us['contact_us_tel']; ?></a>
                 </span>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>&nbsp;&nbsp;
+                <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>
                 <span class="text2" style='color: #ffffff; '>
                     <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
                 </span>
-
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
                 <a onclick="setLanguage('EN')" class="right <?php if($lng != "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >EN</span></a>
                 <a class="right"><span class="lng-icon" style="width: 0.9em; color: #fff;">|</span></a>
                 <a onclick="setLanguage('TH')" class="right <?php if($lng == "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >TH</span></a>
