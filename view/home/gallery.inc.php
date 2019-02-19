@@ -14,12 +14,12 @@
     </div>
 </div>
 
-<div class="container-fluid px-0 no-padding gallery-show">
+<div class="container-fluid px-0  gallery-show p-0">
     <div class="text-center" id="image_fixed">
         <div class="row" mx-0>
             <?php for ($i = 0; $i < count($gallery); ++$i) { ?>
             <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 no-padding">
-                <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid w-100" style="margin:-0.5%" width="100%" alt="">
+                <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid-gellery" alt="">
             </div>
             <?php } ?>
         </div>

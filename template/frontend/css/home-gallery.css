@@ -1,7 +1,12 @@
-  #image_fixed {
+#image_fixed {
     width: auto;
-    height: 420px;
+    height: 300px;
     overflow: hidden;
+}
+.img-fluid-gellery {
+    width: 100%;
+    height: 150px;
+    position: initial;
 }
 .no-padding {
   padding-left: 0;
