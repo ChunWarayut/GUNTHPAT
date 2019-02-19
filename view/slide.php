@@ -1,9 +1,9 @@
 <link href="template/frontend/css/slide.css" rel="stylesheet">
 
 <?PHP
-require_once('models/RoomsModel.php');
-$rooms_model = new Rooms;
-$rooms = $rooms_model -> getRooms();
+require_once('models/SlideModel.php');
+$slide_model = new Slide;
+$slide = $slide_model -> slideRoom01();
 ?>
 
 <script>

@@ -16,13 +16,26 @@ class Contact_us extends BaseModel{
         WHERE 1
         ORDER BY tb_contact_us.contact_us_id
         ";
-        // echo "<pre>";
-        // print_r($sql);
-        // echo "</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
                 $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+    function getContact_usByID($id){
+        $sql = " SELECT * 
+        FROM tb_contact_us
+        WHERE contact_us_id = '$id' 
+        ";
+
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data;
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data = $row;
             }
             $result->close();
             return $data;

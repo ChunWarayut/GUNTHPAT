@@ -8,7 +8,13 @@
 		});
 	}
 </script>
-
+<?php 
+    require_once('models/Contact_usModel.php');
+    $path = "modules/contact_us/views/";
+    $img_path = "../img_upload/contact_us/";
+    $contact_us_model = new Contact_us;
+    $contact_us = $contact_us_model -> getContact_us();
+?>
     <link href="template/frontend/css/menu.css" rel="stylesheet">
 
     <div style="z-index: 50; position:relative; ">
@@ -16,11 +22,11 @@
         <div class="text-right contact_header">
             <div class="font-weight-light contact_list">
                 <i class='fas fa-mobile-alt' ></i>
-                <span class="text2; font-weight-light" style='color: #ffffff; '>
-                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us['contact_us_tel']; ?>"><?PHP echo $contact_us['contact_us_tel']; ?></a>
+                <span class="text2; font-weight-light">
+                  <?PHP echo $contact_us['contact_us_tel']; ?>
                 </span>
                 <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>
-                <span class="text2" style='color: #ffffff; '>
+                <span class="text2">
                     <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
                 </span>
                 <a onclick="setLanguage('EN')" class="right <?php if($lng != "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >EN</span></a>

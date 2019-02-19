@@ -6,9 +6,6 @@ require_once('models/Contact_usModel.php');
 $contact_us_model = new Contact_us;
 $contact_us = $contact_us_model -> getContact_us();
 
-require_once('models/SlideModel.php');
-$slide_model = new Slide;
-$slide = $slide_model -> slideRoom01();
 
 $pathImgGallery = "img_upload/gallery/";
 require_once('models/GalleryModel.php');
