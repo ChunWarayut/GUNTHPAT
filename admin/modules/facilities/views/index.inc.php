@@ -54,7 +54,7 @@ window.location = "index.php?content=facilities"
 </script>
 <?PHP
     } else if( $_GET['action'] == "edit_head") {
-        $result = $facilities_model-> editFacilitiesHead($id, $_POST['facilities_head_sub_title']);
+        $result = $facilities_model-> editFacilitiesHead($id, $_POST['facilities_head_sub_title_th'], $_POST['facilities_head_sub_title_en']);
         require_once($path.'view.inc.php');
         ?>
 <script>

@@ -65,9 +65,9 @@ class Facilities extends BaseModel{
         }
     }
     
-    function editFacilitiesHead($facilities_head_id, $facilities_head_sub_title) {
+    function editFacilitiesHead($facilities_head_id, $facilities_head_sub_title_th, $facilities_head_sub_title_en) {
         
-        $sql = "UPDATE `tb_facilities_head` SET `facilities_head_sub_title` = '$facilities_head_sub_title' WHERE `tb_facilities_head`.`facilities_head_id` = 1 
+        $sql = "UPDATE `tb_facilities_head` SET `facilities_head_sub_title_th` = '$facilities_head_sub_title_th', `facilities_head_sub_title_en` = '$facilities_head_sub_title_en' WHERE `tb_facilities_head`.`facilities_head_id` = 1 
         ";
         // echo "<pre>";
         // print_r( $sql);
@@ -129,9 +129,9 @@ class Facilities extends BaseModel{
             '".$data['facilities_detail_en']."'
         )
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
