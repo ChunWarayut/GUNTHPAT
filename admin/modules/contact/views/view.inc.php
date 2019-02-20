@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-6">
                 <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_title">
-                    <button type="submit" name="" id="" class="button  float-right"
+                    <button type="submit" name="" id="" class="button float-right"
                         btn-block>เพิ่ม</button>
                 </form>
             </div>
@@ -79,7 +79,7 @@
                 </td>
                 
                 <td>
-                    <a class="text-danger" href="?content=contact&action=delete_title&id=<?PHP echo $i  ?>">
+                    <a class="text-danger" href="?content=contact&action=delete_title&id=<?PHP echo $contact_title[$i]['contact_title_id']; ?>">
                         <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
                 </td>
@@ -136,7 +136,7 @@
                 </td>
 
                 <td>
-                    <a class="text-danger" href="?content=contact&action=delete_type&id=<?PHP echo $i  ?>">
+                    <a class="text-danger" href="?content=contact&action=delete_type&id=<?PHP echo $contact_type[$i]['contact_type_id'];  ?>">
                         <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
                 </td>
