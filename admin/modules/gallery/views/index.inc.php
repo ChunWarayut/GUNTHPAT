@@ -58,6 +58,39 @@ window.location = "index.php?content=gallery"
 </script>
 
 <?PHP
+    } else if( $_GET['action'] == "insert_title") {
+        // echo $_POST['contact_type_name'];
+        if(isset($_POST['contact_title_name_th'])){
+        $check = true;
+        if($check == false){ ?>
+    <script>
+    alert('<?php echo $error_msg; ?>');
+    window.history.back();
+    </script>
+    <?php
+            
+        }else{
+            
+            $result = $contact_model-> insertContactTitle($_POST['contact_title_name_th'], $_POST['contact_title_name_en']);
+            
+            if($result){
+                ?>
+    <script>
+    window.location = "index.php?content=contact"
+    </script>
+    <?php
+                }else{
+                    ?>
+    <script>
+    window.history.back();
+    </script>
+    <?php
+                }
+            }
+        }else{
+            require_once($path . 'insert.inc.php');
+        }
+
     } else if( $_GET['action'] == "edit_head") {
         $result = $gallery_model-> editGalleryHead($id, $_POST['gallery_head_sub_title_th'], $_POST['gallery_head_sub_title_en']);
         require_once($path.'view.inc.php');
