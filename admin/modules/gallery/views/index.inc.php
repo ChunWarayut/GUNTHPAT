@@ -59,7 +59,7 @@ window.location = "index.php?content=gallery"
 
 <?PHP
     } else if( $_GET['action'] == "edit_head") {
-        $result = $gallery_model-> editGalleryHead($id, $_POST['gallery_head_sub_title']);
+        $result = $gallery_model-> editGalleryHead($id, $_POST['gallery_head_sub_title_th'], $_POST['gallery_head_sub_title_en']);
         require_once($path.'view.inc.php');
         ?>
 <script>
@@ -76,12 +76,13 @@ window.location = "index.php?content=gallery"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
-    if(isset($_POST['gallery_name'])){
+    if(isset($_POST['gallery_id'])){
         $check = true;
         $data = [];
         $data['gallery_id'] = $_POST['gallery_id'];
         $data['room_id'] = $_POST['room_id'];
-        $data['gallery_name'] = $_POST['gallery_name'];
+        $data['gallery_name_th'] = $_POST['gallery_name_th'];
+        $data['gallery_name_en'] = $_POST['gallery_name_en'];
         $data['gallery_type_id'] = $_POST['gallery_type_id'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -163,9 +164,9 @@ window.history.back();
         $data = [];
         $data['gallery_id'] = $_POST['gallery_id'];
         $data['room_id'] = $_POST['room_id'];
-        $data['gallery_name'] = $_POST['gallery_name'];
+        $data['gallery_name_th'] = $_POST['gallery_name_th'];
+        $data['gallery_name_en'] = $_POST['gallery_name_en'];
         $data['gallery_type_id'] = $_POST['gallery_type_id'];
-        $data['gallery_detail'] = $_POST['gallery_detail'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------

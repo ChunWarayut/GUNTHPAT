@@ -56,10 +56,18 @@ echo $gallery[$id]['gallery_name'];  ?>
                 <div class="col-lg-9">
                     <div class="row">
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Gallery Name <font color="#F00"><b>*</b></font></label>
-                                <input id="gallery_name" name="gallery_name" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name'];?>" />
+                                <label>Gallery Name TH <font color="#F00"><b>*</b></font></label>
+                                <input id="gallery_name_th" name="gallery_name_th" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name_th'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Gallery Name EN<font color="#F00"><b>*</b></font></label>
+                                <input id="gallery_name_en" name="gallery_name_en" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name_en'];?>" />
                                 <p class="help-block">Example :CONTACT</p>
                             </div>
                         </div>
@@ -69,13 +77,12 @@ echo $gallery[$id]['gallery_name'];  ?>
 
                                 <label>Gallery Type <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="gallery_type_id" name="gallery_type_id">
-                                        <?PHP echo $gallery_type[$type-1]['gallery_type_name'];?>
                                     </option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option selected value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
+                                    <option  value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"  <?PHP if ($gallery_type[$type-1]['gallery_type_id'] == $gallery_type[$i]['gallery_type_id'])  { echo 'selected'; } ?>>
                                         <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
                                     </option>
                                     <?PHP 
@@ -91,19 +98,11 @@ echo $gallery[$id]['gallery_name'];  ?>
 
                                 <label> ROOM <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="room_id" name="room_id">
-                                <option  value=""> อื่น ๆ </option>
-                                        <?PHP echo $rooms[$type-1]['rooms_name'];?>
-                                    </option>
-                                    <?PHP #endregion
-                                for ($i=0; $i < count($rooms); $i++) { 
-                                    # code...
-                                ?>
-                                    <option selected value="<?PHP echo $rooms[$i]['room_id'];?>">
+                                <option  value=""> อื่น ๆ </option> <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($rooms[$type-1]['room_id'] == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
                                         <?PHP echo $rooms[$i]['room_name'];?>
                                     </option>
-                                    <?PHP 
-                                }
-                                ?>
+                                    <?PHP }  ?>
                                 </select>
                                 <p class="help-block">Example : Delux Room </p>
                             </div>

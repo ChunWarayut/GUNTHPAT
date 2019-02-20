@@ -48,13 +48,22 @@
                 <div class="col-lg-9">
                     <div class="row">
 
-                        <div class="col-lg-12">
+                    <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Gallery Name <font color="#F00"><b>*</b></font></label>
-                                <input id="gallery_name" name="gallery_name" class="form-control" />
+                                <label>Gallery Name TH <font color="#F00"><b>*</b></font></label>
+                                <input id="gallery_name_th" name="gallery_name_th" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name_th'];?>" />
                                 <p class="help-block">Example :CONTACT</p>
                             </div>
                         </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Gallery Name EN<font color="#F00"><b>*</b></font></label>
+                                <input id="gallery_name_en" name="gallery_name_en" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name_en'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
+
 
                         <div class="col-lg-12">
                             <div class="form-group">
@@ -68,7 +77,11 @@
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"><?PHP echo $gallery_type[$i]['gallery_type_name'];?></option>
+                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
+                                    <?PHP echo $gallery_type[$i]['gallery_type_name_th'];?>
+                                    <?PHP echo $gallery_type[$i]['gallery_type_name_en'];?>
+                                    <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
+                                    </option>
                                     <?PHP 
                                 }
                                 ?>
@@ -91,6 +104,8 @@
                                     # code...
                                 ?>
                                     <option  value="<?PHP echo $rooms[$i]['room_id'];?>">
+                                        <?PHP echo $rooms[$i]['room_name_th'];?>
+                                        <?PHP echo $rooms[$i]['room_name_en'];?>
                                         <?PHP echo $rooms[$i]['room_name'];?>
                                     </option>
                                     <?PHP 

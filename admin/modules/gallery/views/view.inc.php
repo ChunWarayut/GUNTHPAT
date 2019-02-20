@@ -4,17 +4,22 @@
 <h2> แก้ไข Sub Title</h2>
 <hr>
 <form  id="form_target" role="form" method="post" action="index.php?content=gallery&action=edit_head">
+                <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button>
     <div class="row">
-            <div class="col-lg-12">
-<button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button>
+            <div class="col-lg-6">
                 <div class="form-group">
                     <label> </label>
-                    <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                    <textarea class="form-control " id="gallery_head_sub_title" name="gallery_head_sub_title"
-                        rows="6"><?PHP echo $gallery_head[0]['gallery_head_sub_title'];?></textarea>
+                    <textarea class="form-control " id="gallery_head_sub_title_th" name="gallery_head_sub_title_th"
+                        rows="6"><?PHP echo $gallery_head[0]['gallery_head_sub_title_th'];?></textarea>
                 </div>
             </div>
-<!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label> </label>
+                    <textarea class="form-control " id="gallery_head_sub_title_en" name="gallery_head_sub_title_en"
+                        rows="6"><?PHP echo $gallery_head[0]['gallery_head_sub_title_en'];?></textarea>
+                </div>
+            </div>
             <div class="col-lg-6">
             </div>
     </div>
@@ -38,8 +43,10 @@
         <tr>
             <th width="10">#</th>
             <th width="100">Image</th>
-            <th width="100">Name</th>
-            <th width="100"> Type</th>
+            <th width="100">Name TH</th>
+            <th width="100">Name EN</th>
+            <th width="100"> Type TH</th>
+            <th width="100"> Type EN</th>
             <th width="10"></th>
             <th width="10"></th>
             <th width="10"></th>
@@ -62,11 +69,18 @@
         </td>
 
         <td class="text-left">
-            <?PHP echo $gallery[$i]['gallery_name'];  ?>
+            <?PHP echo $gallery[$i]['gallery_name_th'];  ?>
+        </td>
+        <td class="text-left">
+            <?PHP echo $gallery[$i]['gallery_name_en'];  ?>
         </td>
 
         <td class="text-left">
-            <?PHP echo  $gallery[$i]['gallery_type_name'];  ?>
+            <?PHP echo  $gallery[$i]['gallery_type_name_th'];  ?>
+        </td>
+
+        <td class="text-left">
+            <?PHP echo  $gallery[$i]['gallery_type_name_en'];  ?>
         </td>
 
         <td>
