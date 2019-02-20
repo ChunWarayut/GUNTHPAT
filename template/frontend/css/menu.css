@@ -1,10 +1,16 @@
 .font-weight-light{
     color: #f47322; 
 }
-a {
+a p{
+    color: #5f5f5f;
+}
+span{
     color: #f47322;
 }
-
+.btn-orage{
+    background: #f47322;
+    color: #fff;
+}
 a:hover {
     color: #f47322;
 }

@@ -4,7 +4,7 @@ require_once('view/menu.inc.php');
 <div class="container" id="gallery">
     <div class="row gallery-title">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="text-left gallery-header" >
+            <div class="text-left gallery-header">
                 <h1>
                     <span>
                         OUR
@@ -49,7 +49,7 @@ require_once('view/menu.inc.php');
     </div>
 </div>
 
-<div class="gallery-show " >
+<div class="gallery-show ">
 
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
 
@@ -160,12 +160,12 @@ require_once('view/menu.inc.php');
 
 <div class="gallery-slide">
 
-<section class="slide-galery" >
-    <?php for ($i=0; $i < count($gallery); $i++) {    ?>
-    <img class="img-fluid" style=" width: 100px; height: 200px; object-fit: cover;"
-        src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>">
-    <?php } ?>
-</section>
+    <section class="slide-galery">
+        <?php for ($i=0; $i < count($gallery); $i++) {    ?>
+        <img class="img-fluid" style=" width: 100px; height: 200px; object-fit: cover;"
+            src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>">
+        <?php } ?>
+    </section>
 
 </div>
 
@@ -181,4 +181,3 @@ $(document).on('ready', function() {
     });
 });
 </script>
-

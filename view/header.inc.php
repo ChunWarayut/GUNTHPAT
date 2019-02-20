@@ -30,7 +30,7 @@
 <script src="template/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="template/slick/slick.min.js" type ="text/javascript" charset="utf-8"></script>
-<link href='template/frontend/anakotmai/font.css' rel='stylesheet'>
+
 
 <link href="template/frontend/css/font-gunthpat.css" rel="stylesheet">
 
