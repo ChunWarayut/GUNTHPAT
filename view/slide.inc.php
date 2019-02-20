@@ -35,7 +35,7 @@ function search() {
             </div>
             <div class="col-lg-4" style="background-color: #00000036 ">
                 <div class="p-2">Arrival Date
-                    <input input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
+                    <input input class="form-control" id = "book_date_start" name="book_date_start" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
                 <div class="p-2">Depature Date
                     <input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
