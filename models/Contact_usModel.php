@@ -47,47 +47,72 @@ class Contact_us extends BaseModel{
     }
     
     function editContact_us($contact_us_id,$data = []) {
-        $data['contact_us_title']=mysqli_real_escape_string(static::$db,$data['contact_us_title']);
-        $data['contact_us_sub_title']=mysqli_real_escape_string(static::$db,$data['contact_us_sub_title']);
-        $data['contact_us_facebook']=mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
-        $data['contact_us_tel']=mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
-        $data['contact_us_address']=mysqli_real_escape_string(static::$db,$data['contact_us_address']);
-        $data['contact_us_address_1']=mysqli_real_escape_string(static::$db,$data['contact_us_address_1']);
-        $data['contact_us_address_2']=mysqli_real_escape_string(static::$db,$data['contact_us_address_2']);
-        $data['contact_us_address_3']=mysqli_real_escape_string(static::$db,$data['contact_us_address_3']);
-        $data['contact_us_address_4']=mysqli_real_escape_string(static::$db,$data['contact_us_address_4']);
-        $data['contact_us_fax']=mysqli_real_escape_string(static::$db,$data['contact_us_fax']);
-        $data['contact_us_email']=mysqli_real_escape_string(static::$db,$data['contact_us_email']);
-        $data['contact_us_carry_title']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_title']);
-        $data['contact_us_carry_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_detail']);
-        $data['contact_us_taxi_title']=mysqli_real_escape_string(static::$db,$data['contact_us_taxi_title']);
-        $data['contact_us_taxi_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_taxi_detail']);
-        $data['contact_us_car_titel']=mysqli_real_escape_string(static::$db,$data['contact_us_car_titel']);
-        $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
-        $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
-        $data['contact_us_map_latitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
-        $data['contact_us_map_longitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
+      
+        $data['contact_us_title_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_title_th']);
+        $data['contact_us_sub_title_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_sub_title_th']);
+        $data['contact_us_title_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_title_en']);
+        $data['contact_us_sub_title_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_sub_title_en']);
+        $data['contact_us_facebook'] =mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
+        $data['contact_us_tel'] =mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
+        $data['contact_us_address_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_th']);
+        $data['contact_us_address_1_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_1_th']);
+        $data['contact_us_address_2_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_2_th']);
+        $data['contact_us_address_3_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_3_th']);
+        $data['contact_us_address_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_en']);
+        $data['contact_us_address_1_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_1_en']);
+        $data['contact_us_address_2_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_2_en']);
+        $data['contact_us_address_3_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_3_en']);
+        $data['contact_us_address_4'] =mysqli_real_escape_string(static::$db,$data['contact_us_address_4']);
+        $data['contact_us_fax'] =mysqli_real_escape_string(static::$db,$data['contact_us_fax']);
+        $data['contact_us_email'] =mysqli_real_escape_string(static::$db,$data['contact_us_email']);
+        $data['contact_us_carry_title_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_carry_title_th']);
+        $data['contact_us_carry_detail_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_carry_detail_th']);
+        $data['contact_us_taxi_title_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_taxi_title_th']);
+        $data['contact_us_taxi_detail_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_taxi_detail_th']);
+        $data['contact_us_car_titel_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_car_titel_th']);
+        $data['contact_us_car_detail_th'] =mysqli_real_escape_string(static::$db,$data['contact_us_car_detail_th']);
+        $data['contact_us_carry_title_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_carry_title_en']);
+        $data['contact_us_carry_detail_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_carry_detail_en']);
+        $data['contact_us_taxi_title_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_taxi_title_en']);
+        $data['contact_us_taxi_detail_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_taxi_detail_en']);
+        $data['contact_us_car_titel_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_car_titel_en']);
+        $data['contact_us_car_detail_en'] =mysqli_real_escape_string(static::$db,$data['contact_us_car_detail_en']);
+        $data['contact_us_map'] =mysqli_real_escape_string(static::$db,$data['contact_us_map']);
+        $data['contact_us_map_latitude'] =mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
+        $data['contact_us_map_longitude'] =mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
         $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
 
         $sql = "UPDATE `tb_contact_us` 
-        SET `contact_us_title` = '".$data['contact_us_title']."', 
-         `contact_us_sub_title` = '".$data['contact_us_sub_title']."', 
+        SET
+         `contact_us_title_th` = '".$data['contact_us_title_th']."', 
+         `contact_us_title_en` = '".$data['contact_us_title_en']."', 
+         `contact_us_sub_title_th` = '".$data['contact_us_sub_title_th']."', 
+         `contact_us_sub_title_en` = '".$data['contact_us_sub_title_en']."', 
          `contact_us_facebook` = '".$data['contact_us_facebook']."', 
          `contact_us_tel` = '".$data['contact_us_tel']."', 
-         `contact_us_address` = '".$data['contact_us_address']."', 
-         `contact_us_address_1` = '".$data['contact_us_address_1']."', 
-         `contact_us_address_2` = '".$data['contact_us_address_2']."', 
-         `contact_us_address_3` = '".$data['contact_us_address_3']."',  
+         `contact_us_address_th` = '".$data['contact_us_address_th']."', 
+         `contact_us_address_en` = '".$data['contact_us_address_en']."', 
+         `contact_us_address_1_th` = '".$data['contact_us_address_1_th']."', 
+         `contact_us_address_1_en` = '".$data['contact_us_address_1_en']."', 
+         `contact_us_address_2_th` = '".$data['contact_us_address_2_th']."', 
+         `contact_us_address_2_en` = '".$data['contact_us_address_2_en']."', 
+         `contact_us_address_3_th` = '".$data['contact_us_address_3_th']."',  
+         `contact_us_address_3_en` = '".$data['contact_us_address_3_en']."',  
          `contact_us_address_4` = '".$data['contact_us_address_4']."',  
          `contact_us_fax` = '".$data['contact_us_fax']."', 
          `contact_us_email` = '".$data['contact_us_email']."', 
-         `contact_us_carry_title` = '".$data['contact_us_carry_title']."', 
-         `contact_us_carry_detail` = '".$data['contact_us_carry_detail']."', 
-         `contact_us_taxi_title` = '".$data['contact_us_taxi_title']."', 
-         `contact_us_taxi_detail` = '".$data['contact_us_taxi_detail']."', 
-         `contact_us_car_titel` = '".$data['contact_us_car_titel']."', 
-         `contact_us_taxi_detail` = '".$data['contact_us_taxi_detail']."', 
-         `contact_us_car_detail` = '".$data['contact_us_car_detail']."', 
+         `contact_us_carry_title_th` = '".$data['contact_us_carry_title_th']."', 
+         `contact_us_carry_title_en` = '".$data['contact_us_carry_title_en']."', 
+         `contact_us_carry_detail_th` = '".$data['contact_us_carry_detail_th']."', 
+         `contact_us_carry_detail_en` = '".$data['contact_us_carry_detail_en']."', 
+         `contact_us_taxi_title_th` = '".$data['contact_us_taxi_title_th']."', 
+         `contact_us_taxi_title_en` = '".$data['contact_us_taxi_title_en']."', 
+         `contact_us_taxi_detail_th` = '".$data['contact_us_taxi_detail_th']."', 
+         `contact_us_taxi_detail_en` = '".$data['contact_us_taxi_detail_en']."', 
+         `contact_us_car_titel_th` = '".$data['contact_us_car_titel_th']."', 
+         `contact_us_car_titel_en` = '".$data['contact_us_car_titel_en']."', 
+         `contact_us_car_detail_th` = '".$data['contact_us_car_detail_th']."', 
+         `contact_us_car_detail_en` = '".$data['contact_us_car_detail_en']."', 
          `contact_us_map` = '".$data['contact_us_map']."',
          `contact_us_map_latitude` = '".$data['contact_us_map_latitude']."',
          `contact_us_map_longitude` = '".$data['contact_us_map_longitude']."',
@@ -105,69 +130,6 @@ class Contact_us extends BaseModel{
         }
     }
 
-    function addContact_us($data = []) {
-        $data['contact_us_title ']=mysqli_real_escape_string(static::$db,$data['contact_us_title ']);
-        $data['contact_us_sub_title']=mysqli_real_escape_string(static::$db,$data['contact_us_sub_title']);
-        $data['contact_us_facebook']=mysqli_real_escape_string(static::$db,$data['contact_us_facebook']);
-        $data['contact_us_tel']=mysqli_real_escape_string(static::$db,$data['contact_us_tel']);
-        $data['contact_us_address']=mysqli_real_escape_string(static::$db,$data['contact_us_address']);
-        $data['contact_us_address_1']=mysqli_real_escape_string(static::$db,$data['contact_us_address_1']);
-        $data['contact_us_address_2']=mysqli_real_escape_string(static::$db,$data['contact_us_address_2']);
-        $data['contact_us_address_3']=mysqli_real_escape_string(static::$db,$data['contact_us_address_3']);
-        $data['contact_us_address_4']=mysqli_real_escape_string(static::$db,$data['contact_us_address_4']);
-        $data['contact_us_fax']=mysqli_real_escape_string(static::$db,$data['contact_us_fax']);
-        $data['contact_us_email']=mysqli_real_escape_string(static::$db,$data['contact_us_email']);
-        $data['contact_us_carry_title']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_title']);
-        $data['contact_us_carry_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_carry_detail']);
-        $data['contact_us_taxi_title']=mysqli_real_escape_string(static::$db,$data['contact_us_taxi_title']);
-        $data['contact_us_taxi_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_taxi_detail']);
-        $data['contact_us_car_titel']=mysqli_real_escape_string(static::$db,$data['contact_us_car_titel']);
-        $data['contact_us_car_detail']=mysqli_real_escape_string(static::$db,$data['contact_us_car_detail']);
-        $data['contact_us_map']=mysqli_real_escape_string(static::$db,$data['contact_us_map']);
-        $data['contact_us_map_latitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
-        $data['contact_us_map_longitude']=mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
-        $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
-
-
-        $sql = "INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title`, `contact_us_sub_title`, `contact_us_facebook`, `contact_us_tel`, 
-        `contact_us_address`, 
-        `contact_us_address_1`, 
-        `contact_us_address_2`, 
-        `contact_us_address_3`, 
-        `contact_us_address_4`, 
-        `contact_us_fax`, `contact_us_email`, `contact_us_carry_title`, `contact_us_carry_detail`, `contact_us_taxi_title`, `contact_us_taxi_detail`, `contact_us_car_titel`, `contact_us_car_detail`, `contact_us_map`) 
-        VALUES (
-            NULL, 
-            '".$data['contact_us_title']."', 
-            '".$data['contact_us_sub_title']."' ,
-            '".$data['contact_us_facebook']."' ,
-            '".$data['contact_us_tel']."' ,
-            '".$data['contact_us_address']."' ,
-            '".$data['contact_us_address_1']."' ,
-            '".$data['contact_us_address_2']."' ,
-            '".$data['contact_us_address_3']."' ,
-            '".$data['contact_us_address_4']."' ,
-            '".$data['contact_us_fax']."' ,
-            '".$data['contact_us_email']."' ,
-            '".$data['contact_us_carry_title']."' ,
-            '".$data['contact_us_carry_detail']."' ,
-            '".$data['contact_us_taxi_title']."' ,
-            '".$data['contact_us_taxi_detail']."' ,
-            '".$data['contact_us_car_titel']."' ,
-            '".$data['contact_us_car_detail']."' ,
-            '".$data['contact_us_map']."' 
-        )
-        ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
-
-        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
-            return 1;
-        }else {
-            return 0;
-        }
-    }
 
 }
 ?>
