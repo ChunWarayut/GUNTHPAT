@@ -57,10 +57,11 @@ require_once 'view/menu.inc.php';
                                 <div class="row">
                                     <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
 
-
-                                    <p>
-                                        <?PHP echo $contact_us[0]['contact_us_tel']; ?>
-                                    </p>
+                                    <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
+                                            <p >
+                                                <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                                            </p>
+                                        </a>
 
 
                                 </div>

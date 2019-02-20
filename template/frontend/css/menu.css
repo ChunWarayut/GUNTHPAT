@@ -1,6 +1,9 @@
 .font-weight-light{
     color: #f47322; 
 }
+.header-menu{
+    padding: 0 5%;
+}
 a p{
     color: #5f5f5f;
 }
@@ -79,17 +82,10 @@ img::-moz-selection {
     .font-weight-light {
         font-size:15px; color: #f47322;
     }
-    .contact_header{
-        padding-right: 5% ; 
-    }
     .contact_list {
-        padding: 1.1em 1em;
+        padding: 1em;
     }
     #mainNav {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 5%;
-        padding-right: 5%;
         -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
         transition: padding-top 0.3s, padding-bottom 0.3s;
         border: none;
@@ -104,7 +100,7 @@ img::-moz-selection {
         transition: all 0.3s;
     }
     #mainNav .navbar-nav .nav-item .nav-link {
-        padding: 1.1em 1em !important;
+        padding: 0em 1em !important;
     }
     #mainNav.navbar-shrink {
         padding-top: 0;
@@ -119,12 +115,13 @@ img::-moz-selection {
 
 
 
-@media (max-width: 992px) {
-    
+@media (max-width: 991px) {
     .contact_header{
         display: none;
     }
- 
+    .header-menu{
+        padding: 0px;
+    }
 
     header.masthead .intro-text {
         padding-top: 300px;

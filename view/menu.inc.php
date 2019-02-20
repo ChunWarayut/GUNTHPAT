@@ -1,5 +1,3 @@
-    <!-- Navigation -->
-
 <script>
 	function setLanguage(lng){
 		$.post( "controls/setLanguage.php", { lng: lng })
@@ -8,6 +6,8 @@
 		});
 	}
 </script>
+<script src="template/frontend/js/agency.min.js"></script>
+
 <?php 
     require_once('models/Contact_usModel.php');
     $path = "modules/contact_us/views/";
@@ -16,35 +16,23 @@
     $contact_us = $contact_us_model -> getContact_us();
 ?>
     <link href="template/frontend/css/menu.css" rel="stylesheet">
-
+<div class="header-menu">
     <div style="z-index: 50; position:relative; ">
-
         <div class="text-right contact_header">
-            <div class="font-weight-light contact_list">
-                <i class='fas fa-mobile-alt' ></i>
-<<<<<<< HEAD
-                <span class="text2; font-weight-light">
-                  <?PHP echo $contact_us['contact_us_tel']; ?>
-=======
-                <span class="text2; font-weight-light" style='color: #ffffff; '>
-                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>"><?PHP echo $contact_us[0]['contact_us_tel']; ?></a>
->>>>>>> fda4376725ecbd024d34524573370e2cff6588e6
-                </span>
-                <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>
-                <span class="text2">
-                    <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
-                </span>
+            <div class="white contact_list">
+
+                <span style="padding-right: 2%;color:#fff;"><i class="fas fa-mobile-alt" aria-hidden="true"></i> <?php echo $contact_us[0]['contact_us_tel']; ?></span>
+                <span style="padding-right: 2%;color:#fff;"><i class='fas fa-map-marker-alt'></i> <?PHP echo $contact_us[0]['contact_us_address_3']; ?></span>
                 <a onclick="setLanguage('EN')" class="right <?php if($lng != "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >EN</span></a>
                 <a class="right"><span class="lng-icon" style="width: 0.9em; color: #fff;">|</span></a>
                 <a onclick="setLanguage('TH')" class="right <?php if($lng == "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >TH</span></a>
             </div>
         </div>
     </div>
-</div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="
     z-index: 50; "
         id="mainNav">
-        <a href="index.php" class="navbar-brand js-scroll-trigger "><img src="template/backend/images/logo/logo.png"
+        <a href="index.php" class="navbar-brand"><img src="template/backend/images/logo/logo.png"
                 width="130px" class="img-icon float-right"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -143,10 +131,9 @@
             </ul>
         </div>
     </nav>
-
-
-    <!-- Custom scripts for this template -->
-    <script src="template/frontend/js/agency.min.js"></script>
-    <?PHP
-require_once('slide.php');
+</div>
+<?PHP
+    require_once('slide.inc.php');
 ?>
+    <!-- Custom scripts for this template -->
+
