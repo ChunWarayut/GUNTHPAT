@@ -6,9 +6,9 @@ require_once('view/menu.inc.php');
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="text-left gallery-header">
                 <h1>
-                    <span>
-                        OUR
-                    </span>
+
+                    OUR
+
                     <span style="color:#f47322; ">
                         GALLERY
                     </span>
@@ -23,10 +23,10 @@ require_once('view/menu.inc.php');
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="" style="padding-bottom:8%;">
 
-                <h4 class="font-weight-light">
-                    <span>
-                        GUNTHPAT PLACE
-                    </span>
+                <h4>
+
+                    GUNTHPAT PLACE
+
                 </h4>
                 <span class=" gallery-detail">
                     Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
@@ -41,11 +41,11 @@ require_once('view/menu.inc.php');
 <div class="container">
 
     <div class="text-center ">
-        <h4 class="font-weight-light">
-            <span class="text2">
-                แสดงให้ฉันดู
-            </span>
-        </h4>
+        <h3>
+
+            แสดงให้ฉันดู
+
+        </h3>
     </div>
 </div>
 
