@@ -6,9 +6,7 @@ require_once('view/menu.inc.php');
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="text-left gallery-header">
                 <h1>
-                    <span>
-                        OUR
-                    </span>
+                    OUR
                     <span style="color:#f47322; ">
                         GALLERY
                     </span>
@@ -23,10 +21,10 @@ require_once('view/menu.inc.php');
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="" style="padding-bottom:8%;">
 
-                <h4 class="font-weight-light">
-                    <span>
-                        GUNTHPAT PLACE
-                    </span>
+                <h4>
+
+                    GUNTHPAT PLACE
+
                 </h4>
                 <span class=" gallery-detail">
                     Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
@@ -38,17 +36,29 @@ require_once('view/menu.inc.php');
         </div>
     </div>
 </div>
-<div class="container">
 
-    <div class="text-center ">
-        <h4 class="font-weight-light">
-            <span class="text2">
-                แสดงให้ฉันดู
-            </span>
-        </h4>
+<div class="container">
+    <div class="class row">
+        <div class=" col-6">
+            <div class="text-right">
+                <h4>
+                    แสดงให้ฉันดู
+                </h4>
+            </div>
+        </div>
+        <div class=" col-6">
+            <select class="form-control"  style="border: 0px solid #ced4da; width: 150px; color: #f47322" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
+                <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
+                    echo 'selected' ; } ?>>
+                    <?PHP echo $rooms[$i]['room_name_th'];?>
+                </option>
+                <?PHP 
+                    }?>
+            </select>
+        </div>
     </div>
 </div>
-
 <div class="gallery-show ">
 
     <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 

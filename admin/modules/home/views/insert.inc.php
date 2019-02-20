@@ -46,32 +46,58 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <div class="row-lg-2">
-                        <div class="form-group">
-                            <label>Title <font color="#F00"><b>*</b></font></label>
-                            <input id="slide_title" name="slide_title" class="form-control"  />
-                            <p class="help-block">Example : Delux Room</p>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Title TH <font color="#F00"><b>*</b></font></label>
+                                <input id="slide_title_th" name="slide_title_th" class="form-control"
+                                    value="<?PHP echo $slide[$id]['slide_title_th'];?>" />
+                                <p class="help-block">Example : Delux Room</p>
+                            </div>
                         </div>
-                    </div>
 
-
-                    <div class="row-lg-2">
-                        <div class="form-group">
-                            <label>Link <font color="#F00"><b>*</b></font></label>
-                            <input  id="slide_link" name="slide_link" class="form-control"  />
-                            <p class="help-block">Example : https://www.youtube.com/watch?v=TMr6subvuQI </p>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Title EN<font color="#F00"><b>*</b></font></label>
+                                <input id="slide_title_en" name="slide_title_en" class="form-control"
+                                    value="<?PHP echo $slide[$id]['slide_title_en'];?>" />
+                                <p class="help-block">Example : Delux Room</p>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="col-lg-5">
-                    <div class="form-group">
-                        <label>Sub Title <font color="#F00"><b>*</b></font></label>
-                        <textarea class="form-control" id="slide_sub_title" name="slide_sub_title" aria-label="With textarea"rows="6"></textarea>
-                        <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Sub Title TH<font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control" id="slide_sub_title_th" name="slide_sub_title_th"
+                                    aria-label="With textarea"
+                                    rows="6"><?PHP echo $slide[$id]['slide_sub_title_th'];?></textarea>
+                                <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control" id="slide_sub_title_en" name="slide_sub_title_en"
+                                    aria-label="With textarea"
+                                    rows="6"><?PHP echo $slide[$id]['slide_sub_title_en'];?></textarea>
+                                <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Link <font color="#F00"><b>*</b></font></label>
+                                <input id="slide_link" name="slide_link" class="form-control"
+                                    value="<?PHP echo  $slide[$id]['slide_link'];?>" />
+                                <p class="help-block">Example : https://www.youtube.com/watch?v=TMr6subvuQI </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
+
             </div>
 
         </div>

@@ -12,8 +12,10 @@
         <tr>
             <th width="12px">#</th>
             <th width="100px">Image</th>
-            <th width="100px">Title</th>
-            <th width="500px">Sub Title</th>
+            <th width="100px">Title TH</th>
+            <th width="500px">Sub Title TH</th>
+            <th width="100px">Title EN</th>
+            <th width="500px">Sub Title EN</th>
             <th width="50px">ลิงค์</th>
             <th width="50px"></th>
             <th width="50px"></th>
@@ -33,11 +35,16 @@
                     width="200px" alt="">
             </td>
             <td>
-                <?PHP echo $slide[$i]['slide_title'];  ?>
+                <?PHP echo $slide[$i]['slide_title_th'];  ?>
             </td>
             <td class="text-left">
-                <?PHP echo  $slide[$i]['slide_sub_title'];  ?>
+                <?PHP echo  $slide[$i]['slide_sub_title_th'];  ?>
             </td>
+            <td>
+                <?PHP echo $slide[$i]['slide_title_en'];  ?>
+            </td>
+            <td class="text-left">
+                <?PHP echo  $slide[$i]['slide_sub_title_en'];  ?>
             </td>
             <td class="text-left">
                 <?PHP echo $slide[$i]['slide_link'];  ?>

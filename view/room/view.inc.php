@@ -178,7 +178,7 @@ require_once 'view/menu.inc.php';
 
                                 THB
 
-                                <span style="padding-left:40px;color: #ffff;">
+                                <span style="padding-left:40px;color: #000;">
                                     <?PHP if ($rooms[$i]['room_price'] == "") {
                             echo "ไม่ระบุ";
                         }else{

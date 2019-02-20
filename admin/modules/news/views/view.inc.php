@@ -9,7 +9,8 @@
     <thead>
         <tr>
             <th>#</th>
-            <th> หัวข้อข่าว </th>
+            <th> หัวข้อข่าว TH</th>
+            <th> หัวข้อข่าว EN</th>
             <th></th>
             <th></th>
 
@@ -21,8 +22,10 @@
     ?>
         <tr>
             <td><?php echo $i+1; ?></td>
-            <td class="text-left"><?php echo $news[$i]['news_name']; ?> </td>
-            <!-- <td class="text-left"><?php echo $news[$i]['news_detail']; ?></td> -->
+            <td class="text-left"><?php echo $news[$i]['news_name_th']; ?> </td>
+            <!-- <td class="text-left"><?php echo $news[$i]['news_detail_th']; ?></td> -->
+            <td class="text-left"><?php echo $news[$i]['news_name_en']; ?> </td>
+            <!-- <td class="text-left"><?php echo $news[$i]['news_detail_en']; ?></td> -->
             <td>
                 <a href="?content=news&action=update&id=<?php echo $news[$i]['news_id'];?>" style="font-size: 20px;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

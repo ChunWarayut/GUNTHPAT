@@ -47,21 +47,41 @@
                 <div class="col-lg-9">
                     <div class="row">
 
-                        <div class="col-lg-12">
+                    <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Facilities Name <font color="#F00"><b>*</b></font></label>
-                                <input id="facilities_name" name="facilities_name" class="form-control" value="" />
-                                <p class="help-block">Example : ...</p>
+                                <label>Facilities Name TH <font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_name_th" name="facilities_name_th" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_name_th'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control" id="slide_sub_title" name="slide_sub_title" rows="6"></textarea>
-                                <p class="help-block">Example : มีอาหารเช้าพร้อมบริการ</p>
+                                <label>Facilities Name EN<font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_name_en" name="facilities_name_en" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_name_en'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
                             </div>
                         </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Sub Title TH <font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control " id="facilities_detail_th" name="facilities_detail_th"rows="6"><?PHP echo $facilities[$id]['facilities_detail_th'];?></textarea>
+                                <p class="help-block">Example : </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control " id="facilities_detail_en" name="facilities_detail_en"rows="6"><?PHP echo $facilities[$id]['facilities_detail_en'];?></textarea>
+                                <p class="help-block">Example : </p>
+                            </div>
+                        </div>
+
+
 
 
                     </div>

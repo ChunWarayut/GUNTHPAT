@@ -66,18 +66,25 @@ class Slide extends BaseModel{
     
 
     function insertSlide($data = []) {
-        $data['slide_title']=mysqli_real_escape_string(static::$db,$data['slide_title']);
-        $data['slide_sub_title']=mysqli_real_escape_string(static::$db,$data['slide_sub_title']);
+        $data['slide_title_th']=mysqli_real_escape_string(static::$db,$data['slide_title_th']);
+        $data['slide_sub_title_th']=mysqli_real_escape_string(static::$db,$data['slide_sub_title_th']);
+        $data['slide_title_en']=mysqli_real_escape_string(static::$db,$data['slide_title_en']);
+        $data['slide_sub_title_en']=mysqli_real_escape_string(static::$db,$data['slide_sub_title_en']);
         $data['slide_link']=mysqli_real_escape_string(static::$db,$data['slide_link']);
         $data['slide_img']=mysqli_real_escape_string(static::$db,$data['slide_img']);
 
 
-        $sql = "INSERT INTO `tb_slide`(`slide_id`, `slide_img`, `slide_title`, `slide_sub_title`, `slide_link`) 
+        $sql = "INSERT INTO `tb_slide`(`slide_id`, `slide_img`, 
+        `slide_title_en`, `slide_sub_title_en`, 
+        `slide_title_th`, `slide_sub_title_th`, 
+        `slide_link`) 
         VALUES (
             NULL, 
             '".$data['slide_img']."', 
-            '".$data['slide_title']."', 
-            '".$data['slide_sub_title']."', 
+            '".$data['slide_title_en']."', 
+            '".$data['slide_sub_title_en']."', 
+            '".$data['slide_title_th']."', 
+            '".$data['slide_sub_title_th']."', 
             '".$data['slide_link']."'
             )
         ";
@@ -94,16 +101,19 @@ class Slide extends BaseModel{
 
 
     function editRoom($slide_id,$data = []) {
-        $data['slide_img']=mysqli_real_escape_string(static::$db,$data['slide_img']);
-        $data['slide_id']=mysqli_real_escape_string(static::$db,$data['slide_id']);
-        $data['slide_title']=mysqli_real_escape_string(static::$db,$data['slide_title']);
-        $data['slide_sub_title']=mysqli_real_escape_string(static::$db,$data['slide_sub_title']);
+        $data['slide_title_th']=mysqli_real_escape_string(static::$db,$data['slide_title_th']);
+        $data['slide_sub_title_th']=mysqli_real_escape_string(static::$db,$data['slide_sub_title_th']);
+        $data['slide_title_en']=mysqli_real_escape_string(static::$db,$data['slide_title_en']);
+        $data['slide_sub_title_en']=mysqli_real_escape_string(static::$db,$data['slide_sub_title_en']);
         $data['slide_link']=mysqli_real_escape_string(static::$db,$data['slide_link']);
+        $data['slide_img']=mysqli_real_escape_string(static::$db,$data['slide_img']);
 
         $sql = "UPDATE `tb_slide` 
         SET `slide_img` = '".$data['slide_img']."', 
-        `slide_title` = '".$data['slide_title']."', 
-        `slide_sub_title` = '".$data['slide_sub_title']."', 
+        `slide_title_en` = '".$data['slide_title_en']."', 
+        `slide_sub_title_en` = '".$data['slide_sub_title_en']."', 
+        `slide_title_th` = '".$data['slide_title_th']."', 
+        `slide_sub_title_th` = '".$data['slide_sub_title_th']."', 
         `slide_link` = '".$data['slide_link']."' 
         WHERE `tb_slide`.`slide_id` = '$slide_id'
         ";

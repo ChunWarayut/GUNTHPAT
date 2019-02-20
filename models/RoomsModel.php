@@ -118,31 +118,47 @@ class Rooms extends BaseModel{
     function editRoom($room_id,$data = []) {
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
         $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
-        $data['room_name']=mysqli_real_escape_string(static::$db,$data['room_name']);
-        $data['room_sub_title']=mysqli_real_escape_string(static::$db,$data['room_sub_title']);
+        $data['room_name_th']=mysqli_real_escape_string(static::$db,$data['room_name_th']);
+        $data['room_sub_title_th']=mysqli_real_escape_string(static::$db,$data['room_sub_title_th']);
+        $data['room_name_en']=mysqli_real_escape_string(static::$db,$data['room_name_en']);
+        $data['room_sub_title_en']=mysqli_real_escape_string(static::$db,$data['room_sub_title_en']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
         $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
-        $data['room_size']=mysqli_real_escape_string(static::$db,$data['room_size']);
-        $data['room_detail_1']=mysqli_real_escape_string(static::$db,$data['room_detail_1']);
-        $data['room_detail_2']=mysqli_real_escape_string(static::$db,$data['room_detail_2']);
-        $data['room_detail_3']=mysqli_real_escape_string(static::$db,$data['room_detail_3']);
-        $data['room_facility_1']=mysqli_real_escape_string(static::$db,$data['room_facility_1']);
-        $data['room_facility_2']=mysqli_real_escape_string(static::$db,$data['room_facility_2']);
+        $data['room_size_th']=mysqli_real_escape_string(static::$db,$data['room_size_th']);
+        $data['room_detail_1_th']=mysqli_real_escape_string(static::$db,$data['room_detail_1_th']);
+        $data['room_detail_2_th']=mysqli_real_escape_string(static::$db,$data['room_detail_2_th']);
+        $data['room_detail_3_th']=mysqli_real_escape_string(static::$db,$data['room_detail_3_th']);
+        $data['room_facility_1_th']=mysqli_real_escape_string(static::$db,$data['room_facility_1_th']);
+        $data['room_facility_2_th']=mysqli_real_escape_string(static::$db,$data['room_facility_2_th']);
+        $data['room_size_en']=mysqli_real_escape_string(static::$db,$data['room_size_en']);
+        $data['room_detail_1_en']=mysqli_real_escape_string(static::$db,$data['room_detail_1_en']);
+        $data['room_detail_2_en']=mysqli_real_escape_string(static::$db,$data['room_detail_2_en']);
+        $data['room_detail_3_en']=mysqli_real_escape_string(static::$db,$data['room_detail_3_en']);
+        $data['room_facility_1_en']=mysqli_real_escape_string(static::$db,$data['room_facility_1_en']);
+        $data['room_facility_2_en']=mysqli_real_escape_string(static::$db,$data['room_facility_2_en']);
 
         $sql = "UPDATE `tb_room` 
         SET `room_img` = '".$data['room_img']."', 
-        `room_name` = '".$data['room_name']."', 
-        `room_sub_title` = '".$data['room_sub_title']."', 
+        `room_name_en` = '".$data['room_name_en']."', 
+        `room_sub_title_en` = '".$data['room_sub_title_en']."', 
+        `room_name_th` = '".$data['room_name_th']."', 
+        `room_sub_title_th` = '".$data['room_sub_title_th']."', 
         `room_type_id` = '".$data['room_type_id']."', 
         `room_price` = '".$data['room_price']."' ,
         `room_amout` = '".$data['room_amout']."' ,
-        `room_size` = '".$data['room_size']."' ,
-        `room_detail_1` = '".$data['room_detail_1']."' ,
-        `room_detail_2` = '".$data['room_detail_2']."' ,
-        `room_detail_3` = '".$data['room_detail_3']."' ,
-        `room_facility_1` = '".$data['room_facility_1']."' ,
-        `room_facility_2` = '".$data['room_facility_2']."' 
+        `room_size_th` = '".$data['room_size_th']."' ,
+        `room_detail_1_th` = '".$data['room_detail_1_th']."' ,
+        `room_detail_2_th` = '".$data['room_detail_2_th']."' ,
+        `room_detail_3_th` = '".$data['room_detail_3_th']."' ,
+        `room_facility_1_th` = '".$data['room_facility_1_th']."' ,
+        `room_facility_2_th` = '".$data['room_facility_2_th']."' ,
+        `room_size_en` = '".$data['room_size_en']."' ,
+        `room_detail_1_en` = '".$data['room_detail_1_en']."' ,
+        `room_detail_2_en` = '".$data['room_detail_2_en']."' ,
+        `room_detail_3_en` = '".$data['room_detail_3_en']."' ,
+        `room_facility_1_en` = '".$data['room_facility_1_en']."' ,
+        `room_facility_2_en` = '".$data['room_facility_2_en']."' 
         WHERE `tb_room`.`room_id` = '$room_id'
         ";
         // echo "<pre>";
@@ -174,46 +190,72 @@ class Rooms extends BaseModel{
     function addRoom($data = []) {
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
         $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
-        $data['room_name']=mysqli_real_escape_string(static::$db,$data['room_name']);
-        $data['room_sub_title']=mysqli_real_escape_string(static::$db,$data['room_sub_title']);
+        $data['room_name_th']=mysqli_real_escape_string(static::$db,$data['room_name_th']);
+        $data['room_sub_title_th']=mysqli_real_escape_string(static::$db,$data['room_sub_title_th']);
+        $data['room_name_en']=mysqli_real_escape_string(static::$db,$data['room_name_en']);
+        $data['room_sub_title_en']=mysqli_real_escape_string(static::$db,$data['room_sub_title_en']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
         $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
-        $data['room_size']=mysqli_real_escape_string(static::$db,$data['room_size']);
-        $data['room_detail_1']=mysqli_real_escape_string(static::$db,$data['room_detail_1']);
-        $data['room_detail_2']=mysqli_real_escape_string(static::$db,$data['room_detail_2']);
-        $data['room_detail_3']=mysqli_real_escape_string(static::$db,$data['room_detail_3']);
-        $data['room_facility_1']=mysqli_real_escape_string(static::$db,$data['room_facility_1']);
-        $data['room_facility_2']=mysqli_real_escape_string(static::$db,$data['room_facility_2']);
+        $data['room_size_th']=mysqli_real_escape_string(static::$db,$data['room_size_th']);
+        $data['room_detail_1_th']=mysqli_real_escape_string(static::$db,$data['room_detail_1_th']);
+        $data['room_detail_2_th']=mysqli_real_escape_string(static::$db,$data['room_detail_2_th']);
+        $data['room_detail_3_th']=mysqli_real_escape_string(static::$db,$data['room_detail_3_th']);
+        $data['room_facility_1_th']=mysqli_real_escape_string(static::$db,$data['room_facility_1_th']);
+        $data['room_facility_2_th']=mysqli_real_escape_string(static::$db,$data['room_facility_2_th']);
+        $data['room_size_en']=mysqli_real_escape_string(static::$db,$data['room_size_en']);
+        $data['room_detail_1_en']=mysqli_real_escape_string(static::$db,$data['room_detail_1_en']);
+        $data['room_detail_2_en']=mysqli_real_escape_string(static::$db,$data['room_detail_2_en']);
+        $data['room_detail_3_en']=mysqli_real_escape_string(static::$db,$data['room_detail_3_en']);
+        $data['room_facility_1_en']=mysqli_real_escape_string(static::$db,$data['room_facility_1_en']);
+        $data['room_facility_2_en']=mysqli_real_escape_string(static::$db,$data['room_facility_2_en']);
 
         $sql = "INSERT INTO `tb_room` 
-        (`room_id`, 
-        `room_type_id`, 
-        `room_name`, 
-        `room_sub_title`, 
-        `room_price`, 
-        `room_amout`, 
-        `room_img`, 
-        `room_size`, 
-        `room_detail_1`, 
-        `room_detail_2`, 
-        `room_detail_3`, 
-        `room_facility_1`, 
-        `room_facility_2`) 
+        (
+            `room_id`, 
+            `room_type_id`, 
+            `room_name_en`, 
+            `room_sub_title_en`, 
+            `room_name_th`, 
+            `room_sub_title_th`, 
+            `room_price`, 
+            `room_amout`, 
+            `room_img`, 
+            `room_size_th`, 
+            `room_detail_1_th`, 
+            `room_detail_2_th`,
+             `room_detail_3_th`, 
+             `room_facility_1_th`, 
+             `room_facility_2_th`, 
+             `room_size_en`, 
+             `room_detail_1_en`,
+             `room_detail_2_en`, 
+             `room_detail_3_en`, 
+             `room_facility_1_en`, 
+             `room_facility_2_en`
+        ) 
         VALUES (
             NULL, 
             '".$data['room_type_id']."', 
-            '".$data['room_name']."', 
-            '".$data['room_sub_title']."', 
+            '".$data['room_name_en']."', 
+            '".$data['room_sub_title_en']."', 
+            '".$data['room_name_th']."', 
+            '".$data['room_sub_title_th']."', 
             '".$data['room_price']."' ,
             '".$data['room_amout']."' ,
             '".$data['room_img']."', 
-            '".$data['room_size']."' , 
-            '".$data['room_detail_1']."' ,
-            '".$data['room_detail_2']."' ,
-            '".$data['room_detail_3']."' ,
-            '".$data['room_facility_1']."' ,
-            '".$data['room_facility_2']."' 
+            '".$data['room_size_th']."' , 
+            '".$data['room_detail_1_th']."' ,
+            '".$data['room_detail_2_th']."' ,
+            '".$data['room_detail_3_th']."' ,
+            '".$data['room_facility_1_th']."' ,
+            '".$data['room_facility_2_th']."' ,
+            '".$data['room_size_en']."' , 
+            '".$data['room_detail_1_en']."' ,
+            '".$data['room_detail_2_en']."' ,
+            '".$data['room_detail_3_en']."' ,
+            '".$data['room_facility_1_en']."' ,
+            '".$data['room_facility_2_en']."'
         )
         ";
         // echo "<pre>";

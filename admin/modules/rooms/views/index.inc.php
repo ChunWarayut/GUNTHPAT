@@ -54,6 +54,84 @@ $target_dir = "../img_upload/rooms/";
 window.location = "index.php?content=rooms"
 </script>
 <?PHP
+
+
+} else if( $_GET['action'] == "delete_type") {
+    $result = $room_type_model-> deleteRoomType($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=rooms"
+</script>
+<?PHP
+
+    } else if( $_GET['action'] == "insert_type") {
+        // echo $_POST['room_type_name'];
+        if(isset($_POST['room_type_id'])){
+        $check = true;
+        if($check == false){ ?>
+    <script>
+    alert('<?php echo $error_msg; ?>');
+    window.history.back();
+    </script>
+    <?php
+            
+        }else{
+            
+            $result = $room_type_model-> insertRoomType($_POST['room_type_name_th'], $_POST['room_type_name_en']);
+            
+            if($result){
+                ?>
+    <script>
+    window.location = "index.php?content=rooms"
+    </script>
+    <?php
+                }else{
+                    ?>
+    <script>
+    window.history.back();
+    </script>
+    <?php
+                }
+            }
+        }else{
+            require_once($path . 'insert_type.inc.php');
+        }
+
+    } else if( $_GET['action'] == "edit_type") {
+        if(isset($_POST['room_type_id'])){
+            $check = true;
+            if($check == false){ ?>
+        <script>
+        alert('<?php echo $error_msg; ?>');
+        window.history.back();
+        </script>
+        <?php
+            }else{
+                $result = $room_type_model-> editRoomType($_POST['room_type_id'],$_POST['room_type_name_th'],$_POST['room_type_name_en']);
+                if($result){
+                    ?>
+        <script>
+        window.location = "index.php?content=rooms"
+        </script>
+        <?php }else{    ?>
+        <script>
+        window.history.back();
+        </script>
+        <?php  }
+            }
+            }else{
+                require_once($path . 'edit_type.inc.php');
+            }
+        } else if( $_GET['action'] == "recommened") {
+          
+                $result = $room_model-> editRoomRecommened($id, $_GET['recommened']);        
+    
+            ?>
+    <script>
+    window.location = "index.php?content=rooms"
+    </script>
+    <?PHP
     } else if( $_GET['action'] == "recommened") {
       
             $result = $rooms_model-> editRoomRecommened($id, $_GET['recommened']);        
@@ -68,18 +146,26 @@ window.location = "index.php?content=rooms"
         $check = true;
         $data = [];
         $data['room_id'] = $_POST['room_id'];
-        $data['room_name'] = $_POST['room_name'];
-        $data['room_sub_title'] = $_POST['room_sub_title'];
+        $data['room_name_th'] = $_POST['room_name_th'];
+        $data['room_sub_title_th'] = $_POST['room_sub_title_th'];
+        $data['room_name_en'] = $_POST['room_name_en'];
+        $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
         $data['room_type_id'] = $_POST['room_type_id'];
         $data['room_price'] = $_POST['room_price'];
         $data['room_amout'] = $_POST['room_amout'];
         $data['room_img'] = $_POST['room_img'];
-        $data['room_size'] = $_POST['room_size'];
-        $data['room_detail_1'] = $_POST['room_detail_1'];
-        $data['room_detail_2'] = $_POST['room_detail_2'];
-        $data['room_detail_3'] = $_POST['room_detail_3'];
-        $data['room_facility_1'] = $_POST['room_facility_1'];
-        $data['room_facility_2'] = $_POST['room_facility_2'];
+        $data['room_size_th'] = $_POST['room_size_th'];
+        $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
+        $data['room_detail_2_th'] = $_POST['room_detail_2_th'];
+        $data['room_detail_3_th'] = $_POST['room_detail_3_th'];
+        $data['room_facility_1_th'] = $_POST['room_facility_1_th'];
+        $data['room_facility_2_th'] = $_POST['room_facility_2_th'];
+        $data['room_size_en'] = $_POST['room_size_en'];
+        $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
+        $data['room_detail_2_en'] = $_POST['room_detail_2_en'];
+        $data['room_detail_3_en'] = $_POST['room_detail_3_en'];
+        $data['room_facility_1_en'] = $_POST['room_facility_1_en'];
+        $data['room_facility_2_en'] = $_POST['room_facility_2_en'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -160,18 +246,26 @@ window.history.back();
         $check = true;
         $data = [];
         $data['room_id'] = $_POST['room_id'];
-        $data['room_name'] = $_POST['room_name'];
-        $data['room_sub_title'] = $_POST['room_sub_title'];
+        $data['room_name_th'] = $_POST['room_name_th'];
+        $data['room_sub_title_th'] = $_POST['room_sub_title_th'];
+        $data['room_name_en'] = $_POST['room_name_en'];
+        $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
         $data['room_type_id'] = $_POST['room_type_id'];
         $data['room_price'] = $_POST['room_price'];
         $data['room_amout'] = $_POST['room_amout'];
         $data['room_img'] = $_POST['room_img'];
-        $data['room_size'] = $_POST['room_size'];
-        $data['room_detail_1'] = $_POST['room_detail_1'];
-        $data['room_detail_2'] = $_POST['room_detail_2'];
-        $data['room_detail_3'] = $_POST['room_detail_3'];
-        $data['room_facility_1'] = $_POST['room_facility_1'];
-        $data['room_facility_2'] = $_POST['room_facility_2'];
+        $data['room_size_th'] = $_POST['room_size_th'];
+        $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
+        $data['room_detail_2_th'] = $_POST['room_detail_2_th'];
+        $data['room_detail_3_th'] = $_POST['room_detail_3_th'];
+        $data['room_facility_1_th'] = $_POST['room_facility_1_th'];
+        $data['room_facility_2_th'] = $_POST['room_facility_2_th'];
+        $data['room_size_en'] = $_POST['room_size_en'];
+        $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
+        $data['room_detail_2_en'] = $_POST['room_detail_2_en'];
+        $data['room_detail_3_en'] = $_POST['room_detail_3_en'];
+        $data['room_facility_1_en'] = $_POST['room_facility_1_en'];
+        $data['room_facility_2_en'] = $_POST['room_facility_2_en'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -244,7 +338,7 @@ window.history.back();
         }
     }else{
         // echo $_GET['id'];
-        $img_path_gallery = "../img_upload/gallery/"; 
+        $img_path_room = "../img_upload/room/"; 
         $roomBy = $rooms_model -> getRoomsBy($_GET['id']);
         // print_r($roomBy);
         require_once($path . 'edit.inc.php');

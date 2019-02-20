@@ -23,9 +23,9 @@
 
     <div class="text-center facilities-page-title" >
         <h1>
-            <span class="text">
+            
                 CONTACT
-            </span>
+            
             <span class="text-gunthpat" style="">
                 US
             </span>
@@ -44,10 +44,10 @@
         </div>
 
         <div class="col-lg-8 facilities-page-header" style="">
-            <h4 class="font-weight-light">
-                <span class="text2">
+            <h4>
+                
                     <?PHP echo $contact_us[0]['contact_us_title']; ?>
-                </span>
+                
             </h4>
             <p class="font-weight-light">
                 <span class="contact_us_sub_title">
@@ -90,9 +90,9 @@
                 </div>
             </div>
             <h4 class="font-weight-light;" style="margin-top: 25;">
-                <span class="text">
+               
                     รายละเอียดการติดต่อ
-                </span>
+                
             </h4>
             <div class="col-2">
                 <hr style="border-top: 2px solid #f47322">
@@ -104,14 +104,14 @@
                         <i class="fas fa-map-marker-alt" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
-                        <p class="contact_us_sub_title">
-                            <span class="text2">
+                        <p>
+                            
                                 <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
                                 <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
-                            </span>
+                            
                             </a>
                         </p>
                     </div>
@@ -123,9 +123,9 @@
                     </div>
                     <div class="col-auto">
                         <p class="contact_us_sub_title"> &nbsp;
-                            <span class="text2">
+                            
                                 <?PHP echo $contact_us[0]['contact_us_fax']; ?>
-                            </span>
+                           
                         </p>
                     </div>
                 </div>
@@ -137,9 +137,9 @@
                     <div class="col-auto">
                         <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
                             <p class="contact_us_sub_title"> &nbsp;
-                                <span class="text2">
+                               
                                     <?PHP echo $contact_us[0]['contact_us_email']; ?>
-                                </span>
+                                
                             </p>
                         </a>
                     </div>
@@ -147,11 +147,11 @@
                 <br>
                 <div class="container">
                     <div class="col">
-                        <a href="#contact" class="btn btn-primary text-uppercase js-scroll-trigger"
+                        <a href="#contact" class="btn btn-orage text-uppercase js-scroll-trigger"
                             style="padding-left:8%; padding-right:8%">
-                            <span class="text">
+                            
                                 ติดต่อเรา
-                            </span> </a>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -174,9 +174,9 @@
             <div class="dropdown" style="padding-left:10%;padding-bottom:3%;">
                 <a class="btn btn-secondary dropdown-toggle" href="<?PHP echo $contact_us[0]['contact_us_map']; ?>">
                   
-                        <span class="text">
+                        
                             ดาวโหลดแผนที่
-                        </span> 
+                         
                 </a>
             </div>
 
@@ -192,9 +192,9 @@
                     </div>
                     <div id="collapseOne" class="collapse show bg-light text-dark" data-parent="#accordion">
                         <div class="card-body">
-                            <span class="text">
+                            
                                 <?PHP echo $contact_us[0]['contact_us_carry_detail']; ?>
-                            </span>
+                            
                         </div>
                     </div>
                 </div>
@@ -210,9 +210,9 @@
                 </div>
                 <div id="collapseTwo" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
-                        <span class="text">
+                        
                             <?PHP echo $contact_us[0]['contact_us_taxi_detail']; ?>
-                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -227,9 +227,9 @@
                 </div>
                 <div id="collapseThree" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
-                        <span class="text">
+                        
                             <?PHP echo $contact_us[0]['contact_us_car_detail']; ?>
-                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -335,11 +335,11 @@
                     </div>
                     <div class="col-lg-12" align="center">
 
-                        <button type="submit" name="" id="" class="btn btn-primary btn-md" btn-block
+                        <button type="submit" name="" id="" class="btn btn-orage btn-md" btn-block
                             style="width: 150px; text-align: center; margin:0 auto;">
-                            <span class="text">
+                            
                             <?php if ($lng == TH) { echo "ส่ง";}else{ echo "send"; }   ?>
-                            </span></button>
+                            </button>
                     </div>
                 </div>  
             </form>

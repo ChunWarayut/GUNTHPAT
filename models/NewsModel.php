@@ -66,13 +66,18 @@ class News extends BaseModel{
     }
     
     function editNews($news_id,$data = []) {
-        $data['news_name']=mysqli_real_escape_string(static::$db,$data['news_name']);
-        $data['news_detail']=mysqli_real_escape_string(static::$db,$data['news_detail']);
+        $data['news_name_th']=mysqli_real_escape_string(static::$db,$data['news_name_th']);
+        $data['news_name_en']=mysqli_real_escape_string(static::$db,$data['news_name_en']);
+        $data['news_detail_th']=mysqli_real_escape_string(static::$db,$data['news_detail_th']);
+        $data['news_detail_en']=mysqli_real_escape_string(static::$db,$data['news_detail_en']);
         $data['news_img']=mysqli_real_escape_string(static::$db,$data['news_img']);
 
         $sql = "UPDATE `tb_news` 
-        SET `news_name` = '".$data['news_name']."', 
-         `news_detail` = '".$data['news_detail']."',
+        SET 
+        `news_name_th` = '".$data['news_name_th']."', 
+        `news_name_en` = '".$data['news_name_en']."', 
+         `news_detail_th` = '".$data['news_detail_th']."',
+         `news_detail_en` = '".$data['news_detail_en']."',
          `news_img` = '".$data['news_img']."'
         WHERE `tb_news`.`news_id` = '$news_id'
         ";
@@ -88,22 +93,32 @@ class News extends BaseModel{
     }
 
     function addNews($data = []) {
-        $data['news_name ']=mysqli_real_escape_string(static::$db,$data['news_name ']);
-        $data['news_detail']=mysqli_real_escape_string(static::$db,$data['news_detail']);
+        $data['news_name_th']=mysqli_real_escape_string(static::$db,$data['news_name_th']);
+        $data['news_name_en']=mysqli_real_escape_string(static::$db,$data['news_name_en']);
+        $data['news_detail_th']=mysqli_real_escape_string(static::$db,$data['news_detail_th']);
+        $data['news_detail_en']=mysqli_real_escape_string(static::$db,$data['news_detail_en']);
         $data['news_img']=mysqli_real_escape_string(static::$db,$data['news_img']);
 
-        $sql = "INSERT INTO `tb_news` (`news_id`, `news_name`, `news_detail`, `news_img`, `news_date`) 
+        $sql = "INSERT INTO `tb_news` (
+            `news_id`, 
+            `news_name_en`, 
+            `news_name_th`, 
+            `news_detail_en`,
+            `news_detail_th`,
+             `news_img`, `news_date`) 
         VALUES (
             NULL, 
-            '".$data['news_name']."', 
-            '".$data['news_detail']."'  , 
+            '".$data['news_name_en']."', 
+            '".$data['news_name_th']."', 
+            '".$data['news_detail_en']."'  , 
+            '".$data['news_detail_th']."'  , 
             '".$data['news_img']."'  , 
             CURRENT_TIMESTAMP 
         )
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;

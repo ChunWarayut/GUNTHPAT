@@ -41,8 +41,10 @@ $id =($_GET['id']);
         $check = true;
         $data = [];
         $data['slide_id'] = $_POST['slide_id'];
-        $data['slide_title'] = $_POST['slide_title'];
-        $data['slide_sub_title'] = $_POST['slide_sub_title'];
+        $data['slide_title_th'] = $_POST['slide_title_th'];
+        $data['slide_sub_title_th'] = $_POST['slide_sub_title_th'];
+        $data['slide_title_en'] = $_POST['slide_title_en'];
+        $data['slide_sub_title_en'] = $_POST['slide_sub_title_en'];
         $data['slide_link'] = $_POST['slide_link'];
 
         //------------------ฟังชั่นแก้ไขรูป--------------------
@@ -130,8 +132,10 @@ window.location = "index.php?content=home"
         $check = true;
         $data = [];
         $data['slide_id'] = $_POST['slide_id'];
-        $data['slide_title'] = $_POST['slide_title'];
-        $data['slide_sub_title'] = $_POST['slide_sub_title'];
+        $data['slide_title_th'] = $_POST['slide_title_th'];
+        $data['slide_sub_title_th'] = $_POST['slide_sub_title_th'];
+        $data['slide_title_en'] = $_POST['slide_title_en'];
+        $data['slide_sub_title_en'] = $_POST['slide_sub_title_en'];
         $data['slide_link'] = $_POST['slide_link'];
 
         //------------------ฟังชั่นแก้ไขรูป--------------------

@@ -38,9 +38,7 @@ require_once 'view/menu.inc.php';
                 <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
                 <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; 
-                        # code...
-                    } ?>>
+                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
                         <?PHP echo $rooms[$i]['room_name'];?>
                     </option>
                     <?PHP 
