@@ -14,7 +14,7 @@ require_once 'view/menu.inc.php';
     </div>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <section class="p-0" >
+            <section class="slide-room-detail p-0" >
                     <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$id]['room_id'])); ++$j) {    ?>
                     <img class="img-room-detail"
                         src="<?php if ($roomBy[$j]['gallery_img'] == null ) {
@@ -121,3 +121,6 @@ require_once 'view/menu.inc.php';
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
