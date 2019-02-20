@@ -35,17 +35,17 @@ function search() {
             </div>
             <div class="col-lg-4" style="background-color: #00000036 ">
                 <div class="p-2">Arrival Date
-                    <p input class="form-control pt-1" autocomplete="off" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
+                    <input input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
                 <div class="p-2">Depature Date
-                    <input class="form-control pt-1" autocomplete="off" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
+                    <input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
                 <div class="row p-2">
                     <div class="col-lg-6">Persons
                         <input class="form-control" type="number" autocomplete="off" id="book_person" name="book_person" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                     </div>
                     <div class="col-lg-6">Room
-                        <select class="form-control  custom-select" id="room_id" name="room_id"  style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; "><?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                        <select class="form-control  custom-select" id="room_id" name="room_id"  style="background-color: #00000078;solid #ffffff45; color :fff; "><?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                             <option value="<?PHP echo $rooms[$i]['room_id'];?>">
                                 <?PHP echo $rooms[$i]['room_name'];?>
                             </option> <?PHP } ?>
