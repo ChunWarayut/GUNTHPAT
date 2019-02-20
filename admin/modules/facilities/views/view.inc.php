@@ -37,8 +37,10 @@
         <tr>
             <th width="12px">#</th>
             <th width="300px">Image</th>
-            <th width="150px">Name</th>
-            <th width="500px"> Detail</th>
+            <th width="150px">Name TH</th>
+            <th width="500px"> Detail TH</th>
+            <th width="150px">Name EN</th>
+            <th width="500px"> Detail EN</th>
             <th width="10px"></th>
             <th width="10px"></th>
         </tr>
@@ -60,11 +62,19 @@
         </td>
 
         <td class="text-left">
-            <?PHP echo $facilities[$i]['facilities_name'];  ?>
+            <?PHP echo $facilities[$i]['facilities_name_th'];  ?>
         </td>
 
         <td class="text-left">
-            <?PHP echo  $facilities[$i]['facilities_detail'];  ?>
+            <?PHP echo  $facilities[$i]['facilities_detail_th'];  ?>
+        </td>
+
+        <td class="text-left">
+            <?PHP echo $facilities[$i]['facilities_name_en'];  ?>
+        </td>
+
+        <td class="text-left">
+            <?PHP echo  $facilities[$i]['facilities_detail_en'];  ?>
         </td>
 
         <td>

@@ -62,12 +62,14 @@ window.location = "index.php?content=facilities"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
-    if(isset($_POST['facilities_name'])){
+    if(isset($_POST['facilities_name_th'])){
         $check = true;
         $data = [];
         $data['facilities_id'] = $_POST['facilities_id'];
-        $data['facilities_name'] = $_POST['facilities_name'];
-        $data['facilities_detail'] = $_POST['facilities_detail'];
+        $data['facilities_name_th'] = $_POST['facilities_name_th'];
+        $data['facilities_detail_th'] = $_POST['facilities_detail_th'];
+        $data['facilities_name_en'] = $_POST['facilities_name_en'];
+        $data['facilities_detail_en'] = $_POST['facilities_detail_en'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -148,8 +150,10 @@ window.history.back();
         $check = true;
         $data = [];
         $data['facilities_id'] = $_POST['facilities_id'];
-        $data['facilities_name'] = $_POST['facilities_name'];
-        $data['facilities_detail'] = $_POST['facilities_detail'];
+        $data['facilities_name_th'] = $_POST['facilities_name_th'];
+        $data['facilities_detail_th'] = $_POST['facilities_detail_th'];
+        $data['facilities_name_en'] = $_POST['facilities_name_en'];
+        $data['facilities_detail_en'] = $_POST['facilities_detail_en'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------
