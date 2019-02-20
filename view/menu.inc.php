@@ -17,7 +17,7 @@
             <div class="font-weight-light contact_list">
                 <i class='fas fa-mobile-alt' ></i>
                 <span class="text2; font-weight-light" style='color: #ffffff; '>
-                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us['contact_us_tel']; ?>"><?PHP echo $contact_us['contact_us_tel']; ?></a>
+                    <a style="color: #ffffff;" href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>"><?PHP echo $contact_us[0]['contact_us_tel']; ?></a>
                 </span>
                 <i class='fas fa-map-marker-alt' style='font-size:15px; color: #f47322; '></i>
                 <span class="text2" style='color: #ffffff; '>
