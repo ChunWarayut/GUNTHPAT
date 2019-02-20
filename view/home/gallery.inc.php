@@ -6,10 +6,10 @@
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>
         <h1>
-            <span>OUR</span> <span style="color: #f47322;">GALLERY</span>
+            OUR <span>GALLERY</span>
         </h1>
         <p>
-            <span class="text" ><?php echo $gallery_head[0]['gallery_head_sub_title']; ?></span>
+           <?php echo $gallery_head[0]['gallery_head_sub_title']; ?>
         </p>
     </div>
 </div>
