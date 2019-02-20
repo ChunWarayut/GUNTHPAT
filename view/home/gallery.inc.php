@@ -9,7 +9,7 @@
             OUR <span>GALLERY</span>
         </h1>
         <p>
-           <?php echo $gallery_head[0]['gallery_head_sub_title']; ?>
+        <?php if ($lng == TH) { echo $gallery_head[0]['gallery_head_sub_title_th'];   }else {   echo $gallery_head[0]['gallery_head_sub_title_en'];   }  ?>          
         </p>
     </div>
 </div>
