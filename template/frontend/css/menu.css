@@ -4,7 +4,9 @@
 a {
     color: #f47322;
 }
-
+.btn-orage{
+    background: #f47322;
+}
 a:hover {
     color: #f47322;
 }

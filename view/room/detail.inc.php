@@ -14,7 +14,7 @@ require_once 'view/menu.inc.php';
     </div>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <section class="slide-room-detail" >
+            <section class="p-0" >
                     <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$id]['room_id'])); ++$j) {    ?>
                     <img class="img-room-detail"
                         src="<?php if ($roomBy[$j]['gallery_img'] == null ) {
@@ -43,7 +43,7 @@ require_once 'view/menu.inc.php';
                 <h5 class="room-thb-button">
                     <span >THB</span> &nbsp; <span ><?PHP if ($rooms[$id]['room_price'] == "") {  echo "ไม่ระบุ"; }else{ echo $rooms[$id]['room_price']; }  ?>
                     </span>
-                    <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>#book" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
+                    <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>#book" class="btn btn-orage text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
                         <span class="text-white-button">
                             จองเดียวนี้
                         </span>
@@ -121,6 +121,3 @@ require_once 'view/menu.inc.php';
         </div>
     </div>
 </div>
-<br>
-<br>
-<br>
