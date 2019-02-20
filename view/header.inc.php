@@ -39,9 +39,9 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( "#calendar_start" ).datepicker({dateFormat: 'dd/mm/yy'});
-    $( "#calendar_end" ).datepicker({dateFormat: "dd/mm/yy"});
-    $( "#book_date_start" ).datepicker({dateFormat: 'dd/mm/yy'});
-    $( "#book_date_end" ).datepicker({dateFormat: "dd/mm/yy"});
+    $( "#calendar_start" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#calendar_end" ).datepicker({dateFormat: "yy-mm-dd"});
+    $( "#book_date_start" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#book_date_end" ).datepicker({dateFormat: "yy-mm-dd"});
   } );
   </script>
