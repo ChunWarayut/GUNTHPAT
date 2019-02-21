@@ -39,7 +39,7 @@ require_once 'view/menu.inc.php';
                 <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                     <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
-                        <?PHP echo $rooms[$i]['room_name'];?>
+                        <?php if ($lng == TH) {  echo $rooms[$i]['room_name_th'];   }else { echo $rooms[$i]['room_name_en'];  }  ?>
                     </option>
                     <?PHP 
                     }?>
