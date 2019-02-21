@@ -203,5 +203,64 @@ class Gallery extends BaseModel{
         }
     }
 
+
+    
+    function insertGalleryType($gallery_type_name_th, $gallery_type_name_en) {
+
+        $sql = "INSERT INTO `tb_gallery_type`(`gallery_type_id`, 
+        `gallery_type_name_th`,
+        `gallery_type_name_en`
+        ) VALUES (NULL,'$gallery_type_name_th', '$gallery_type_name_en')
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+
+    
+    function editGalleryType($gallery_type_id, $gallery_type_name_th, $gallery_type_name_en) {
+        $sql = "UPDATE `tb_gallery_type` 
+        SET 
+        `gallery_type_name_th` = '$gallery_type_name_th',
+        `gallery_type_name_en` = '$gallery_type_name_en'
+        WHERE `tb_gallery_type`.`gallery_type_id` = '$gallery_type_id'
+        ";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+
+    function deleteGalleryType($gallery_type_id) {
+        $sql = "DELETE 
+        FROM `tb_gallery_type` 
+        WHERE `tb_gallery_type`.`gallery_type_id` = '$gallery_type_id'
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+       
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return mysqli_insert_id(static::$db);
+        }else {
+            return 0;
+        }
+    }
+
+    
 }
 ?>

@@ -58,9 +58,19 @@ window.location = "index.php?content=gallery"
 </script>
 
 <?PHP
-    } else if( $_GET['action'] == "insert_title") {
-        // echo $_POST['contact_type_name'];
-        if(isset($_POST['contact_title_name_th'])){
+
+} else if( $_GET['action'] == "delete_type") {
+    $result = $gallery_model-> deleteGalleryType($id);
+    require_once($path.'view.inc.php');
+    ?>
+<script>
+window.location = "index.php?content=gallery"
+</script>
+<?PHP
+
+    } else if( $_GET['action'] == "insert_type") {
+        // echo $_POST['gallery_type_name'];
+        if(isset($_POST['gallery_type_id'])){
         $check = true;
         if($check == false){ ?>
     <script>
@@ -71,12 +81,12 @@ window.location = "index.php?content=gallery"
             
         }else{
             
-            $result = $contact_model-> insertContactTitle($_POST['contact_title_name_th'], $_POST['contact_title_name_en']);
+            $result = $gallery_model-> insertGalleryType($_POST['gallery_type_name_th'], $_POST['gallery_type_name_en']);
             
             if($result){
                 ?>
     <script>
-    window.location = "index.php?content=contact"
+    window.location = "index.php?content=gallery"
     </script>
     <?php
                 }else{
@@ -88,7 +98,7 @@ window.location = "index.php?content=gallery"
                 }
             }
         }else{
-            require_once($path . 'insert.inc.php');
+            require_once($path . 'insert_type.inc.php');
         }
 
     } else if( $_GET['action'] == "edit_head") {
@@ -99,6 +109,32 @@ window.location = "index.php?content=gallery"
 window.location = "index.php?content=gallery"
 </script>
 <?PHP
+
+} else if( $_GET['action'] == "edit_type") {
+    if(isset($_POST['gallery_type_id'])){
+        $check = true;
+        if($check == false){ ?>
+    <script>
+    alert('<?php echo $error_msg; ?>');
+    window.history.back();
+    </script>
+    <?php
+        }else{
+            $result = $gallery_model-> editgalleryType($_POST['gallery_type_id'],$_POST['gallery_type_name_th'],$_POST['gallery_type_name_en']);
+            if($result){
+                ?>
+    <script>
+    window.location = "index.php?content=gallery"
+    </script>
+    <?php }else{    ?>
+    <script>
+    window.history.back();
+    </script>
+    <?php  }
+        }
+        }else{
+            require_once($path . 'edit_type.inc.php');
+        }
     } else if( $_GET['action'] == "recommened") {
       
             $result = $gallery_model-> editGalleryRecommened($id, $_GET['recommened']);        
