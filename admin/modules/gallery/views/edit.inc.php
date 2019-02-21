@@ -83,6 +83,8 @@ echo $gallery[$id]['gallery_name'];  ?>
                                     # code...
                                 ?>
                                     <option  value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"  <?PHP if ($gallery_type[$type-1]['gallery_type_id'] == $gallery_type[$i]['gallery_type_id'])  { echo 'selected'; } ?>>
+                                        <?PHP echo $gallery_type[$i]['gallery_type_name_th'];?>
+                                        <?PHP echo $gallery_type[$i]['gallery_type_name_en'];?>
                                         <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
                                     </option>
                                     <?PHP 
@@ -100,6 +102,8 @@ echo $gallery[$id]['gallery_name'];  ?>
                                 <select class="form-control  custom-select" id="room_id" name="room_id">
                                 <option  value=""> อื่น ๆ </option> <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                                     <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($rooms[$type-1]['room_id'] == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
+                                        <?PHP echo $rooms[$i]['room_name_th'];?>
+                                        <?PHP echo $rooms[$i]['room_name_en'];?>
                                         <?PHP echo $rooms[$i]['room_name'];?>
                                     </option>
                                     <?PHP }  ?>
