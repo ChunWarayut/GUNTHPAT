@@ -91,7 +91,7 @@
             </div>
             <h4 class="font-weight-light;" style="margin-top: 25;">
                
-                    รายละเอียดการติดต่อ
+                <?php if ($lng == TH) {  echo   "รายละเอียดการติดต่อ" ; } else{ echo   "contact details" ;}?> 
                 
             </h4>
             <div class="col-2">
@@ -158,7 +158,8 @@
                         <a href="#contact" class="btn btn-orage text-uppercase js-scroll-trigger"
                             style="padding-left:8%; padding-right:8%">
                             
-                                ติดต่อเรา
+                <?php if ($lng == TH) {  echo   "ติดต่อเรา" ; } else{ echo   "Contact Us" ;}?> 
+                
                             </a>
                     </div>
                 </div>
@@ -173,7 +174,10 @@
 
             <h4>
                 <p class="text">
-                    การเดินทางมายังโรงแรม
+
+                
+                <?php if ($lng == TH) {  echo   "การเดินทางมายังโรงแรม" ; } else{ echo   "Getting to the hotel" ;}?> 
+                
                 </p>
             </h4>
             <div class="col-2">
@@ -183,7 +187,8 @@
                 <a class="btn btn-secondary dropdown-toggle" href="<?PHP echo $contact_us[0]['contact_us_map']; ?>">
                   
                         
-                            ดาวโหลดแผนที่
+                <?php if ($lng == TH) {  echo   "ดาวโหลดแผนที่" ; } else{ echo   "Download map" ;}?> 
+                
                          
                 </a>
             </div>
@@ -284,8 +289,8 @@
                         <label class="text"><?php if ($lng == TH) {echo "ชื่อเรื่อง";} else { echo "Title";} ?>  <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_title_id" name="contact_title_id">
                             <?PHP for ($i=0; $i < count($contact_title); $i++) { ?>
-                            <option selected value="<?PHP echo $contact_title[$i]['contact_title_id'];   ?>">
-                                <?PHP echo $contact_title[$i]['contact_title_name'];   ?>
+                            <option selected value="<?PHP echo $contact_title[$i]['contact_title_id'];  ?>">
+                                <?PHP if ($lng == TH) { echo $contact_title[$i]['contact_title_name_th'];   }else{ echo $contact_title[$i]['contact_title_name_en'];  }?>
                             </option>
                             <?PHP } ?>
                         </select>
@@ -311,15 +316,9 @@
                     <div class="col-lg-6">
                         <label class="text">  <?php if ($lng == TH) {echo "ประเทศ";} else { echo "Country";} ?> <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_country" name="contact_country">
-                            <?PHP for ($i=0; $i < count($country); $i++) { 
-                                # code...
-                            ?>
-                            <option value="<?PHP echo $country[$i]['ct_code'];?>">
-                                <?PHP if ($lng == TH) {
-                                    echo $country[$i]['ct_nameTHA'];
-                                }else{
-                                    echo $country[$i]['ct_nameENG'];
-                                } ?>
+                            <?PHP for ($i=0; $i < count($country); $i++) { ?>
+                            <option value="<?PHP echo $country[$i]['ct_code'];?>"<?PHP if(  'THA' == $country[$i]['ct_code']) { echo "selected";} ?>>
+                                <?PHP if ($lng == TH) {echo $country[$i]['ct_nameTHA']; }else{ echo $country[$i]['ct_nameENG']; } ?>
                             </option>
                             <?PHP } ?>
                         </select>
@@ -331,7 +330,7 @@
                                 # code...
                             ?>
                             <option value="<?PHP echo $contact_type[$i]['contact_type_id'];?>">
-                                <?PHP echo $contact_type[$i]['contact_type_name'];?>
+                                <?PHP if ($lng == TH) {  echo $contact_type[$i]['contact_type_name_th'];}else{  echo $contact_type[$i]['contact_type_name_en']; }?>
                             </option>
                             <?PHP } ?>
                         </select>
@@ -347,7 +346,7 @@
                         <button type="submit" name="" id="" class="btn btn-orage btn-md" btn-block
                             style="width: 150px; text-align: center; margin:0 auto;">
                             
-                            <?php if ($lng == TH) { echo "ส่ง";}else{ echo "send"; }   ?>
+                            <?php if ($lng == TH) { echo "ส่ง"; }else{ echo "send"; }   ?>
                             </button>
                     </div>
                 </div>  
