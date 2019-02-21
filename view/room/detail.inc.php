@@ -47,7 +47,9 @@ require_once 'view/menu.inc.php';
                     <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>#book"
                         class="btn btn-orage text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
 
-                        จองเดียวนี้
+                        <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
+
+                        
 
                     </a>
                 </h5>
@@ -77,7 +79,10 @@ require_once 'view/menu.inc.php';
                 <br>
                 <h4 class="font-weight-light;" style="margin-top: 25;">
 
-                    รายละเอียดห้อง
+
+                <?PHP if ($lng == TH) {  echo "รายละเอียดห้อง"; } else {  echo "Room details";  }?>
+
+                    
 
                 </h4>
                 <div class="col-2">

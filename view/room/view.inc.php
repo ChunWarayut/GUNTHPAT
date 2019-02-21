@@ -151,7 +151,9 @@ require_once 'view/menu.inc.php';
                 <br>
                 <br>
                 <span class="text-detail-room">
-                    บริการโทรศัพท์ห้อง
+
+                <?PHP if ($lng == TH) {  echo "บริการโทรศัพท์ห้อง"; } else {  echo "Room telephone service";  }?>
+
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
@@ -195,7 +197,9 @@ require_once 'view/menu.inc.php';
                     <div class="col-6">
                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
                             <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                                Share
+                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
+
+                                
                             </button>
                         </a>
                     </div>
@@ -203,7 +207,10 @@ require_once 'view/menu.inc.php';
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                                 <span class="text-black">
-                                    ดูเพิ่มเติม
+                                
+                <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
+
+                                    
                                 </span>
                             </button>
                         </a>
@@ -214,8 +221,10 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book"
                             class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block ">
+            
+                            <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
 
-                            จองเดียวนี้
+                            
 
                         </a>
                     </div>
