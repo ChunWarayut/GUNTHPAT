@@ -86,6 +86,10 @@ class Facilities extends BaseModel{
         $data['facilities_detail_th']=mysqli_real_escape_string(static::$db,$data['facilities_detail_th']);
         $data['facilities_name_en']=mysqli_real_escape_string(static::$db,$data['facilities_name_en']);
         $data['facilities_detail_en']=mysqli_real_escape_string(static::$db,$data['facilities_detail_en']);
+        $data['facilities_detail_1_th']=mysqli_real_escape_string(static::$db,$data['facilities_detail_1_th']);
+        $data['facilities_detail_1_en']=mysqli_real_escape_string(static::$db,$data['facilities_detail_1_en']);
+        $data['facilities_detail_2_th']=mysqli_real_escape_string(static::$db,$data['facilities_detail_2_th']);
+        $data['facilities_detail_2_en']=mysqli_real_escape_string(static::$db,$data['facilities_detail_2_en']);
 
         $sql = "UPDATE `tb_facilities` 
         SET 
@@ -93,6 +97,10 @@ class Facilities extends BaseModel{
         `facilities_name_en` = '".$data['facilities_name_en']."', 
          `facilities_img` = '".$data['facilities_img']."', 
          `facilities_detail_th` = '".$data['facilities_detail_th']."',
+         `facilities_detail_1_th` = '".$data['facilities_detail_1_th']."',
+         `facilities_detail_1_en` = '".$data['facilities_detail_1_en']."',
+         `facilities_detail_2_th` = '".$data['facilities_detail_2_th']."',
+         `facilities_detail_2_en` = '".$data['facilities_detail_2_en']."',
          `facilities_detail_en` = '".$data['facilities_detail_en']."'
         WHERE `tb_facilities`.`facilities_id` = '$facilities_id'
         ";
@@ -111,6 +119,11 @@ class Facilities extends BaseModel{
         $data['facilities_name']=mysqli_real_escape_string(static::$db,$data['facilities_name']);
         $data['facilities_img']=mysqli_real_escape_string(static::$db,$data['facilities_img']);
         $data['facilities_detail']=mysqli_real_escape_string(static::$db,$data['facilities_detail']);
+        $data['facilities_detail_1_th']=mysqli_real_escape_string(static::$db,$data['facilities_detail_1_th']);
+        $data['facilities_detail_1_en']=mysqli_real_escape_string(static::$db,$data['facilities_detail_1_en']);
+        $data['facilities_detail_2_th']=mysqli_real_escape_string(static::$db,$data['facilities_detail_2_th']);
+        $data['facilities_detail_2_en']=mysqli_real_escape_string(static::$db,$data['facilities_detail_2_en']);
+
 
         $sql = "INSERT INTO `tb_facilities` (
             `facilities_id`, 
@@ -118,7 +131,11 @@ class Facilities extends BaseModel{
             `facilities_name_en`, 
             `facilities_img`, 
             `facilities_detail_th`,
-            `facilities_detail_en`
+            `facilities_detail_en`,
+            `facilities_detail_1_th`,
+            `facilities_detail_1_en`,
+            `facilities_detail_2_th`,
+            `facilities_detail_2_en`
             )
         VALUES (
             NULL, 
@@ -126,12 +143,16 @@ class Facilities extends BaseModel{
             '".$data['facilities_name_en']."', 
             '".$data['facilities_img']."' ,
             '".$data['facilities_detail_th']."',
-            '".$data['facilities_detail_en']."'
+            '".$data['facilities_detail_en']."',
+            '".$data['facilities_detail_1_th']."',
+            '".$data['facilities_detail_1_en']."',
+            '".$data['facilities_detail_2_th']."',
+            '".$data['facilities_detail_2_en']."'
         )
         ";
-        // echo "<pre>";
-        // print_r( $sql);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r( $sql);
+        echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;

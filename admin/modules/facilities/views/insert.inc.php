@@ -87,6 +87,44 @@
                     </div>
 
                 </div>
+
+                
+
+                <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Facilities Detail 1 TH<font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_detail_1_th" name="facilities_detail_1_th" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_detail_1_th'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Facilities Detail 1 EN<font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_detail_1_en" name="facilities_detail_1_en" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_detail_1_en'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Facilities Detail 2 TH<font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_detail_2_th" name="facilities_detail_2_th" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_detail_2_th'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Facilities Detail 2 EN<font color="#F00"><b>*</b></font></label>
+                                <input id="facilities_detail_2_en" name="facilities_detail_2_en" class="form-control"
+                                    value="<?PHP echo $facilities[$id]['facilities_detail_2_en'];?>" />
+                                <p class="help-block">Example :CONTACT</p>
+                            </div>
+                        </div>
             </div>
 
         </div>
