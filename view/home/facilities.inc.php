@@ -118,7 +118,7 @@
             <div class="row">
                 <div class="col-lg-4 home-facilities-title" style="">
                     <h3 class="facilities-header"><?php if ($lng == TH) {  echo $facilities[$i]['facilities_name_th'];   }else {  echo $facilities[$i]['facilities_name_en'];  }  ?>  </h3>
-                    <p class="text" style="color: #ffffff;"><?php echo $facilities[$i]['facilities_detail'];?></p>
+                    <p class="text" style="color: #ffffff;"><?php if ($lng == TH) {  echo $facilities[$i]['facilities_detail_th'];}else{ echo $facilities[$i]['facilities_detail_en'];}?></p>
                 </div>
 
                 <div class="col-lg-5 home-facilities-img" style="">
