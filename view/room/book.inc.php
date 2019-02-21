@@ -96,7 +96,10 @@ require_once 'view/menu.inc.php';
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
-                <a name="" id="" class="btn btn-orage form-control " href="room.php" role="button"> ย้อนกลับ </a>
+                <a name="" id="" class="btn btn-orage form-control " href="room.php" role="button">
+                
+                <?php if ($lng == TH) {echo "ย้อนกลับ";} else { echo "back";} ?>  
+                 </a>
             </div>
             <div class="col-6">
                 <label class="text">
