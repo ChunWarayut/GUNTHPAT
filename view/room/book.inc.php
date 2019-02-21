@@ -103,7 +103,8 @@ require_once 'view/menu.inc.php';
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
                 <button class="btn btn-orage form-control " type="submit">
-                    ยืนยัน
+                    
+                    <?php if ($lng == TH) {echo "ยืนยัน";} else { echo "Submit";} ?> 
                 </button>
             </div>
         </div>
