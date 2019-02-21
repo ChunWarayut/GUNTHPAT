@@ -10,9 +10,11 @@
         color: #fff;
     }
     .slide-title p{
+        font-family: 'anakotmai-bold';
         font-size: 1.5em;
     }
     .slide-title h1{
+        font-family: 'anakotmai-bold';
         font-size: 4em;  
     }
     .btn-orange {
