@@ -11,7 +11,7 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 <p class="text-left">
                     |
                 </p>
-                <span class="h3 room-text-name"><?php echo $rooms[$i]['room_name']; ?></span>
+                <span class="h3 room-text-name"><?php if ($lng == TH) {  echo $rooms[$i]['room_name_th'];   }else { echo $rooms[$i]['room_name_en'];  }  ?> </span>
                 <div class="room-text-detail">
                     <div class="text-content-room" style="overflow-wrap: break-word;">
                         <?php echo $rooms[$i]['room_sub_title']; ?>

@@ -117,7 +117,7 @@
         <div class="facilities-slide-detail" >
             <div class="row">
                 <div class="col-lg-4 home-facilities-title" style="">
-                    <h3 class="facilities-header"><?php echo $facilities[$i]['facilities_name'];?></h3>
+                    <h3 class="facilities-header"><?php if ($lng == TH) {  echo $facilities[$i]['facilities_name_th'];   }else {  echo $facilities[$i]['facilities_name_en'];  }  ?>  </h3>
                     <p class="text" style="color: #ffffff;"><?php echo $facilities[$i]['facilities_detail'];?></p>
                 </div>
 
