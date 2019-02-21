@@ -51,7 +51,7 @@ require_once('view/menu.inc.php');
                 <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                 <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
                     echo 'selected' ; } ?>>
-                    <?PHP echo $rooms[$i]['room_name'];?>
+                    <?PHP echo $rooms[$i]['room_name_th'];?>
                 </option>
                 <?PHP 
                     }?>
