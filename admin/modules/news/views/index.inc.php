@@ -1,5 +1,5 @@
 <?php
-require_once('../models/News.php');
+require_once('../models/NewsModel.php');
 
 $path = "modules/news/views/";
 
@@ -31,7 +31,9 @@ if(!isset($_GET['action'])){
 }else if ($_GET['action'] == 'insert'){
     require_once($path.'insert.inc.php');
 }else if ($_GET['action'] == 'update'){
+    $news_id = $_GET['id'];
     $news = $news_model->getNewsById($news_id);
+    // print_r($news);
         require_once($path.'update.inc.php');
 }else if ($_GET['action'] == 'delete'){
     $target_file = $target_dir . $_GET['news_img_o'];
@@ -45,11 +47,13 @@ window.location = "index.php?content=news"
 </script>
 <?php
 }else if ($_GET['action'] == 'add'){
-    if(isset($_POST['news_name'])){
+    if(isset($_POST['news_id'])){
         $check = true;
         $data = [];
-        $data['news_detail'] = trim($_POST['news_detail']);
-        $data['news_name'] = trim($_POST['news_name']);
+        $data['news_detail_th'] = trim($_POST['news_detail_th']);
+        $data['news_detail_en'] = trim($_POST['news_detail_en']);
+        $data['news_name_th'] = trim($_POST['news_name_th']);
+        $data['news_name_en'] = trim($_POST['news_name_en']);
 
         
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
@@ -98,7 +102,7 @@ window.location = "index.php?content=news"
         if($check == false){
             ?>
 <script>
-// window.history.back();
+window.history.back();
 </script>
 <?php
         }else{
@@ -111,7 +115,7 @@ window.location = "index.php?content=news"
 </script> <?php
             }else{
                 ?> <script>
-window.history.back();
+// window.history.back();
 </script> <?php
             }
         }
@@ -125,8 +129,10 @@ window.history.back();
     if(isset($_POST['news_id'])){
         $check = true;
         $data = [];
-        $data['news_detail'] = trim($_POST['news_detail']);
-        $data['news_name'] = trim($_POST['news_name']);
+        $data['news_detail_th'] = trim($_POST['news_detail_th']);
+        $data['news_detail_en'] = trim($_POST['news_detail_en']);
+        $data['news_name_th'] = trim($_POST['news_name_th']);
+        $data['news_name_en'] = trim($_POST['news_name_en']);
 
         
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------

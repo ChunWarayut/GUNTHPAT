@@ -7,11 +7,11 @@ require_once 'view/menu.inc.php';
 <div class="container" id="book">
     <div class="text-center book-title">
     <i class="far fa-edit" ></i>
-        <h1>
-            <span class=" book-title">
+   
+            <h1>
                 รายละเอียด
-            </span>
-            <span class=" book-title" style="color:#f47322; ">
+
+            <span>
                 การจอง
             </span>
         </h1>
@@ -38,9 +38,7 @@ require_once 'view/menu.inc.php';
                 <label class="text"> ห้อง <font color="#F00"><b>*</b></font></label>
                 <select class="form-control  custom-select" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; 
-                        # code...
-                    } ?>>
+                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
                         <?PHP echo $rooms[$i]['room_name'];?>
                     </option>
                     <?PHP 
@@ -84,13 +82,13 @@ require_once 'view/menu.inc.php';
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
-                <a name="" id="" class="btn btn-primary form-control" href="room.php" role="button"> ย้อนกลับ </a>
+                <a name="" id="" class="btn btn-orage form-control " href="room.php" role="button"> ย้อนกลับ </a>
             </div>
             <div class="col-6">
                 <label class="text">
                     <font color="#FFFFFF"><b>*</b></font>
                 </label>
-                <button class="btn btn-primary form-control" type="submit">
+                <button class="btn btn-orage form-control " type="submit">
                     ยืนยัน
                 </button>
             </div>

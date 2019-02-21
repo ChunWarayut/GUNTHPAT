@@ -4,7 +4,7 @@
         position: absolute;
         top: 24%;
         max-width: 100%;
-        z-index: 999;
+        z-index: 10;
         margin-left: -90;
         padding-left: 200px; 
         padding-right: 50px; 
@@ -23,48 +23,30 @@
     .header-slide-mobile{
         display: none;
     }
-    .btn-primary {
-        background-color: #f47322;
-        border-color: #f47322;
+    .btn-orange {
+        color: #fff;
+        background-color: #ff6c11;
     }
-    .btn-primary:hover {
-        background-color: #f47322;
-        border-color: #f47322;
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff6c11;
     }
 @media (max-width: 1024px) {
 
     .slide-detail-detail {
         position: absolute;
-        top: 19%;
+        top: 15%;
         max-width: 100%;
-        z-index: 999;
+        z-index: 10;
         margin-left: -90;
         padding-left: 200px; 
         padding-right: 50px; 
         width: 100%; 
     }
-    .slide-text{
-        color: #fff;
-    }
-    .slide-text2{
-        color: #fff;
-    }
-    .slide-text-detail{
-        color: #fff;
-    }
     
     .header-slide-mobile{
         display: none;
     }
-    .btn-primary {
-        background-color: #f47322;
-        border-color: #f47322;
-    }
-    .btn-primary:hover {
-        background-color: #f47322;
-        border-color: #f47322;
-    }
-
 }
 @media (max-width: 991px) {
     .header-slide{
@@ -74,7 +56,7 @@
         position: absolute;
         top: 24%;
         max-width: 100%;
-        z-index: 999;
+        z-index: 10;
         margin-left: -90;
         padding-left: 200px; 
         width: 100%; 
@@ -94,11 +76,33 @@
 }
 
 @media (max-width: 767px) {
-    
-    .slide-detail-detail{
-        display: none;
-    }
     .slide{
+        padding-bottom: 10%;
+    }
+    .header-slide{
         display: none;
     }
+    .slide-detail-detail {
+        position: absolute;
+        top: 15%;
+        max-width: 100%;
+        z-index: 10;
+        margin-left: -90;
+        padding-left: 150px; 
+        padding-right: 0px; 
+        width: 100%; 
+    }
+    .slide-detail-detail .slide-header .text{
+        font-size:20px;
+    }
+    .slide-detail-detail .slide-header{
+        color: #fff;
+    }
+    .slide-detail-detail .slide-text-detail .font-weight-light{
+        font-size:90px;
+    }
+    .slide-detail-detail .slide-text-detail{
+        color: #fff;
+    }
+  
 }

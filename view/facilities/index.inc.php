@@ -5,7 +5,7 @@ require_once('view/menu.inc.php');
 $path = "view/facilities/";
 
 $pathImgFacilities = "img_upload/facilities/";
-require_once('models/Facilities.php');
+require_once('models/FacilitiesModel.php');
 $facilities_model = new Facilities;
 $facilities = $facilities_model -> getfacilities() ;
 

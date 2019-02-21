@@ -1,7 +1,7 @@
 <link href="template/frontend/css/slide.css" rel="stylesheet">
 
 <?PHP
-require_once('models/Rooms.php');
+require_once('models/RoomsModel.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRooms();
 ?>
@@ -106,7 +106,7 @@ function search() {
                 <br>
                 <div class="row">
                     <div class="class col-lg-12">
-                        <button onclick="search();" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
+                        <button onclick="search();" class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block">
                             <span class="slide-text ">
                                 BOOK NOW
                             </span>

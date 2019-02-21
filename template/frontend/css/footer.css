@@ -16,3 +16,7 @@
     height: 15em;
     overflow: hidden;
 }
+.row-footer{
+    margin-right: 0;
+    margin-left: 0;
+}

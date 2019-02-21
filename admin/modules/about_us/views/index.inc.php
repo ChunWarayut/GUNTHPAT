@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/About_us.php');
+require_once('../models/About_usModel.php');
 
 $path = "modules/about_us/views/";
 $img_path = "../img_upload/about_us/";
@@ -41,8 +41,10 @@ $id =($_GET['id']);
         $check = true;
         $data = [];
         $data['about_us_id'] = $_POST['about_us_id'];
-        $data['about_us_title'] = $_POST['about_us_title'];
-        $data['about_us_sub_title'] = $_POST['about_us_sub_title'];
+        $data['about_us_title_en'] = $_POST['about_us_title_en'];
+        $data['about_us_sub_title_en'] = $_POST['about_us_sub_title_en'];
+        $data['about_us_title_th'] = $_POST['about_us_title_th'];
+        $data['about_us_sub_title_th'] = $_POST['about_us_sub_title_th'];
 
         //------------------ฟังชั่นแก้ไขรูป--------------------
         if($_FILES['about_us_img']['name'] == ""){
@@ -96,7 +98,11 @@ window.history.back();
 </script>
 <?php
         }else{
-            $result = $about_us_model-> editRoom($_POST['about_us_id'],$data);
+            if (!$data['about_us_img']){
+                $result = $about_us_model-> editRoom($_POST['about_us_id'],$data);
+            }else{
+                $result = $about_us_model-> editRoomImg($_POST['about_us_id'],$data);
+            }
 
             if($result){
                 ?>

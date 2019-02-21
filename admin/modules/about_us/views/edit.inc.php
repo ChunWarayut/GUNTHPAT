@@ -21,7 +21,7 @@ function readURL(input) {
                 <div class="col-lg-6">
                     <h1>
                         หน้าแก้ไขข้อมูล About us
-                        <?PHP echo $about_us[$id]['about_us_title'];  ?>
+                        <?PHP echo $about_us[$id]['about_us_title_en'];  ?>
                     </h1>
                 </div>
                 <div class="col-lg-6">
@@ -57,22 +57,35 @@ function readURL(input) {
                 <div class="col-lg-9">
                     <div class="row">
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label>About Title <font color="#F00"><b>*</b></font></label>
-                                <input id="about_us_title" name="about_us_title" class="form-control"
-                                    value="<?PHP echo $about_us[$id]['about_us_title'];?>" />
+                                <label>About Title EN <font color="#F00"><b>*</b></font></label>
+                                <input id="about_us_title_en" name="about_us_title_en" class="form-control"
+                                    value="<?PHP echo $about_us[$id]['about_us_title_en'];?>" />
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label>About Sub Title <font color="#F00"><b>*</b></font></label>
-                                <textarea class="form-control " id="about_us_sub_title" name="about_us_sub_title"rows="8"><?PHP echo $about_us[$id]['about_us_sub_title'];?></textarea>
+                                <label>About Title TH <font color="#F00"><b>*</b></font></label>
+                                <input id="about_us_title_th" name="about_us_title_th" class="form-control"
+                                    value="<?PHP echo $about_us[$id]['about_us_title_th'];?>" />
                             </div>
                         </div>
 
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>About Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control " id="about_us_sub_title_en" name="about_us_sub_title_en"rows="8"><?PHP echo $about_us[$id]['about_us_sub_title_en'];?></textarea>
+                            </div>
+                        </div>
 
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>About Sub Title TH<font color="#F00"><b>*</b></font></label>
+                                <textarea class="form-control " id="about_us_sub_title_th" name="about_us_sub_title_th"rows="8"><?PHP echo $about_us[$id]['about_us_sub_title_th'];?></textarea>
+                            </div>
+                        </div>
 
                     </div>
 

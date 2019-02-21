@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Contact_us.php');
+require_once('../models/Contact_usModel.php');
 
 $path = "modules/contact_us/views/";
 $img_path = "../img_upload/contact_us/";
@@ -24,6 +24,7 @@ $id =($_GET['id']);
 // ECHO "</PRE>";
 
     if( !isset($_GET['action']) ) {
+        $id =0;
         require_once($path.'view.inc.php');
     } else if( $_GET['action'] == "delete") {
         $result = $contact_us_model-> deleteContact_us($id);
@@ -148,23 +149,35 @@ $id =($_GET['id']);
     if(isset($_POST['contact_us_id'])){
         $check = true;
         $data = [];
-        $data['contact_us_title'] = $_POST['contact_us_title'];
-        $data['contact_us_sub_title'] = $_POST['contact_us_sub_title'];
+        $data['contact_us_title_th'] = $_POST['contact_us_title_th'];
+        $data['contact_us_sub_title_th'] = $_POST['contact_us_sub_title_th'];
+        $data['contact_us_title_en'] = $_POST['contact_us_title_en'];
+        $data['contact_us_sub_title_en'] = $_POST['contact_us_sub_title_en'];
         $data['contact_us_facebook'] = $_POST['contact_us_facebook'];
         $data['contact_us_tel'] = $_POST['contact_us_tel'];
-        $data['contact_us_address'] = $_POST['contact_us_address'];
-        $data['contact_us_address_1'] = $_POST['contact_us_address_1'];
-        $data['contact_us_address_2'] = $_POST['contact_us_address_2'];
-        $data['contact_us_address_3'] = $_POST['contact_us_address_3'];
+        $data['contact_us_address_th'] = $_POST['contact_us_address_th'];
+        $data['contact_us_address_1_th'] = $_POST['contact_us_address_1_th'];
+        $data['contact_us_address_2_th'] = $_POST['contact_us_address_2_th'];
+        $data['contact_us_address_3_th'] = $_POST['contact_us_address_3_th'];
+        $data['contact_us_address_en'] = $_POST['contact_us_address_en'];
+        $data['contact_us_address_1_en'] = $_POST['contact_us_address_1_en'];
+        $data['contact_us_address_2_en'] = $_POST['contact_us_address_2_en'];
+        $data['contact_us_address_3_en'] = $_POST['contact_us_address_3_en'];
         $data['contact_us_address_4'] = $_POST['contact_us_address_4'];
         $data['contact_us_fax'] = $_POST['contact_us_fax'];
         $data['contact_us_email'] = $_POST['contact_us_email'];
-        $data['contact_us_carry_title'] = $_POST['contact_us_carry_title'];
-        $data['contact_us_carry_detail'] = $_POST['contact_us_carry_detail'];
-        $data['contact_us_taxi_title'] = $_POST['contact_us_taxi_title'];
-        $data['contact_us_taxi_detail'] = $_POST['contact_us_taxi_detail'];
-        $data['contact_us_car_titel'] = $_POST['contact_us_car_titel'];
-        $data['contact_us_car_detail'] = $_POST['contact_us_car_detail'];
+        $data['contact_us_carry_title_th'] = $_POST['contact_us_carry_title_th'];
+        $data['contact_us_carry_detail_th'] = $_POST['contact_us_carry_detail_th'];
+        $data['contact_us_taxi_title_th'] = $_POST['contact_us_taxi_title_th'];
+        $data['contact_us_taxi_detail_th'] = $_POST['contact_us_taxi_detail_th'];
+        $data['contact_us_car_titel_th'] = $_POST['contact_us_car_titel_th'];
+        $data['contact_us_car_detail_th'] = $_POST['contact_us_car_detail_th'];
+        $data['contact_us_carry_title_en'] = $_POST['contact_us_carry_title_en'];
+        $data['contact_us_carry_detail_en'] = $_POST['contact_us_carry_detail_en'];
+        $data['contact_us_taxi_title_en'] = $_POST['contact_us_taxi_title_en'];
+        $data['contact_us_taxi_detail_en'] = $_POST['contact_us_taxi_detail_en'];
+        $data['contact_us_car_titel_en'] = $_POST['contact_us_car_titel_en'];
+        $data['contact_us_car_detail_en'] = $_POST['contact_us_car_detail_en'];
         $data['contact_us_map'] = $_POST['contact_us_map'];
         $data['contact_us_map_latitude'] = $_POST['contact_us_map_latitude'];
         $data['contact_us_map_longitude'] = $_POST['contact_us_map_longitude'];

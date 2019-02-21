@@ -30,7 +30,7 @@
 <script src="template/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="template/slick/slick.min.js" type ="text/javascript" charset="utf-8"></script>
-<link href='template/frontend/anakotmai/font.css' rel='stylesheet'>
+
 
 <link href="template/frontend/css/font-gunthpat.css" rel="stylesheet">
 
@@ -39,9 +39,9 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( "#calendar_start" ).datepicker({dateFormat: 'dd/mm/yy'});
-    $( "#calendar_end" ).datepicker({dateFormat: "dd/mm/yy"});
-    $( "#book_date_start" ).datepicker({dateFormat: 'dd/mm/yy'});
-    $( "#book_date_end" ).datepicker({dateFormat: "dd/mm/yy"});
+    $( "#calendar_start" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#calendar_end" ).datepicker({dateFormat: "yy-mm-dd"});
+    $( "#book_date_start" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#book_date_end" ).datepicker({dateFormat: "yy-mm-dd"});
   } );
   </script>

@@ -1,11 +1,32 @@
+<style>
+.facilities-page-title {
+    padding-bottom:8%;
+    margin-top:50;
+}
+.facilities-page-header {
+    padding-bottom:8%;
+}
+.facilities-page-title-img {
+    padding-bottom:8%
+}
+.text-gunthpat {
+    color:#f47322; 
+}
+.contact_us_sub_title{
+    color:#000;
+}
+.contact-address{
+    padding-bottom:8%
+}
+</style>
 <div class="container" id="contact_us">
 
-    <div class="text-center" style=" padding-bottom:8%">
+    <div class="text-center facilities-page-title" >
         <h1>
-            <span class="text">
+            
                 CONTACT
-            </span>
-            <span class="text" style="color:#f47322; ">
+            
+            <span class="text-gunthpat" style="">
                 US
             </span>
         </h1>
@@ -18,18 +39,18 @@
             <img src=" <?PHP
                         echo $pathImgContact_us . $contact_us[0]['contact_us_img'];
                         ?>"
-                style=" padding-bottom:8%"
-                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+               
+                class="img-fluid facilities-page-title-img" alt="">
         </div>
 
-        <div class="col-lg-8" style="padding-bottom:8%;">
-            <h4 class="font-weight-light">
-                <span class="text2">
+        <div class="col-lg-8 facilities-page-header" style="">
+            <h4>
+                
                     <?PHP echo $contact_us[0]['contact_us_title']; ?>
-                </span>
+                
             </h4>
             <p class="font-weight-light">
-                <span class="text2">
+                <span class="contact_us_sub_title">
                     <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
                 </span>
             </p>
@@ -44,7 +65,7 @@
                             <div class="col-10">
                                 <span class="text2">
                                     <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                        <p class="font-weight-light">
+                                        <p class="contact_us_sub_title text-truncate">
                                             <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
                                         </p>
                                     </a>
@@ -58,7 +79,7 @@
                                 <i class="fas fa-phone-volume" style="font-size:20px"></i>&nbsp;
                                 <span class="text2">
                                     <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                        <p class="font-weight-light">
+                                        <p class="contact_us_sub_title">
                                             <?PHP echo $contact_us[0]['contact_us_tel']; ?>
                                         </p>
                                 </span>
@@ -69,9 +90,9 @@
                 </div>
             </div>
             <h4 class="font-weight-light;" style="margin-top: 25;">
-                <span class="text">
+               
                     รายละเอียดการติดต่อ
-                </span>
+                
             </h4>
             <div class="col-2">
                 <hr style="border-top: 2px solid #f47322">
@@ -83,14 +104,14 @@
                         <i class="fas fa-map-marker-alt" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
-                        <p class="font-weight-light">
-                            <span class="text2">
+                        <p>
+                            
                                 <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
                                 <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
-                            </span>
+                            
                             </a>
                         </p>
                     </div>
@@ -101,10 +122,10 @@
                         <i class="fas fa-phone-volume" style="font-size:20px"></i>
                     </div>
                     <div class="col-auto">
-                        <p class="font-weight-light"> &nbsp;
-                            <span class="text2">
+                        <p class="contact_us_sub_title"> &nbsp;
+                            
                                 <?PHP echo $contact_us[0]['contact_us_fax']; ?>
-                            </span>
+                           
                         </p>
                     </div>
                 </div>
@@ -115,10 +136,10 @@
                     </div>
                     <div class="col-auto">
                         <a href="mailto:<?PHP echo $contact_us[0]['contact_us_email']; ?>">
-                            <p class="font-weight-light"> &nbsp;
-                                <span class="text2">
+                            <p class="contact_us_sub_title"> &nbsp;
+                               
                                     <?PHP echo $contact_us[0]['contact_us_email']; ?>
-                                </span>
+                                
                             </p>
                         </a>
                     </div>
@@ -126,11 +147,11 @@
                 <br>
                 <div class="container">
                     <div class="col">
-                        <a href="" class="btn btn-primary text-uppercase js-scroll-trigger"
+                        <a href="#contact" class="btn btn-orage text-uppercase js-scroll-trigger"
                             style="padding-left:8%; padding-right:8%">
-                            <span class="text">
+                            
                                 ติดต่อเรา
-                            </span> </a>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -140,7 +161,7 @@
 
 <div class="p-3 mb-2 bg-light text-dark">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 contact-address">
 
             <h4>
                 <p class="text">
@@ -153,9 +174,9 @@
             <div class="dropdown" style="padding-left:10%;padding-bottom:3%;">
                 <a class="btn btn-secondary dropdown-toggle" href="<?PHP echo $contact_us[0]['contact_us_map']; ?>">
                   
-                        <span class="text">
+                        
                             ดาวโหลดแผนที่
-                        </span> 
+                         
                 </a>
             </div>
 
@@ -171,9 +192,9 @@
                     </div>
                     <div id="collapseOne" class="collapse show bg-light text-dark" data-parent="#accordion">
                         <div class="card-body">
-                            <span class="text">
+                            
                                 <?PHP echo $contact_us[0]['contact_us_carry_detail']; ?>
-                            </span>
+                            
                         </div>
                     </div>
                 </div>
@@ -189,9 +210,9 @@
                 </div>
                 <div id="collapseTwo" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
-                        <span class="text">
+                        
                             <?PHP echo $contact_us[0]['contact_us_taxi_detail']; ?>
-                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -206,14 +227,13 @@
                 </div>
                 <div id="collapseThree" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
-                        <span class="text">
+                        
                             <?PHP echo $contact_us[0]['contact_us_car_detail']; ?>
-                        </span>
+                        
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="col-md-6">
             <div style="">
@@ -232,7 +252,7 @@
 </div>
 
 
-<div class="container" style="padding-top:8%">
+<div class="container"id="contact" style="padding-top:8%">
     <div class="row">
 
         <div class="col-md-6">
@@ -245,14 +265,14 @@
                 <hr style="border-top: 2px solid #f47322">
             </div>
             <p class="text">
-                <?PHP echo $contact_head[0]['contact_head_detail']; ?>
+                <?php if ($lng == TH) {  echo $contact_head[0]['contact_head_detail_th'];  } else{  echo $contact_head[0]['contact_head_detail_en'];  } ?>
             </p>
         </div>
         <div class="col-md-6">
             <form id="form_target" role="form" method="post" action="contact_us.php?&action=add">
                 <div class="row">
                     <div class="col-lg-6">
-                        <label class="text">ชื่อเรื่อง <font color="#F00"><b>*</b></font></label>
+                        <label class="text"><?php if ($lng == TH) {echo "ชื่อเรื่อง";} else { echo "Title";} ?>  <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_title_id" name="contact_title_id">
                             <?PHP for ($i=0; $i < count($contact_title); $i++) { ?>
                             <option selected value="<?PHP echo $contact_title[$i]['contact_title_id'];   ?>">
@@ -262,13 +282,13 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-6">
-                        <label class="text">ชื่อ <font color="#F00"><b>*</b></font></label>
+                        <label class="text"> <?php if ($lng == TH) {echo "ชื่อ";} else { echo "Firstname";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_firstname" name="contact_firstname" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">นามสกุล <font color="#F00"><b>*</b></font></label>
+                        <label class="text"><?php if ($lng == TH) {echo "นามสกุล";} else { echo "Lastname";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_lastname" name="contact_lastname" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
@@ -276,23 +296,27 @@
                         <input id="contact_email" name="contact_email" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">หมายลขโทรศัพท์ <font color="#F00"><b>*</b></font></label>
+                        <label class="text">  <?php if ($lng == TH) {echo "หมายลขโทรศัพท์";} else { echo "Tel";} ?> <font color="#F00"><b>*</b></font></label>
                         <input id="contact_tel" name="contact_tel" class="form-control" autocomplete="off">
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">ประเทศ <font color="#F00"><b>*</b></font></label>
+                        <label class="text">  <?php if ($lng == TH) {echo "ประเทศ";} else { echo "Country";} ?> <font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_country" name="contact_country">
                             <?PHP for ($i=0; $i < count($country); $i++) { 
                                 # code...
                             ?>
                             <option value="<?PHP echo $country[$i]['ct_code'];?>">
-                                <?PHP echo $country[$i]['ct_nameTHA'];?>
+                                <?PHP if ($lng == TH) {
+                                    echo $country[$i]['ct_nameTHA'];
+                                }else{
+                                    echo $country[$i]['ct_nameENG'];
+                                } ?>
                             </option>
                             <?PHP } ?>
                         </select>
                     </div>
                     <div class="col-lg-6">
-                        <label class="text">ประเภทของคำถาม <font color="#F00"><b>*</b></font></label>
+                        <label class="text"> <?php if ($lng == TH) {echo "ประเภทของคำถาม";}else{ echo "Type";}?><font color="#F00"><b>*</b></font></label>
                         <select class="form-control  custom-select" id="contact_type_id" name="contact_type_id">
                             <?PHP for ($i=0; $i < count($contact_type); $i++) { 
                                 # code...
@@ -305,17 +329,17 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="text"> ข้อความ <font color="#F00"><b>*</b></font></label>
+                            <label class="text"> <?php if ($lng == TH) {echo "ข้อความ";} else { echo "Massenger";} ?><font color="#F00"><b>*</b></font></label>
                             <textarea class="form-control " id="contact_text" name="contact_text" rows="6"></textarea>
                         </div>
                     </div>
                     <div class="col-lg-12" align="center">
 
-                        <button type="submit" name="" id="" class="btn btn-primary btn-md" btn-block
+                        <button type="submit" name="" id="" class="btn btn-orage btn-md" btn-block
                             style="width: 150px; text-align: center; margin:0 auto;">
-                            <span class="text">
-                                ส่ง
-                            </span></button>
+                            
+                            <?php if ($lng == TH) { echo "ส่ง";}else{ echo "send"; }   ?>
+                            </button>
                     </div>
                 </div>  
             </form>

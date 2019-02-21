@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
-require_once('../models/Contact.php');
+require_once('../models/ContactModel.php');
 
 $path = "modules/contact/views/";
 $img_path = "../img_upload/contact/";
@@ -64,7 +64,7 @@ window.location = "index.php?content=contact"
 <?PHP
 
 } else if( $_GET['action'] == "edit_head") {
-    $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail']);
+    $result = $contact_model-> editContact_head(1, $_POST['contact_head_detail_th'], $_POST['contact_head_detail_en']);
     require_once($path.'view.inc.php');
     ?>
 <script>
@@ -73,70 +73,70 @@ window.location = "index.php?content=contact"
 <?PHP
 
 } else if( $_GET['action'] == "insert_title") {
-    echo $_POST['contact_title_name'];
-if(isset($_POST['contact_title_name'])){
-    $check = true;
-    if($check == false){ ?>
-<script>
-alert('<?php echo $error_msg; ?>');
-window.history.back();
-</script>
-<?php
-        
-    }else{
-        
-        $result = $contact_model-> insertContactTitle($_POST['contact_title_name']);
-        
-        if($result){
-            ?>
-<script>
-window.location = "index.php?content=contact"
-</script>
-<?php
-            }else{
+     // echo $_POST['contact_type_name'];
+     if(isset($_POST['contact_title_name_th'])){
+        $check = true;
+        if($check == false){ ?>
+    <script>
+    alert('<?php echo $error_msg; ?>');
+    window.history.back();
+    </script>
+    <?php
+            
+        }else{
+            
+            $result = $contact_model-> insertContactTitle($_POST['contact_title_name_th'], $_POST['contact_title_name_en']);
+            
+            if($result){
                 ?>
-<script>
-window.history.back();
-</script>
-<?php
+    <script>
+    window.location = "index.php?content=contact"
+    </script>
+    <?php
+                }else{
+                    ?>
+    <script>
+    window.history.back();
+    </script>
+    <?php
+                }
             }
+        }else{
+            require_once($path . 'insert.inc.php');
         }
-    }else{
-        require_once($path . 'insert.inc.php');
-    }
 
 } else if( $_GET['action'] == "insert_type") {
-    echo $_POST['contact_type_name'];
-if(isset($_POST['contact_type_name'])){
-    $check = true;
-    if($check == false){ ?>
-<script>
-alert('<?php echo $error_msg; ?>');
-window.history.back();
-</script>
-<?php
-        
-    }else{
-        
-        $result = $contact_model-> insertContactType($_POST['contact_type_name']);
-        
-        if($result){
-            ?>
-<script>
-window.location = "index.php?content=contact"
-</script>
-<?php
-            }else{
+    // echo $_POST['contact_type_name'];
+    if(isset($_POST['contact_type_name_th'])){
+        $check = true;
+        if($check == false){ ?>
+    <script>
+    alert('<?php echo $error_msg; ?>');
+    window.history.back();
+    </script>
+    <?php
+            
+        }else{
+            
+            $result = $contact_model-> insertContactType($_POST['contact_type_name_th'], $_POST['contact_type_name_en']);
+            
+            if($result){
                 ?>
-<script>
-window.history.back();
-</script>
-<?php
+    <script>
+    window.location = "index.php?content=contact"
+    </script>
+    <?php
+                }else{
+                    ?>
+    <script>
+    window.history.back();
+    </script>
+    <?php
+                }
             }
+        }else{
+            require_once($path . 'insert_type.inc.php');
         }
-    }else{
-        require_once($path . 'insert_type.inc.php');
-    }
 
 } else if( $_GET['action'] == "edit_title") {
 if(isset($_POST['contact_title_id'])){
@@ -148,7 +148,7 @@ window.history.back();
 </script>
 <?php
     }else{
-        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_title_name']);
+        $result = $contact_model-> editContactTitle($_POST['contact_title_id'],$_POST['contact_title_name_th'],$_POST['contact_title_name_en']);
         if($result){
             ?>
 <script>
@@ -173,7 +173,7 @@ window.history.back();
 </script>
 <?php
     }else{
-        $result = $contact_model-> editContactType($_POST['contact_type_id'],$_POST['contact_type_name']);
+        $result = $contact_model-> editContactType($_POST['contact_type_id'],$_POST['contact_type_name_th'],$_POST['contact_type_name_en']);
         if($result){
             ?>
 <script>

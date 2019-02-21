@@ -3,15 +3,13 @@
 require_once 'view/menu.inc.php';
 ?>
 
-<div class="container rooms" id="room" >
+<div class="container rooms" id="room">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="text-left rooms-center">
                 <h1>
+                    ROOM
                     <span>
-                        ROOM
-                    </span>
-                    <span style="color:#f47322; ">
                         S
                     </span>
                 </h1>
@@ -44,13 +42,13 @@ require_once 'view/menu.inc.php';
                                     <i class="fab fa-facebook-square" style="font-size:30px"></i> &nbsp;
                                 </div>
                                 <div class="col-10">
-                                    <span class="text-detail-room">
-                                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                            <p class="font-weight-light text-truncate">
-                                                <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
-                                            </p>
-                                        </a>
-                                    </span>
+
+                                    <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                                        <p>
+                                            <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
+                                        </p>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -58,13 +56,13 @@ require_once 'view/menu.inc.php';
                             <div class="container">
                                 <div class="row">
                                     <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
-                                    <span class="text-detail-room">
-                                        <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                            <p class="font-weight-light">
-                                                <?PHP echo $contact_us[0]['contact_us_tel']; ?>
-                                            </p>
-                                        </a>
-                                    </span>
+
+
+                                    <p>
+                                        <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                                    </p>
+
+
                                 </div>
                             </div>
                         </div>
@@ -176,10 +174,10 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <div class="p-3 mb-2 bg-light text-dark" style="padding:0%; margin:-16">
                             <h5 style=" margin-left:30">
-                                <span class="text-detail-room">
-                                    THB
-                                </span>
-                                <span style=" margin-left:40">
+
+                                THB
+
+                                <span style="padding-left:40px;color: #000;">
                                     <?PHP if ($rooms[$i]['room_price'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -192,11 +190,9 @@ require_once 'view/menu.inc.php';
                 </div>
                 <div class="row">
                     <div class="col-6">
-                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
                             <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                                <span class="text">
-                                    Share
-                                </span>
+                                Share
                             </button>
                         </a>
                     </div>
@@ -213,10 +209,10 @@ require_once 'view/menu.inc.php';
                 <br>
                 <div class="row">
                     <div class="col-12">
-                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book" class="btn btn-primary text-uppercase js-scroll-trigger btn-lg btn-block">
-                            <span class="text">
-                                จองเดียวนี้
-                            </span>
+                        <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book"
+                            class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block ">
+
+                            จองเดียวนี้
 
                         </a>
                     </div>
