@@ -46,12 +46,12 @@
         <div class="col-lg-8 facilities-page-header" style="">
             <h4>
                 
-                    <?PHP echo $contact_us[0]['contact_us_title']; ?>
+                   <?php if ($lng == TH) {   echo $contact_us[0]['contact_us_title_th']; } else {    echo $contact_us[0]['contact_us_title_en'];   } ?>
                 
             </h4>
             <p class="font-weight-light">
                 <span class="contact_us_sub_title">
-                    <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
+                    <?php if ($lng == TH) {   echo $contact_us[0]['contact_us_sub_title_th']; } else {    echo $contact_us[0]['contact_us_sub_title_en'];   } ?>
                 </span>
             </p>
             <hr>
@@ -105,13 +105,21 @@
                     </div>
                     <div class="col-auto">
                         <p>
-                            
-                                <?PHP echo $contact_us[0]['contact_us_address']; ?><br>
-                                <?PHP echo $contact_us[0]['contact_us_address_1']; ?>
-                                <?PHP echo $contact_us[0]['contact_us_address_2']; ?>
-                                <?PHP echo $contact_us[0]['contact_us_address_3']; ?>
+                        <?php if ($lng == TH) {  ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_th']; ?><br>
+                                <?PHP echo $contact_us[0]['contact_us_address_1_th']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_2_th']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_3_th']; ?>
                                 <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
-                            
+                        <?PHP } else {?>
+
+                            <?PHP echo $contact_us[0]['contact_us_address_en']; ?><br>
+                                <?PHP echo $contact_us[0]['contact_us_address_1_en']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_2_en']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_3_en']; ?>
+                                <?PHP echo $contact_us[0]['contact_us_address_4']; ?>
+
+                      <?PHP }?>
                             </a>
                         </p>
                     </div>
@@ -186,14 +194,14 @@
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
                             <span class="text">
-                                <?PHP echo $contact_us[0]['contact_us_carry_title']; ?>
+                                <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_carry_title_th']; } else {  echo $contact_us[0]['contact_us_carry_title_en']; } ?>
                             </span>
                         </a>
                     </div>
                     <div id="collapseOne" class="collapse show bg-light text-dark" data-parent="#accordion">
                         <div class="card-body">
                             
-                                <?PHP echo $contact_us[0]['contact_us_carry_detail']; ?>
+                                <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_carry_detail_th'];} else {   echo $contact_us[0]['contact_us_carry_detail_en'];  } ?>
                             
                         </div>
                     </div>
@@ -204,14 +212,14 @@
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
                         <span class="text">
-                            <?PHP echo $contact_us[0]['contact_us_taxi_title']; ?>
+                            <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_taxi_title_th']; } else {  echo $contact_us[0]['contact_us_taxi_title_en']; } ?>
                         </span>
                     </a>
                 </div>
                 <div id="collapseTwo" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
                         
-                            <?PHP echo $contact_us[0]['contact_us_taxi_detail']; ?>
+                        <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_taxi_detail_th']; } else {  echo $contact_us[0]['contact_us_taxi_detail_en']; } ?>  
                         
                     </div>
                 </div>
@@ -221,14 +229,15 @@
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
                         <span class="text">
-                            <?PHP echo $contact_us[0]['contact_us_car_titel']; ?>
+                        
+                        <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_car_titel_th']; } else {  echo $contact_us[0]['contact_us_car_titel_en']; } ?>  
                         </span>
                     </a>
                 </div>
                 <div id="collapseThree" class="collapse  bg-light text-dark" data-parent="#accordion">
                     <div class="card-body">
                         
-                            <?PHP echo $contact_us[0]['contact_us_car_detail']; ?>
+                    <?PHP  if ($lng == TH) {  echo $contact_us[0]['contact_us_car_detail_th']; } else {  echo $contact_us[0]['contact_us_car_detail_en']; } ?>  
                         
                     </div>
                 </div>
@@ -258,7 +267,7 @@
         <div class="col-md-6">
             <h4>
                 <p class="text">
-                    พูดคุยกับเรา
+                <?php if ($lng == TH) {  echo  "พูดคุยกับเรา";} else { echo "Talk to us"; }?>
                 </p>
             </h4>
             <div class="col-2">
