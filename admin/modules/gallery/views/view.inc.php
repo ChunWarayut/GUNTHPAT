@@ -98,8 +98,8 @@
         <tr>
             <th width="10">#</th>
             <th width="100">Image</th>
-            <th width="100">Name TH</th>
-            <th width="100">Name EN</th>
+            <!-- <th width="100">Name TH</th> -->
+            <!-- <th width="100">Name EN</th> -->
             <th width="100"> Type TH</th>
             <th width="100"> Type EN</th>
             <th width="10"></th>
@@ -121,13 +121,13 @@
         <td>
             <img src="<?PHP echo $img_path . $gallery[$i]['gallery_img'];  ?> " class="img-fluid " width="200px" alt="">
         </td>
-
+<!-- 
         <td class="text-left">
             <?PHP echo $gallery[$i]['gallery_name_th'];  ?>
         </td>
         <td class="text-left">
             <?PHP echo $gallery[$i]['gallery_name_en'];  ?>
-        </td>
+        </td> -->
 
         <td class="text-left">
             <?PHP echo  $gallery[$i]['gallery_type_name_th'];  ?>

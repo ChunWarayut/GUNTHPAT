@@ -30,6 +30,22 @@ class Rooms extends BaseModel{
         }
     }
 
+    function getRoomsLast() {
+        $sql = " SELECT * FROM `tb_room` WHERE 1 ORDER BY `room_id` DESC LIMIT 1
+        ";
+        // echo "<pre>";
+        // print_r();
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
     function getRoomsByID($room_id) {
         $sql = " SELECT
                 room_id,

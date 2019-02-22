@@ -265,19 +265,20 @@ function readURL(input) {
     </div>
 
 
-</form>
 <br>
 <hr>
 <h1>
     Gallery
 </h1>
+<a href="?content=gallery&action=insert&room_id=<?php echo  $_GET['id']; ?>" class="btn btn-primary float-right">เพิ่มข้อมูล</a>
+</form>
 <br>
 <div class="row">
-    <?PHP for ($i=0; $i < count($roomBy); $i++) { 
+    <?PHP for ($i=0; $i < count($gallery); $i++) { 
     # code...
 ?>
     <div class="col-md-3">
-        <img id="_img" width="400" src="<?PHP echo $img_path_gallery . $roomBy[$i]['gallery_img']; ?>" class="img-fluid"
+        <img id="_img" width="400" src="<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']; ?>" class="img-fluid"
             alt="">
     </div>
     <?PHP }  ?>

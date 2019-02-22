@@ -6,11 +6,18 @@ require_once('../models/Room_TypeModel.php');
 $path = "modules/rooms/views/";
 $img_path = "../img_upload/rooms/"; 
 
+$pathImgGallery = "../img_upload/gallery/";
 $rooms_model = new Rooms;
 $room_type_model = new Room_Type;
 $rooms = $rooms_model -> getRooms();
 $room_type = $room_type_model -> getRoomType();
 
+$rooms_totle_mo = $rooms_model -> getRoomsLast();
+$rooms_totle = $rooms_totle_mo[0]['room_id'];
+
+require_once('../models/GalleryModel.php');
+$gallery_model = new Gallery;
+$gallery = $gallery_model -> getgalleryby($_GET['id']) ;
 // echo "<pre>";
 // print_r($rooms);
 // echo "</pre>";
@@ -225,7 +232,7 @@ window.history.back();
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=rooms"
+window.location = "index.php?content=rooms&action=edit&id=<?PHP echo $rooms_totle+1; ?>"
 </script>
 <?php
             }else{

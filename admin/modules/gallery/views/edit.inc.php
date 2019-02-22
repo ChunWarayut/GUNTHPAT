@@ -55,7 +55,7 @@ echo $gallery[$id]['gallery_name'];  ?>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
-
+<!-- 
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Gallery Name TH <font color="#F00"><b>*</b></font></label>
@@ -70,7 +70,7 @@ echo $gallery[$id]['gallery_name'];  ?>
                                 <input id="gallery_name_en" name="gallery_name_en" class="form-control" value="<?PHP echo $gallery[$id]['gallery_name_en'];?>" />
                                 <p class="help-block">Example :CONTACT</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-lg-12">
                             <div class="form-group">
