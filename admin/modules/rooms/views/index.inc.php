@@ -130,22 +130,13 @@ window.location = "index.php?content=rooms"
             }else{
                 require_once($path . 'edit_type.inc.php');
             }
-        } else if( $_GET['action'] == "recommened") {
-          
-                $result = $room_model-> editRoomRecommened($id, $_GET['recommened']);        
-    
-            ?>
-    <script>
-    window.location = "index.php?content=rooms"
-    </script>
-    <?PHP
     } else if( $_GET['action'] == "recommened") {
       
             $result = $rooms_model-> editRoomRecommened($id, $_GET['recommened']);        
 
         ?>
 <script>
-// window.location = "index.php?content=rooms"
+window.location = "index.php?content=rooms"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
