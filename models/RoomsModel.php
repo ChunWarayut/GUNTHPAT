@@ -131,7 +131,7 @@ class Rooms extends BaseModel{
         }
     }
     
-    function editRoom($room_id,$data = []) {
+    function editRoom($room_id, $data = []) {
         $data['room_img']=mysqli_real_escape_string(static::$db,$data['room_img']);
         $data['room_id']=mysqli_real_escape_string(static::$db,$data['room_id']);
         $data['room_name_th']=mysqli_real_escape_string(static::$db,$data['room_name_th']);
@@ -175,10 +175,10 @@ class Rooms extends BaseModel{
         `room_detail_3_en` = '".$data['room_detail_3_en']."' ,
         `room_facility_1_en` = '".$data['room_facility_1_en']."' ,
         `room_facility_2_en` = '".$data['room_facility_2_en']."' 
-        WHERE `tb_room`.`room_id` = '$room_id'
+        WHERE `tb_room`.`room_id` = '".$data['room_id']."'
         ";
         // echo "<pre>";
-        // print_r( $sql);
+        // print_r($data);
         // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
@@ -192,9 +192,9 @@ class Rooms extends BaseModel{
       
         $sql = "UPDATE `tb_room` SET `room_recommened` = '$room_recommened' WHERE `tb_room`.`room_id` = '$room_id'
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
