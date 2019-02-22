@@ -9,6 +9,7 @@ require_once('models/GalleryModel.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgalleryby($_GET['id']) ;
 
+$gallery_head = $gallery_model -> getgalleryHead();
 $room_id = $_POST['room_id'];
 
 if( !isset($_GET['action']) ) {
