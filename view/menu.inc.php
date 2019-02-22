@@ -10,7 +10,6 @@
 
 <?php 
     require_once('models/Contact_usModel.php');
-    $path = "modules/contact_us/views/";
     $img_path = "../img_upload/contact_us/";
     $contact_us_model = new Contact_us;
     $contact_us = $contact_us_model -> getContact_us();
