@@ -18,11 +18,5 @@ if( !isset($_GET['action']) ) {
     $gallery = $gallery_model -> getgalleryby($_POST['room_id']) ;
 }
 
-
-
-
-
-
-
 require_once($path . 'view.inc.php');
 ?>
