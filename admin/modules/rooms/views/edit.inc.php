@@ -270,7 +270,7 @@ function readURL(input) {
 <h1>
     Gallery
 </h1>
-<a href="?content=gallery&action=insert&room_id=<?php echo  $_GET['id']; ?>" class="btn btn-primary float-right">เพิ่มข้อมูล</a>
+<a href="?content=gallery&action=insert&room_id=<?php echo  $_GET['id']; ?>&gallery_type_id=1" class="btn btn-primary float-right">เพิ่มข้อมูล</a>
 </form>
 <br>
 <div class="row">

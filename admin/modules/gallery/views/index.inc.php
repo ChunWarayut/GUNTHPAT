@@ -24,6 +24,7 @@ $rooms = $rooms_model -> getRooms();
 // echo "</pre>";
 
 $room_id = $_GET['room_id'];
+$gallery_type_id = $_GET['gallery_type_id'];
 $type =($_GET['type']);
 $id =($_GET['id']);
 // ECHO "<PRE>";

@@ -77,7 +77,7 @@
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>">
+                                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>" <?PHP if ($gallery_type_id == $gallery_type[$i]['gallery_type_id']) { echo "selected" ;} ?>>
                                     <?PHP echo $gallery_type[$i]['gallery_type_name_th'];?>
                                     <?PHP echo $gallery_type[$i]['gallery_type_name_en'];?>
                                     <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
