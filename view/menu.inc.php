@@ -6,7 +6,6 @@
 		});
 	}
 </script>
-<script src="template/frontend/js/agency.min.js"></script>
 
 <?php 
     require_once('models/Contact_usModel.php');
