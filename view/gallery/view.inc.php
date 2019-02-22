@@ -23,14 +23,11 @@ require_once('view/menu.inc.php');
 
                 <h4>
 
-                    GUNTHPAT PLACE
+                    <?php if ($lng == TH) { echo $gallery_head[0]['gallery_head_title_th'];   }else {   echo $gallery_head[0]['gallery_head_title_en'];   }  ?>
 
                 </h4>
                 <span class=" gallery-detail">
-                    Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
-                    system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima
-                    Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV,
-                    Refrigerator, Closet, sink, bed light, etc,
+                    <?php if ($lng == TH) { echo $gallery_head[0]['gallery_head_sub_title_th'];   }else {   echo $gallery_head[0]['gallery_head_sub_title_en'];   }  ?>
                 </span>
             </div>
         </div>
@@ -43,7 +40,7 @@ require_once('view/menu.inc.php');
             <div class=" col-5">
                 <div class="text-right">
                     <h4>
-                        <?php if ($lng == TH) { echo  "แสดงให้ฉันดู"; }else {   echo "Show me";  }  ?> 
+                        <?php if ($lng == TH) { echo  "แสดงให้ฉันดู"; }else {   echo "Show me";  }  ?>
                     </h4>
                 </div>
             </div>
@@ -52,13 +49,13 @@ require_once('view/menu.inc.php');
                     id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
 
                     <option value="">
-                        <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?> 
-                        </option>
+                        <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?>
+                    </option>
                     <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                     <!-- formaction="gallery.php?id=<?PHP echo $rooms[$i]['room_id'];?>" -->
                     <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
                         echo 'selected' ; } ?>>
-                        <?php if ($lng == TH) {    echo $rooms[$i]['room_name_th']; }else {   echo $rooms[$i]['room_name_en']; }  ?> 
+                        <?php if ($lng == TH) {    echo $rooms[$i]['room_name_th']; }else {   echo $rooms[$i]['room_name_en']; }  ?>
                     </option>
                     <?PHP 
                     }?>
