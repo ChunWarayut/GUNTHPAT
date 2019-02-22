@@ -30,6 +30,31 @@ class Gallery extends BaseModel{
         }
     }
 
+    function getgalleryby($room_id) {
+        if ($room_id == null || $room_id == "") {
+            $rid = '1';
+        }else {
+            $rid = "tb_gallery.room_id = '$room_id'" ;
+        }
+        $sql = " SELECT *
+        FROM `tb_gallery`
+        LEFT JOIN tb_gallery_type ON tb_gallery.gallery_type_id = tb_gallery_type.gallery_type_id
+        WHERE $rid
+        ORDER BY tb_gallery.gallery_id
+        ";
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
     
     function getgalleryHead() {
         $sql = " SELECT *
