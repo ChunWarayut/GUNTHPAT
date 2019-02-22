@@ -197,7 +197,7 @@
                                                 <label>Size EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_size_en" name="room_size_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_size_en'];?>" />
-                                                <p class="help-block">Example : 50 ตารางเมตร </p>
+                                                <p class="help-block">Example : 50 square meters </p>
                                             </div>
                                         </div>
 
@@ -207,7 +207,7 @@
                                                 <label>Detail 1 EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_detail_1_en" name="room_detail_1_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_detail_1_en'];?>" />
-                                                <p class="help-block">Example : ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน </p>
+                                                <p class="help-block">Example : 2 adults + 1 child </p>
                                             </div>
                                         </div>
 
@@ -216,7 +216,7 @@
                                                 <label>Detail 2 EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_detail_2_en" name="room_detail_2_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_detail_2_en'];?>" />
-                                                <p class="help-block">Example : ระเบียงส่วนตัว </p>
+                                                <p class="help-block">Example : Private balcony </p>
                                             </div>
                                         </div>
 
@@ -225,7 +225,7 @@
                                                 <label>Detail 3 EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_detail_3_en" name="room_detail_3_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_detail_3_en'];?>" />
-                                                <p class="help-block">Example : วิวห้องหรือสวน </p>
+                                                <p class="help-block">Example : Room or garden view </p>
                                             </div>
                                         </div>
 
@@ -234,7 +234,7 @@
                                                 <label>Facility 1 EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_facility_1_en" name="room_facility_1_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_facility_1_en'];?>" />
-                                                <p class="help-block">Example : บริการโทรศัพท์ห้อง </p>
+                                                <p class="help-block">Example : Room telephone service </p>
                                             </div>
                                         </div>
 
@@ -243,7 +243,7 @@
                                                 <label>Facility 2 EN<font color="#F00"><b>*</b></font></label>
                                                 <input id="room_facility_2_en" name="room_facility_2_en" class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_facility_2_en'];?>" />
-                                                <p class="help-block">Example : บริการ WiFi ฟรี </p>
+                                                <p class="help-block">Example : Free WiFi service</p>
                                             </div>
                                         </div>
 
