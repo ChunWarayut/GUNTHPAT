@@ -38,26 +38,37 @@ require_once('view/menu.inc.php');
 </div>
 
 <div class="container">
-    <div class="class row">
-        <div class=" col-6">
-            <div class="text-right">
-                <h4>
-                    แสดงให้ฉันดู
-                </h4>
+    <form action="gallery.php?action=search" id="form_target" role="form" method="post">
+        <div class="class row">
+            <div class=" col-5">
+                <div class="text-right">
+                    <h4>
+                        <?php if ($lng == TH) { echo  "แสดงให้ฉันดู"; }else {   echo "Show me";  }  ?> 
+                    </h4>
+                </div>
+            </div>
+            <div class=" col-2">
+                <select class="form-control" style="border: 0px solid #ced4da; width: 150px; color: #f47322"
+                    id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
+
+                    <option value="">
+                        <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?> 
+                        </option>
+                    <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                    <!-- formaction="gallery.php?id=<?PHP echo $rooms[$i]['room_id'];?>" -->
+                    <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
+                        echo 'selected' ; } ?>>
+                        <?php if ($lng == TH) {    echo $rooms[$i]['room_name_th']; }else {   echo $rooms[$i]['room_name_en']; }  ?> 
+                    </option>
+                    <?PHP 
+                    }?>
+                </select>
+            </div>
+            <div class=" col-2">
+                <button type="submit" class="btn btn-primary ">search</button>
             </div>
         </div>
-        <div class=" col-6">
-            <select class="form-control"  style="border: 0px solid #ced4da; width: 150px; color: #f47322" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
-                <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
-                    echo 'selected' ; } ?>>
-                    <?PHP echo $rooms[$i]['room_name_th'];?>
-                </option>
-                <?PHP 
-                    }?>
-            </select>
-        </div>
-    </div>
+    </form>
 </div>
 <div class="gallery-show ">
 
