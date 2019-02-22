@@ -2,7 +2,8 @@
 
 abstract class BaseModel{
     public static $db;
-    protected $host="localhost";
+    protected $host="192.168.0.168";
+    // protected $host="localhost";
     protected $db_name="revelsoft_gtp";
     protected $username="root";
 	protected $password="root123456";
