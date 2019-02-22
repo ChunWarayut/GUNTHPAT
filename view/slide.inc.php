@@ -73,12 +73,9 @@ function search() {
 </div>
 
     <section class="slide" style="margin-top:-20em; ">
-        <?php for ($i = 0; $i < count($slide); ++$i) {
-        ?>
-        <img style=" width: 200px; height: 900px; object-fit: cover;"
-            src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
-        <?php
-    } ?>
+        <?php for ($i = 0; $i < count($slide); ++$i) {  ?>
+            <img style=" width: 200px; height: 900px; object-fit: cover;"     src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">  
+        <?PHP   } ?>
     </section>
 
 <script type="text/javascript">
