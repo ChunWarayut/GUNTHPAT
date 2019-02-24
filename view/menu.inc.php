@@ -130,8 +130,6 @@
         </div>
     </nav>
 </div>
-<?PHP
-    require_once('slide.inc.php');
-?>
+
     <!-- Custom scripts for this template -->
 

@@ -1,67 +1,64 @@
-    .slide-detail {
-        font-family: 'anakotmai-bold';
-        position: absolute;
-        padding-top: 10%;
-        max-width: 100%;
-        z-index: 10;
-        margin-left: -90;
-        padding-left: 10%; 
-        padding-right: 5%; 
-        width: 100%; 
-        color: #fff;
-    }
-    .slide-title p{
-        font-size: 1.5em;
-    }
-    .slide-title h1{
-        font-size: 4em;  
-    }
-    .btn-orange {
-        color: #fff;
-        background-color: #ff6c11;
-    }
-    .btn-orange:hover {
-        color: #fff;
-        background-color: #ff6c11;
-    }
-@media (max-width: 1024px) {
-    .slide-title h1{
-        font-size: 3em;  
-    }
-    .header-slide-mobile{
-        display: none;
-    }
+.menu-slide-style{
+    color: #ffffff;
+}
+.menu-slide{
+    margin-top : -20em;
+}
+.btn-orange {
+    color: #fff;
+    background-color: #ff6c11;
+}
+.btn-orange:hover {
+    color: #fff;
+    background-color: #ff6c11;
+}
+.menu-slide-detail {
+    position: absolute;
+    top: 30%;
+    max-width: 100%;
+    z-index: 999;
+    padding-left: 10%; 
+    padding-right: 10%; 
+    width:100%;
+}
+.menu-slide-item{
+    position:relative;
+}
+.home-menu-top {
+    margin-top: 100; 
+}
+.menu-header{
+    color: #f47322;
+}
+.room-header{
+    color: #f47322;
+}
+.home-menu-img{
+     object-fit: cover;
+}
+.menu-slide-popup{
+    padding: 0px 10% 0px 10%;
+    top: 30%;
+    position: absolute;
+    width: 100%;
 }
 @media (max-width: 991px) {
-    .header-slide{
-        display: none;
-    }
-    .slide-title{
+    .menu-slide-title{
         text-align: center;
+        padding-bottom: 5%;
     }
-    .slide-detail {
-        padding-top: 5%;
-        padding-left: 20%;
-        padding-right: 10%;
+    .menu-slide-detail {
+        top: 35%;
+    }
+    .menu-slide-popup{
+        top: 35%;
     }
 }
-
 @media (max-width: 767px) {
-    .slide{
-        padding-bottom: 10%;
+    .menu-slide-detail {
+        top: 40%;
     }
-    .header-slide{
-        display: none;
-    }
-}
-@media (max-width: 640px) {
-    .slide-title h1 {
-        font-size: 2em;
-    }
-}
-@media (max-width: 480px) {
-    .slide-detail {
-        padding-left: 25%;
-        padding-right: 0%;
+    .menu-slide-popup{
+        /* top: 35%; */
     }
 }

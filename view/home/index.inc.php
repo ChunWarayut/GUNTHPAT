@@ -1,6 +1,5 @@
 <?PHP 
 $menu = "index";
-require_once('view/menu.inc.php');
 $path = "view/home/";
 
 $pathImg = "img_upload/rooms/";
