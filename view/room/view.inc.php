@@ -25,12 +25,13 @@ require_once 'view/menu.inc.php';
 
                 <h4 class="font-weight-light">
                     <span class="text-detail-room">
-                        <?PHP echo $contact_us[0]['contact_us_title']; ?>
+                    <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_title_th'];   }else { echo $contact_us[0]['contact_us_title_en'];  }  ?>
                     </span>
                 </h4>
                 <p class="font-weight-light">
                     <span class="text-detail-room">
-                        <?PHP echo $contact_us[0]['contact_us_sub_title']; ?>
+                    <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_sub_title_th'];   }else { echo $contact_us[0]['contact_us_sub_title_en'];  }  ?>
+
                     </span>
                 </p>
                 <hr>
@@ -103,70 +104,73 @@ require_once 'view/menu.inc.php';
                 </script>
                 <h5 class="font-weight-light;" style="margin-top: 25;">
                     <span class="text-detail-room">
-                        <?PHP if ($rooms[$i]['room_name'] == "") {
+                    
+                        <?PHP if ($rooms[$i]['room_name_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_name'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_name_th'];   }else { echo $rooms[$i]['room_name_en'];  } 
                         }  ?>
                     </span>
                 </h5>
                 <i class="fas fa-home" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_size'] == "") {
+                <?PHP if ($rooms[$i]['room_size_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_size'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_size_th'];   }else { echo $rooms[$i]['room_size_en'];  } 
                         }  ?>
                 </span>
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                <?PHP if ($rooms[$i]['room_detail_1_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_detail_1'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_detail_1_th'];   }else { echo $rooms[$i]['room_detail_1_en'];  } 
                         }  ?>
                 </span>
                 <br>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_detail_1'] == "") {
+                <?PHP if ($rooms[$i]['room_detail_2_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_detail_1'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_detail_2_th'];   }else { echo $rooms[$i]['room_detail_2_en'];  } 
                         }  ?>
                 </span>
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_detail_3'] == "") {
+                <?PHP if ($rooms[$i]['room_detail_3_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_detail_3'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_detail_3_th'];   }else { echo $rooms[$i]['room_detail_3_en'];  } 
                         }  ?>
                 </span>
                 <br>
                 <br>
                 <span class="text-detail-room">
-                    บริการโทรศัพท์ห้อง
+
+                <?PHP if ($lng == TH) {  echo "บริการโทรศัพท์ห้อง"; } else {  echo "Room telephone service";  }?>
+
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_facility_1'] == "") {
-                            echo "ไม่ระ บุ";
+                <?PHP if ($rooms[$i]['room_facility_1_th'] == "") {
+                            echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_facility_1'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_facility_1_th'];   }else { echo $rooms[$i]['room_facility_1_en'];  } 
                         }  ?>
                 </span>
                 <br>
                 <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                    <?PHP if ($rooms[$i]['room_facility_2'] == "") {
+                <?PHP if ($rooms[$i]['room_facility_2_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
-                            echo $rooms[$i]['room_facility_2'];
+                            if ($lng == TH) {  echo $rooms[$i]['room_facility_2_th'];   }else { echo $rooms[$i]['room_facility_2_en'];  } 
                         }  ?>
                 </span>
                 <br>
@@ -193,7 +197,9 @@ require_once 'view/menu.inc.php';
                     <div class="col-6">
                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
                             <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                                Share
+                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
+
+                                
                             </button>
                         </a>
                     </div>
@@ -201,7 +207,10 @@ require_once 'view/menu.inc.php';
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                                 <span class="text-black">
-                                    ดูเพิ่มเติม
+                                
+                <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
+
+                                    
                                 </span>
                             </button>
                         </a>
@@ -212,8 +221,10 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book"
                             class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block ">
+            
+                            <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
 
-                            จองเดียวนี้
+                            
 
                         </a>
                     </div>

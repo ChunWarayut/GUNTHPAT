@@ -6,11 +6,9 @@
 		});
 	}
 </script>
-<script src="template/frontend/js/agency.min.js"></script>
 
 <?php 
     require_once('models/Contact_usModel.php');
-    $path = "modules/contact_us/views/";
     $img_path = "../img_upload/contact_us/";
     $contact_us_model = new Contact_us;
     $contact_us = $contact_us_model -> getContact_us();
@@ -23,9 +21,9 @@
 
                 <span style="padding-right: 2%;color:#fff;"><i class="fas fa-mobile-alt" aria-hidden="true"></i> <?php echo $contact_us[0]['contact_us_tel']; ?></span>
                 <span style="padding-right: 2%;color:#fff;"><i class='fas fa-map-marker-alt'></i> <?PHP echo $contact_us[0]['contact_us_address_3']; ?></span>
-                <a onclick="setLanguage('EN')" class="right <?php if($lng != "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >EN</span></a>
+                <a onclick="setLanguage('EN')" class="right <?php if($lng != "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " <?php if($lng != "TH"){ echo 'style="color: #f47322;"' ;} else { echo 'style="color: #ffffff;"' ; } ?> >EN</span></a>
                 <a class="right"><span class="lng-icon" style="width: 0.9em; color: #fff;">|</span></a>
-                <a onclick="setLanguage('TH')" class="right <?php if($lng == "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable " style="color: #ffffff;" >TH</span></a>
+                <a onclick="setLanguage('TH')" class="right <?php if($lng == "TH"){ echo "active-lng"; } ?>"><span class="lng-icon hoverable "  <?php if($lng == "TH"){ echo 'style="color: #f47322;"' ;} else { echo 'style="color: #ffffff;"' ; } ?> >TH</span></a>
             </div>
         </div>
     </div>

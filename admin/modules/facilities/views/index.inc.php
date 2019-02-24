@@ -70,6 +70,10 @@ window.location = "index.php?content=facilities"
         $data['facilities_detail_th'] = $_POST['facilities_detail_th'];
         $data['facilities_name_en'] = $_POST['facilities_name_en'];
         $data['facilities_detail_en'] = $_POST['facilities_detail_en'];
+        $data['facilities_detail_1_th'] = $_POST['facilities_detail_1_th'];
+        $data['facilities_detail_1_en'] = $_POST['facilities_detail_1_en'];
+        $data['facilities_detail_2_th'] = $_POST['facilities_detail_2_th'];
+        $data['facilities_detail_2_en'] = $_POST['facilities_detail_2_en'];
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -154,6 +158,10 @@ window.history.back();
         $data['facilities_detail_th'] = $_POST['facilities_detail_th'];
         $data['facilities_name_en'] = $_POST['facilities_name_en'];
         $data['facilities_detail_en'] = $_POST['facilities_detail_en'];
+        $data['facilities_detail_1_th'] = $_POST['facilities_detail_1_th'];
+        $data['facilities_detail_1_en'] = $_POST['facilities_detail_1_en'];
+        $data['facilities_detail_2_th'] = $_POST['facilities_detail_2_th'];
+        $data['facilities_detail_2_en'] = $_POST['facilities_detail_2_en'];
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
         //-----------------------------------------------

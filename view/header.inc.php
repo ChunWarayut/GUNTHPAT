@@ -37,6 +37,7 @@
 <link type="text/css" rel="Stylesheet"href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   <script>
   $( function() {
     $( "#calendar_start" ).datepicker({dateFormat: 'yy-mm-dd'});

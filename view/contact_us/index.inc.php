@@ -13,7 +13,7 @@ $contact_us = $contact_us_model -> getContact_us() ;
 $contact_title = $contact_model -> getContactTitle() ;
 $country = $contact_model -> getCountry() ;
 $contact_type = $contact_model -> getContactType() ;
-
+$countryTHA == 'THA';
 // echo"<pre>";
 // print_r($contact_type);
 // echo"</pre>";

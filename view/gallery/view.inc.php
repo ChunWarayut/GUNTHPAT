@@ -23,14 +23,11 @@ require_once('view/menu.inc.php');
 
                 <h4>
 
-                    GUNTHPAT PLACE
+                    <?php if ($lng == TH) { echo $gallery_head[0]['gallery_head_title_th'];   }else {   echo $gallery_head[0]['gallery_head_title_en'];   }  ?>
 
                 </h4>
                 <span class=" gallery-detail">
-                    Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety
-                    system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima
-                    Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV,
-                    Refrigerator, Closet, sink, bed light, etc,
+                    <?php if ($lng == TH) { echo $gallery_head[0]['gallery_head_sub_title_th'];   }else {   echo $gallery_head[0]['gallery_head_sub_title_en'];   }  ?>
                 </span>
             </div>
         </div>
@@ -38,133 +35,39 @@ require_once('view/menu.inc.php');
 </div>
 
 <div class="container">
-    <div class="class row">
-        <div class=" col-6">
-            <div class="text-right">
-                <h4>
-                    แสดงให้ฉันดู
-                </h4>
+    <form action="gallery.php?action=search" id="form_target" role="form" method="post">
+        <div class="class row">
+            <div class=" col-5">
+                <div class="text-right">
+                    <h4>
+                        <?php if ($lng == TH) { echo  "แสดงให้ฉันดู"; }else {   echo "Show me";  }  ?>
+                    </h4>
+                </div>
             </div>
-        </div>
-        <div class=" col-6">
-            <select class="form-control"  style="border: 0px solid #ced4da; width: 150px; color: #f47322" id="room_id" name="room_id" value="<?PHP echo $room_id;?>">
-                <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
-                    echo 'selected' ; } ?>>
-                    <?PHP echo $rooms[$i]['room_name_th'];?>
-                </option>
-                <?PHP 
+            <div class=" col-2">
+                <select class="form-control" style="border: 0px solid #ced4da; width: 150px; color: #f47322"
+                    id="gallery_type_id" name="gallery_type_id" value="<?PHP echo $gallery_type_id;?>" onchange="getGallery(this)">
+                    <option value="">
+                        <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?>
+                    </option>
+                    <?PHP for ($i=0; $i < count($gallery_type); $i++) { ?>
+                    <!-- formaction="gallery.php?id=<?PHP echo $gallery_type[$i]['gallery_type_id'];?>" -->
+                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>" <?PHP if ($gallery_type_id==$gallery_type[$i]['gallery_type_id']) {
+                        echo 'selected' ; } ?>>
+                        <?php if ($lng == TH) {    echo $gallery_type[$i]['gallery_type_name_th']; }else {   echo $gallery_type[$i]['gallery_type_name_en']; }  ?>
+                    </option>
+                    <?PHP 
                     }?>
-            </select>
-        </div>
-    </div>
-</div>
-<div class="gallery-show ">
-
-    <?PHP for ($i=0; $i < count($gallery); $i= $i + 10) { 
-
-?>
-    <div class="row">
-        <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-            <div class="row ">
-                <!-- ----------------------------------------------------------------------------------- -->
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 co-xs-12 gal-item">
-                        <div class="row">
-                            <?PHP if (!$gallery[$i]) {}else{?>
-                            <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                            <?PHP if (!$gallery[$i+1]) {}else{?>
-                            <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i+1]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                        </div>
-                    </div>
-                    <?PHP if (!$gallery[$i+2]) {}else{?>
-                    <div class="col-md-8 col-sm-8 co-xs-12 gal-item">
-                        <div class="box">
-                            <img src="<?PHP echo $path_img . $gallery[$i+2]['gallery_img']?>"
-                                class="img-ht img-fluid rounded">
-                        </div>
-                    </div>
-                </div>
-                <!-- ----------------------------------------------------------------------------------- -->
-                <?PHP }  ?>
-                <div class="row">
-                    <?PHP if (!$gallery[$i+3]) {}else{?>
-                    <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                        <div class="box">
-                            <img src="<?PHP echo $path_img . $gallery[$i+3]['gallery_img']?>"
-                                class="img-ht img-fluid rounded">
-                        </div>
-                    </div>
-                    <?PHP }  ?>
-                    <?PHP if (!$gallery[$i+4]) {}else{?>
-                    <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                        <div class="box">
-                            <img src="<?PHP echo $path_img . $gallery[$i+4]['gallery_img']?>"
-                                class="img-ht img-fluid rounded">
-                        </div>
-                    </div>
-                    <?PHP }  ?>
-                    <?PHP if (!$gallery[$i+5]) {}else{?>
-                    <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                        <div class="box">
-                            <img src="<?PHP echo $path_img . $gallery[$i+5]['gallery_img']?>"
-                                class="img-ht img-fluid rounded">
-                        </div>
-                    </div>
-                    <?PHP }  ?>
-                    <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                        <div class="row">
-                            <?PHP if (!$gallery[$i+6]) {}else{?>
-                            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i+6]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                            <?PHP if (!$gallery[$i+7]) {}else{?>
-                            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i+7]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                            <?PHP if (!$gallery[$i+8]) {}else{?>
-                            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i+8]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                            <?PHP if (!$gallery[$i+9]) {}else{?>
-                            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <img src="<?PHP echo $path_img . $gallery[$i+9]['gallery_img']?>"
-                                        class="img-ht img-fluid rounded">
-                                </div>
-                            </div>
-                            <?PHP }  ?>
-                        </div>
-                    </div>
-                </div>
+                </select>
+            </div>
+            <div class=" col-2">
+                <!-- <button type="submit" class="btn btn-primary ">search</button> -->
             </div>
         </div>
-    </div>
-    <?PHP } ?>
+    </form>
+</div>
+
+<div class="gallery-show " id="galleryBY">
 </div>
 
 
@@ -182,6 +85,7 @@ require_once('view/menu.inc.php');
 
 <script type="text/javascript">
 $(document).on('ready', function() {
+    getGallery(this.value = "");
     $(".slide-galery").slick({
         arrows: false,
         dots: false,
@@ -190,4 +94,13 @@ $(document).on('ready', function() {
         autoplaySpeed: 2500,
     });
 });
+
+function getGallery(id) {
+    var gallery_type_id = id.value;
+    $.post("controls/getGallery.php", {
+        'gallery_type_id': gallery_type_id
+    }, function(data) {
+        $("#galleryBY").html(data);
+    });
+}
 </script>

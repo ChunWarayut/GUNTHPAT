@@ -35,7 +35,7 @@ $img_path = "img_upload/news/";
             # code...
             ?>
                 <p class="text-detail text-truncate ">
-                    <?PHP  echo    $news[$i]['news_name'];?>
+                <?php if ($lng == TH) {   echo    $news[$i]['news_name_th'];   }else { echo    $news[$i]['news_name_en'];  }  ?>
                 </p>
                 <hr class="border-white">
 
@@ -65,8 +65,9 @@ $img_path = "img_upload/news/";
                     <div class="col-md-8 col-lg-12" >
                         <span class="text-header">Address :</span>
                         <p class="text-detail">
-                            <?PHP echo    $contact_us[0]['contact_us_address']; echo    $contact_us[0]['contact_us_address_1']; ?> 
-                            <?PHP echo    $contact_us[0]['contact_us_address_2']; echo    $contact_us[0]['contact_us_address_3']; echo    $contact_us[0]['contact_us_address_4']; ?>
+                        <?php if ($lng == TH) {   echo    $contact_us[0]['contact_us_address_th']; echo    $contact_us[0]['contact_us_address_1_th'];   }else { echo    $contact_us[0]['contact_us_address_en']; echo    $contact_us[0]['contact_us_address_1_en'];  }  ?>
+                        <?php if ($lng == TH) {   echo    $contact_us[0]['contact_us_address_2_th']; echo    $contact_us[0]['contact_us_address_3_th']; echo    $contact_us[0]['contact_us_address_4_th'];   }else { echo    $contact_us[0]['contact_us_address_2_en']; echo    $contact_us[0]['contact_us_address_3_en']; echo    $contact_us[0]['contact_us_address_4_en'];  }  ?>
+                    
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-12 col-sm-6 col-xs-6">

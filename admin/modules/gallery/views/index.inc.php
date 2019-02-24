@@ -23,7 +23,8 @@ $rooms = $rooms_model -> getRooms();
 // print_r($gallery);
 // echo "</pre>";
 
-
+$room_id = $_GET['room_id'];
+$gallery_type_id = $_GET['gallery_type_id'];
 $type =($_GET['type']);
 $id =($_GET['id']);
 // ECHO "<PRE>";
@@ -209,11 +210,20 @@ window.history.back();
             $result = $gallery_model-> addGallery($data);
            
             if($result){
+                if ($_POST['room_id'] == null || $_POST['room_id'] == "") {
                 ?>
 <script>
 window.location = "index.php?content=gallery"
 </script>
 <?php
+}else{
+?>
+<script>
+window.location = "index.php?content=rooms&action=edit&id=<?PHP echo $_POST['room_id']; ?>"
+</script>
+<?PHP
+}?>
+
             }else{
                 ?>
 <script>

@@ -4,6 +4,13 @@
 require_once('models/SlideModel.php');
 $slide_model = new Slide;
 $slide = $slide_model -> slideRoom01();
+
+require_once('models/RoomsModel.php');
+$rooms_model = new Rooms;
+$rooms = $rooms_model -> getRooms();
+
+
+
 ?>
 
 <script>
@@ -47,8 +54,9 @@ function search() {
                     <div class="col-lg-6">Room
                         <select class="form-control  custom-select" id="room_id" name="room_id"  style="background-color: #00000078;solid #ffffff45; color :fff; "><?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                             <option value="<?PHP echo $rooms[$i]['room_id'];?>">
-                                <?PHP echo $rooms[$i]['room_name'];?>
+                            <?php if ($lng == TH) {  echo $rooms[$i]['room_name_th'];   }else { echo $rooms[$i]['room_name_en'];  }  ?>
                             </option> <?PHP } ?>
+                            
                         </select>
                     </div>
                 </div>
@@ -65,12 +73,9 @@ function search() {
 </div>
 
     <section class="slide" style="margin-top:-20em; ">
-        <?php for ($i = 0; $i < count($slide); ++$i) {
-        ?>
-        <img style=" width: 200px; height: 900px; object-fit: cover;"
-            src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
-        <?php
-    } ?>
+        <?php for ($i = 0; $i < count($slide); ++$i) {  ?>
+            <img style=" width: 200px; height: 900px; object-fit: cover;"     src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">  
+        <?PHP   } ?>
     </section>
 
 <script type="text/javascript">

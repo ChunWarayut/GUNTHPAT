@@ -1,5 +1,8 @@
 body{
-    font-family: 'anakotmai-bold';
+    font-family: 
+    'anakotmai-light', 
+    'anakotmai-medium',
+    'anakotmai-bold';
 }
 .list-one{
     margin-top: -10%;

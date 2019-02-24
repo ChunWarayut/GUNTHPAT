@@ -75,6 +75,8 @@
 
         <td class="text-left">
             <?PHP echo  $facilities[$i]['facilities_detail_th'];  ?>
+            <?PHP echo  $facilities[$i]['facilities_detail_1_th'];  ?>
+            <?PHP echo  $facilities[$i]['facilities_detail_2_th'];  ?>
         </td>
 
         <td class="text-left">
@@ -83,6 +85,8 @@
 
         <td class="text-left">
             <?PHP echo  $facilities[$i]['facilities_detail_en'];  ?>
+            <?PHP echo  $facilities[$i]['facilities_detail_1_en'];  ?>
+            <?PHP echo  $facilities[$i]['facilities_detail_2_en'];  ?>
         </td>
 
         <td>

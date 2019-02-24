@@ -6,11 +6,18 @@ require_once('../models/Room_TypeModel.php');
 $path = "modules/rooms/views/";
 $img_path = "../img_upload/rooms/"; 
 
+$pathImgGallery = "../img_upload/gallery/";
 $rooms_model = new Rooms;
 $room_type_model = new Room_Type;
 $rooms = $rooms_model -> getRooms();
 $room_type = $room_type_model -> getRoomType();
 
+$rooms_totle_mo = $rooms_model -> getRoomsLast();
+$rooms_totle = $rooms_totle_mo[0]['room_id'];
+
+require_once('../models/GalleryModel.php');
+$gallery_model = new Gallery;
+$gallery = $gallery_model -> getgalleryby($_GET['id']) ;
 // echo "<pre>";
 // print_r($rooms);
 // echo "</pre>";
@@ -123,22 +130,13 @@ window.location = "index.php?content=rooms"
             }else{
                 require_once($path . 'edit_type.inc.php');
             }
-        } else if( $_GET['action'] == "recommened") {
-          
-                $result = $room_model-> editRoomRecommened($id, $_GET['recommened']);        
-    
-            ?>
-    <script>
-    window.location = "index.php?content=rooms"
-    </script>
-    <?PHP
     } else if( $_GET['action'] == "recommened") {
       
             $result = $rooms_model-> editRoomRecommened($id, $_GET['recommened']);        
 
         ?>
 <script>
-// window.location = "index.php?content=rooms"
+window.location = "index.php?content=rooms"
 </script>
 <?PHP
     } else if( $_GET['action'] == "insert") {
@@ -187,7 +185,7 @@ window.location = "index.php?content=rooms"
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["room_img"]["size"] > 5000000) {
+            }else if ($_FILES["room_img"]["size"] > 5000000000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
@@ -225,7 +223,7 @@ window.history.back();
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=rooms"
+window.location = "index.php?content=rooms&action=edit&id=<?PHP echo $rooms_totle+1; ?>"
 </script>
 <?php
             }else{
@@ -287,7 +285,7 @@ window.history.back();
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["room_img"]["size"] > 5000000) {
+            }else if ($_FILES["room_img"]["size"] > 5000000000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
@@ -313,15 +311,10 @@ window.history.back();
            
             ?>
 <script>
-alert('<?php echo $error_msg; ?>');
 window.history.back();
 </script>
-<?php
-          
-        }else{
-           
-            $result = $rooms_model-> editRoom($_POST['room_id'],$data);
-           
+<?php }else{
+            $result = $rooms_model-> editRoom($id ,$data);
             if($result){
                 ?>
 <script>

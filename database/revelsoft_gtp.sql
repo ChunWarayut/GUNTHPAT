@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 21, 2019 at 07:17 AM
+-- Generation Time: Feb 22, 2019 at 07:41 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -40,7 +40,7 @@ CREATE TABLE `tb_about_us` (
 --
 
 INSERT INTO `tb_about_us` (`about_us_id`, `about_us_title_en`, `about_us_sub_title_en`, `about_us_title_th`, `about_us_sub_title_th`, `about_us_img`) VALUES
-(1, 'ABOUT GUNTHPAT PLACEgdhfg', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. \r\n\r\nGunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.                                                                                                                                                                                                                                ', 'เกี่ยวกับ กันตพัฒน์', ' กันตพัฒน์ เพลส เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย', '1802201915405918022019154059504040802.jpg');
+(1, 'ABOUT GUNTHPAT PLACEgdhfg', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. \r\n\r\nGunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.                                                                                                                                                                                                                                ', 'เกี่ยวกับ กันตพัฒน์', ' กันตพัฒน์ เพลส เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย', '21022019165104210220191651041588218454.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,8 @@ INSERT INTO `tb_book` (`book_id`, `book_firstname`, `book_lastname`, `book_perso
 (2, 'วรายุทธ', 'เทกระโทก', 5, 2, '0000-00-00', '0000-00-00', '0918136426'),
 (3, '', '', 0, 0, '0000-00-00', '0000-00-00', ''),
 (4, ';ikp6mT', 'gmdiT\\Fmsd', 2, 4, '0000-00-00', '0000-00-00', '0999989988'),
-(5, 'as', 'dasd', 0, 0, '2019-02-09', '2019-02-15', '0999989988');
+(5, 'as', 'dasd', 0, 0, '2019-02-09', '2019-02-15', '0999989988'),
+(6, 'dsadas', 'dasdas', 4, 3, '2019-02-01', '2019-02-02', '123123123123123123');
 
 -- --------------------------------------------------------
 
@@ -498,17 +499,21 @@ CREATE TABLE `tb_facilities` (
   `facilities_name_th` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `facilities_img` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `facilities_detail_th` text COLLATE utf8_unicode_ci NOT NULL,
-  `facilities_detail_en` text COLLATE utf8_unicode_ci NOT NULL
+  `facilities_detail_en` text COLLATE utf8_unicode_ci NOT NULL,
+  `facilities_detail_1_th` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `facilities_detail_1_en` text COLLATE utf8_unicode_ci NOT NULL,
+  `facilities_detail_2_th` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `facilities_detail_2_en` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tb_facilities`
 --
 
-INSERT INTO `tb_facilities` (`facilities_id`, `facilities_name_en`, `facilities_name_th`, `facilities_img`, `facilities_detail_th`, `facilities_detail_en`) VALUES
-(1, 'CONTACT', 'ติดต่อ ', 'blogger-336371_1920.jpg', 'คุณสามารถติดต่อทรู อินเทอร์เน็ตเพื่อสอบถาม                                   ', 'You can contact True. Internet to inquire'),
-(2, 'Deliicious Foods', 'อาหารอร่อย', 'breakfast-1246686_1920.jpg', 'สด สะอาด อร่อย ปลอดภัย', 'We\'ve scoured the planet'),
-(3, 'Security', 'ความปลอดภัย', 'hotel-1330850_1920.jpg', 'มีความปลอดภัยและเป็นอิสระ', 'Security is freedom from');
+INSERT INTO `tb_facilities` (`facilities_id`, `facilities_name_en`, `facilities_name_th`, `facilities_img`, `facilities_detail_th`, `facilities_detail_en`, `facilities_detail_1_th`, `facilities_detail_1_en`, `facilities_detail_2_th`, `facilities_detail_2_en`) VALUES
+(1, 'CONTACT', 'ติดต่อ ', 'blogger-336371_1920.jpg', 'คุณสามารถติดต่อทรู อินเทอร์เน็ตเพื่อสอบถาม                                   ', 'You can contact True. Internet to inquire', 'อาหารเช้า', 'Breakfast', 'ร้านกาแฟ ', 'Coffee Shop'),
+(2, 'Deliicious Foods', 'อาหารอร่อย', 'breakfast-1246686_1920.jpg', 'สด สะอาด อร่อย ปลอดภัย', 'We\'ve scoured the planet', 'ระเบียงสระน้ำ', 'Pool Terrace', ' สแน็คบาร์ ', ' Snack Bar'),
+(3, 'Security', 'ความปลอดภัย', 'hotel-1330850_1920.jpg', 'มีความปลอดภัยและเป็นอิสระ', 'Security is freedom from', 'สระว่ายน้ำกลางแจ้ง', 'One Out Door Swimming', 'จากุซซี่ ', 'Jacuzzi.');
 
 -- --------------------------------------------------------
 
@@ -588,7 +593,7 @@ CREATE TABLE `tb_gallery_head` (
 --
 
 INSERT INTO `tb_gallery_head` (`gallery_head_id`, `gallery_head_title_th`, `gallery_head_title_en`, `gallery_head_sub_title_th`, `gallery_head_sub_title_en`) VALUES
-(1, 'GUNTHPAT PLACE', '', 'ค้นดูรูปภาพในแกลเลอรีของเราและเริ่มจินตนาการภาพวันหยุดพักผ่อนของท่านค้นดูรูปภาพในแกลเลอรีของเราและเริ่มจินตนาการภาพวันหยุดพักผ่อนของท่าน                                                                                                                                                                               ', 'Search for pictures in our gallery and start imagining your vacation. Look at the pictures in our gallery and start imagining your vacation.');
+(1, '\nกันตพัฒน์ เพลส', 'GUNTHPAT PLACE', 'กันทภัทรเพลสอพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '\n                    Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety\n                    system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima\n                    Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV,\n                    Refrigerator, Closet, sink, bed light, etc,');
 
 -- --------------------------------------------------------
 
@@ -676,12 +681,12 @@ CREATE TABLE `tb_room` (
 --
 
 INSERT INTO `tb_room` (`room_id`, `room_type_id`, `room_name_en`, `room_sub_title_en`, `room_name_th`, `room_sub_title_th`, `room_price`, `room_amout`, `room_img`, `room_size_th`, `room_detail_1_th`, `room_detail_2_th`, `room_detail_3_th`, `room_facility_1_th`, `room_facility_2_th`, `room_size_en`, `room_detail_1_en`, `room_detail_2_en`, `room_detail_3_en`, `room_facility_1_en`, `room_facility_2_en`, `room_recommened`) VALUES
-(0, 3, 'Deluxe Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4050.00', 5, '22012019164823220120191648231602616181.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(1, 2, 'Duluxe Junior Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'Deluxe Junior Suite', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4150.00', 5, '002.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(2, 1, 'Deluxe River View Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์ริเวอร์วิว', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '5100.00', 5, '003.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี ', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(3, 4, 'Anantara Riverfront Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องอนันตราริเวอร์ฟร้อนท์', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '6100.00', 5, '004.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
-(4, 4, 'Dream Stateroom', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องนอน', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '12000.00', 5, '005.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
-(5, 4, 'Family Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องสวีทสำหรับครอบครัว', 't hotel urban hotel, sardinia โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '9800.00', 5, '006.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0);
+(0, 3, 'Deluxe Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4050.00', 5, '22012019164823220120191648231602616181.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
+(1, 2, 'Duluxe Junior Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'สำหรับเด็ก', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4150.00', 5, '002.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
+(2, 1, 'Deluxe River View Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์ริเวอร์วิว', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '5100.00', 5, '003.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี ', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
+(3, 4, 'Anantara Riverfront Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องอนันตราริเวอร์ฟร้อนท์', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '6100.00', 5, '004.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
+(4, 4, 'Dream Stateroom', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องนอน', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '12000.00', 5, '005.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
+(5, 4, 'Family Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องสวีทสำหรับครอบครัว', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '9800.00', 5, '006.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0);
 
 -- --------------------------------------------------------
 
@@ -727,9 +732,8 @@ CREATE TABLE `tb_slide` (
 --
 
 INSERT INTO `tb_slide` (`slide_id`, `slide_img`, `slide_title_en`, `slide_sub_title_en`, `slide_title_th`, `slide_sub_title_th`, `slide_link`) VALUES
-(1, '06022019102303060220191023031740682243.jpg', 'Delux Room', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ', 'ห้องดีลักซ์', 'เอนทิตีหรือปรากฏการณ์อื่น ๆ ที่เสี่ยงต่อการเปลี่ยนแปลงที่ไม่พึงประสงค์จากสภาพแวดล้อม', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
-(2, '29012019110632290120191106321811532773.jpg', 'Dream Stateroom', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                      ', 'ห้องนอน', 'เอนทิตีหรือปรากฏการณ์อื่น ๆ ที่เสี่ยงต่อการเปลี่ยนแปลงที่ไม่พึงประสงค์จากสภาพแวดล้อม', 'https://youtu.be/JZKlSYWlW54'),
-(3, '21022019141621210220191416211517055568.png', 'Future Forward Party พรรคอนาคตใหม่', 'The Future Forward Party was founded by Thanathorn Juangroongruangkit and Piyabutr Saengkanokkul upon the determination to restore democracy in Thailand. Its slogan promises the changes Thailand much deserves - “The Future Forward for Thailand with a brighter future,”', 'พรรคอนาคตใหม่พรรค', 'พรรคอนาคตใหม่ คือพรรคการเมืองที่เกิดจากการริเริ่มของ ธนาธร จึงรุ่งเรืองกิจ อดีตรองประธานกรรมการบริหารกลุ่มบริษัทไทยซัมมิท และ ปิยบุตร แสงกนกกุล อดีตนักวิชาการด้านนิติศาสตร์และอาจารย์มหาวิทยาลัยธรรมศาสตร์  ร่วมกับกลุ่มบุคคลที่ไม่เห็นด้วยกับการรัฐประหารซึ่งถือเป็นวิถีทางที่ไม่เป็นประชาธิปไตย อนาคตใหม่มุ่งมั่นทำงานการเมืองอย่างสร้างสรรค์โดยชูคำขวัญ “อนาคตใหม่ เพื่อประเทศไทยที่มีอนาคต” และเสนอแนวนโยบาย “3 ป.”', 'https://www.facebook.com/FWPthailand/');
+(1, '06022019102303060220191023031740682243.jpg', 'GUNTHPAT PLACE', 'A place to experience and enjoy life\n', 'กันตพัฒน์ เพลส', 'หรูหรากับระบบความปลอดภัยเต็มรูปแบบ', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
+(2, '29012019110632290120191106321811532773.jpg', 'Dream Stateroom', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                      ', 'ห้องนอน', 'เอนทิตีหรือปรากฏการณ์อื่น ๆ ที่เสี่ยงต่อการเปลี่ยนแปลงที่ไม่พึงประสงค์จากสภาพแวดล้อม', 'https://youtu.be/JZKlSYWlW54');
 
 -- --------------------------------------------------------
 
@@ -915,7 +919,7 @@ ALTER TABLE `tb_about_us`
 -- AUTO_INCREMENT for table `tb_book`
 --
 ALTER TABLE `tb_book`
-  MODIFY `book_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `book_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tb_contact`
 --
@@ -945,7 +949,7 @@ ALTER TABLE `tb_contact_us`
 -- AUTO_INCREMENT for table `tb_facilities`
 --
 ALTER TABLE `tb_facilities`
-  MODIFY `facilities_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `facilities_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tb_facilities_head`
 --
