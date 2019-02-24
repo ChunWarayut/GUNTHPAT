@@ -5,7 +5,7 @@ $path = "modules/news/views/";
 
 $news_model = new News;
 
-$news_id = isset($_GET['id']);
+$news_id = ($_GET['id']);
 
 
 
@@ -36,10 +36,6 @@ if(!isset($_GET['action'])){
     // print_r($news);
         require_once($path.'update.inc.php');
 }else if ($_GET['action'] == 'delete'){
-    $target_file = $target_dir . $_GET['news_img_o'];
-    if (file_exists($target_file)) {
-        unlink($target_file);
-    }
     $news = $news_model->deleteNews($news_id);
     ?>
 <script>

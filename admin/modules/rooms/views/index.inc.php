@@ -17,7 +17,8 @@ $rooms_totle = $rooms_totle_mo[0]['room_id'];
 
 require_once('../models/GalleryModel.php');
 $gallery_model = new Gallery;
-$gallery = $gallery_model -> getgalleryby($_GET['id']) ;
+$gallery = $gallery_model -> getgallerybyRoom($_GET['id']) ;
+
 // echo "<pre>";
 // print_r($rooms);
 // echo "</pre>";

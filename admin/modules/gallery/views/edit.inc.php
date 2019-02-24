@@ -101,7 +101,7 @@ echo $gallery[$id]['gallery_name'];  ?>
                                 <label> ROOM <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="room_id" name="room_id">
                                 <option  value=""> อื่น ๆ </option> <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($rooms[$type-1]['room_id'] == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
+                                    <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
                                         <?PHP echo $rooms[$i]['room_name_th'];?>
                                         <?PHP echo $rooms[$i]['room_name_en'];?>
                                         <?PHP echo $rooms[$i]['room_name'];?>

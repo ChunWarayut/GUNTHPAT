@@ -14,7 +14,7 @@ $book_model = new BookModel;
 // print_r($book);
 
 if( $_GET['action'] == "detail") {
-    $id = ($_GET['id']);
+    $id = ($_GET['id'])-1;
     $roomBy = $rooms_model -> getRoomsBy($id);
     require_once($path.'detail.inc.php');
 } else if( $_GET['action'] == "book") {

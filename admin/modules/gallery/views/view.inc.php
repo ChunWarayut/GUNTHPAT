@@ -139,7 +139,7 @@
 
         <td>
             <a
-                href="?content=gallery&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo  $gallery[$i]['gallery_type_id'];?>">
+                href="?content=gallery&action=edit&id=<?PHP echo $i;  ?>&type=<?PHP echo  $gallery[$i]['gallery_type_id'];?>&room_id=<?PHP echo  $gallery[$i]['room_id'];?>">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
 
