@@ -97,8 +97,6 @@
                                 <label>ROOM <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="room_id" name="room_id">
                                 <option  value="">ไม่ระบุ</option>
-                                        <?PHP echo $rooms[$type-1]['rooms_name'];?>
-                                    </option>
                                     <?PHP #endregion
                                 for ($i=0; $i < count($rooms); $i++) { 
                                     # code...
