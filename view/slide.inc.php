@@ -43,17 +43,17 @@ $rooms = $rooms_model -> getRooms();
 
 <div class="row m-0 justify-content-end menu-slide-popup" style="">
 <div class="col-lg-4 col-12 p-2" style="background-color: #00000036;width: 80%; ">
-    <div class="p-2">Arrival Date
+    <div class="p-2"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
         <input input class="form-control" id = "book_date_start" name="book_date_start" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
     </div>
-    <div class="p-2">Depature Date
+    <div class="p-2"><?php if ($lng == TH) {  echo "วันที่ออก";   }else { echo "Depature Dates";  }  ?>
         <input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
     </div>
     <div class="row p-2">
-        <div class="col-lg-6">Persons
+        <div class="col-lg-6"><?php if ($lng == TH) {  echo "จำนวนท่าน";   }else { echo "Persons";  }  ?>
             <input class="form-control" type="number" autocomplete="off" id="book_person" name="book_person" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
         </div>
-        <div class="col-lg-6">Room
+        <div class="col-lg-6"><?php if ($lng == TH) {  echo "ห้อง";   }else { echo "Room";  }  ?>
             <select class="form-control" id="room_id" name="room_id"  style="background-color: #00000078;solid #ffffff45; color :fff; ">
                 <?PHP for ($j=0; $j < count($rooms); $j++) { ?>
                     <option value="<?PHP echo $rooms[$j]['room_id'];?>">
