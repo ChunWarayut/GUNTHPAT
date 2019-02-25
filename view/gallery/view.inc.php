@@ -46,15 +46,15 @@ require_once('view/menu.inc.php');
             </div>
             <div class=" col-2">
                 <select class="form-control" style="border: 0px solid #ced4da; width: 150px; color: #f47322"
-                    id="room_id" name="room_id" value="<?PHP echo $room_id;?>" onchange="getGallery(this)">
+                    id="gallery_type_id" name="gallery_type_id" value="<?PHP echo $gallery_type_id;?>" onchange="getGallery(this)">
                     <option value="">
                         <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?>
                     </option>
-                    <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
-                    <!-- formaction="gallery.php?id=<?PHP echo $rooms[$i]['room_id'];?>" -->
-                    <option value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id==$rooms[$i]['room_id']) {
+                    <?PHP for ($i=0; $i < count($gallery_type); $i++) { ?>
+                    <!-- formaction="gallery.php?id=<?PHP echo $gallery_type[$i]['gallery_type_id'];?>" -->
+                    <option value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>" <?PHP if ($gallery_type_id==$gallery_type[$i]['gallery_type_id']) {
                         echo 'selected' ; } ?>>
-                        <?php if ($lng == TH) {    echo $rooms[$i]['room_name_th']; }else {   echo $rooms[$i]['room_name_en']; }  ?>
+                        <?php if ($lng == TH) {    echo $gallery_type[$i]['gallery_type_name_th']; }else {   echo $gallery_type[$i]['gallery_type_name_en']; }  ?>
                     </option>
                     <?PHP 
                     }?>
@@ -96,9 +96,9 @@ $(document).on('ready', function() {
 });
 
 function getGallery(id) {
-    var room_id = id.value;
+    var gallery_type_id = id.value;
     $.post("controls/getGallery.php", {
-        'room_id': room_id
+        'gallery_type_id': gallery_type_id
     }, function(data) {
         $("#galleryBY").html(data);
     });

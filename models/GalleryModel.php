@@ -30,11 +30,11 @@ class Gallery extends BaseModel{
         }
     }
 
-    function getgalleryby($room_id) {
-        if ($room_id == null || $room_id == "") {
+    function getgalleryby($gallery_type_id) {
+        if ($gallery_type_id == null || $gallery_type_id == "") {
             $rid = '1';
         }else {
-            $rid = "tb_gallery.room_id = '$room_id'" ;
+            $rid = "tb_gallery.gallery_type_id = '$gallery_type_id'" ;
         }
         $sql = " SELECT *
         FROM `tb_gallery`
