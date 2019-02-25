@@ -59,7 +59,7 @@ function search() {
 } ?>
 </section>
 
-<div class="row m-0 justify-content-end menu-slide-popup" style="">
+<div class="row m-0 justify-content-end menu-slide-popup">
 <div class="col-lg-4 col-12 p-2" style="background-color: #00000036;width: 80%; ">
     <div class="p-2"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
         <input input class="form-control" id = "book_date_start" name="book_date_start" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
