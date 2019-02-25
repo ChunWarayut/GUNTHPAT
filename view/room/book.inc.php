@@ -45,7 +45,7 @@ require_once 'view/menu.inc.php';
                 <input id="book_lastname" name="book_lastname" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-6">
-                <label class="text"> <?php if ($lng == TH) {echo "จำนวน";} else { echo "Number";} ?>  <font color="#F00"><b>*</b></font></label>
+                <label class="text"> <?php if ($lng == TH) {echo "จำนวน";} else { echo "Persons";} ?>  <font color="#F00"><b>*</b></font></label>
                 <input id="book_person" name="book_person" value="<?PHP echo $book_person;?>" class="form-control" autocomplete="off">
             </div>
             <div class="col-md-6">

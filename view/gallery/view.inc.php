@@ -71,19 +71,20 @@ require_once('view/menu.inc.php');
 </div>
 
 
-<div class="gallery-slide">
-
+<div class="gallery-slide" id="galleryBYSlide">
+<!-- 
     <section class="slide-galery">
         <?php for ($i=0; $i < count($gallery); $i++) {    ?>
         <img class="img-fluid" style=" width: 100px; height: 200px; object-fit: cover;"
             src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>">
         <?php } ?>
-    </section>
+    </section> -->
 
 </div>
 
 
 <script type="text/javascript">
+
 $(document).on('ready', function() {
     getGallery(this.value = "");
     $(".slide-galery").slick({
@@ -101,6 +102,15 @@ function getGallery(id) {
         'gallery_type_id': gallery_type_id
     }, function(data) {
         $("#galleryBY").html(data);
+    });
+    getGallerySlide(id)
+}
+function getGallerySlide(id) {
+    var gallery_type_id = id.value;
+    $.post("controls/getGallerySlide.php", {
+        'gallery_type_id': gallery_type_id
+    }, function(data) {
+        $("#galleryBYSlide").html(data);
     });
 }
 </script>
