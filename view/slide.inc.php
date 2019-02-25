@@ -41,17 +41,17 @@ function search() {
                 </div>
             </div>
             <div class="col-lg-4" style="background-color: #00000036 ">
-                <div class="p-2">Arrival Date
+                <div class="p-2"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
                     <input input class="form-control" id = "book_date_start" name="book_date_start" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
-                <div class="p-2">Depature Date
+                <div class="p-2"><?php if ($lng == TH) {  echo "วันออก";   }else { echo "Depature Date";  }  ?>
                     <input class="form-control" id = "book_date_end" name="book_date_end" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                 </div>
                 <div class="row p-2">
-                    <div class="col-lg-6">Persons
+                    <div class="col-lg-6"><?php if ($lng == TH) {  echo "จำนวนท่าน";   }else { echo "Persons";  }  ?>
                         <input class="form-control" type="number" autocomplete="off" id="book_person" name="book_person" style="background-color: #00000078; border: 0.5px solid #ffffff45; color :fff; ">
                     </div>
-                    <div class="col-lg-6">Room
+                    <div class="col-lg-6"><?php if ($lng == TH) {  echo "ห้อง";   }else { echo "Room";  }  ?>
                         <select class="form-control  custom-select" id="room_id" name="room_id"  style="background-color: #00000078;solid #ffffff45; color :fff; "><?PHP for ($i=0; $i < count($rooms); $i++) { ?>
                             <option value="<?PHP echo $rooms[$i]['room_id'];?>">
                             <?php if ($lng == TH) {  echo $rooms[$i]['room_name_th'];   }else { echo $rooms[$i]['room_name_en'];  }  ?>
