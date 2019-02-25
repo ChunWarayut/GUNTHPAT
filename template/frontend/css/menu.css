@@ -1,10 +1,8 @@
 .header-menu{
     z-index: 50;
     position: relative;
-}
-
-.header-menu{
     padding: 0 5%;
+    color: #ffffff; 
 }
 
 .btn-orage{
