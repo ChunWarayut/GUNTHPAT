@@ -131,8 +131,8 @@
                        >
                         &nbsp;&nbsp;&nbsp;<i class='fas fa-concierge-bell' style='font-size:24px; color: #f47322;'></i>
                         <p class="text" style="color: #ffffff;">
-                            &nbsp;&nbsp;<?php if ($lng == TH) {  echo $facilities[$i]['facilities_detail_1_th'];}else{ echo $facilities[$i]['facilities_detail_1_th'];}?> <br>
-                            &nbsp;&nbsp;<?php if ($lng == TH) {  echo $facilities[$i]['facilities_detail_2_th'];}else{ echo $facilities[$i]['facilities_detail_2_th'];}?>  <br>
+                            &nbsp;&nbsp;<?php if ($lng == TH) {  echo $facilities[$i]['facilities_detail_1_th'];}else{ echo $facilities[$i]['facilities_detail_1_en'];}?> <br>
+                            &nbsp;&nbsp;<?php if ($lng == TH) {  echo $facilities[$i]['facilities_detail_2_th'];}else{ echo $facilities[$i]['facilities_detail_2_en'];}?>  <br>
                         </p>
                     </div>
                 </div>
