@@ -14,7 +14,7 @@
 }
 .menu-slide-detail {
     position: absolute;
-    top: 30%;
+    top: 35%;
     max-width: 100%;
     z-index: 999;
     padding-left: 10%; 
@@ -27,18 +27,9 @@
 .home-menu-top {
     margin-top: 100; 
 }
-.menu-header{
-    color: #f47322;
-}
-.room-header{
-    color: #f47322;
-}
-.home-menu-img{
-     object-fit: cover;
-}
 .menu-slide-popup{
     padding: 0px 10% 0px 10%;
-    top: 30%;
+    top: 35%;
     position: absolute;
     width: 100%;
 }

@@ -1,0 +1,20 @@
+span, a, p, h1, h2, h3, h4, h5,span a span{
+    color: #ffffff; 
+}
+
+span span{
+    color: #f47322; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn-orage{
+    background: #f47322;
+    color: #ffffff; 
+}
+@media (min-width: 300px){
+    .container {
+        max-width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+}
