@@ -76,7 +76,7 @@ window.location = "index.php?content=news"
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["news_img"]["size"] > 5000000000000) {
+            }else if ($_FILES["news_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
@@ -155,7 +155,7 @@ window.history.back();
             if (file_exists($target_file)) {
                 $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
                 $check = false;
-            }else if ($_FILES["news_img"]["size"] > 5000000000000) {
+            }else if ($_FILES["news_img"]["size"] > 5000000) {
                 $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {

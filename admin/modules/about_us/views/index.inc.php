@@ -66,7 +66,7 @@ $id =($_GET['id']);
             if (file_exists($target_file)) {
                 $error_msg =  "Sorry, file already exists.";
                 $check = false;
-            }else if ($_FILES["about_us_img"]["size"] > 5000000000000) {
+            }else if ($_FILES["about_us_img"]["size"] > 5000000) {
                 $error_msg = "Sorry, your file is too large.";
                 $check = false;
             }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
