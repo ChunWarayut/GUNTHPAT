@@ -181,9 +181,9 @@ class Gallery extends BaseModel{
          `gallery_img` = '".$data['gallery_img']."'
         WHERE `tb_gallery`.`gallery_id` = '$gallery_id'
         ";
-        echo "<pre>";
-        print_r( $sql);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
 
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
