@@ -359,6 +359,5 @@
 
 
 
-<script src="https://maps-api-ssl.google.com/maps/api/js?key=AIzaSyBPYt_mZGd-2iotzhpiZKw1_GpZ6H9w3vs&sensor=false">
-</script>
+<?PHP    if($lng == "TH"){        ?>        <script src="https://maps-api-ssl.google.com/maps/api/js?key=AIzaSyBPYt_mZGd-2iotzhpiZKw1_GpZ6H9w3vs&sensor=false"></script>        <?PHP    }else{        ?>        <script src="https://maps-api-ssl.google.com/maps/api/js?key=AIzaSyBPYt_mZGd-2iotzhpiZKw1_GpZ6H9w3vs&sensor=false&language=en&region=en"></script>        <?PHP    } ?>
 <script src="template/map/js/jquery-gmaps-latlon-picker.js"></script>
