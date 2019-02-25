@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 22, 2019 at 07:41 AM
+-- Generation Time: Feb 25, 2019 at 04:08 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -40,7 +40,7 @@ CREATE TABLE `tb_about_us` (
 --
 
 INSERT INTO `tb_about_us` (`about_us_id`, `about_us_title_en`, `about_us_sub_title_en`, `about_us_title_th`, `about_us_sub_title_th`, `about_us_img`) VALUES
-(1, 'ABOUT GUNTHPAT PLACEgdhfg', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. \r\n\r\nGunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.                                                                                                                                                                                                                                ', 'เกี่ยวกับ กันตพัฒน์', ' กันตพัฒน์ เพลส เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย', '21022019165104210220191651041588218454.jpg');
+(1, 'ABOUT GUNTHPAT PLACE', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. \r\n\r\nGunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.                                                                                                                                                                                                                                ', 'เกี่ยวกับ กันตพัฒน์', ' กันตพัฒน์ เพลส เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย', '25022019103315250220191033151014999630.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,18 +59,6 @@ CREATE TABLE `tb_book` (
   `book_tel` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `tb_book`
---
-
-INSERT INTO `tb_book` (`book_id`, `book_firstname`, `book_lastname`, `book_person`, `room_id`, `book_date_start`, `book_date_end`, `book_tel`) VALUES
-(1, 'warayut', 'taekrathok', 1, 3, '0000-00-00', '0000-00-00', '0918136426'),
-(2, 'วรายุทธ', 'เทกระโทก', 5, 2, '0000-00-00', '0000-00-00', '0918136426'),
-(3, '', '', 0, 0, '0000-00-00', '0000-00-00', ''),
-(4, ';ikp6mT', 'gmdiT\\Fmsd', 2, 4, '0000-00-00', '0000-00-00', '0999989988'),
-(5, 'as', 'dasd', 0, 0, '2019-02-09', '2019-02-15', '0999989988'),
-(6, 'dsadas', 'dasdas', 4, 3, '2019-02-01', '2019-02-02', '123123123123123123');
-
 -- --------------------------------------------------------
 
 --
@@ -88,24 +76,6 @@ CREATE TABLE `tb_contact` (
   `contact_type_id` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `contact_text` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `tb_contact`
---
-
-INSERT INTO `tb_contact` (`contact_id`, `contact_title_id`, `contact_firstname`, `contact_lastname`, `contact_email`, `contact_tel`, `contact_country`, `contact_type_id`, `contact_text`) VALUES
-(1, '1', 'ส้มฉุน', 'เที่ยงกระโทก', 'Som@gmail.com', '089-958-8747', 'THA', '3', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน'),
-(2, '2', 'สมใจ', 'ใจดี', 'Test@gmail.com', '085-965-9587', 'THA', '4', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน'),
-(3, '3', 'มนัสวี', 'เข่งพิมล', 'Manadsawee@hotmail.com', '098-218-9498', 'THA', '2', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาที\r\nโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน'),
-(4, '3', 'dasd', 'das', 'asd', 'asdas', 'THA', '1', 'asdasdasdasdasd'),
-(5, '3', 'dasd', 'das', 'asd', 'asdas', 'THA', '1', 'asdasdasdasdasd'),
-(6, '2', 'asd', 'asd', 'asd', 'sdasd', 'THA', '2', '555'),
-(7, '2', 'asd', 'asd', 'asd', 'sdasd', 'THA', '2', '555'),
-(8, '2', 'asd', 'asd', 'asd', 'sdasd', 'THA', '2', '555'),
-(9, '2', 'asd', 'asd', 'asd', 'sdasd', 'THA', '2', '555'),
-(10, '2', 'asd', 'asd', 'asd', 'asd', 'THA', '3', 'asdasdasdasdasd'),
-(11, '1', 'asdasdas', 'sd', 'asd', 'asd', 'THA', '5', 'asdasdasdasd'),
-(12, '1', 'asdasdas', 'sd', 'asd', 'asd', 'THA', '5', 'asdasdasdasd');
 
 -- --------------------------------------------------------
 
@@ -144,7 +114,7 @@ CREATE TABLE `tb_contact_title` (
 
 INSERT INTO `tb_contact_title` (`contact_title_id`, `contact_title_name_th`, `contact_title_name_en`) VALUES
 (1, 'ที่พัก', 'room'),
-(8, 'สถานที่', 'travel ');
+(10, 'การเดินทาง', 'travel');
 
 -- --------------------------------------------------------
 
@@ -216,7 +186,7 @@ CREATE TABLE `tb_contact_us` (
 --
 
 INSERT INTO `tb_contact_us` (`contact_us_id`, `contact_us_title_en`, `contact_us_title_th`, `contact_us_sub_title_en`, `contact_us_sub_title_th`, `contact_us_facebook`, `contact_us_tel`, `contact_us_address_en`, `contact_us_address_th`, `contact_us_address_1_en`, `contact_us_address_1_th`, `contact_us_address_2_en`, `contact_us_address_2_th`, `contact_us_address_3_en`, `contact_us_address_3_th`, `contact_us_address_4`, `contact_us_fax`, `contact_us_email`, `contact_us_carry_title_th`, `contact_us_carry_title_en`, `contact_us_carry_detail_th`, `contact_us_carry_detail_en`, `contact_us_taxi_title_th`, `contact_us_taxi_title_en`, `contact_us_taxi_detail_th`, `contact_us_taxi_detail_en`, `contact_us_car_titel_th`, `contact_us_car_titel_en`, `contact_us_car_detail_th`, `contact_us_car_detail_en`, `contact_us_map`, `contact_us_map_latitude`, `contact_us_map_longitude`, `contact_us_img`) VALUES
-(8, 'GUNTHPAT PLACE', '', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.     Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, ', ' เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย ', 'https://www.facebook.com/gunthpatplace', '0864653355', '263/3 Soi King-Sa wai rieng', '263/3 ซ.กิ่งสวายเรียง', 'Nai Muang', 'ต.ในเมือง', 'Muang', 'อ.เมือง', 'Nakhornratchasima ', 'จ.นครราชสีมา ', '30000', '044-255-617', 'gunthpatplace@hotmail.com', 'ระบบขนส่งสาธารณะ', 'Public transport', '  ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน ', 'Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style', 'แท็กซี่โดยสาร', 'Passenger taxi', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน ', 'Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style', 'รถรับส่งของโรงแรม', 'Hotel shuttle', 'ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน ', 'Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style', 'https://www.google.com/maps/place/Gunthpat+Place/@14.9755388,102.070692,18.25z/data=!4m8!1m2!2m1!1sguthpat!3m4!1s0x311eb34d179b5b75:0xba3f08e9b53c348f!8m2!3d14.976385!4d102.0702457', '14.9763853', '102.0680571', '20022019153537200220191535371116883229.jpg');
+(8, 'GUNTHPAT PLACE', '', 'Gunthpat Place Luxurious apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc.     Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc, ', ' เซอร์วิส อพาร์ทเม้นท์ 7 ชั้น ใจกลางเมือง โคราช หรูหรากับระบบความปลอดภัยเต็มรูปแบบ กับความสะดวกสบายด้วยบริการลิฟต์ 2 ตัว โล่งโปร่งสบาย         ด้วยโถงสกายไลท์ ตรงกลาง พร้อมน้ำพุ กับแหล่งช้อปปิ้ง ที่รายล้อม ทั้ง ห้างเดอะมอลล์ และเพียงเดินไม่กี่ก้าวถึงก็เทสโก้ โลตัส และสิ่งอำนวยความสะดวกอื่นๆ อีกมากมาย ', 'https://www.facebook.com/gunthpatplace', '0864653355', '263/3 Soi King-Sa wai rieng', '263/3 ซ.กิ่งสวายเรียง', 'Nai Muang', 'ต.ในเมือง', 'Muang', 'อ.เมือง', 'Nakhornratchasima ', 'จ.นครราชสีมา ', '30000', '044-255-617', 'gunthpatplace@hotmail.com', 'ระบบขนส่งสาธารณะ', 'Public transport', '   ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน  ', ' Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style ', 'แท็กซี่โดยสาร', 'Passenger taxi', ' ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน  ', ' Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style ', 'รถรับส่งของโรงแรม', 'Hotel shuttle', ' ใช้บริการแอร์พอร์ต ลิงก์ จากสนามบินนานาชาติสุวรรณภูมิมาที่พญาไทโดยให้บริการทุกๆ 20 นาทีตั้งแต่เวลา 6.00 น. ถึง 24.00 น. เที่ยงคืน โดยขึ้นรถไฟฟ้าบีทีเอส เปลี่ยนขบวนที่สถานีสยาม และลงที่สถานีสะพานตากสิน จากที่นั่น ท่านสามารถใช้บริการเรือโดยสารได้ฟรี โดยเรือออกทุก 20 นาทีโปรดแจ้งให้ทางโรงแรมทราบล่วงหน้าเพื่อให้เราทราบถึงรูปแบบการเดินทางของท่าน  ', ' Use the Airport Link service from Suvarnabhumi International Airport to Phayathai by serving every 20 minutes from 6.00 am to 24.00 pm, midnight by BTS sky train. Change the train at Siam Station And get off at Saphan Taksin Station. From there, you can use the passenger boat for free. By boat departing every 20 minutes, please inform the hotel in advance in order to let us know your travel style ', 'https://www.google.com/maps/place/Gunthpat+Place/@14.9755388,102.070692,18.25z/data=!4m8!1m2!2m1!1sguthpat!3m4!1s0x311eb34d179b5b75:0xba3f08e9b53c348f!8m2!3d14.976385!4d102.0702457', '14.9763853', '102.0680571', '25022019103349250220191033491896032191.jpg');
 
 -- --------------------------------------------------------
 
@@ -511,9 +481,8 @@ CREATE TABLE `tb_facilities` (
 --
 
 INSERT INTO `tb_facilities` (`facilities_id`, `facilities_name_en`, `facilities_name_th`, `facilities_img`, `facilities_detail_th`, `facilities_detail_en`, `facilities_detail_1_th`, `facilities_detail_1_en`, `facilities_detail_2_th`, `facilities_detail_2_en`) VALUES
-(1, 'CONTACT', 'ติดต่อ ', 'blogger-336371_1920.jpg', 'คุณสามารถติดต่อทรู อินเทอร์เน็ตเพื่อสอบถาม                                   ', 'You can contact True. Internet to inquire', 'อาหารเช้า', 'Breakfast', 'ร้านกาแฟ ', 'Coffee Shop'),
-(2, 'Deliicious Foods', 'อาหารอร่อย', 'breakfast-1246686_1920.jpg', 'สด สะอาด อร่อย ปลอดภัย', 'We\'ve scoured the planet', 'ระเบียงสระน้ำ', 'Pool Terrace', ' สแน็คบาร์ ', ' Snack Bar'),
-(3, 'Security', 'ความปลอดภัย', 'hotel-1330850_1920.jpg', 'มีความปลอดภัยและเป็นอิสระ', 'Security is freedom from', 'สระว่ายน้ำกลางแจ้ง', 'One Out Door Swimming', 'จากุซซี่ ', 'Jacuzzi.');
+(1, 'CONTACT', 'ติดต่อ ', '25022019102641250220191026411309051608.jpg', 'คุณสามารถติดต่อทรู อินเทอร์เน็ตเพื่อสอบถาม                                   ', 'You can contact True. Internet to inquire', 'อาหารเช้า', 'Breakfast', 'ร้านกาแฟ ', 'Coffee Shop'),
+(2, 'Deliicious Foods', 'อาหารอร่อย', '2502201910262825022019102628215980504.jpg', 'สด สะอาด อร่อย ปลอดภัย', 'We\'ve scoured the planet', 'ระเบียงสระน้ำ', 'Pool Terrace', ' สแน็คบาร์ ', ' Snack Bar');
 
 -- --------------------------------------------------------
 
@@ -557,22 +526,63 @@ CREATE TABLE `tb_gallery` (
 --
 
 INSERT INTO `tb_gallery` (`gallery_id`, `room_id`, `gallery_name_en`, `gallery_name_th`, `gallery_img`, `gallery_type_id`, `gallery_recommened`) VALUES
-(1, 2, 'Deluxe Junior Suite', '', 'hotel-1330841_1920.jpg', 3, 1),
-(2, 2, 'Deluxe Room', '', 'hotel-1979406_1920.jpg', 1, 0),
-(3, 4, 'Deliicious foods555', '', '24012019095132240120190951321461156926.jpg', 2, 0),
-(5, 3, '\r\nthe bridge', '', 'bangkok-1178693_1920.jpg', 3, 0),
-(6, 5, 'labeang', 'ระเบียง', '06022019102358060220191023582031698422.JPG', 3, 0),
-(7, 6, '', 'บันได', '06022019102406060220191024061847635412.JPG', 1, 0),
-(8, 5, '', 'โครมไฟ', '0602201910241906022019102419791969612.JPG', 0, 0),
-(10, 4, '', '', '0902201901001909022019010019821357893.jpg', 1, 0),
-(11, 3, '', '', '0902201912275709022019122757501095111.jpg', 1, 0),
-(12, 2, '', '', '0902201912281309022019122813400796524.jpg', 1, 0),
-(13, 1, '', '', '1202201909441112022019094411637775352.jpg', 1, 0),
-(14, 2, '', '', '12022019094416120220190944161579921432.jpg', 1, 0),
-(15, 3, '', '', '1202201909442212022019094422270102934.jpg', 1, 0),
-(16, 4, '', '', '12022019094428120220190944281628548374.jpg', 1, 0),
-(17, 0, '', '', '12022019103820120220191038201992948178.jpg', 2, 0),
-(18, 0, '', '', '1202201910390312022019103903412308061.jpg', 3, 0);
+(73, 3, '', '', '2502201910083625022019100836438480414.jpg', 1, 0),
+(74, 3, '', '', '2502201910104625022019101046387324539.jpg', 1, 0),
+(75, 3, '', '', '25022019101056250220191010561136095918.jpg', 1, 0),
+(76, 4, '', '', '2502201910112325022019101123995880074.jpg', 1, 0),
+(77, 4, '', '', '25022019101129250220191011291755025076.jpg', 1, 0),
+(78, 4, '', '', '25022019101138250220191011381678424283.jpg', 1, 0),
+(79, 5, '', '', '2502201910131825022019101318268529490.jpg', 1, 0),
+(80, 5, '', '', '25022019101325250220191013252101346826.jpg', 1, 0),
+(81, 5, '', '', '2502201910133725022019101337430281988.jpg', 1, 0),
+(82, 5, '', '', '25022019101346250220191013461501730277.jpg', 1, 0),
+(83, 6, '', '', '25022019101424250220191014241872757038.jpg', 1, 0),
+(84, 6, '', '', '25022019101432250220191014321971392185.jpg', 1, 0),
+(85, 6, '', '', '2502201910144125022019101441733081807.jpg', 1, 0),
+(86, 6, '', '', '2502201910145225022019101452516482876.jpg', 1, 0),
+(87, 6, '', '', '25022019101500250220191015001412921835.jpg', 1, 0),
+(88, 6, '', '', '25022019101522250220191015221915472082.jpg', 1, 0),
+(89, 6, '', '', '2502201910153025022019101530897634579.jpg', 1, 0),
+(90, 6, '', '', '2502201910153625022019101536615834232.jpg', 1, 0),
+(91, 7, '', '', '2502201910163325022019101633500386015.jpg', 1, 0),
+(92, 7, '', '', '25022019101650250220191016501150396699.jpg', 1, 0),
+(93, 7, '', '', '25022019101700250220191017001221878408.jpg', 1, 0),
+(94, 7, '', '', '2502201910172225022019101722702926937.jpg', 1, 0),
+(95, 7, '', '', '2502201910173225022019101732278179736.jpg', 1, 0),
+(96, 7, '', '', '2502201910174025022019101740670657180.jpg', 1, 0),
+(97, 7, '', '', '25022019101747250220191017472122401495.jpg', 1, 0),
+(98, 1, '', '', '25022019102424250220191024241401611789.jpg', 1, 0),
+(99, 1, '', '', '2502201910243825022019102438856998109.jpg', 1, 0),
+(100, 1, '', '', '25022019102444250220191024441052291951.jpg', 1, 0),
+(101, 1, '', '', '25022019102449250220191024491061769751.jpg', 1, 0),
+(102, 2, '', '', '25022019102509250220191025091309215879.jpg', 1, 0),
+(103, 2, '', '', '25022019102528250220191025282012699770.jpg', 1, 0),
+(104, 2, '', '', '25022019102534250220191025341736472152.jpg', 1, 0),
+(105, 2, '', '', '2502201910254125022019102541153788185.jpg', 1, 0),
+(106, 2, '', '', '25022019102547250220191025471608105076.jpg', 1, 0),
+(107, 2, '', '', '25022019102552250220191025521223472777.jpg', 1, 0),
+(108, 0, '', '', '2502201910355825022019103558141688695.jpg', 2, 0),
+(109, 0, '', '', '2502201910365025022019103650356943488.jpg', 2, 0),
+(110, 0, '', '', '2502201910511725022019105117574581508.jpg', 2, 0),
+(111, 0, '', '', '25022019105128250220191051281502938188.jpg', 2, 0),
+(112, 0, '', '', '2502201910513625022019105136103212463.jpg', 1, 0),
+(113, 0, '', '', '2502201910514425022019105144500975071.jpg', 2, 0),
+(114, 0, '', '', '2502201910515825022019105158962726843.jpg', 1, 0),
+(115, 0, '', '', '2502201910521025022019105210722948669.jpg', 1, 0),
+(116, 0, '', '', '25022019105252250220191052521101579715.jpg', 3, 0),
+(117, 0, '', '', '25022019105304250220191053041358450328.jpg', 3, 0),
+(118, 0, '', '', '2502201910531525022019105315106884089.jpg', 3, 0),
+(119, 0, '', '', '25022019105325250220191053252111188276.jpg', 3, 0),
+(120, 0, '', '', '2502201910533525022019105335132845646.jpg', 3, 0),
+(121, 0, '', '', '25022019105345250220191053451926242244.jpg', 3, 0),
+(122, 0, '', '', '25022019105358250220191053581737134534.jpg', 3, 0),
+(123, 0, '', '', '2502201910540925022019105409559893591.jpg', 3, 0),
+(124, 1, '', '', '25022019105423250220191054231059075937.jpg', 3, 0),
+(125, 0, '', '', '2502201910544525022019105445325475771.jpg', 3, 0),
+(126, 0, '', '', '2502201910545325022019105453870102385.jpg', 3, 0),
+(127, 1, '', '', '25022019105504250220191055041199304537.jpg', 3, 0),
+(128, 0, '', '', '25022019105532250220191055321569221245.jpg', 3, 0),
+(129, 0, '', '', '2502201910554225022019105542548156350.jpg', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -637,13 +647,12 @@ CREATE TABLE `tb_news` (
 --
 
 INSERT INTO `tb_news` (`news_id`, `news_name_en`, `news_name_th`, `news_detail_en`, `news_detail_th`, `news_img`, `news_date`) VALUES
-(1, 'It is a long established fact', 'พรรคอนาคตใหม่ก่อตั้งขึ้นโดยนายธนาธร จึงรุ่งเรืองกิจ', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', 'พรรคอนาคตใหม่ยึดมั่นในหลักประชาธิปไตย นิติรัฐ ศักดิ์ศรีความเป็นมนุษย์ สิทธิมนุษยชน ความเสมอภาคทางการเมือง เศรษฐกิจ และสังคม การกระจายอำนาจออกจากส่วนกลาง ความหลากหลายทางเพศ ความหลากหลายทางวัฒนธรรม ระบบเศรษฐกิจที่แข่งขันอย่างเสรีและเป็นธรรมปราศจากการผูกขาด การสร้างระบบสวัสดิการ การสร้างโอกาสให้แก่มนุษย์ในการดำรงชีวิตอย่างมีศักดิ์ศรีและมีคุณภาพตั้งแต่เกิดจนตาย และการพัฒนาอย่างยั่งยืนโดยคำนึงถึงทรัพยากรธรรมชาติและสิ่งแวดล้อม', '21022019102227210220191022271526931450.png', '2019-02-21 03:22:27'),
 (2, 'Lorem Ipsum is simply dummy', 'ยื่นจดแจ้งชื่อจัดตั้งพรรคต่อคณะกรรมการการเลือกตั้งเมื่อวันพฤหัสบดีที่ 15 มีนาคม พ.ศ. 2561 โดยพรรคอนา', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'สามเหลี่ยมกลับหัว แสดงถึงการให้ความสำคัญกับประชาชนคนส่วนใหญ่ของประเทศ ลูกศรที่ชี้พุ่งขึ้นไป คือ การมุ่งหน้าไปสู่ “อนาคตใหม่” เครื่องหมายนี้จึงหมายถึง ประชาชนผู้ทรงอำนาจสูงสุดร่วมกันนำพาสังคมไทยก้าวไปสู่อนาคตใหม่   ', '2.jpg', '2019-02-21 02:48:47'),
 (3, 'Contrary to popular belief', 'วันอาทิตย์ที่ 27 พฤษภาคม พ.ศ. 2561 พรรคอนาคตใหม่ได้จัดการประชุมใหญ่สามัญ ครั้งที่ 1 ที่ยิมเนเซียม 5 ', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32', 'ตลอดช่วงทศวรรษที่ผ่านมาประเทศไทยวนเวียนอยู่ในความขัดแย้งทางการเมืองอย่างร้าวลึก กองทัพฉวยโอกาสเข้าครองอํานาจอยู่เสมอในยามที่บ้านเมืองมีวิกฤต ทำการรัฐประหารฉีกรัฐธรรมนูญซ้ำแล้วซ้ำเล่า โดยเฉลี่ยแทบจะทุกๆ 4 ปี ผู้คนต่างตกอยู่ในความรู้สึกหดหู่ สิ้นหวัง ไร้ทางออก การปกครองในระบอบประชาธิปไตยที่ประชาชนเป็นเจ้าของอำนาจสูงสุดไม่เคยถูกปล่อยให้เติบโต', '3.jpg', '2019-02-21 02:49:03'),
 (4, 'Lorem Ipsum comes from sections', 'พรรคอนาคตใหม่ก่อตั้งขึ้นเพื่อมุ่งสร้างการเมืองแบบใหม่ ให้สังคมไทยตระหนักว่าการกลับสู่ประชาธิปไตยคือท', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32', 'ถึงเวลาแล้วที่จะต้องมีพลังใหม่เพื่อฟื้นความเชื่อมั่นในระบอบประชาธิปไตยให้กลับคืนมาอีกครั้ง นําพาประเทศไทยก้าวพ้นจากห้วงภาวะวิกฤติ นี่คือเหตุผลที่ทำให้เกิด \"พรรคอนาคตใหม่\" เพื่อสร้างประชาธิปไตยในประเทศ เพื่อเปลี่ยนแปลงและสร้างสรรค์สิ่งใหม่ที่ดีกว่าที่เป็นอยู่ และเพื่อปรับภูมิทัศน์การเมืองไทยให้ดีขึ้น', '4.jpg', '2019-02-21 02:49:07'),
 (5, 'Lorem Ipsum is not simply random', 'เมื่อคนในชาติไม่อาจแสวงหาฉันทามติร่วมกันได้เพราะการเมืองไทยถูกแบ่งแยกออกเป็นฝักฝ่าย เราต่างถูกทำให้เ', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32', 'พรรคอนาคตใหม่จะมุ่งนําเสนอนโยบายก้าวหน้า กระจายอํานาจ ทลายการผูกขาดทางเศรษฐกิจ และเปิดโอกาสให้ประชาชนเข้าถึงทุน ทรัพยากร และสวัสดิการ โดยนโยบายของพรรค จะเกิดจาก  การวิเคราะห์วิจัยทางวิชาการ การมีส่วนร่วมของประชาชน เข้ารับฟังปัญหาในแต่ละพื้นที่ การศึกษาเปรียบเทียบตัวแบบจากหลายประเทศ ในการดำเนินกิจกรรมทางการเมือง พรรคอนาคตใหม่มองพรรคการเมืองอื่นเป็นคู่แข่ง ไม่ใช่ศัตรูทางการเมือง โดยเรามุ่งที่จะเอาชนะใจประชาชนด้วยนโยบาย ไม่ใช่การทำลายล้างกันอย่างไม่เลือกวิธีการ', '5.jpg', '2019-02-21 02:49:14'),
 (6, 'comes from sections', 'พรรคอนาคตใหม่จึงขอเป็นพลังที่จะฟื้นความเชื่อมั่นในระบอบประชาธิปไตยให้กลับคืนมาอีกครั้ง นำพาประเทศออก', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32', 'ผู้บริหารพรรคเพียงไม่กี่คนไม่อาจกําหนดความเป็นไปของพรรคได้ ไม่อาจกําหนดตัวผู้สมัครสมาชิกสภาผู้แทนราษฎร (ส.ส.) ได้ตามอําเภอใจ และที่สำคัญคือ เงินที่ได้จากการระดมทุน รายรับ รายจ่าย จะถูกนํามาเปิดเผยต่อสาธารณะเพื่อสร้างความโปร่งใสและ เปิดโอกาสให้สังคมตรวจสอบได้  เมื่อสมาชิกทุกคนร่วมเป็นเจ้าของพรรคร่วมกันแล้ว พวกเขาก็ย่อมมีอํานาจในการตัดสินใจ มีส่วนร่วมในการกําหนดทิศทางของพรรค ตามการออกแบบโครงสร้างและการดําเนินการที่อยู่บนพื้นฐานของหลักการประชาธิปไตย การมีส่วนร่วม และการกระจายอํานาจ', '6.jpg', '2019-02-21 02:49:21'),
-(15, 'FUTURE FORWARD PARTY', 'พรรคอนาคตใหม่', 'The Future Forward Party was founded by Thanathorn Juangroongruangkit and Piyabutr Saengkanokkul upon the determination to restore democracy in Thailand. Its slogan promises the changes Thailand much deserves - “The Future Forward for Thailand with a brighter future,”. Future Forward’s main policy frameworks are; 1) reconstruction of laws, policies and regulations which hinder Thailand’s development and support monopoly capital, 2) reformation of budgets and resources by providing public welfare and decentralizing power to local authorities, and 3) reinforcement by  increasing people’s opportunities to access resources and capital in order to reach their potential for better life.', 'พรรคอนาคตใหม่ คือพรรคการเมืองที่เกิดจากการริเริ่มของ ธนาธร จึงรุ่งเรืองกิจ อดีตรองประธานกรรมการบริหารกลุ่มบริษัทไทยซัมมิท และ ปิยบุตร แสงกนกกุล อดีตนักวิชาการด้านนิติศาสตร์และอาจารย์มหาวิทยาลัยธรรมศาสตร์  ร่วมกับกลุ่มบุคคลที่ไม่เห็นด้วยกับการรัฐประหารซึ่งถือเป็นวิถีทางที่ไม่เป็นประชาธิปไตย อนาคตใหม่มุ่งมั่นทำงานการเมืองอย่างสร้างสรรค์โดยชูคำขวัญ “อนาคตใหม่ เพื่อประเทศไทยที่มีอนาคต” และเสนอแนวนโยบาย “3 ป.” คือ 1. ปลดล็อก กฎหมาย นโยบาย ระเบียบต่าง ๆ ที่ขัดขวางการพัฒนาประเทศและเอื้อต่อทุนผูกขาด 2. ปรับโครงสร้าง การจัดสรรงบประมาณและทรัพยากร มุ่งเน้นการกระจายอำนาจสู่ท้องถิ่น และ 3. เปิดโอกาส ให้ประชาชนเข้าถึงทรัพยากรต่าง ๆ  และใช้ศักยภาพดังกล่าวพาตัวเองไปสู่อนาคตใหม่ที่ดีขึ้น', '2102201910313121022019103131726865006.png', '2019-02-21 03:31:31');
+(15, 'FUTURE FORWARD PARTY', 'พรรคอนาคตใหม่', 'The Future Forward Party was founded by Thanathorn Juangroongruangkit and Piyabutr Saengkanokkul upon the determination to restore democracy in Thailand. Its slogan promises the changes Thailand much deserves - “The Future Forward for Thailand with a brighter future,”. Future Forward’s main policy frameworks are; 1) reconstruction of laws, policies and regulations which hinder Thailand’s development and support monopoly capital, 2) reformation of budgets and resources by providing public welfare and decentralizing power to local authorities, and 3) reinforcement by  increasing people’s opportunities to access resources and capital in order to reach their potential for better life.', 'พรรคอนาคตใหม่ คือพรรคการเมืองที่เกิดจากการริเริ่มของ ธนาธร จึงรุ่งเรืองกิจ อดีตรองประธานกรรมการบริหารกลุ่มบริษัทไทยซัมมิท และ ปิยบุตร แสงกนกกุล อดีตนักวิชาการด้านนิติศาสตร์และอาจารย์มหาวิทยาลัยธรรมศาสตร์  ร่วมกับกลุ่มบุคคลที่ไม่เห็นด้วยกับการรัฐประหารซึ่งถือเป็นวิถีทางที่ไม่เป็นประชาธิปไตย อนาคตใหม่มุ่งมั่นทำงานการเมืองอย่างสร้างสรรค์โดยชูคำขวัญ “อนาคตใหม่ เพื่อประเทศไทยที่มีอนาคต” และเสนอแนวนโยบาย “3 ป.” คือ 1. ปลดล็อก กฎหมาย นโยบาย ระเบียบต่าง ๆ ที่ขัดขวางการพัฒนาประเทศและเอื้อต่อทุนผูกขาด 2. ปรับโครงสร้าง การจัดสรรงบประมาณและทรัพยากร มุ่งเน้นการกระจายอำนาจสู่ท้องถิ่น และ 3. เปิดโอกาส ให้ประชาชนเข้าถึงทรัพยากรต่าง ๆ  และใช้ศักยภาพดังกล่าวพาตัวเองไปสู่อนาคตใหม่ที่ดีขึ้น', '22022019171515220220191715151003901661.jpg', '2019-02-22 10:15:15');
 
 -- --------------------------------------------------------
 
@@ -681,12 +690,13 @@ CREATE TABLE `tb_room` (
 --
 
 INSERT INTO `tb_room` (`room_id`, `room_type_id`, `room_name_en`, `room_sub_title_en`, `room_name_th`, `room_sub_title_th`, `room_price`, `room_amout`, `room_img`, `room_size_th`, `room_detail_1_th`, `room_detail_2_th`, `room_detail_3_th`, `room_facility_1_th`, `room_facility_2_th`, `room_size_en`, `room_detail_1_en`, `room_detail_2_en`, `room_detail_3_en`, `room_facility_1_en`, `room_facility_2_en`, `room_recommened`) VALUES
-(0, 3, 'Deluxe Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and t hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4050.00', 5, '22012019164823220120191648231602616181.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(1, 2, 'Duluxe Junior Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'สำหรับเด็ก', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '4150.00', 5, '002.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(2, 1, 'Deluxe River View Room', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องดีลักซ์ริเวอร์วิว', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '5100.00', 5, '003.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ฟรี', 'บริการ WiFi ฟรี ', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 1),
-(3, 4, 'Anantara Riverfront Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องอนันตราริเวอร์ฟร้อนท์', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '6100.00', 5, '004.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองวิวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
-(4, 4, 'Dream Stateroom', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องนอน', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '12000.00', 5, '005.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวเมืองหรือวสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0),
-(5, 4, 'Family Suite', 't hotel urban hotel, sardinia A dynamic hotel with diversified amenities and activities, a vibrant approach to hospitality and ', 'ห้องสวีทสำหรับครอบครัว', 'โรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมในเมืองซาร์ดิเนียโรงแรมแบบไดนามิกที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ t โรงแรมที่มีสิ่งอำนวยความสะดวกและกิจกรรมที่หลากหลายวิธีการที่มีชีวิตชีวาเพื่อการต้อนรับและ', '9800.00', 5, '006.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน ', 'ระเบียงส่วนตัว', 'วิวเมืองหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters', '2 adults + 1 child', 'Private balcony', 'City or garden view', 'Room telephone service', 'Free WiFi service', 0);
+(1, 1, 'Deluxe Room', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องดีลักซ์', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '2500.00', 5, '2502201910243025022019102430306583624.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 0),
+(2, 2, 'President Room', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องประธานาธิบดี', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '3000.00', 5, '25022019102519250220191025191353715690.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 1),
+(3, 3, ' Studio Room Corner Room', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องสตูดิโอ(มุม)', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '3500.00', 5, '2202201916423222022019164232605077864.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 1),
+(4, 3, ' Studio Room Single', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องสตูดิโอ(เดี่ยว)', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '3500.00', 5, '22022019164539220220191645391080662942.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 0),
+(5, 3, ' Studio Room double', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องสตูดิโอ(เตียงคู่)', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '4000.00', 5, '22022019165137220220191651371751550915.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 0),
+(6, 4, 'Super President Room', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc', ' ห้องซูเปอร์เพรสซิเดนท์', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '6000.00', 5, '25022019101508250220191015081684846739.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 0),
+(7, 6, 'VIP Room', 'apartment is located right behind Tesco-Lotus with the full safety system building, surrounding with all convenience places such as THE MALL, Bangkok-Ratchasima Hospital, Schools, Bank etc. Every room type is including 5’bed, 2 Tables, 1TV stand, TV, Refrigerator, Closet, sink, bed light, etc,', 'ห้องวีไอพี', 'อพาร์ทเมนท์สุดหรูตั้งอยู่ด้านหลังเทสโก้โลตัสพร้อมอาคารระบบความปลอดภัยเต็มรูปแบบแวดล้อมไปด้วยสถานที่อำนวยความสะดวกมากมายเช่น THE MALL โรงพยาบาลกรุงเทพ - นครราชสีมาโรงเรียนธนาคาร ฯลฯ ห้องพักทุกห้องประกอบด้วยเตียง 5 เตียง 2 โต๊ะ 1 ทีวี, ทีวี, ตู้เย็น, ตู้เสื้อผ้า, อ่างล้าง, ไฟเตียง, ฯลฯ', '8000.00', 3, '25022019101706250220191017061801809049.jpg', '38 ตารางเมตร', 'ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน', 'ระเบียงส่วนตัว', 'วิวห้องหรือสวน', 'บริการโทรศัพท์ห้อง', 'บริการ WiFi ฟรี', '38 square meters ', '2 adults + 1 child', 'Private balcony', 'City or garden view ', 'Room telephone service', 'Free WiFi service', 1);
 
 -- --------------------------------------------------------
 
@@ -706,10 +716,10 @@ CREATE TABLE `tb_room_type` (
 
 INSERT INTO `tb_room_type` (`room_type_id`, `room_type_name_th`, `room_type_name_en`) VALUES
 (1, 'ห้องดีลักซ์\n', 'Deluxe Room'),
-(2, 'ห้องจูเนียร์สวีท\n', 'Deluxe Junior Suite'),
-(3, 'ห้องนอน\n', 'Dream Stateroom'),
-(4, 'ห้องสวีทสำหรับครอบครัว\n', 'Family Suite'),
-(6, 'ธรรมะสวัสดี', 'Hello');
+(2, ' ห้องประธานาธิบดี', 'President Room'),
+(3, 'ห้องสตูดิโอ', 'Studio Room  '),
+(4, ' ห้องซูเปอร์เพรสซิเดนท์', 'Super President Room'),
+(6, 'ห้องวีไอพี', 'VIP Room');
 
 -- --------------------------------------------------------
 
@@ -732,8 +742,8 @@ CREATE TABLE `tb_slide` (
 --
 
 INSERT INTO `tb_slide` (`slide_id`, `slide_img`, `slide_title_en`, `slide_sub_title_en`, `slide_title_th`, `slide_sub_title_th`, `slide_link`) VALUES
-(1, '06022019102303060220191023031740682243.jpg', 'GUNTHPAT PLACE', 'A place to experience and enjoy life\n', 'กันตพัฒน์ เพลส', 'หรูหรากับระบบความปลอดภัยเต็มรูปแบบ', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
-(2, '29012019110632290120191106321811532773.jpg', 'Dream Stateroom', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                      ', 'ห้องนอน', 'เอนทิตีหรือปรากฏการณ์อื่น ๆ ที่เสี่ยงต่อการเปลี่ยนแปลงที่ไม่พึงประสงค์จากสภาพแวดล้อม', 'https://youtu.be/JZKlSYWlW54');
+(1, '25022019102712250220191027121105551250.jpg', 'GUNTHPAT PLACE', 'A place to experience and enjoy life\r\n', 'กันตพัฒน์ เพลส', 'หรูหรากับระบบความปลอดภัยเต็มรูปแบบ', 'https://www.youtube.com/watch?v=1AszE9-ikOU'),
+(2, '250220191031432502201910314383105868.jpg', 'Dream Stateroom', 'other entity or phenomenon vulnerable to unwanted change by its environment.                                                                                                                      ', 'ห้องนอน', 'เอนทิตีหรือปรากฏการณ์อื่น ๆ ที่เสี่ยงต่อการเปลี่ยนแปลงที่ไม่พึงประสงค์จากสภาพแวดล้อม', 'https://youtu.be/JZKlSYWlW54');
 
 -- --------------------------------------------------------
 
@@ -765,7 +775,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`user_id`, `user_type_id`, `user_firstname`, `user_lastname`, `user_phone`, `user_email`, `user_facebook`, `user_line`, `user_username`, `user_password`, `user_address`, `user_district`, `user_amphur`, `user_province`, `user_zipcode`, `user_image`) VALUES
-(2, 1, 'มนัสวี', 'เข่งพิมล', '0982189898', 'Manadswee@hotmail.com', 'www.facebook.com/manadsave', '098-218-9898', 'test', 'test123456', '68', 'บ้านใหม่', 'หนองบุญมาก', 'โคราช', '30410', 'nack.jpg'),
+(2, 1, 'มนัสวี', 'เข่งพิมล', '0982189898', 'Manadswee@hotmail.com', 'www.facebook.com/manadsave', '098-218-9898', 'test', 'test123456', '68', 'บ้านใหม่', 'หนองบุญมาก', 'โคราช', '30410', '22022019150245-deluxe4.jpg'),
 (3, 1, 'ส้มฉุน', 'เทกระโทก', '0899589651', 'Som@gmail.com', 'www.facebook.com/som', '089-958-9651', 'root', 'root123456', '215', 'เพ็กใหญ่', 'พล', 'ขอนแก่น', '10420', 'man667-8.jpg'),
 (4, 2, 'ทดลอง', 'ทดลอง', '0859589654', 'test@gmail.com', 'www.facebook.com/test', '085-958-9654', 'admin', '123456', '698', 'ในเมือง', 'เมืองนครราชสีมา', 'นครราชสีมา', '30000', '25012019143620-24012019112916240120191129161102358359.jpg');
 
@@ -919,12 +929,12 @@ ALTER TABLE `tb_about_us`
 -- AUTO_INCREMENT for table `tb_book`
 --
 ALTER TABLE `tb_book`
-  MODIFY `book_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `book_id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
-  MODIFY `contact_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `contact_id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tb_contact_head`
 --
@@ -934,12 +944,12 @@ ALTER TABLE `tb_contact_head`
 -- AUTO_INCREMENT for table `tb_contact_title`
 --
 ALTER TABLE `tb_contact_title`
-  MODIFY `contact_title_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `contact_title_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tb_contact_type`
 --
 ALTER TABLE `tb_contact_type`
-  MODIFY `contact_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `contact_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_contact_us`
 --
@@ -949,7 +959,7 @@ ALTER TABLE `tb_contact_us`
 -- AUTO_INCREMENT for table `tb_facilities`
 --
 ALTER TABLE `tb_facilities`
-  MODIFY `facilities_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `facilities_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_facilities_head`
 --
@@ -959,7 +969,7 @@ ALTER TABLE `tb_facilities_head`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `gallery_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `gallery_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 --
 -- AUTO_INCREMENT for table `tb_gallery_head`
 --
@@ -969,7 +979,7 @@ ALTER TABLE `tb_gallery_head`
 -- AUTO_INCREMENT for table `tb_gallery_type`
 --
 ALTER TABLE `tb_gallery_type`
-  MODIFY `gallery_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `gallery_type_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_news`
 --
@@ -979,7 +989,7 @@ ALTER TABLE `tb_news`
 -- AUTO_INCREMENT for table `tb_room`
 --
 ALTER TABLE `tb_room`
-  MODIFY `room_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `room_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_room_type`
 --
@@ -989,12 +999,12 @@ ALTER TABLE `tb_room_type`
 -- AUTO_INCREMENT for table `tb_slide`
 --
 ALTER TABLE `tb_slide`
-  MODIFY `slide_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `slide_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_user_type`
 --
