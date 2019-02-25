@@ -13,15 +13,11 @@
 .room-detail-style {
     margin-bottom: 2.5rem;
 }
-.slide-room-detail {
 
-}
 .img-room-detail {
     width: 100%; height: auto; object-fit: cover;
 }
-.room-detail-thb {
 
-}
 .text-black {
     color: #000;
 }
@@ -46,9 +42,7 @@
     .rooms-center{
         margin-left:0;
     }            
-    .room-detail-style {
 
-    }
     .room-detail-thb {
         padding-top: 0%;
     }
@@ -64,15 +58,11 @@
     .rooms-center{
         margin-left:0;
     }            
-    .room-detail-style {
 
-    }
     .room-detail-thb {
         padding-top: 8%;
     }
-    .room-detail-detail {
-        
-    }
+
     .text-black-title {
         color: #000;
         font-size: 20px;
