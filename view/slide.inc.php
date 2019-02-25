@@ -63,7 +63,7 @@ function search() {
                 <div class="row p-2">
                     <div class="class col-lg-12">
                         <button onclick="search();" class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block">
-                                BOOK NOW
+                                <?php if ($lng == TH) {  echo "จองเดียวนี้";   }else { echo "BOOK NOW";  }  ?>
                         </button>
                     </div>
                 </div>
