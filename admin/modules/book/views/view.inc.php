@@ -11,7 +11,8 @@
             <th>#</th>
             <th> ชื่อ </th>
             <th> จำนวน </th>
-            <th>ห้อง </th>
+            <th>ห้อง TH</th>
+            <th>ห้อง EN</th>
             <th>วันที่เข้าพัก </th>
             <th>ถึงวันที่ </th>
             <th> Tel </th>
@@ -29,7 +30,8 @@
             <?php echo $book[$i]['book_lastname']; ?> 
             </td>
             <td class="text-left"><?php echo $book[$i]['book_person']; ?></td>
-            <td class="text-left"><?php echo $book[$i]['room_name']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['room_name_th']; ?></td>
+            <td class="text-left"><?php echo $book[$i]['room_name_en']; ?></td>
             <td class="text-left"><?php echo $book[$i]['book_date_start']; ?></td>
             <td class="text-left"><?php echo $book[$i]['book_date_end']; ?></td>
             <td class="text-left"><?php echo $book[$i]['book_tel']; ?></td>
