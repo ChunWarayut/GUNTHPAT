@@ -3,7 +3,7 @@
 $path_img = "img_upload/gallery/";
 require_once('../models/GalleryModel.php');
 $galleryBy_model = new Gallery;
-$gallery = $galleryBy_model -> getgalleryby($_POST['room_id']) ;
+$gallery = $galleryBy_model -> getgalleryby($_POST['gallery_type_id']) ;
 
 
 

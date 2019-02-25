@@ -180,7 +180,8 @@
 
 
         <td class="text-left">
-            <?PHP echo $contact[$i]['contact_title_name'];  ?>
+            <?PHP echo $contact[$i]['contact_title_name_th'];  ?>
+            <?PHP echo $contact[$i]['contact_title_name_en'];  ?>
         </td>
 
         <td class="text-left">
@@ -189,7 +190,8 @@
         </td>
 
         <td class="text-left">
-            <?PHP echo  $contact[$i]['contact_type_name'];  ?>
+            <?PHP echo  $contact[$i]['contact_type_name_th'];  ?>
+            <?PHP echo  $contact[$i]['contact_type_name_en'];  ?>
         </td>
 
         <td class="text-left">
