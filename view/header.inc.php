@@ -33,7 +33,6 @@
 
 
 <link href="template/frontend/css/font-gunthpat.css" rel="stylesheet">
-<link href="template/frontend/css/style.css" rel="stylesheet">
 
 <link type="text/css" rel="Stylesheet"href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->

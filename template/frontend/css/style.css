@@ -11,10 +11,3 @@ span span{
     background: #f47322;
     color: #ffffff; 
 }
-@media (min-width: 300px){
-    .container {
-        max-width: 100%;
-        padding: 0px;
-        margin: 0px;
-    }
-}
