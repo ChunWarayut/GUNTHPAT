@@ -24,7 +24,7 @@
                 echo $img_path . 'default.png';
             }  ?> "
                 class="img-fluid" alt="">
-            
+
         </div>
 
         <div class="form-group">
@@ -205,121 +205,129 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
 
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Carry Title TH<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_carry_title_th" name="contact_us_carry_title_th" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_carry_title_th'];?>" />
-                <p class="help-block">Example : ...</p>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Carry Title TH<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_carry_title_th" name="contact_us_carry_title_th"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_title_th'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Carry Detail TH<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_carry_detail_th" name="contact_us_carry_detail_th"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_detail_th'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_carry_detail_th'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Taxi Title TH<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_taxi_title_th" name="contact_us_taxi_title_th"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_taxi_title_th'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Taxi Detai TH<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_taxi_detail_th" name="contact_us_taxi_detail_th"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_taxi_detail_th'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_taxi_detail_th'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Car Title TH<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_car_titel_th" name="contact_us_car_titel_th" class="form-control"
+                            value="<?PHP echo $contact_us[$id]['contact_us_car_titel_th'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12    ">
+                    <div class="form-group">
+                        <label> Car Detail TH<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_car_detail_th" name="contact_us_car_detail_th"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_car_detail_th'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_car_detail_th'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Carry Title EN<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_carry_title_en" name="contact_us_carry_title_en"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_title_en'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
 
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label> Carry Detail TH<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_carry_detail_th" name="contact_us_carry_detail_th"
-                    class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_detail_th'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_carry_detail_th'];?> </textarea>
-                <p class="help-block">Example : ...</p>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Carry Detail EN<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_carry_detail_en" name="contact_us_carry_detail_en"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_detail_en'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_carry_detail_en'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Taxi Title EN<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_taxi_title_en" name="contact_us_taxi_title_en"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_taxi_title_en'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Taxi Detai EN<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_taxi_detail_en" name="contact_us_taxi_detail_en"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_taxi_detail_en'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_taxi_detail_en'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label> Car Title EN<font color="#F00"><b>*</b></font></label>
+                        <input readonly id="contact_us_car_titel_en" name="contact_us_car_titel_en" class="form-control"
+                            value="<?PHP echo $contact_us[$id]['contact_us_car_titel_en'];?>" />
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12   ">
+                    <div class="form-group">
+                        <label> Car Detail EN<font color="#F00"><b>*</b></font></label>
+                        <textarea readonly id="contact_us_car_detail_en" name="contact_us_car_detail_en"
+                            class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_car_detail_en'];?>"
+                            rows="5"> <?PHP echo $contact_us[$id]['contact_us_car_detail_en'];?> </textarea>
+                        <p class="help-block">Example : ...</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Carry Title EN<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_carry_title_en" name="contact_us_carry_title_en" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_carry_title_en'];?>" />
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label> Carry Detail EN<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_carry_detail_en" name="contact_us_carry_detail_en"
-                    class="form-control" value="<?PHP echo $contact_us[$id]['contact_us_carry_detail_en'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_carry_detail_en'];?> </textarea>
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Taxi Title TH<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_taxi_title_th" name="contact_us_taxi_title_th" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_taxi_title_th'];?>" />
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label> Taxi Detai TH<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_taxi_detail_th" name="contact_us_taxi_detail_th" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_taxi_detail_th'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_taxi_detail_th'];?> </textarea>
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Taxi Title EN<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_taxi_title_en" name="contact_us_taxi_title_en" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_taxi_title_en'];?>" />
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label> Taxi Detai EN<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_taxi_detail_en" name="contact_us_taxi_detail_en" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_taxi_detail_en'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_taxi_detail_en'];?> </textarea>
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Car Title TH<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_car_titel_th" name="contact_us_car_titel_th" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_car_titel_th'];?>" />
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4    ">
-            <div class="form-group">
-                <label> Car Detail TH<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_car_detail_th" name="contact_us_car_detail_th" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_car_detail_th'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_car_detail_th'];?> </textarea>
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-2">
-            <div class="form-group">
-                <label> Car Title EN<font color="#F00"><b>*</b></font></label>
-                <input readonly id="contact_us_car_titel_en" name="contact_us_car_titel_en" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_car_titel_en'];?>" />
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4    ">
-            <div class="form-group">
-                <label> Car Detail EN<font color="#F00"><b>*</b></font></label>
-                <textarea readonly id="contact_us_car_detail_en" name="contact_us_car_detail_en" class="form-control"
-                    value="<?PHP echo $contact_us[$id]['contact_us_car_detail_en'];?>"
-                    rows="5"> <?PHP echo $contact_us[$id]['contact_us_car_detail_en'];?> </textarea>
-                <p class="help-block">Example : ...</p>
-            </div>
-        </div>
-
         <div class="col-lg-12">
             <div class="form-group">
                 <label> Map <font color="#F00"><b>*</b></font></label>
