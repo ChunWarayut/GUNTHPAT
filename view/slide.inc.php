@@ -8,6 +8,21 @@ require_once('models/RoomsModel.php');
 $rooms_model = new Rooms;
 $rooms = $rooms_model -> getRooms();
 ?>
+
+
+
+<script>
+function search() {
+    var room_id = $("#room_id").val();
+    var book_person = $("#book_person").val();
+    var book_date_start = $("#book_date_start").val();
+    var book_date_end = $("#book_date_end").val();
+        window.location = "room.php?action=book&room_id="+room_id+"&book_person="+book_person+"&book_date_start="+book_date_start+"&book_date_end="+book_date_end+"#book";
+
+}
+</script>
+
+
 <div class="menu-slide-style">
 <section class="menu-slide">
 
@@ -17,14 +32,16 @@ $rooms = $rooms_model -> getRooms();
         <div class="menu-slide-detail" >
             <div class="row">
                 <div class="col-lg-7 menu-slide-title" style="position: relative;">
-                    <h4 class="pb-4">Welcome to</h4>
-                    <h1 class="pb-4">GUNTHPAT PLACE</h1>
+                    <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo $slide[$i]['Welcome To'];  }  ?></h4>
+                    <h1 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_title_th'];   }else {  echo $slide[$i]['slide_title_en'];  }  ?></h1>
                     <div class="d-none d-lg-block">
-                        <h3 class="pb-4">A place to experience and enjoy life</h3>
+                        <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
-                                <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>
-                                <span class="h2 px-3"> Watch Video</span>
+                                <a href="<?php echo $slide[$i]['slide_link']; ?>">
+                                    <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>
+                                    <span class="h2 px-3" style="color: #fff; " > Watch Video</span>
+                                </a>
                             </div>
                         </div>
                     </div>
