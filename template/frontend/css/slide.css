@@ -14,7 +14,7 @@
 }
 .menu-slide-detail {
     position: absolute;
-    top: 35%;
+    top: 40%;
     max-width: 100%;
     z-index: 15;
     padding-left: 10%; 
@@ -29,19 +29,25 @@
 }
 .menu-slide-popup{
     z-index: 10;
-    padding: 0px 10% 0px 10%;
-    top: 35%;
+    right: 10%;
+    top: 30%;
     position: absolute;
-    width: 100%;
+    width: 50%;
 }
 .bg-pop-color{
     background-color: #00000036;
-    width: 80%; 
+    width: 100%; 
 }
 .bg-pop-color .form-control{
     background-color: #00000078; 
     border: 0.5px solid #ffffff45; 
     color :fff;
+}
+.slide-video{
+    color: #ffffff;
+}
+.bg-slide-color{
+    background-color: #000;
 }
 @media (max-width: 991px) {
     .menu-slide-title{
@@ -53,6 +59,11 @@
     }
     .menu-slide-popup{
         top: 35%;
+    }
+    .menu-slide-popup{
+        right: 0%;
+        padding: 0px 10% 0px 10%;
+        width: 100%;
     }
 }
 @media (max-width: 767px) {

@@ -23,8 +23,36 @@ function search() {
 
 
 <div class="menu-slide-style">
+    <section class="menu-slide">
+        <?php for ($i = 0; $i < count($slide); ++$i) { ?>
+            <div class="menu-slide-item"  >
+                <div class="menu-slide-detail" >
+                    <div class="row">
+                        <div class="col-lg-7 menu-slide-title">
+                        <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo "Welcome To"; }  ?></h4>
+                            <h1 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_title_th'];   }else {  echo $slide[$i]['slide_title_en'];  }  ?></h1>
+                            <div class="d-none d-lg-block">
+                                <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
+                                <div class="row">
+                                    <a href="<?php echo $slide[$i]['slide_link']; ?>">
+                                        <div class="col-12 d-flex align-items-center">
+                                            <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>
+                                            <span class="h2 px-3 py-0 m-0 slide-video"> Watch Video</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slide-color" >
+                    <img style=" width: 100%; height: 900px; object-fit: cover;" src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
+                </div>
+            </div>
+        <?php } ?>
+    </section>
     <div class="row m-0 justify-content-end menu-slide-popup">
-        <div class="col-lg-4 col-12 p-2 bg-pop-color">
+        <div class="col-lg-6 col-12 p-2 bg-pop-color">
             <div class="p-2"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
                 <input class="form-control" id = "book_date_start" name="book_date_start">
             </div>
@@ -52,34 +80,6 @@ function search() {
             </div> 
         </div>
     </div>
-    <section class="menu-slide">
-        <?php for ($i = 0; $i < count($slide); ++$i) { ?>
-            <div class="menu-slide-item"  >
-                <div class="menu-slide-detail" >
-                    <div class="row">
-                        <div class="col-lg-7 menu-slide-title">
-                        <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo "Welcome To"; }  ?></h4>
-                            <h1 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_title_th'];   }else {  echo $slide[$i]['slide_title_en'];  }  ?></h1>
-                            <div class="d-none d-lg-block">
-                                <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
-                                <div class="row">
-                                    <div class="col-12 d-flex align-items-center">
-                                        <a href="<?php echo $slide[$i]['slide_link']; ?>" class="btn">
-                                            <i class="far fa-play-circle"></i>
-                                            <span class="h2 px-3" > Watch Video</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="background-color: #000;">
-                    <img style=" width: 100%; height: 900px; object-fit: cover;" src="img_upload/slide/<?php echo $slide[$i]['slide_img']; ?>">
-                </div>
-            </div>
-        <?php } ?>
-    </section>
 
 
 </div>

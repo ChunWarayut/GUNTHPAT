@@ -1,7 +1,4 @@
 <!--  OUR GALLERY  -->
-
-<link href="template/frontend/css/home-gallery.css" rel="stylesheet">
-
 <div class="container">
     <div class="text-center">
         <i class="far fa-images" style="font-size:60px"></i>

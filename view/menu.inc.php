@@ -14,8 +14,8 @@
     $contact_us = $contact_us_model -> getContact_us();
 ?>
 <div class="header-menu">
-    <div class="text-right contact_header">
-        <div class="contact_list">
+    <div class="text-right">
+        <div class="contact_list pb-0">
             <span><span><i class="fas fa-mobile-alt" aria-hidden="true"></i></span><?php echo $contact_us[0]['contact_us_tel']; ?></span>
             <span><span><i class='fas fa-map-marker-alt'></i></span><?php if ($lng == TH) {  echo $contact_us[0]['contact_us_address_3_th'];}else { echo $contact_us[0]['contact_us_address_3_en'];  }  ?></span>
            
@@ -31,8 +31,10 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+        
         <a href="index.php" class="navbar-brand"><img src="template/backend/images/logo/logo.png"
                 width="130px" class="img-icon float-right"></a>
+            
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
