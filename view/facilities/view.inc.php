@@ -22,12 +22,12 @@
                         <div style=" padding-top: 10%; padding-bottom: 10%; ">
                             <div style=" padding-top: 20%; padding-bottom: 20% ">
                                 <h4>
-                                    <span class="text" style="color:#FFFFFF">
+                                    <span class="text text-truncate" style="color:#FFFFFF">
                                     <?php if ($lng == TH) {  echo    $facilities[$i]['facilities_name_th'];   }else { echo    $facilities[$i]['facilities_name_en'];  }  ?>
                                     </span>
                                 </h4>
                                 <p>
-                                    <span class="text" style="color:#FFFFFF">
+                                    <span class="text text-truncate" style="color:#FFFFFF">
                                     <?php if ($lng == TH) {  echo    $facilities[$i]['facilities_detail_th'];   }else { echo    $facilities[$i]['facilities_detail_en'];  }  ?>
                              
                                     </span>
