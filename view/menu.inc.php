@@ -14,17 +14,10 @@
     $contact_us = $contact_us_model -> getContact_us();
 ?>
 <div class="header-menu">
-<<<<<<< HEAD
     <div class="text-right">
         <div class="contact_list pb-0">
             <span><span><i class="fas fa-mobile-alt" aria-hidden="true"></i></span><?php echo $contact_us[0]['contact_us_tel']; ?></span>
             <span><span><i class='fas fa-map-marker-alt'></i></span><?php if ($lng == TH) {  echo $contact_us[0]['contact_us_address_3_th'];}else { echo $contact_us[0]['contact_us_address_3_en'];  }  ?></span>
-=======
-    <div class="text-right contact_header">
-        <div class="contact_list">
-            <span><i class="fas fa-mobile-alt" aria-hidden="true"></i></span><?php echo $contact_us[0]['contact_us_tel']; ?>
-            <span><i class='fas fa-map-marker-alt'></i></span><?php if ($lng == TH) {  echo $contact_us[0]['contact_us_address_3_th'];}else { echo $contact_us[0]['contact_us_address_3_en'];  }  ?>
->>>>>>> 4e9daa90f883099b00d28041a37abd4c3be94e2b
            
                 <a onclick="setLanguage('EN')" class="right btn p-1 ml-5 <?php if($lng != "TH"){ echo "active-lng"; } ?>">
                     EN</a>
