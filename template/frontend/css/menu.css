@@ -113,11 +113,17 @@ img::-moz-selection {
         padding: .5rem 1rem;
         background-color: #212529;
     }
+    .contact_list span{
+        display: none;
+    }
     .header-menu{
         padding: 0px;
     }
     .nav-link {
-        padding: 2%;
+        padding: 0%;
+    }
+    .nav-link.active{
+        border-radius: 2%;
     }
     header.masthead .intro-text {
         padding-top: 300px;

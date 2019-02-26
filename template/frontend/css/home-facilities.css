@@ -115,8 +115,11 @@ section{
     padding-left: 5%;
     padding-right: 5%;
     color: #ffffff;
+    align-items: center;
+    display: flex;
 }
 .facilities-detail-flood{
+    align-self: center;
     text-align: center;
 }
 .facilities-detail-flood a{
@@ -137,17 +140,26 @@ section{
     opacity: 0.3;
 }
 @media (max-width: 991px) {
-
+    .facilities-detail{
+        align-items: unset;
+        display: unset;
+    }
     .facilities-detail-titel span span{
         display: flex;
         justify-content: center;
     }
     .facilities-detail-image{
-        max-width: 50%;
         display: flex;
         justify-content: center;
     }
     .facilities-detail-image .img-fluid{
         height: 60%;
+    }
+    
+}
+@media (max-width: 575px) {
+    .facilities-detail-image .img-fluid{
+        height: 35%;
+        width: 100%;
     }
 }
