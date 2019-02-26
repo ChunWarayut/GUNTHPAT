@@ -1,6 +1,6 @@
 
 <section class="facilities" >
-    <?php for ($i = 0; $i <count($facilities); ++$i) {
+    <?php for ($i = 0; $i < count($facilities); ++$i) {
     ?>
     <div class="facilities-slide-item" >
         <div class="facilities-detail">

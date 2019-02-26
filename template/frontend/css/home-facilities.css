@@ -140,10 +140,6 @@ section{
     opacity: 0.3;
 }
 @media (max-width: 991px) {
-    .facilities-detail{
-        align-items: unset;
-        display: unset;
-    }
     .facilities-detail-titel span span{
         display: flex;
         justify-content: center;
@@ -155,7 +151,6 @@ section{
     .facilities-detail-image .img-fluid{
         height: 60%;
     }
-    
 }
 @media (max-width: 575px) {
     .facilities-detail-image .img-fluid{
