@@ -58,7 +58,7 @@ function search() {
                 <div class="menu-slide-detail" >
                     <div class="row">
                         <div class="col-lg-7 menu-slide-title">
-                        <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo "Welcome To"; }  ?></h4>
+                            <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo $slide[$i]['Welcome To'];  }  ?></h4>
                             <h1 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_title_th'];   }else {  echo $slide[$i]['slide_title_en'];  }  ?></h1>
                             <div class="d-none d-lg-block">
                                 <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
