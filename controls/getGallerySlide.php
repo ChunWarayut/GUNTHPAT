@@ -17,8 +17,8 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <?PHP if (!$gallery[$i]) {}else{?>
                                 <div class="col-12 col-12 co-12 gal-item">
                                     <div class="box">
-                                        <img src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                        <img src="<?PHP echo $path_img . $gallery[$i]['gallery_img']?>" 
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>
@@ -26,7 +26,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <div class="col-12 col-12 co-12 gal-item">
                                     <div class="box">
                                         <img src="<?PHP echo $path_img . $gallery[$i+1]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+1]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>
@@ -36,7 +36,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                         <div class="col-8 col-8 co-12 gal-item">
                             <div class="box">
                                 <img src="<?PHP echo $path_img . $gallery[$i+2]['gallery_img']?>"
-                                    class="img-ht img-fluid rounded">
+                                    class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+2]['gallery_img']?>');">
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                         <div class="col-6 col-6 co-12 gal-item">
                             <div class="box">
                                 <img src="<?PHP echo $path_img . $gallery[$i+3]['gallery_img']?>"
-                                    class="img-ht img-fluid rounded">
+                                    class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+3]['gallery_img']?>');">
                             </div>
                         </div>
                         <?PHP }  ?>
@@ -55,7 +55,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                         <div class="col-6 col-6 co-12 gal-item">
                             <div class="box">
                                 <img src="<?PHP echo $path_img . $gallery[$i+4]['gallery_img']?>"
-                                    class="img-ht img-fluid rounded">
+                                    class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+4]['gallery_img']?>');">
                             </div>
                         </div>
                         <?PHP }  ?>
@@ -63,7 +63,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                         <div class="col-6 col-6 co-12 gal-item">
                             <div class="box">
                                 <img src="<?PHP echo $path_img . $gallery[$i+5]['gallery_img']?>"
-                                    class="img-ht img-fluid rounded">
+                                    class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+5]['gallery_img']?>');">
                             </div>
                         </div>
                         <?PHP }  ?>
@@ -73,7 +73,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <div class="col-6 col-6 co-12 gal-item">
                                     <div class="box">
                                         <img src="<?PHP echo $path_img . $gallery[$i+6]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+6]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>
@@ -81,7 +81,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <div class="col-6 col-6 co-12 gal-item">
                                     <div class="box">
                                         <img src="<?PHP echo $path_img . $gallery[$i+7]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+7]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>
@@ -89,7 +89,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <div class="col-6 col-6 co-12 gal-item">
                                     <div class="box">
                                         <img src="<?PHP echo $path_img . $gallery[$i+8]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+8]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>
@@ -97,7 +97,7 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                                 <div class="col-6 col-6 co-12 gal-item">
                                     <div class="box">
                                         <img src="<?PHP echo $path_img . $gallery[$i+9]['gallery_img']?>"
-                                            class="img-ht img-fluid rounded">
+                                            class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $path_img . $gallery[$i+9]['gallery_img']?>');">
                                     </div>
                                 </div>
                                 <?PHP }  ?>

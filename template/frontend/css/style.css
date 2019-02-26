@@ -9,3 +9,6 @@ span span{
     background: #f47322;
     color: #ffffff; 
 }
+.modal-backdrop{
+    display: none;  
+}
