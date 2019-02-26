@@ -1,4 +1,5 @@
-4<?PHP
+<link href="template/frontend/css/slide.css" rel="stylesheet">
+<?PHP
 require_once('models/SlideModel.php');
 $slide_model = new Slide;
 $slide = $slide_model -> slideRoom01();
@@ -16,10 +17,10 @@ $rooms = $rooms_model -> getRooms();
         <div class="menu-slide-detail" >
             <div class="row">
                 <div class="col-lg-7 menu-slide-title" style="position: relative;">
-                    <h4 class="mb-4">Welcome to</h4>
-                    <h1 class="mb-4">GUNTHPAT PLACE</h1>
+                    <h4 class="pb-4">Welcome to</h4>
+                    <h1 class="pb-4">GUNTHPAT PLACE</h1>
                     <div class="d-none d-lg-block">
-                        <h3 class="mb-4">A place to experience and enjoy life</h3>
+                        <h3 class="pb-4">A place to experience and enjoy life</h3>
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
                                 <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>
