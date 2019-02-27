@@ -13,11 +13,6 @@ require_once 'view/menu.inc.php';
                         S
                     </span>
                 </h1>
-                <p class="text-right">
-                    <span>
-
-                    </span>
-                </p>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -25,12 +20,12 @@ require_once 'view/menu.inc.php';
 
                 <h4 class="font-weight-light">
                     <span class="text-detail-room">
-                    <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_title_th'];   }else { echo $contact_us[0]['contact_us_title_en'];  }  ?>
+                        <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_title_th'];   }else { echo $contact_us[0]['contact_us_title_en'];  }  ?>
                     </span>
                 </h4>
                 <p class="font-weight-light">
                     <span class="text-detail-room">
-                    <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_sub_title_th'];   }else { echo $contact_us[0]['contact_us_sub_title_en'];  }  ?>
+                        <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_sub_title_th'];   }else { echo $contact_us[0]['contact_us_sub_title_en'];  }  ?>
 
                     </span>
                 </p>
@@ -40,29 +35,29 @@ require_once 'view/menu.inc.php';
                         <div class="col-sm-auto">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="fab fa-facebook-square" style="font-size:30px"></i> &nbsp;
+                                    <i class="fab fa-facebook-square" style="font-size:30px;"></i> &nbsp;
                                 </div>
                                 <div class="col-10">
-
-                                    <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                        <p>
-                                            <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
-                                        </p>
-                                    </a>
-
+                                    
+                                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                                            <p>
+                                                <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
+                                            </p>
+                                        </a>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-auto">
                             <div class="container">
                                 <div class="row">
-                                    <i class="fas fa-phone-volume" style="font-size:30px"></i>&nbsp;
+                                    <i class="fas fa-phone-volume" style="font-size:30px;"></i>&nbsp;
 
                                     <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                            <p >
-                                                <?PHP echo $contact_us[0]['contact_us_tel']; ?>
-                                            </p>
-                                        </a>
+                                        <p>
+                                            <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                                        </p>
+                                    </a>
 
 
                                 </div>
@@ -104,7 +99,7 @@ require_once 'view/menu.inc.php';
                 </script>
                 <h5 class="font-weight-light;" style="margin-top: 25;">
                     <span class="text-detail-room">
-                    
+
                         <?PHP if ($rooms[$i]['room_name_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -114,7 +109,7 @@ require_once 'view/menu.inc.php';
                 </h5>
                 <i class="fas fa-home" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_size_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_size_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_size_th'];   }else { echo $rooms[$i]['room_size_en'];  } 
@@ -123,7 +118,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <i class="fa fa-users" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_detail_1_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_detail_1_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_detail_1_th'];   }else { echo $rooms[$i]['room_detail_1_en'];  } 
@@ -133,7 +128,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_detail_2_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_detail_2_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_detail_2_th'];   }else { echo $rooms[$i]['room_detail_2_en'];  } 
@@ -142,7 +137,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_detail_3_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_detail_3_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_detail_3_th'];   }else { echo $rooms[$i]['room_detail_3_en'];  } 
@@ -152,13 +147,13 @@ require_once 'view/menu.inc.php';
                 <br>
                 <span class="text-detail-room">
 
-                <?PHP if ($lng == TH) {  echo "บริการโทรศัพท์ห้อง"; } else {  echo "Room telephone service";  }?>
+                    <?PHP if ($lng == TH) {  echo "บริการโทรศัพท์ห้อง"; } else {  echo "Room telephone service";  }?>
 
                 </span>
                 <br>
                 <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_facility_1_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_facility_1_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_facility_1_th'];   }else { echo $rooms[$i]['room_facility_1_en'];  } 
@@ -167,7 +162,7 @@ require_once 'view/menu.inc.php';
                 <br>
                 <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
-                <?PHP if ($rooms[$i]['room_facility_2_th'] == "") {
+                    <?PHP if ($rooms[$i]['room_facility_2_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
                             if ($lng == TH) {  echo $rooms[$i]['room_facility_2_th'];   }else { echo $rooms[$i]['room_facility_2_en'];  } 
@@ -197,9 +192,9 @@ require_once 'view/menu.inc.php';
                     <div class="col-6">
                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
                             <button type="button" class="btn btn-secondary btn-lg btn-block ">
-                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
+                                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
 
-                                
+
                             </button>
                         </a>
                     </div>
@@ -207,10 +202,10 @@ require_once 'view/menu.inc.php';
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
                                 <span class="text-black">
-                                
-                <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
 
-                                    
+                                    <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
+
+
                                 </span>
                             </button>
                         </a>
@@ -221,10 +216,10 @@ require_once 'view/menu.inc.php';
                     <div class="col-12">
                         <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book"
                             class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block ">
-            
+
                             <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
 
-                            
+
 
                         </a>
                     </div>

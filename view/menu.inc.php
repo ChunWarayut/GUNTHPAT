@@ -16,16 +16,16 @@
 <div class="header-menu">
     <div class="text-right contact_header">
         <div class="contact_list">
-            <span><span><i class="fas fa-mobile-alt" aria-hidden="true"></i></span><?php echo $contact_us[0]['contact_us_tel']; ?></span>
-            <span><span><i class='fas fa-map-marker-alt'></i></span><?php if ($lng == TH) {  echo $contact_us[0]['contact_us_address_3_th'];}else { echo $contact_us[0]['contact_us_address_3_en'];  }  ?></span>
+            <span><i class="fas fa-mobile-alt" aria-hidden="true"></i></span><?php echo $contact_us[0]['contact_us_tel']; ?>
+            <span><i class='fas fa-map-marker-alt'></i></span><?php if ($lng == TH) {  echo $contact_us[0]['contact_us_address_3_th'];}else { echo $contact_us[0]['contact_us_address_3_en'];  }  ?>
            
                 <a onclick="setLanguage('EN')" class="right btn p-1 ml-5 <?php if($lng != "TH"){ echo "active-lng"; } ?>">
-                    <span>EN</span></a>
+                    EN</a>
                 <a class="right">
-                    <span>|</span>
+                    |
                 </a>
                 <a onclick="setLanguage('TH')" class="right btn p-1 <?php if($lng == "TH"){ echo "active-lng"; } ?>">
-                    <span>TH</span>
+                    TH
                 </a>
          
         </div>
