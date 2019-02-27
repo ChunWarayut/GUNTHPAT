@@ -8,9 +8,8 @@ $gallery = $galleryBy_model -> getgalleryby($_POST['gallery_type_id']) ;
 
 
 for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-                <div class="row ">
+        
+                <div class="gal-item ">
                     <!-- ----------------------------------------------------------------------------------- -->
                     <div class="row">
                         <div class="col-md-4 col-sm-4 co-xs-12 gal-item">
@@ -106,8 +105,6 @@ for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
+         
         <?PHP } ?>
     
