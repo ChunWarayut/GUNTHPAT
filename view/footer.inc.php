@@ -1,4 +1,3 @@
-<link href="template/frontend/css/footer.css" rel="stylesheet">
 
 <?PHP
 
@@ -9,9 +8,7 @@ $img_path = "img_upload/news/";
 
 // print_r($news);
 ?>
-<div style="padding:30;">
 
-</div>
 
 <div class="row text-white row-footer" style="background-color: #212529; ">
 

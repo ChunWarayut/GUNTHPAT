@@ -109,13 +109,16 @@ img::-moz-selection {
 
 
 @media (max-width: 991px) {
-    .contact_header{
-        display: none;
+    .contact_list {
+        padding: .5rem 1rem;
+        background-color: #212529;
     }
     .header-menu{
         padding: 0px;
     }
-
+    .nav-link {
+        padding: 2%;
+    }
     header.masthead .intro-text {
         padding-top: 300px;
         padding-bottom: 400px;

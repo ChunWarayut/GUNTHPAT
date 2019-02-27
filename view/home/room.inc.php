@@ -1,4 +1,3 @@
-<link href="template/frontend/css/home-room.css" rel="stylesheet">
 <?php
 for ($i = 0; $i < count($rooms); ++$i) {
     if ($i % 2 == 0) {
