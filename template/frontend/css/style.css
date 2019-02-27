@@ -1,5 +1,10 @@
 
-
+body{
+  font-family: 
+  /* 'anakotmai-light',  */
+  'anakotmai-medium',
+  'anakotmai-bold';
+}
 span span{
     color: #f47322; 
     padding-left: 10px;
