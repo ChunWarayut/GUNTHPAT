@@ -31,6 +31,7 @@ $gallery_head = $gallery_model -> getgalleryHead();
 
 require_once($path . 'view.inc.php');
 
-require_once($path_home . 'facilities.inc.php');
-require_once($path_home . 'gallery.inc.php');
+
+require_once($path_home  . 'facilities.inc.php');
+require_once($path_home  . 'gallery.inc.php');
 ?>

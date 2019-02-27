@@ -17,6 +17,7 @@ $menu = 'gallery';
     <link href="template/frontend/css/slide.css" rel="stylesheet">
     <link href="template/frontend/css/gallery.css" rel="stylesheet">
     
+    
 </head>
 <body>
         <?PHP require_once('view/menu.inc.php');?>
