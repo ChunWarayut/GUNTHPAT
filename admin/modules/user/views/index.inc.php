@@ -139,7 +139,6 @@ if(!isset($_GET['action'])){
                 $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
                 $check = false;
             }else if (move_uploaded_file($_FILES["user_image"]["tmp_name"], $target_file)) {
-
                 $data['user_image'] = $date.'-'.strtolower(basename($_FILES["user_image"]["name"]));
 
                 $target_file = $target_dir . $_POST['user_image_o'];
