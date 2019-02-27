@@ -14,7 +14,7 @@
             <div class="" style="padding-bottom:8%;">
 
                 <h4 class="font-weight-light">
-                    <span class="text-detail-room">
+                    <span class="text-detail-room p-0">
                         <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_title_th'];   }else { echo $contact_us[0]['contact_us_title_en'];  }  ?>
                     </span>
                 </h4>
@@ -25,46 +25,27 @@
                     </span>
                 </p>
                 <hr>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-auto">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i class="fab fa-facebook-square" style="font-size:30px;"></i> &nbsp;
-                                </div>
-                                <div class="col-10">
-                                    
-                                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                                            <p>
-                                                <?PHP echo $contact_us[0]['contact_us_facebook']; ?>
-                                            </p>
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-auto">
-                            <div class="container">
-                                <div class="row">
-                                    <i class="fas fa-phone-volume" style="font-size:30px;"></i>&nbsp;
-
-                                    <a href="tel:<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
-                                        <p>
-                                            <?PHP echo $contact_us[0]['contact_us_tel']; ?>
-                                        </p>
-                                    </a>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <span class="h3"><i class="fab fa-facebook-square" style="font-size:30px;"></i></span>
+                    <span>
+                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                            Gunthpat Place
+                        </a>
+                    </span>
+                </div>
+                <div>
+                    <span class="h3"><i class="fas fa-phone-volume" style="font-size:30px;"></i></span>
+                    <span>
+                        <a href="<?PHP echo $contact_us[0]['contact_us_tel']; ?>">
+                            <?PHP echo $contact_us[0]['contact_us_tel']; ?>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container" style="">
+<div class="container">
     <div class="row">
         <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
         <div class="col-lg-4 col-md-6">
