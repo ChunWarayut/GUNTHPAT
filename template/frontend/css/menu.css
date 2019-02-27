@@ -105,9 +105,6 @@ img::-moz-selection {
         padding: 12px 0;
     }
 }
-
-
-
 @media (max-width: 991px) {
     .contact_list {
         padding: .5rem 1rem;
@@ -118,6 +115,7 @@ img::-moz-selection {
     }
     .header-menu{
         padding: 0px;
+        background-color: #212529;
     }
     .nav-link {
         padding: 0%;

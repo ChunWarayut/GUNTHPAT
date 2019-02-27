@@ -1,8 +1,8 @@
 .room-header{
     color: #f47322;
 }
-.rooms-center{
-    margin-left:150;
+.rooms-title{
+    text-align: right;
 }
 .text-detail-room{
     color: #000;
@@ -36,32 +36,24 @@ a{
     }
 } 
 @media (max-width: 767px) {
-    .rooms {
-        padding-top: 20%
+    .rooms{
+        padding-top: 10%;
     }
     .slide-room-detail {
         margin-top: 0; margin-left:0
     }
-    .rooms-center{
-        margin-left:0;
-    }            
+    .rooms-title{
+        text-align: left;
+    }           
 
     .room-detail-thb {
         padding-top: 0%;
     }
 }
 @media (max-width: 739px) {
-    
-    .rooms {
-        padding-top: 20%
-    }
     .slide-room-detail {
         margin-top: 0; margin-left:0
     }
-    .rooms-center{
-        margin-left:0;
-    }            
-
     .room-detail-thb {
         padding-top: 8%;
     }

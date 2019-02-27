@@ -1,9 +1,4 @@
-<?php
-
-require_once 'view/menu.inc.php';
-?>
-
-<div class="container rooms" id="room">
+<div class="container" id="room">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="text-left rooms-center">

@@ -16,6 +16,8 @@ $menu = 'gallery';
     <link href="template/frontend/css/menu.css" rel="stylesheet">
     <link href="template/frontend/css/slide.css" rel="stylesheet">
     <link href="template/frontend/css/gallery.css" rel="stylesheet">
+    <link href="template/frontend/css/footer.css" rel="stylesheet">
+
     
     
 </head>

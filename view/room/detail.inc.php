@@ -1,6 +1,3 @@
-<?php
-require_once 'view/menu.inc.php';
-?>
 <div class="container" id="detail">
     <div class="text-center room-detail-style">
         <h1>
@@ -10,6 +7,7 @@ require_once 'view/menu.inc.php';
                         }else{
                             if ($lng == TH) {  echo $rooms[$id]['room_name_th'];   }else { echo $rooms[$id]['room_name_en'];  } 
                         }  ?>
+            </span>                        
         </h1>
     </div>
     <div class="row">

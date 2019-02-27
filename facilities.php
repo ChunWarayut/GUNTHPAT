@@ -20,10 +20,11 @@ $menu = 'facilities';
     <link href="template/frontend/css/menu.css" rel="stylesheet">
     <link href="template/frontend/css/slide.css" rel="stylesheet">
     <link href="template/frontend/css/facilities.css" rel="stylesheet">
+    <link href="template/frontend/css/footer.css" rel="stylesheet">
 </head>
 <body>
-        <?PHP require_once('view/menu.inc.php');?>
-        <?PHP require_once('view/slide.inc.php');?>
+    <?PHP require_once('view/menu.inc.php');?>
+    <?PHP require_once('view/slide.inc.php');?>
     <?PHP require_once('view/facilities/index.inc.php');?>
     <?PHP require_once('view/footer.inc.php'); ?>
 </body>

@@ -118,6 +118,9 @@ section{
     align-items: center;
     display: flex;
 }
+.facilities-detail .row{
+    width: 100%;
+}
 .facilities-detail-flood{
     align-self: center;
     text-align: center;
@@ -155,6 +158,12 @@ section{
 @media (max-width: 575px) {
     .facilities-detail-image .img-fluid{
         height: 35%;
+        width: 100%;
+    }
+}
+@media (min-width: 1600px) {
+    .facilities-detail-image .img-fluid{
+        height: 400px;
         width: 100%;
     }
 }
