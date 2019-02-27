@@ -31,9 +31,7 @@
 <?PHP
 // for ($i=0; $i < count($gallery); $i= $i + 10) { 
 for ($i=0; $i < 5; $i= $i + 10) { ?>
-        <div class="row">
-            <div class="col-12 col-12 co-12 gal-item">
-                <div class="row ">
+                <div class="gal-item">
                     <!-- ----------------------------------------------------------------------------------- -->
                     <div class="row">
                         <div class="col-4 col-4 co-12 gal-item">
@@ -68,8 +66,6 @@ for ($i=0; $i < 5; $i= $i + 10) { ?>
                     <?PHP }  ?>
                     
                 </div>
-            </div>
-        </div>
         
         <?PHP } ?>
     
