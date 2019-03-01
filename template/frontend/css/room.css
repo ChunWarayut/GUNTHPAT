@@ -37,7 +37,7 @@ a{
 } 
 @media (max-width: 767px) {
     .rooms{
-        padding-top: 10%;
+        padding-top: 5%;
     }
     .slide-room-detail {
         margin-top: 0; margin-left:0

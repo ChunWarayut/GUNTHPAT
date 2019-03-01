@@ -1,7 +1,6 @@
 .menu-slide-style{
     color: #ffffff;
-}
-.menu-slide{
+    position: relative;
     margin-top : -20em;
 }
 .btn-orange {
@@ -14,7 +13,7 @@
 }
 .menu-slide-detail {
     position: absolute;
-    top: 40%;
+    top: 45%;
     max-width: 100%;
     z-index: 15;
     padding-left: 10%; 
@@ -30,13 +29,17 @@
 .menu-slide-popup{
     z-index: 10;
     right: 10%;
-    top: 30%;
+    top: 45%;
     position: absolute;
-    width: 50%;
+    width: 40%;
+}
+.menu-slide-popup-input{
+    padding: 2%;
 }
 .bg-pop-color{
     background-color: #00000036;
-    width: 100%; 
+    width: 100%;
+    padding: 15px;
 }
 .bg-pop-color .form-control{
     background-color: #00000078; 
@@ -51,23 +54,45 @@
 }
 @media (max-width: 991px) {
     .menu-slide-title{
-        text-align: center;
         padding-bottom: 5%;
     }
+    .menu-slide-content{
+        text-align: start;
+    }
     .menu-slide-detail {
-        top: 35%;
+        top: 45%;
+        padding-left: 5%;
     }
     .menu-slide-popup{
-        top: 35%;
+        top: 45%;
+        right: 5%;
+        width: 50%;
     }
-    .menu-slide-popup{
-        right: 0%;
-        padding: 0px 10% 0px 10%;
-        width: 100%;
+}
+@media (max-width: 874px) {
+    .menu-slide-content h3{
+        width: 65%;
     }
 }
 @media (max-width: 767px) {
     .menu-slide-detail {
-        top: 40%;
+        top: 50%;
+        padding-left: 10%;
+    }
+    .menu-slide-popup{
+        position: relative;
+        top: unset;
+        right: unset;
+        width: 100%;
+        padding: 0% 0% 5% 0%;
+    }
+    .menu-slide-popup-input{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .menu-slide-title, .menu-slide-content h3, .menu-slide-video{
+        width: 100%;
+        text-align: center;
+        
     }
 }

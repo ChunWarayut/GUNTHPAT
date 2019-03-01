@@ -46,7 +46,9 @@
     animation-name: zoom;
     animation-duration: 0.6s;
   }
-  
+  .gallery-header{
+    text-align: right;
+  }
   @keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
@@ -91,11 +93,6 @@
     width: 100%;
     object-fit: cover;
 }
-
-
-.gallery-header{
-    margin-left:150
-}
 .gallery-slide {
     display: none;
 }
@@ -109,32 +106,20 @@
 }
 @media (max-width: 767px) {
     .gallery-header{
-        margin-left:0
+      text-align: center;
     }
-    .gallery-title {
-        padding-top: 50
+    .gallery{
+        padding-top: 5%;
     }
    
 }
 @media (max-width: 739px) {
-    .gallery-header{
-        margin-left:0
-    }
     .gallery-show {
         display: none;
     }
     .gallery-slide {
         display: inline;
         padding-top: 50;
-        padding-bottom: 50;
-    }
-}
-@media (max-width: 600px) {
-    .gallery-header{
-        margin-left:0;
-    }
-    .gallery-slide {
-        display: inline;
         padding-bottom: 50;
     }
 }

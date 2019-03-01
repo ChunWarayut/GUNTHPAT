@@ -1,11 +1,8 @@
-<div class="container" id="about_us" style=" padding-top: 8%; padding-bottom: 3%;
-    margin-bottom: -200;">
-    <div class="text-center" style=" padding-bottom: 10%">
+<div class="container about" id="about_us">
+    <div class="text-center">
         <h1>
-            
                 ABOUT
-            
-            <span class="text" style="color:#f47322; ">
+            <span>
                 GUNTHPAT PLACE
             </span>
         </h1>
@@ -23,12 +20,4 @@
         <?php if ($lng == TH) {  echo $about_us[0]['about_us_sub_title_th'];}else{  echo $about_us[0]['about_us_sub_title_en'];} ?>
     </p>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+

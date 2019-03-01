@@ -18,6 +18,7 @@ $menu = 'contact_us';
     <link href="template/frontend/css/style.css" rel="stylesheet">
     <link href="template/frontend/css/menu.css" rel="stylesheet">
     <link href="template/frontend/css/slide.css" rel="stylesheet">
+    <link href="template/frontend/css/contact.css" rel="stylesheet">
     <link href="template/frontend/css/footer.css" rel="stylesheet">
 
 </head>

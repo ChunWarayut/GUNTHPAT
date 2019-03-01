@@ -1,15 +1,10 @@
 body{
     font-family: 
-    /* 'anakotmai-light',  */
     'anakotmai-medium',
     'anakotmai-bold';
 }
 .list-one{
     margin-top: -10%;
-
-}
-.read_more{
-    margin-top: 5%;
 }
 .list-two{
     margin-top: 5%;

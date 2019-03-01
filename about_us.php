@@ -18,6 +18,7 @@ $menu = 'about_us';
     <link href="template/frontend/css/style.css" rel="stylesheet">
     <link href="template/frontend/css/menu.css" rel="stylesheet">
     <link href="template/frontend/css/slide.css" rel="stylesheet">
+    <link href="template/frontend/css/about.css" rel="stylesheet">
     <link href="template/frontend/css/home-facilities.css" rel="stylesheet">
     <link href="template/frontend/css/home-gallery.css" rel="stylesheet">
     <link href="template/frontend/css/footer.css" rel="stylesheet">    

@@ -85,8 +85,8 @@ for ($i = 0; $i < count($rooms); ++$i) {
 <?php
 }
 ?>
-<div class="text-center read_more">
-    <a class="btn btn-orange" href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+<div class="text-center pt-md-5 pb-5 pb-md-0">
+    <a class="btn btn-orange" href="room.php?#room">
         <?php if ($lng == TH) {  echo "ดูเพิ่มเติม";   }else { echo "Read More";  }  ?>
     </a>
 </div>

@@ -1,4 +1,5 @@
-section{
+.facilities{
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 .facilities-slide-detail {
@@ -36,13 +37,6 @@ section{
     }
 
 @media (max-width: 991px) {
-
-    .home-facilities-top {
-        /* margin-top: 100;  */
-    }
-    .facilities-slide-detail{
-        /* display: none; */
-    }
     .facilities-header{
         margin-top: -100; 
     }

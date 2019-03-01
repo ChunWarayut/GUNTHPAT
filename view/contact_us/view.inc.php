@@ -1,8 +1,4 @@
 <style>
-.facilities-page-title {
-    padding-bottom:8%;
-    margin-top:50;
-}
 .facilities-page-header {
     padding-bottom:8%;
 }
@@ -18,10 +14,10 @@
 .contact-address{
     padding-bottom:8%
 }
-</style>
-<div class="container" id="contact_us">
+</style> 
+<div class="container contact" id="contact_us">
 
-    <div class="text-center facilities-page-title" >
+    <div class="text-center" >
         <h1>
             
                 CONTACT
@@ -32,7 +28,7 @@
         </h1>
     </div>
 </div>
-<div class="container" style="">
+<div class="container " style="">
     <div class="row">
 
         <div class="col-lg-4">
@@ -250,7 +246,7 @@
         </div>
 
         <div class="col-md-6">
-            <div style="">
+            <div style="padding-left:5%;padding-right:5%;">
                 <fieldset class="gllpLatlonPicker" style="margin: -14; height: auto;">
                     <div class="gllpMap" style="width: 100%;  height: 50%;">Google Maps</div>
                     <!-- <div class="gllpMap" style="width: 100%; height: 80%;">Google Maps</div> -->

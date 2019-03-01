@@ -1,10 +1,10 @@
 <?PHP
 require_once('view/menu.inc.php');
 ?>
-<div class="container" id="gallery">
-    <div class="row gallery-title">
+<div class="container gallery" id="gallery">
+    <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="text-left gallery-header">
+            <div class="gallery-header">
                 <h1>
                     OUR
                     <span style="color:#f47322; ">

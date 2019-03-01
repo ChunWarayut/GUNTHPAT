@@ -24,22 +24,19 @@ function search() {
 
 <div class="menu-slide-style">
     <section class="menu-slide">
-        <?php for ($i = 0; $i < count($slide); ++$i) { ?>
+        <?php for ($i = 0; $i < 1; ++$i) { ?>
             <div class="menu-slide-item"  >
                 <div class="menu-slide-detail" >
                     <div class="row">
-                        <div class="col-lg-7 menu-slide-title">
+                        <div class="col-lg-12 menu-slide-title">
                         <h4 class="pb-4"><?php if ($lng == TH) {  echo "ยินดีต้อนรับเข้าสู่";   }else {  echo "Welcome To"; }  ?></h4>
                             <h1 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_title_th'];   }else {  echo $slide[$i]['slide_title_en'];  }  ?></h1>
-                            <div class="d-none d-lg-block">
+                            <div class="menu-slide-content">
                                 <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
-                                <div class="row">
-                                    <a href="<?php echo $slide[$i]['slide_link']; ?>">
-                                        <div class="col-12 d-flex align-items-center">
-                                            <i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i>
-                                            <span class="h2 px-3 py-0 m-0 slide-video"> Watch Video</span>
-                                        </div>
-                                    </a>
+                                <div class="menu-slide-video">
+                                <a class="btn" href="<?php echo $slide[$i]['slide_link']; ?>">
+                                    <span style="display: flex;align-items: center;"><i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i> <span class="h2 pl-2 m-0" style="color: #ffffff;"> Watch Video </span></span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -51,15 +48,16 @@ function search() {
             </div>
         <?php } ?>
     </section>
+
     <div class="row m-0 justify-content-end menu-slide-popup">
-        <div class="col-lg-6 col-12 p-2 bg-pop-color">
-            <div class="p-2"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
+        <div class="col-xl-9 col-lg-9 col-md-8 bg-pop-color">
+            <div class="menu-slide-popup-input"><?php if ($lng == TH) {  echo "วันเข้าพัก";   }else { echo "Arrival Date";  }  ?>
                 <input class="form-control" id = "book_date_start" name="book_date_start">
             </div>
-            <div class="p-2"><?php if ($lng == TH) {  echo "วันที่ออก";   }else { echo "Depature Dates";  }  ?>
+            <div class="menu-slide-popup-input"><?php if ($lng == TH) {  echo "วันที่ออก";   }else { echo "Depature Dates";  }  ?>
                 <input class="form-control" id = "book_date_end" name="book_date_end">
             </div>
-            <div class="row p-2">
+            <div class="row menu-slide-popup-input">
                 <div class="col-lg-6"><?php if ($lng == TH) {  echo "จำนวนท่าน";   }else { echo "Persons";  }  ?>
                     <input class="form-control" type="number" autocomplete="off" id="book_person" name="book_person">
                 </div>
@@ -73,7 +71,7 @@ function search() {
                     </select>
                 </div>
             </div>
-            <div class="col-lg-12 p-2">
+            <div class="col-lg-12 menu-slide-popup-input">
                 <button onclick="search();" class="btn btn-orange text-uppercase js-scroll-trigger btn-block">
                 <?php if ($lng == TH) { echo "จองเดียวนี้"; }else { echo "BOOK NOW"; } ?>
                 </button>
