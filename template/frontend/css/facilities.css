@@ -11,7 +11,7 @@
 .facilities-bg{
     width: 100%;
     height: 200px;
-    background-image: url('../../../img_upload/facilities/2102201917364221022019173642921422845.jpg');
+    /* background-image: url('../../../img_upload/facilities/2102201917364221022019173642921422845.jpg'); */
     /* <?php echo $pathImgFacilities.$facilities[$i]['facilities_img']; ?> */
     /* 'img_upload/background/default.png' */
     background-repeat: no-repeat;  
