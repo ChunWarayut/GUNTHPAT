@@ -53,6 +53,11 @@ else if($content=="news"){
     require_once("modules/news/views/index.inc.php"); 
 }
 
+//  page
+else if($content=="page"){
+    require_once("modules/page/views/index.inc.php"); 
+}
+
 // หน้าหลัก
 else if($content=="home"){
     require_once("modules/home/views/index.inc.php"); 

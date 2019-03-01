@@ -83,6 +83,14 @@
                 </div>
             </a></li>
 
+      
+            <li><a href="index.php?content=page">
+            <div <?php if($content=="page"){echo "class='menu-active'";} else {echo "class='menu'";}?> >
+                <i class="fa fa-tag" style="font-size:24px"></i>
+                <span style="padding:5px; font-size:15px; ">ป้ายกำกับหน้า</span>
+            </div>
+        </a></li> 
+        
         <li><a href="index.php?content=user">
                 <div
                     <?php if($content=="user" ){echo "class='menu-active'" ;} else

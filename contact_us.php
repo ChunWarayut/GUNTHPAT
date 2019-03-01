@@ -11,9 +11,24 @@ if(isset($_COOKIE['language'])){
 
 $menu = 'contact_us';
 
+require_once('models/PageModel.php'); 
+$page_model = new PageModel;
+$page = $page_model->getPageByID('6');
+
 ?>
+
 <html>
 <head>
+
+
+    <meta property="og:type"          content="website">
+    <meta property="og:title"         content="<?PHP if($lng == "TH"){ echo $page['page_title_th']; }else{ echo $page['page_title_en'];} ?>">
+    <meta property="og:description"   content="<?PHP if($lng == "TH"){ echo $page['page_description_th']; }else{ echo $page['page_description_en']; } ?>">
+    
+
+
+
+
     <?PHP require_once('view/header.inc.php'); ?>
     <link href="template/frontend/css/style.css" rel="stylesheet">
     <link href="template/frontend/css/menu.css" rel="stylesheet">
