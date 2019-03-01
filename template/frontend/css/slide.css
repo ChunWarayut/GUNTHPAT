@@ -69,6 +69,16 @@
         width: 50%;
     }
 }
+.menu-slide-video span{
+    color: unset;
+}
+.menu-slide-video a{
+    color: #ffffff;
+}
+.menu-slide-video a:hover{
+    color: #ff6c11;
+}
+
 @media (max-width: 874px) {
     .menu-slide-content h3{
         width: 65%;

@@ -1,7 +1,7 @@
-<div class="container" id="detail">
+<div class="container pb-5" id="detail">
     <div class="text-center room-detail-style">
         <h1>
-            <span class="text-black-title">
+            <span class=""style="color:#000000;padding-top:5%;">
                 <?PHP if ($rooms[$id]['room_name_th'] == "") {
                             echo "ไม่ระบุ";
                         }else{
@@ -43,18 +43,13 @@
                     <?PHP if ($rooms[$id]['room_price'] == "") {  echo "ไม่ระบุ"; }else{ echo $rooms[$id]['room_price']; }  ?>
 
                     <a href="room.php?action=book&room_id=<?PHP echo $rooms[$id]['room_id']; ?>#book"
-                        class="btn btn-orage text-uppercase js-scroll-trigger btn-lg" style=" margin-left:40">
+                        class="btn btn-orage text-uppercase js-scroll-trigger btn-lg room-btn-font ml-1">
 
                         <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
-
-                        
-
                     </a>
                 </h5>
                 <p>
                 <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_sub_title_th'];   }else { echo $contact_us[0]['contact_us_sub_title_en'];  }  ?>
-
-
                 </p>
                 <hr>
                 <i class="fas fa-phone" style="font-size:20px"></i>
@@ -124,6 +119,3 @@
         </div>
     </div>
 </div>
-<br>
-<br>
-<br>

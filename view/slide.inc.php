@@ -35,7 +35,7 @@ function search() {
                                 <h3 class="pb-4"><?php if ($lng == TH) {  echo $slide[$i]['slide_sub_title_th'];   }else {  echo $slide[$i]['slide_sub_title_en'];  }  ?></h3>
                                 <div class="menu-slide-video">
                                 <a class="btn" href="<?php echo $slide[$i]['slide_link']; ?>">
-                                    <span style="display: flex;align-items: center;"><i class="far fa-play-circle" style="color: #fff; font-size:100px;" ></i> <span class="h2 pl-2 m-0" style="color: #ffffff;"> Watch Video </span></span>
+                                    <span style="display: flex;align-items: center;"><i class="far fa-play-circle" style="font-size:100px;" ></i> <span class="h2 pl-2 m-0" style=""> Watch Video </span></span>
                                 </a>
                                 </div>
                             </div>

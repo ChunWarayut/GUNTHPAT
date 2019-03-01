@@ -1,9 +1,3 @@
-<link href="template/frontend/css/room-book.css" rel="stylesheet">
-
-<?php
-require_once 'view/menu.inc.php';
-?>
-
 <div class="container" id="book">
     <div class="text-center book-title">
     <i class="far fa-edit" ></i>

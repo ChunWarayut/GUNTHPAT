@@ -164,34 +164,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
+                <div class="row px-3">
+                    <div class="col-6 pl-0 pr-1">
                         <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
-                            <button type="button" class="btn btn-secondary btn-lg btn-block ">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block room-btn-font">
                                 <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
 
 
                             </button>
                         </a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 pl-1 pr-0">
                         <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
-                            <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
-                                <span class="text-black">
-
+                            <button type="button" class="btn btn-outline-secondary btn-lg btn-block room-btn-font">
                                     <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
-
-
-                                </span>
                             </button>
                         </a>
                     </div>
                 </div>
-                <br>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 p-3">
                         <a href="room.php?action=book&id=<?PHP echo $rooms[$i]['room_id']; ?>&room_id=<?PHP echo $rooms[$i]['room_id']; ?>#book"
-                            class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block ">
+                            class="btn btn-orange text-uppercase js-scroll-trigger btn-lg btn-block room-btn-font">
 
                             <?PHP if ($lng == TH) {  echo "จองเดียวนี้"; } else {  echo "Book this one";  }?>
 
