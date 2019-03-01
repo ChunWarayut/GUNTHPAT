@@ -8,7 +8,7 @@
     <div class="row">
         <?php for ($i = 0; $i < count($facilities); ++$i) { ?>
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-5"> 
-                <div class="facilities-bg p-3">
+                <div class="facilities-bg p-3" style=" background-image: url('<?php echo $pathImgFacilities.$facilities[$i]['facilities_img']; ?>');">
                     <div class="facilities-content">
                         <h3>
                             <span>
