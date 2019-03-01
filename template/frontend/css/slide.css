@@ -37,7 +37,7 @@
     padding: 2%;
 }
 .bg-pop-color{
-    background-color: #00000036;
+    background-color:rgba(0, 0, 0, 0.50);;
     width: 100%;
     padding: 15px;
 }
