@@ -27,13 +27,30 @@ class BookModel extends BaseModel{
         }
     }
 
+    function editBookRecommened($book_id,$book_recommened) {
+        
+        $sql = "UPDATE `tb_book` SET `book_recommened` = '$book_recommened' WHERE `tb_book`.`book_id` = '$book_id'
+        ";
+        // echo "<pre>";
+        // print_r( $sql);
+        // echo "</pre>";
+
+        if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+    
+
+
     function deleteBook($book_id) {
         $sql = "DELETE 
         FROM `tb_book` 
         WHERE `tb_book`.`book_id` = '$book_id'
         ";
         // echo "<pre>";
-        // print_r();
+        // print_r($sql);
         // echo "</pre>";
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return mysqli_insert_id(static::$db);

@@ -16,6 +16,8 @@
             <th>วันที่เข้าพัก </th>
             <th>ถึงวันที่ </th>
             <th> Tel </th>
+            <th> </th>
+            <th> </th>
 
         </tr>
     </thead>
@@ -26,8 +28,8 @@
         <tr>
             <td><?php echo $i+1; ?></td>
             <td class="text-left">
-            <?php echo $book[$i]['book_firstname']; ?> 
-            <?php echo $book[$i]['book_lastname']; ?> 
+                <?php echo $book[$i]['book_firstname']; ?>
+                <?php echo $book[$i]['book_lastname']; ?>
             </td>
             <td class="text-left"><?php echo $book[$i]['book_person']; ?></td>
             <td class="text-left"><?php echo $book[$i]['room_name_th']; ?></td>
@@ -45,7 +47,37 @@
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </a>
             </td> -->
-        </tr>
-        <?php } ?>
+
+            <td>
+                <?PHP 
+                    if ($book[$i]['book_recommened'] == 1) {
+                        ?>
+                <a href="?content=book&action=recommened&id=<?PHP echo $book[$i]['book_id'];?>&recommened=0">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </a>
+                <?PHP        
+            }else{
+           
+                ?>
+                <a href="?content=book&action=recommened&id=<?PHP echo $book[$i]['book_id'];  ?>&recommened=1">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </a>
+                <?PHP
+            }
+            ?>
+            </td>
+
+
+            <td>
+                <a class="text-danger" href="?content=book&action=delete&id=<?PHP echo  $book[$i]['book_id'];?>">
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                </a>
+            </td>
+
+
+
     </tbody>
+    </tr>
+    <?php } ?>
+
 </table>
