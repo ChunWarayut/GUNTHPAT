@@ -17,7 +17,7 @@ At this stage you should see the JSON response.
 
 ## Building Documentation
 
-In order to build the documentation, install [doxygen](http://www.doxygen.org). Version 1.8.8+ is slideed due to some major bugs fixed.
+In order to build the documentation, install [doxygen](http://www.doxygen.org). Version 1.8.8+ is recommended due to some major bugs fixed.
 
 1. `cd dev/doc`
 2. `./builddoc.sh`

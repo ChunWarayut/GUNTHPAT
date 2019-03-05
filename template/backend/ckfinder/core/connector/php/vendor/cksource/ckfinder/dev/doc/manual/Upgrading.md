@@ -2,7 +2,7 @@
 
 \tableofcontents
 
-Latest CKFinder is always the greatest CKFinder. Each new release brings plenty of bug fixes and new features, so it is highly slideed to upgrade often.
+Latest CKFinder is always the greatest CKFinder. Each new release brings plenty of bug fixes and new features, so it is highly recommended to upgrade often.
 Upgrading CKFinder is an easy task. See the complete upgrade instructions below.
 
 Please note that each CKFinder license grants you one year of free upgrades. If you want to take advantage of new CKFinder releases after that time, you can [renew your license](https://cksource.com/ckfinder/buy#renewal) at any time for a discounted price.

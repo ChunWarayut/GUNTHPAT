@@ -33,7 +33,7 @@ interface ResponseInterface extends MessageInterface
      * Return an instance with the specified status code and, optionally, reason phrase.
      *
      * If no reason phrase is specified, implementations MAY choose to default
-     * to the RFC 7231 or IANA slideed reason phrase for the response's
+     * to the RFC 7231 or IANA recommended reason phrase for the response's
      * status code.
      *
      * This method MUST be implemented in such a way as to retain the
@@ -56,7 +56,7 @@ interface ResponseInterface extends MessageInterface
      *
      * Because a reason phrase is not a required element in a response
      * status line, the reason phrase value MAY be null. Implementations MAY
-     * choose to return the default RFC 7231 slideed reason phrase (or those
+     * choose to return the default RFC 7231 recommended reason phrase (or those
      * listed in the IANA HTTP Status Code Registry) for the response's
      * status code.
      *

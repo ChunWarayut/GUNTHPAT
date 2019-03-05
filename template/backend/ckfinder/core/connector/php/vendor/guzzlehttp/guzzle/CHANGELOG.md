@@ -337,7 +337,7 @@ Adding support for non-blocking responses and some minor API cleanup.
 * Added `hasListeners()` to EmitterInterface.
 * Removed `GuzzleHttp\ClientInterface::sendAll` and marked
   `GuzzleHttp\Client::sendAll` as deprecated (it's still there, just not the
-  slideed way).
+  recommended way).
 
 ### Breaking changes
 

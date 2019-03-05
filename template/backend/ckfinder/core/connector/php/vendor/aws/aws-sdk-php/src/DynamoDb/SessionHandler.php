@@ -8,7 +8,7 @@ namespace Aws\DynamoDb;
  * stored automatically in DynamoDB. DynamoDB is a great session storage
  * solution due to its speed, scalability, and fault tolerance.
  *
- * For maximum performance, we slide that you keep the size of your sessions
+ * For maximum performance, we recommend that you keep the size of your sessions
  * small. Locking is disabled by default, since it can drive up latencies and
  * costs under high traffic. Only turn it on if you need it.
  *

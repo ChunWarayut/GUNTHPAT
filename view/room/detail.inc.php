@@ -49,7 +49,7 @@
                     </a>
                 </h5>
                 <p>
-                <?php if ($lng == TH) {  echo $contact_us[0]['contact_us_sub_title_th'];   }else { echo $contact_us[0]['contact_us_sub_title_en'];  }  ?>
+                <?php if ($lng == TH) {  echo $rooms[$id]['room_sub_title_th'];   }else {   echo $rooms[$id]['room_sub_title_en'];  }  ?>
                 </p>
                 <hr>
                 <i class="fas fa-phone" style="font-size:20px"></i>

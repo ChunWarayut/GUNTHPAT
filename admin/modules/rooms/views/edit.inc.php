@@ -118,7 +118,7 @@ function readURL(input) {
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label> Sub Title TH<font color="#F00"><b>*</b></font></label>
+                                <label> รายละเอียด <font color="#F00"><b>*</b></font></label>
                                 <textarea id="room_sub_title_th" name="room_sub_title_th" class="form-control"
                                     value="<?PHP echo $roomBy[0]['room_sub_title_th'];?>"
                                     rows="6"><?PHP echo $roomBy[0]['room_sub_title_th'];?></textarea>
@@ -128,7 +128,7 @@ function readURL(input) {
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label> Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <label> Detail<font color="#F00"><b>*</b></font></label>
                                 <textarea id="room_sub_title_en" name="room_sub_title_en" class="form-control"
                                     value="<?PHP echo $roomBy[0]['room_sub_title_en'];?>"
                                     rows="6"><?PHP echo $roomBy[0]['room_sub_title_en'];?></textarea>
@@ -283,3 +283,30 @@ function readURL(input) {
     </div>
     <?PHP }  ?>
 </div>
+
+
+
+
+
+<script>
+
+CKEDITOR.replace("room_sub_title_th",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+    
+
+CKEDITOR.replace("room_sub_title_en",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+
+</script>

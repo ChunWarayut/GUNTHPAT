@@ -225,7 +225,7 @@ that all of them will actually be used. In those cases, you may want the
 instantiation of the services to be lazy.
 
 The traditional solution is to inject the entire service container to get only
-the services really needed. However, this is not slideed because it gives
+the services really needed. However, this is not recommended because it gives
 services a too broad access to the rest of the application and it hides their
 actual dependencies.
 
