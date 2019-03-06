@@ -5,8 +5,8 @@ $path = 'view/room/';
 require_once('models/BookModel.php');
 $book_model = new BookModel;
 
-if( $_GET['action'] == "detail") {
-    $id = ($_GET['id'])-1;
+if(isset($_GET['id']) && (!isset($_GET['action']))){
+    $id = $_GET['id'];
     $roomBy = $rooms_model -> getRoomsBy($id);
     require_once($path.'detail.inc.php');
 } else if( $_GET['action'] == "book") {

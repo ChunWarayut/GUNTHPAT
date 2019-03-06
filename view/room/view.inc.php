@@ -162,7 +162,7 @@
                         </a>
                     </div>
                     <div class="col-6 pl-1 pr-0">
-                        <a href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
+                        <a href="room.php?id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
                             <button type="button" class="btn btn-outline-secondary btn-lg btn-block room-btn-font">
                                     <?PHP if ($lng == TH) {  echo "ดูเพิ่มเติม"; } else {  echo "See more";  }?>
                             </button>
