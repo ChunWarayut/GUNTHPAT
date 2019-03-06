@@ -18,7 +18,7 @@ require_once('models/GalleryModel.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
 
-$gunthpatlink = "http://support.revelsoft.co.th/gunthpat/room.php?";
+$roomlink = "http://support.revelsoft.co.th/gunthpat/room.php?id=";
 
 if(isset($_COOKIE['language'])){
     $lng = $_COOKIE['language'];
@@ -46,7 +46,7 @@ $page = $page_model->getPageByID('3');
 
     
     <?php if($roomId != ""){ ?>
-        <meta property="og:url"           content="<?php echo $gunthpatlink,$detaillink,$roomId; ?>">
+        <meta property="og:url"           content="<?php echo $roomlink,$roomId; ?>">
         <meta property="og:type"          content="website">
         <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
         <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">

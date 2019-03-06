@@ -153,7 +153,7 @@
                 </div>
                 <div class="row px-3">
                     <div class="col-6 pl-0 pr-1">
-                        <a href="javascript:fbShare('<?php echo $gunthpatlink,$detaillink,$rooms[$i]['room_id']; ?>','<?php echo $rooms[$i]['room_id']; ?>')">
+                        <a href="javascript:fbShare('<?php echo $roomlink,$rooms[$i]['room_id']; ?>','<?php echo $rooms[$i]['room_id']; ?>')">
                             <button type="button" class="btn btn-secondary btn-lg btn-block room-btn-font">
                                 <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "share"; }?>
 
