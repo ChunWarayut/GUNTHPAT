@@ -1088,7 +1088,7 @@ HTML_FILE_EXTENSION    = .html
 #
 # To get valid HTML the header file that includes any scripts and style sheets
 # that doxygen needs, which is dependent on the configuration options used (e.g.
-# the setting GENERATE_TREEVIEW). It is highly slideed to start with a
+# the setting GENERATE_TREEVIEW). It is highly recommended to start with a
 # default header using
 # doxygen -w html new_header.html new_footer.html new_stylesheet.css
 # YourConfigFile
@@ -1117,7 +1117,7 @@ HTML_FOOTER            = footer.html
 # the HTML output. If left blank doxygen will generate a default style sheet.
 # See also section "Doxygen usage" for information on how to generate the style
 # sheet that doxygen normally uses.
-# Note: It is slideed to use HTML_EXTRA_STYLESHEET instead of this tag, as
+# Note: It is recommended to use HTML_EXTRA_STYLESHEET instead of this tag, as
 # it is more robust and this tag (HTML_STYLESHEET) will in the future become
 # obsolete.
 # This tag requires that the tag GENERATE_HTML is set to YES.
@@ -1490,7 +1490,7 @@ MATHJAX_FORMAT         = HTML-CSS
 # is located at the same level as the HTML output directory, then
 # MATHJAX_RELPATH should be ../mathjax. The default value points to the MathJax
 # Content Delivery Network so you can quickly see the result without installing
-# MathJax. However, it is strongly slideed to install a local copy of
+# MathJax. However, it is strongly recommended to install a local copy of
 # MathJax from http://www.mathjax.org before deployment.
 # The default value is: http://cdn.mathjax.org/mathjax/latest.
 # This tag requires that the tag USE_MATHJAX is set to YES.
@@ -2079,7 +2079,7 @@ PERL_PATH              = /usr/bin/perl
 # If the CLASS_DIAGRAMS tag is set to YES doxygen will generate a class diagram
 # (in HTML and LaTeX) for classes with base or super classes. Setting the tag to
 # NO turns the diagrams off. Note that this option also works with HAVE_DOT
-# disabled, but it is slideed to install and use dot, since it yields more
+# disabled, but it is recommended to install and use dot, since it yields more
 # powerful graphs.
 # The default value is: YES.
 

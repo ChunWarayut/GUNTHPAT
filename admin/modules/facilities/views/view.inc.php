@@ -1,4 +1,6 @@
 
+
+
 <h1> Facilities Titlle</h1>
 
 <h2> แก้ไข Sub Title</h2>
@@ -12,13 +14,13 @@
                 <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
                 <div class="form-group">
                     <label> </label>
-                    <textarea class="form-control " id="facilities_head_sub_title_th" name="facilities_head_sub_title_th"rows="6"><?PHP echo $facilities_head[0]['facilities_head_sub_title_th'];?></textarea>
+                    <textarea class="form-control " id="facilities_head_sub_title_th" name="facilities_head_sub_title_th"rows="6"/><?PHP echo $facilities_head[0]['facilities_head_sub_title_th'];?></textarea>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
                     <label> </label>
-                    <textarea class="form-control " id="facilities_head_sub_title_en" name="facilities_head_sub_title_en"rows="6"><?PHP echo $facilities_head[0]['facilities_head_sub_title_en'];?></textarea>
+                    <textarea class="form-control " id="facilities_head_sub_title_en" name="facilities_head_sub_title_en"rows="6"/><?PHP echo $facilities_head[0]['facilities_head_sub_title_en'];?></textarea>
                 </div>
             </div>
 
@@ -109,3 +111,29 @@
     }
     ?>
 </table>
+
+
+<script>
+
+
+CKEDITOR.replace("facilities_head_sub_title_th",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+    
+
+CKEDITOR.replace("facilities_head_sub_title_en",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+
+
+</script>

@@ -68,7 +68,7 @@ interface IQueue
     /**
      * Sets the properties of the service.
      *
-     * It's slideed to use getServiceProperties, alter the returned object and
+     * It's recommended to use getServiceProperties, alter the returned object and
      * then use setServiceProperties with this altered object.
      *
      * @param ServiceProperties $serviceProperties The new service properties.
@@ -84,7 +84,7 @@ interface IQueue
     /**
      * Creates promise to set the properties of the service.
      *
-     * It's slideed to use getServiceProperties, alter the returned object and
+     * It's recommended to use getServiceProperties, alter the returned object and
      * then use setServiceProperties with this altered object.
      *
      * @param ServiceProperties $serviceProperties The new service properties.

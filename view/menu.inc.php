@@ -48,7 +48,7 @@
             <ul class="navbar-nav text-center ml-auto">
                 <li class="nav-item ">
 
-                    <a class="nav-link <?php if($menu == 'index'){ echo 'active'; }?>" href="index.php">
+                    <a class="orange nav-link <?php if($menu == 'index'){ echo 'active'; }?>" href="index.php">
 
                         <?php
                         if ($lng == TH) {

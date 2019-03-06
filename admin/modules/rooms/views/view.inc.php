@@ -3,16 +3,15 @@
         <h1> Rooms page</h1>
         <h2> ข้อมูลห้องพัก</h2>
     </div>
-    <!-- <div class="col-lg-6">
-        <a href="?content=rooms&action=insert" class="btn btn-primary float-right">เพิ่มข้อมูลห้องพัก</a>
-    </div> -->
+    <div class="col-lg-6">
+
+    <form id="form_target" role="form" method="post" action="index.php?content=rooms&action=insert_type">
+            <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button>
+        </form>    </div>
 </div>
 <div class="row">
 <div class="col-lg-6">
     <div class="row">
-        <form id="form_target" role="form" method="post" action="index.php?content=rooms&action=insert_type">
-            <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button>
-        </form>
 
 
         <table>
@@ -21,8 +20,8 @@
                     <th width="10">#</th>
                     <th width="80">Title TH</th>
                     <!-- <th width="80">Title EN</th> -->
-                    <th width="10"></th>
-                    <th width="10"></th>
+                    <!-- <th width="10"></th>
+                    <th width="10"></th> -->
                 </tr>
             </thead>
             <?PHP 
@@ -44,7 +43,7 @@
                     <?PHP echo $room_type[$i]['room_type_name_en'];  ?>
                 </td> -->
 
-                <td>
+                <!-- <td>
                     <a href="?content=rooms&action=edit_type&id=<?PHP echo $i  ?>">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </a>
@@ -55,7 +54,7 @@
                         href="?content=rooms&action=delete_type&id=<?PHP echo $room_type[$i]['room_type_id']; ?>">
                         <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
-                </td>
+                </td> -->
 
 
             </tr>
@@ -70,14 +69,14 @@
 <div class="col-lg-6">
     <div class="row">
         <form id="form_target" role="form" method="post" action="index.php?content=rooms&action=insert_type">
-            <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button>
+            <!-- <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button> -->
         </form>
 
 
         <table>
             <thead>
                 <tr>
-                    <th width="10">#</th>
+                    <!-- <th width="10">#</th> -->
                     <!-- <th width="80">Title TH</th> -->
                     <th width="80">Title EN</th>
                     <th width="10"></th>
@@ -91,9 +90,9 @@
         ?>
             <tr>
 
-                <td>
+                <!-- <td>
                     <?PHP echo $i+1;  ?>
-                </td>
+                </td> -->
 <!-- 
                 <td class="text-left">
                     <?PHP echo $room_type[$i]['room_type_name_th'];  ?>

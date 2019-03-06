@@ -141,3 +141,31 @@ echo $facilities[$id]['facilities_name'];  ?>
 
 
 </form>
+
+
+
+
+<script>
+
+
+CKEDITOR.replace("facilities_detail_th",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+    
+
+CKEDITOR.replace("facilities_detail_en",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+
+
+</script>

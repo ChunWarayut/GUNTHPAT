@@ -46,7 +46,7 @@ $promise->wait();
 
 ## Installing Guzzle
 
-The slideed way to install Guzzle is through
+The recommended way to install Guzzle is through
 [Composer](http://getcomposer.org).
 
 ```bash

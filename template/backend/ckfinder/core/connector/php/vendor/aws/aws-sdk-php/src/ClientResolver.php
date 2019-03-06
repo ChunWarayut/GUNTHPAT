@@ -721,7 +721,7 @@ Your build of the SDK has the following version(s) of "{$service}": {$versions}
 
 You may provide "latest" to the "version" configuration value to utilize the
 most recent available API version that your client's API provider can find.
-Note: Using 'latest' in a production application is not slideed.
+Note: Using 'latest' in a production application is not recommended.
 
 A list of available API versions can be found on each client's API documentation
 page: http://docs.aws.amazon.com/aws-sdk-php/v3/api/index.html. If you are

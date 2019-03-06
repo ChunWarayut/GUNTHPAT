@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
 
-
+<!-- 
                                 <div class="col-12">
 
                                     <div class="form-group">
@@ -79,7 +79,8 @@
                                             value="<?PHP echo number_format( $roomBy[0]['room_amout']);?>" />
                                         <p class="help-block">Example : 5 </p>
                                     </div>
-                                </div>
+                                </div> -->
+
                             </div>
 
 
@@ -89,6 +90,9 @@
 
                     </div>
                 </div>
+
+
+
                 <div class="col-lg-9">
                     <div class="row">
 
@@ -112,7 +116,7 @@
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label> Sub Title TH<font color="#F00"><b>*</b></font></label>
+                                <label> รายละเอียด <font color="#F00"><b>*</b></font></label>
                                 <textarea id="room_sub_title_th" name="room_sub_title_th" class="form-control"
                                     value="<?PHP echo $roomBy[0]['room_sub_title_th'];?>"
                                     rows="6"><?PHP echo $roomBy[0]['room_sub_title_th'];?></textarea>
@@ -122,7 +126,7 @@
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label> Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <label> Detail<font color="#F00"><b>*</b></font></label>
                                 <textarea id="room_sub_title_en" name="room_sub_title_en" class="form-control"
                                     value="<?PHP echo $roomBy[0]['room_sub_title_en'];?>"
                                     rows="6"><?PHP echo $roomBy[0]['room_sub_title_en'];?></textarea>
@@ -143,48 +147,64 @@
                                         </div>
 
 
+
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>Detail 1 TH<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_1_th" name="room_detail_1_th" class="form-control"
+                                                <input id="room_detail_1_th" name="room_detail_1_th"
+                                                    class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_detail_1_th'];?>" />
                                                 <p class="help-block">Example : ผู้ใหญ่ 2 ท่าน + เด็ก 1 ท่าน </p>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-6">
+
+                                        <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Detail 2 TH<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_2_th" name="room_detail_2_th" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_detail_2_th'];?>" />
-                                                <p class="help-block">Example : ระเบียงส่วนตัว </p>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="room_detail_2_th" name="room_detail_2_th">
+                                                    <label class="custom-control-label" for="room_detail_2_th">
+                                                        ระเบียงส่วนตัว /
+                                                        Balcony
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Detail 3 TH <font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_3_th" name="room_detail_3_th" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_detail_3_th'];?>" />
-                                                <p class="help-block">Example : วิวห้องหรือสวน </p>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="room_detail_3_th" name="room_detail_3_th">
+                                                    <label class="custom-control-label" for="room_detail_3_th">
+                                                        WIFI
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Facility 1 TH <font color="#F00"><b>*</b></font></label>
-                                                <input id="room_facility_1_th" name="room_facility_1_th" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_facility_1_th'];?>" />
-                                                <p class="help-block">Example : บริการโทรศัพท์ห้อง </p>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="room_facility_1_th" name="room_facility_1_th">
+                                                    <label class="custom-control-label" for="room_facility_1_th">
+                                                    เครื่องปรับอากาศ / air
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Facility 2 TH<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_facility_2_th" name="room_facility_2_th" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_facility_2_th'];?>" />
-                                                <p class="help-block">Example : บริการ WiFi ฟรี </p>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="room_facility_2_th" name="room_facility_2_th">
+                                                    <label class="custom-control-label" for="room_facility_2_th">
+                                                    โทรศัพท์ / Tel
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -205,47 +225,13 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>Detail 1 EN<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_1_en" name="room_detail_1_en" class="form-control"
+                                                <input id="room_detail_1_en" name="room_detail_1_en"
+                                                    class="form-control"
                                                     value="<?PHP echo $roomBy[0]['room_detail_1_en'];?>" />
                                                 <p class="help-block">Example : 2 adults + 1 child </p>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>Detail 2 EN<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_2_en" name="room_detail_2_en" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_detail_2_en'];?>" />
-                                                <p class="help-block">Example : Private balcony </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>Detail 3 EN<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_detail_3_en" name="room_detail_3_en" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_detail_3_en'];?>" />
-                                                <p class="help-block">Example : Room or garden view </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>Facility 1 EN<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_facility_1_en" name="room_facility_1_en" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_facility_1_en'];?>" />
-                                                <p class="help-block">Example : Room telephone service </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>Facility 2 EN<font color="#F00"><b>*</b></font></label>
-                                                <input id="room_facility_2_en" name="room_facility_2_en" class="form-control"
-                                                    value="<?PHP echo $roomBy[0]['room_facility_2_en'];?>" />
-                                                <p class="help-block">Example : Free WiFi service</p>
-                                            </div>
-                                        </div>
 
                                     </div>
                                 </div>
@@ -253,6 +239,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
 
         </div>
@@ -260,3 +250,27 @@
 
 
 </form>
+
+<script>
+
+CKEDITOR.replace("room_sub_title_th",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+    
+
+CKEDITOR.replace("room_sub_title_en",{
+		filebrowserBrowseUrl : '../template/backend/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl : '../template/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl : '../template/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	}); 
+
+
+</script>

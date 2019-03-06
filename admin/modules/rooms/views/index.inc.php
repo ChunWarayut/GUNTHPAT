@@ -78,11 +78,11 @@ window.location = "index.php?content=rooms"
         if(isset($_POST['room_type_id'])){
         $check = true;
         if($check == false){ ?>
-    <script>
-    alert('<?php echo $error_msg; ?>');
-    window.history.back();
-    </script>
-    <?php
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
             
         }else{
             
@@ -90,16 +90,16 @@ window.location = "index.php?content=rooms"
             
             if($result){
                 ?>
-    <script>
-    window.location = "index.php?content=rooms"
-    </script>
-    <?php
+<script>
+window.location = "index.php?content=rooms"
+</script>
+<?php
                 }else{
                     ?>
-    <script>
-    window.history.back();
-    </script>
-    <?php
+<script>
+window.history.back();
+</script>
+<?php
                 }
             }
         }else{
@@ -110,23 +110,23 @@ window.location = "index.php?content=rooms"
         if(isset($_POST['room_type_id'])){
             $check = true;
             if($check == false){ ?>
-        <script>
-        alert('<?php echo $error_msg; ?>');
-        window.history.back();
-        </script>
-        <?php
+<script>
+alert('<?php echo $error_msg; ?>');
+window.history.back();
+</script>
+<?php
             }else{
                 $result = $room_type_model-> editRoomType($_POST['room_type_id'],$_POST['room_type_name_th'],$_POST['room_type_name_en']);
                 if($result){
                     ?>
-        <script>
-        window.location = "index.php?content=rooms"
-        </script>
-        <?php }else{    ?>
-        <script>
-        window.history.back();
-        </script>
-        <?php  }
+<script>
+window.location = "index.php?content=rooms"
+</script>
+<?php }else{    ?>
+<script>
+window.history.back();
+</script>
+<?php  }
             }
             }else{
                 require_once($path . 'edit_type.inc.php');
@@ -155,16 +155,38 @@ window.location = "index.php?content=rooms"
         $data['room_img'] = $_POST['room_img'];
         $data['room_size_th'] = $_POST['room_size_th'];
         $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
-        $data['room_detail_2_th'] = $_POST['room_detail_2_th'];
-        $data['room_detail_3_th'] = $_POST['room_detail_3_th'];
-        $data['room_facility_1_th'] = $_POST['room_facility_1_th'];
-        $data['room_facility_2_th'] = $_POST['room_facility_2_th'];
+        
         $data['room_size_en'] = $_POST['room_size_en'];
         $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
-        $data['room_detail_2_en'] = $_POST['room_detail_2_en'];
-        $data['room_detail_3_en'] = $_POST['room_detail_3_en'];
-        $data['room_facility_1_en'] = $_POST['room_facility_1_en'];
-        $data['room_facility_2_en'] = $_POST['room_facility_2_en'];
+
+
+        if ($_POST['room_detail_2_th'] != null) {
+
+        $data['room_detail_2_th'] = 'ระเบียงส่วนตัว' ;
+        $data['room_detail_2_en'] = 'Balcony';
+
+        }  
+
+        if ($_POST['room_detail_3_th'] != null) {
+
+        $data['room_detail_3_th'] = 'WIFI' ;
+        $data['room_detail_3_en'] = 'WIFI';
+
+        }   
+
+        if ($_POST['room_facility_1_th'] != null) {
+
+        $data['room_facility_1_th'] = 'โทรศัพท์' ;
+        $data['room_facility_1_en'] = 'TEL';
+
+        }   
+
+        if ($_POST['room_facility_2_th'] != null) {
+
+        $data['room_facility_2_th'] = 'เครื่องปรับอากาศ' ;
+        $data['room_facility_2_en'] = 'AIR';
+
+        }   
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
@@ -255,16 +277,38 @@ window.history.back();
         $data['room_img'] = $_POST['room_img'];
         $data['room_size_th'] = $_POST['room_size_th'];
         $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
-        $data['room_detail_2_th'] = $_POST['room_detail_2_th'];
-        $data['room_detail_3_th'] = $_POST['room_detail_3_th'];
-        $data['room_facility_1_th'] = $_POST['room_facility_1_th'];
-        $data['room_facility_2_th'] = $_POST['room_facility_2_th'];
+        
         $data['room_size_en'] = $_POST['room_size_en'];
         $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
-        $data['room_detail_2_en'] = $_POST['room_detail_2_en'];
-        $data['room_detail_3_en'] = $_POST['room_detail_3_en'];
-        $data['room_facility_1_en'] = $_POST['room_facility_1_en'];
-        $data['room_facility_2_en'] = $_POST['room_facility_2_en'];
+
+
+        if ($_POST['room_detail_2_th'] != null) {
+
+        $data['room_detail_2_th'] = 'ระเบียงส่วนตัว' ;
+        $data['room_detail_2_en'] = 'Balcony';
+
+        }  
+
+        if ($_POST['room_detail_3_th'] != null) {
+
+        $data['room_detail_3_th'] = 'WIFI' ;
+        $data['room_detail_3_en'] = 'WIFI';
+
+        }   
+
+        if ($_POST['room_facility_1_th'] != null) {
+
+            $data['room_facility_1_th'] = 'โทรศัพท์' ;
+            $data['room_facility_1_en'] = 'TEL';
+    
+            }   
+    
+            if ($_POST['room_facility_2_th'] != null) {
+    
+            $data['room_facility_2_th'] = 'เครื่องปรับอากาศ' ;
+            $data['room_facility_2_en'] = 'AIR';
+    
+            }   
 
         //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
         $numrand = (mt_rand());
