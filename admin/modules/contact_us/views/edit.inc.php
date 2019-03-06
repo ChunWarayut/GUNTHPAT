@@ -25,7 +25,7 @@ function readURL(input) {
                     </h1>
                 </div>
                 <div class="col-lg-6">
-                    <button type="submit" class="btn btn-primary float-right">แก้ไข</button>
+                    <button type="submit" class="btn btn-primary float-right">บันทึก</button>
                 </div>
             </div>
         </div>
@@ -115,27 +115,6 @@ function readURL(input) {
                                 <p class="help-block">Example : ...</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label> Sub Title TH <font color="#F00"><b>*</b></font></label>
-                                <textarea id="contact_us_sub_title_th" name="contact_us_sub_title_th"
-                                    class="form-control"
-                                    value="<?PHP echo $contact_us[$id]['contact_us_sub_title_th'];?>"
-                                    rows="5"><?PHP echo $contact_us[$id]['contact_us_sub_title_th'];?></textarea>
-                                <p class="help-block">Example : ...</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label> Sub Title EN<font color="#F00"><b>*</b></font></label>
-                                <textarea id="contact_us_sub_title_en" name="contact_us_sub_title_en"
-                                    class="form-control"
-                                    value="<?PHP echo $contact_us[$id]['contact_us_sub_title_en'];?>"
-                                    rows="5"><?PHP echo $contact_us[$id]['contact_us_sub_title_en'];?></textarea>
-                                <p class="help-block">Example : ...</p>
-                            </div>
-                        </div>
 
                         <div class="col-lg-2">
                             <div class="form-group">
@@ -173,7 +152,7 @@ function readURL(input) {
                             </div>
                         </div>
 
-                        <div class="col-lg-1">
+                        <div class="col-lg-2">
                             <div class="form-group">
                                 <label> Address 4 TH <font color="#F00"><b>*</b></font></label>
                                 <input id="contact_us_address_4" name="contact_us_address_4" class="form-control"
@@ -183,7 +162,7 @@ function readURL(input) {
                         </div>
 
 
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                             <div class="form-group">
                                 <label> Email <font color="#F00"><b>*</b></font></label>
                                 <input id="contact_us_email" name="contact_us_email" class="form-control"
@@ -219,6 +198,9 @@ function readURL(input) {
                             </div>
                         </div>
 
+
+
+
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label> Address 3 EN<font color="#F00"><b>*</b></font></label>
@@ -227,6 +209,34 @@ function readURL(input) {
                                 <p class="help-block">Example : ...</p>
                             </div>
                         </div>
+
+
+
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label> Sub Title TH <font color="#F00"><b>*</b></font></label>
+                                <textarea id="contact_us_sub_title_th" name="contact_us_sub_title_th"
+                                    class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_sub_title_th'];?>"
+                                    rows="5"><?PHP echo $contact_us[$id]['contact_us_sub_title_th'];?></textarea>
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label> Sub Title EN<font color="#F00"><b>*</b></font></label>
+                                <textarea id="contact_us_sub_title_en" name="contact_us_sub_title_en"
+                                    class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_sub_title_en'];?>"
+                                    rows="5"><?PHP echo $contact_us[$id]['contact_us_sub_title_en'];?></textarea>
+                                <p class="help-block">Example : ...</p>
+                            </div>
+                        </div>
+
+
+
 
                     </div>
                 </div>

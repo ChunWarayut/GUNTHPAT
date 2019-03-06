@@ -26,8 +26,10 @@
                     <div class="form-group">
                         <label> </label>
                         <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
-                        <textarea class="form-control " id="contact_head_detail_en" name="contact_head_detail_en" rows="5"><?PHP echo $contact_head[0]['contact_head_detail_en'];?></textarea>
-                        <textarea class="form-control " id="contact_head_detail_th" name="contact_head_detail_th" rows="5"><?PHP echo $contact_head[0]['contact_head_detail_th'];?></textarea>
+                        <textarea class="form-control " id="contact_head_detail_en" name="contact_head_detail_en"
+                            rows="5"><?PHP echo $contact_head[0]['contact_head_detail_en'];?></textarea>
+                        <textarea class="form-control " id="contact_head_detail_th" name="contact_head_detail_th"
+                            rows="5"><?PHP echo $contact_head[0]['contact_head_detail_th'];?></textarea>
                     </div>
                     <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button> -->
                 </div>
@@ -41,8 +43,7 @@
             </div>
             <div class="col-lg-6">
                 <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_title">
-                    <button type="submit" name="" id="" class="button float-right"
-                        btn-block>เพิ่ม</button>
+                    <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button>
                 </form>
             </div>
         </div>
@@ -77,9 +78,10 @@
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </a>
                 </td>
-                
+
                 <td>
-                    <a class="text-danger" href="?content=contact&action=delete_title&id=<?PHP echo $contact_title[$i]['contact_title_id']; ?>">
+                    <a class="text-danger"
+                        href="?content=contact&action=delete_title&id=<?PHP echo $contact_title[$i]['contact_title_id']; ?>">
                         <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
                 </td>
@@ -99,8 +101,7 @@
             </div>
             <div class="col-lg-6">
                 <form id="form_target" role="form" method="post" action="index.php?content=contact&action=insert_type">
-                    <button type="submit" name="" id="" class="button float-right"
-                        btn-block>เพิ่ม</button>
+                    <button type="submit" name="" id="" class="button float-right" btn-block>เพิ่ม</button>
                 </form>
             </div>
         </div>
@@ -136,7 +137,8 @@
                 </td>
 
                 <td>
-                    <a class="text-danger" href="?content=contact&action=delete_type&id=<?PHP echo $contact_type[$i]['contact_type_id'];  ?>">
+                    <a class="text-danger"
+                        href="?content=contact&action=delete_type&id=<?PHP echo $contact_type[$i]['contact_type_id'];  ?>">
                         <i class="fa fa-window-close" aria-hidden="true"></i>
                     </a>
                 </td>
@@ -165,6 +167,7 @@
             <th width="100"> Tel</th>
             <th width="100"> Country</th>
             <th width="300"> Text</th>
+            <th width="300"> </th>
         </tr>
     </thead>
     <?PHP 
@@ -208,6 +211,13 @@
 
         <td class="text-left">
             <?PHP echo  $contact[$i]['contact_text'];  ?>
+        </td>
+
+
+        <td>
+            <a class="text-danger" href="?content=contact&action=delete&id=<?PHP echo  $contact[$i]['contact_id'];?>">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </a>
         </td>
 
 

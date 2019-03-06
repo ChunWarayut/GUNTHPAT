@@ -119,15 +119,13 @@
                             if ($lng == TH) {  echo $rooms[$i]['room_detail_3_th'];   }else { echo $rooms[$i]['room_detail_3_en'];  } 
                         }  ?>
                 </span>
-                <br>
-                <br>
+                
                 <span class="text-detail-room">
 
-                    <?PHP if ($lng == TH) {  echo "บริการโทรศัพท์ห้อง"; } else {  echo "Room telephone service";  }?>
 
                 </span>
                 <br>
-                <i class="fas fa-phone" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
+                <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_facility_1_th'] == "") {
                             echo "ไม่ระบุ";
@@ -136,7 +134,7 @@
                         }  ?>
                 </span>
                 <br>
-                <i class="fas fa-wifi" style="font-size:15px; margin-left:30; margin-top: 15; "></i>
+                <i class="fa fa-circle" style="font-size:7px; margin-left:30; margin-top: 15; "></i>
                 <span class="text-detail-room">
                     <?PHP if ($rooms[$i]['room_facility_2_th'] == "") {
                             echo "ไม่ระบุ";

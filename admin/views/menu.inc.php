@@ -73,7 +73,7 @@
                     <span style="padding:5px; font-size:15px; "> CONTACT </span>
                 </div>
             </a></li>
-
+<!-- 
         <li><a href="index.php?content=news">
                 <div
                     <?php if($content=="news" ){echo "class='menu-active'" ;} else
@@ -81,7 +81,7 @@
                     <i class="fa fa-newspaper-o" style="font-size:24px"></i>
                     <span style="padding:5px; font-size:15px; "> NEWS </span>
                 </div>
-            </a></li>
+            </a></li> -->
 
       
             <li><a href="index.php?content=page">
