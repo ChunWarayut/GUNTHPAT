@@ -62,17 +62,6 @@
                 </section>
 
 
-                <script type="text/javascript">
-                $(document).on('ready', function() {
-                    $(".slide").slick({
-                        arrows: false,
-                        dots: false,
-                        infinite: true,
-                        autoplay: true,
-                        autoplaySpeed: 2500,
-                    });
-                });
-                </script>
                 <h5 class="font-weight-light;" style="margin-top: 25;">
                     <span class="text-detail-room">
 
@@ -166,9 +155,9 @@
                 </div>
                 <div class="row px-3">
                     <div class="col-6 pl-0 pr-1">
-                        <a href="<?PHP echo $contact_us[0]['contact_us_facebook']; ?>">
+                        <a href="javascript:fbShare('<?php echo $gunthpatlink,$detaillink,$rooms[$i]['room_id']; ?>','<?php echo $rooms[$i]['room_id']; ?>')">
                             <button type="button" class="btn btn-secondary btn-lg btn-block room-btn-font">
-                                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "Share";  }?>
+                                <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "share"; }?>
 
 
                             </button>
@@ -199,3 +188,22 @@
         <?PHP } ?>
     </div>
 </div>
+<script>
+    function fbShare(url,roomId) {
+		$.post( "controls/setRoomIdShare.php", { roomId: roomId })
+			.done(function( data ) {
+                window.open('http://www.facebook.com/sharer.php?&p	[url]=' + url);
+		});
+    }
+</script>
+    <script type="text/javascript">
+    $(document).on('ready', function() {
+        $(".slide").slick({
+            arrows: false,
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2500,
+        });
+    });
+</script>

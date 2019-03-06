@@ -2,16 +2,8 @@
 
 $menu = 'room';
 $path = 'view/room/';
-require_once('models/RoomsModel.php');
-$rooms_model = new Rooms;
-$rooms = $rooms_model -> getRooms();
-$img_path_gallery = "img_upload/gallery/"; 
-$img_path_room = "img_upload/rooms/"; 
-// print_r($rooms);
 require_once('models/BookModel.php');
 $book_model = new BookModel;
-// $book = $book_model -> getBook();
-// print_r($book);
 
 if( $_GET['action'] == "detail") {
     $id = ($_GET['id'])-1;
