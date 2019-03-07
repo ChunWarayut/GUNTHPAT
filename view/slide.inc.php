@@ -24,7 +24,7 @@ function search() {
 
 <div class="menu-slide-style">
     <section class="menu-slide">
-        <?php for ($i = 0; $i < 1; ++$i) { ?>
+        <?php for ($i = 0; $i < count($slide); ++$i) { ?>
             <div class="menu-slide-item"  >
                 <div class="menu-slide-detail" >
                     <div class="row">

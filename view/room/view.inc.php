@@ -194,7 +194,7 @@
 		});
     }
 </script>
-    <script type="text/javascript">
+<script type="text/javascript">
     $(document).on('ready', function() {
         $(".slide").slick({
             arrows: false,

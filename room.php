@@ -43,8 +43,6 @@ $page = $page_model->getPageByID('3');
 
 <html>
 <head>
-
-    
     <?php if($roomId != ""){ ?>
         <meta property="og:url"           content="<?php echo $roomlink,$roomId; ?>">
         <meta property="og:type"          content="website">

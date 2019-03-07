@@ -16,11 +16,11 @@ $page = $page_model->getPageByID('1');
 <html>
 <head>
 
-
+    <?php if($menu != 'room'){ ?>
     <meta property="og:type"          content="website">
     <meta property="og:title"         content="<?PHP if($lng == "TH"){ echo $page['page_title_th']; }else{ echo $page['page_title_en'];} ?>">
     <meta property="og:description"   content="<?PHP if($lng == "TH"){ echo $page['page_description_th']; }else{ echo $page['page_description_en']; } ?>">
-    
+    <?php } ?>
 
 
 
