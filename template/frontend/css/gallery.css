@@ -111,15 +111,16 @@
     .gallery{
         padding-top: 5%;
     }
-   
+    .gallery-show {
+      display: none;
+  }
+  .gallery-slide {
+    display: inline;
+    padding-top: 50;
+    padding-bottom: 50;
+}
 }
 @media (max-width: 739px) {
-    .gallery-show {
-        display: none;
-    }
-    .gallery-slide {
-        display: inline;
-        padding-top: 50;
-        padding-bottom: 50;
-    }
+
+
 }

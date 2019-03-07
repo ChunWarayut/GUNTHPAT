@@ -31,7 +31,6 @@ $page = $page_model->getPageByID('1');
         <link href="template/frontend/css/slide.css" rel="stylesheet">
         <link href="template/frontend/css/home-room.css" rel="stylesheet">
         <link href="template/frontend/css/home-facilities.css" rel="stylesheet">
-        <link href="template/frontend/css/home-gallery.css" rel="stylesheet">
         <link href="template/frontend/css/footer.css" rel="stylesheet">
     </head>
     <body>

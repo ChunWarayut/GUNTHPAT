@@ -39,7 +39,7 @@ $page = $page_model->getPageByID('5');
 <body>
         <?PHP require_once('view/menu.inc.php');?>
         <?PHP require_once('view/slide.inc.php');?>
-    <?PHP require_once('view/gallery/index.inc.php');?>
-    <?PHP require_once('view/footer.inc.php'); ?>
+        <?PHP require_once('view/gallery/index.inc.php');?>
+        <?PHP require_once('view/footer.inc.php'); ?>
 </body>
 <html>

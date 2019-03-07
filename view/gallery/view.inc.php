@@ -37,15 +37,13 @@ require_once('view/menu.inc.php');
 <div class="container">
     <form action="gallery.php?action=search" id="form_target" role="form" method="post">
         <div class="class row">
-            <div class=" col-5">
-                <div class="text-right">
-                    <h4>
+            <div class=" col-6 text-right">
+                    <h4 class="p-0 m-0">
                         <?php if ($lng == TH) { echo  "แสดงให้ฉันดู"; }else {   echo "Show me";  }  ?>
                     </h4>
-                </div>
             </div>
-            <div class=" col-2">
-                <select class="form-control" style="border: 0px solid #ced4da; width: 150px; color: #f47322"
+            <div class=" col-6 text-left">
+                <select class="" style="border: 0px solid #ced4da; width: 150px; color: #f47322"
                     id="gallery_type_id" name="gallery_type_id" value="<?PHP echo $gallery_type_id;?>" onchange="getGallery(this)">
                     <option value="">
                         <?php if ($lng == TH) { echo  "ทั้งหมด"; }else {   echo " Show All";  }  ?>

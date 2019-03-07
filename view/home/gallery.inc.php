@@ -10,62 +10,17 @@
     </p>
   </div>
 </div>
-<div class="container-fluid gallery-show">
-  <div class="text-center" id="image_fixed">
-    <div class="row" mx-0>
-      <?php for ($i = 0; $i < count($gallery); ++$i) { ?>
-        <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 no-padding" onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>');">
-          <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid-gellery" alt="">
-        </div>
-      <?php } ?>
-    </div>
+<div class="pb-5" style="" >
+  <div id="slide-galery">
+    <?php for ($i = 0; $i < count($gallery); ++$i) { ?>
+      <div onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>');">
+        <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid-gellery" style="width: 100%;">
+      </div>
+    <?php } ?>
   </div>
 </div>
-<div class="gallery-slide">
-  <?PHP for ($i=0; $i < 5; $i= $i + 10) { ?>
-    <div class="gal-item">
-      <div class="row">
-        <div class="col-4 col-4 co-12 gal-item">
-          <div class="row">
-            <?PHP if (!$gallery[$i]) {}else{?>
-              <div class="col-12 col-12 co-12 gal-item">
-                <div class="box">
-                  <img src="<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>" class="img-ht img-fluid rounded " onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>');">
-                </div>
-              </div>
-            <?PHP }  ?>
-            <?PHP if (!$gallery[$i+1]) {}else{?>
-              <div class="col-12 col-12 co-12 gal-item">
-                <div class="box">
-                  <img src="<?PHP echo $pathImgGallery . $gallery[$i+1]['gallery_img']?>" class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i+1]['gallery_img']?>');">
-                </div>
-              </div>
-            <?PHP }  ?>
-          </div>
-        </div>
-        <?PHP if (!$gallery[$i+2]) {}else{?>
-          <div class="col-8 col-8 co-12 gal-item">
-            <div class="box">
-              <img src="<?PHP echo $pathImgGallery . $gallery[$i+2]['gallery_img']?>" class="img-ht img-fluid rounded" onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i+2]['gallery_img']?>');">
-            </div>
-          </div>
-        <?PHP }  ?>
-      </div>
-    </div><!---->
-  <?PHP } ?>
-</div>
-    <script type="text/javascript">
-      $(document).on('ready', function() {
-          $(".slide-galery").slick({
-              arrows: false,
-              dots: false,
-              infinite: true,
-              autoplay: true,
-              autoplaySpeed: 2500,
-          });
-      });
-    </script>
-  <div id="myModal" class="modal">
+
+<div id="myModal" class="modal">
     <!-- The Close Button -->
     <!--   <span class="close">&times;</span> -->
     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -74,13 +29,48 @@
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
   </div>
-  <script>
-    function Show(img) {
+
+<script type="text/javascript">
+  $("#slide-galery").slick({
+    dots: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  function Show(img) {
         $('#myModal').modal('show');
         document.getElementById("img01").src = img;
     }
-  </script>
-
-<style>/* Style the Image Used to Trigger the Modal */
-
-</style>
+</script>
