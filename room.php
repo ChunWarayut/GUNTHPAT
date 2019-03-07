@@ -43,17 +43,7 @@ $page = $page_model->getPageByID('3');
 
 <html>
 <head>
-    <?php if($roomId != ""){ ?>
-        <meta property="og:url"           content="<?php echo $roomlink,$roomId; ?>">
-        <meta property="og:type"          content="website">
-        <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
-        <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
-        <meta property="og:image"         content="<?php echo $img_path_room,$rooms[$roomId]['room_img'];?>">
-    <?php }else{ ?>
-        <meta property="og:type"          content="website">
-        <meta property="og:title"         content="<?PHP if($lng == "TH"){ echo $page['page_title_th']; }else{ echo $page['page_title_en'];} ?>">
-        <meta property="og:description"   content="<?PHP if($lng == "TH"){ echo $page['page_description_th']; }else{ echo $page['page_description_en']; } ?>">
-    <?php } ?>
+
 
 <?PHP require_once('view/header.inc.php'); ?>
     <link href="template/frontend/css/style.css" rel="stylesheet">

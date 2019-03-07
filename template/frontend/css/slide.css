@@ -52,6 +52,9 @@
 .bg-slide-color{
     background-color: #000;
 }
+.menu-slide-content h3{
+    width: 60%;
+}
 @media (max-width: 991px) {
     .menu-slide-title{
         padding-bottom: 5%;
@@ -68,6 +71,9 @@
         right: 5%;
         width: 50%;
     }
+    .menu-slide-content h3{
+        width: 65%;
+    }
 }
 .menu-slide-video span{
     color: unset;
@@ -77,12 +83,6 @@
 }
 .menu-slide-video a:hover{
     color: #ff6c11;
-}
-
-@media (max-width: 874px) {
-    .menu-slide-content h3{
-        width: 65%;
-    }
 }
 @media (max-width: 767px) {
     .menu-slide-detail {
