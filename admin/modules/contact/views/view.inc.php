@@ -20,18 +20,18 @@
                         </div>
                         <div class="col-lg-6">
                             <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"
-                                btn-block>แก้ไข</button>
+                                btn-block>บันทึก</button>
                         </div>
                     </div>
                     <div class="form-group">
                         <label> </label>
-                        <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
+                        <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>บันทึก</button> -->
                         <textarea class="form-control " id="contact_head_detail_en" name="contact_head_detail_en"
                             rows="5"><?PHP echo $contact_head[0]['contact_head_detail_en'];?></textarea>
                         <textarea class="form-control " id="contact_head_detail_th" name="contact_head_detail_th"
                             rows="5"><?PHP echo $contact_head[0]['contact_head_detail_th'];?></textarea>
                     </div>
-                    <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>แก้ไข</button> -->
+                    <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right" btn-block>บันทึก</button> -->
                 </div>
             </div>
         </form>

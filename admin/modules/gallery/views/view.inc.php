@@ -5,7 +5,7 @@
 <form id="form_target" role="form" method="post" action="index.php?content=gallery&action=edit_head">
     <div class="row">
         <div class="col-lg-4">
-            <button type="submit" name="" id="" class="btn btn-warning btn-xs " btn-block>แก้ไข</button>
+            <button type="submit" name="" id="" class="btn btn-warning btn-xs " btn-block>บันทึก</button>
             <div class="form-group">
                 <label> </label>
                 <textarea class="form-control " id="gallery_head_sub_title_th" name="gallery_head_sub_title_th"
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <button type="submit" name="" id="" class="btn btn-warning btn-xs " btn-block>แก้ไข</button>
+            <button type="submit" name="" id="" class="btn btn-warning btn-xs " btn-block>บันทึก</button>
             <div class="form-group">
                 <label> </label>
                 <textarea class="form-control " id="gallery_head_sub_title_en" name="gallery_head_sub_title_en"
