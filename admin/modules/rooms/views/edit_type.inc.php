@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-6">
 
-                    <button type="submit" class="btn btn-primary float-right">แก้ไข</button>
+                    <button type="submit" class="btn btn-primary float-right">บันทึก</button>
                 </div>
             </div>
         </div>

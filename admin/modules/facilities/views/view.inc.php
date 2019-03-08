@@ -6,12 +6,12 @@
 <h2> แก้ไข Sub Title</h2>
 <hr>
 <form  id="form_target" role="form" method="post" action="index.php?content=facilities&action=edit_head">   
-<button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button>         
+<button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>บันทึก</button>         
     <div class="row">
     
 
             <div class="col-lg-6">
-                <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>แก้ไข</button> -->
+                <!-- <button type="submit" name="" id="" class="btn btn-warning btn-xs float-right"  btn-block>บันทึก</button> -->
                 <div class="form-group">
                     <label> </label>
                     <textarea class="form-control " id="facilities_head_sub_title_th" name="facilities_head_sub_title_th"rows="6"/><?PHP echo $facilities_head[0]['facilities_head_sub_title_th'];?></textarea>
