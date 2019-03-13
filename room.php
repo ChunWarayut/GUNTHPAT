@@ -18,7 +18,7 @@ require_once('models/GalleryModel.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
 
-$roomlink = "http://support.revelsoft.co.th/gunthpat/room.php?id=";
+$roomlink = "http://support.revelsoft.co.th/gunthpat/";
 
 if(isset($_COOKIE['language'])){
     $lng = $_COOKIE['language'];
@@ -44,17 +44,31 @@ $page = $page_model->getPageByID('3');
 <html>
 <head>
 
-
 <?PHP require_once('view/header.inc.php'); ?>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="description" content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
     <meta name="author" content="">
-    <meta property="og:url"           content="<?php echo $roomlink,$roomId; ?>">
+    <meta property="og:url"           content="<?php echo $roomlink?>,'room.php?id=',<?php echo $roomId; ?>">
     <meta property="og:type"          content="website">
     <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
     <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
-  <meta property="og:image"         content="<?php echo $img_path_room,$rooms[$roomId]['room_img'];?>">
+    <meta property="og:image"         content="<?php echo $roomlink,$img_path_room,$rooms[$roomId]['room_img'];?>">
+    
+    <?php if($menu == 'room'){ ?>
+        <meta property="og:url"           content="<?php echo $roomlink?>,'room.php?id=',<?php echo $roomId; ?>">
+        <meta property="og:type"          content="website">
+        <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
+        <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
+        <meta property="og:image"         content="<?php echo $roomlink,$img_path_room,$rooms[$roomId]['room_img'];?>">
+        <?php }else{ ?>
+        <meta property="og:url"           content="<?php echo $setting['setting_url']; ?>">
+        <meta property="og:type"          content="website">
+        <meta property="og:title"         content="<?php if($lng == "TH"){ echo $page['page_title_th']; }else{ echo $page['page_title_en'];} ?>">
+        <meta property="og:description"   content="<?php if($lng == "TH"){ echo $page['page_description_th']; }else{ echo $page['page_description_en']; } ?>">
+        <meta property="og:image"         content="<?PHP echo $setting['setting_url']; ?>img_upload/setting/<?PHP if($setting['setting_logo'] != ""){ echo $setting['setting_logo']; }else{ echo "default-logo.png"; } ?>">
+        <?php } ?>
+
+
     <link href="template/frontend/css/style.css" rel="stylesheet">
     <link href="template/frontend/css/menu.css" rel="stylesheet">
     <link href="template/frontend/css/slide.css" rel="stylesheet">
