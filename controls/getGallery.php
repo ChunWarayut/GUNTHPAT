@@ -6,8 +6,7 @@ $galleryBy_model = new Gallery;
 $gallery = $galleryBy_model -> getgalleryby($_POST['gallery_type_id']) ;
 
 
-
-for ($i=0; $i < 10; $i= $i + 10) { ?>
+for ($i=0; $i < count($gallery); $i= $i + 10) { ?>
         
                 <div class="gal-item ">
                     <!-- ----------------------------------------------------------------------------------- -->

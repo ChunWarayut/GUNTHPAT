@@ -5,19 +5,26 @@
 <title>GUNTHPAT</title>
 <link rel="icon" href="" type="image/png">
 <script defer src="https://use.fontawesome.com/releases/v5.7.0/js/all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K" crossorigin="anonymous"> </script>
+<meta charset="utf-8">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php if($roomId != ""){ ?>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
-  <meta name="author" content="">
-  <meta property="og:url"           content="<?php echo $roomlink,$roomId; ?>">
-  <meta property="og:type"          content="website">
-  <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
-  <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
-  <meta property="og:image"         content="<?php echo $img_path_room,$rooms[$roomId]['room_img'];?>">
+    <meta name="author" content="">
+
+    <meta name="description" content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
+    <meta name="author" content="">
+    <meta property="og:url"           content="<?php echo $roomlink,'room.php?id=',$roomId; ?>">
+    <meta property="og:type"          content="website">
+    <meta property="og:title"         content="<?php if($lng == "TH"){ echo $rooms[$roomId]['room_name_th']; }else{ echo $rooms[$roomId]['room_name_en'];} ?>">
+    <meta property="og:description"   content="<?php if($lng == "TH"){ echo "ขนาดห้อง ",$rooms[$roomId]['room_size_th'],$rooms[$roomId]['room_detail_1_th']; }else{ echo "size ",$rooms[$roomId]['room_size_en']," ",$rooms[$roomId]['room_detail_1_en'];} ?>">
+    <meta property="og:image"         content="<?php echo $roomlink,$img_path_room,$rooms[$roomId]['room_img'];?>">
 <?php }else{ ?>
-  
+  <meta name="description" content=">">
+  <meta name="author" content="">
   <meta property="og:type"          content="website">
   <meta property="og:title"         content="<?PHP if($lng == "TH"){ echo $page['page_title_th']; }else{ echo $page['page_title_en'];} ?>">
   <meta property="og:description"   content="<?PHP if($lng == "TH"){ echo $page['page_description_th']; }else{ echo $page['page_description_en']; } ?>">

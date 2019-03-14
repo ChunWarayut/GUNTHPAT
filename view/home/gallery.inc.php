@@ -12,10 +12,10 @@
 </div>
 <div class="pb-5" style="" >
   <div id="slide-galery">
-    <?php for ($i = 0; $i < count($gallery); ++$i) { ?>
-      <div onclick="Show('<?PHP echo $pathImgGallery . $gallery[$i]['gallery_img']?>');">
+    <?php for ($i = 0; $i < 20; ++$i) { ?>
+      <a href="gallery.php#gallery">
         <img src="<?php echo $pathImgGallery.$gallery[$i]['gallery_img']; ?>"class="img-fluid-gellery" style="width: 100%;">
-      </div>
+      </a>
     <?php } ?>
   </div>
 </div>
@@ -29,6 +29,7 @@
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
   </div>
+  
 
 <script type="text/javascript">
   $("#slide-galery").slick({
@@ -38,7 +39,7 @@
     arrows: false,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 1600,
@@ -69,8 +70,4 @@
       }
     ]
   });
-  function Show(img) {
-        $('#myModal').modal('show');
-        document.getElementById("img01").src = img;
-    }
 </script>

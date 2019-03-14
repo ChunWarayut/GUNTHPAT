@@ -38,7 +38,7 @@ $img_path = "img_upload/gallery/";
                 <?PHP  }?> -->
 
 
-                <a class="text-header nav-link " href="room.php#room">
+                <a class="text-menu-footer nav-link " href="room.php#room">
 
 
                     <?php
@@ -51,7 +51,7 @@ $img_path = "img_upload/gallery/";
                 </a>
 
 
-                <a class="text-header nav-link "
+                <a class="text-menu-footer nav-link "
                     href="facilities.php#facilities">
 
 
@@ -67,7 +67,7 @@ $img_path = "img_upload/gallery/";
                 </a>
 
 
-                <a class="text-header nav-link"
+                <a class="text-menu-footer nav-link"
                     href="gallery.php#gallery">
 
                     <?php
@@ -81,7 +81,7 @@ $img_path = "img_upload/gallery/";
                 </a>
 
 
-                <a class="text-header nav-link "
+                <a class="text-menu-footer nav-link "
                     href="about_us.php#about_us">
 
 
