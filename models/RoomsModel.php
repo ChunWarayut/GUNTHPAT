@@ -48,8 +48,7 @@ class Rooms extends BaseModel{
 
     function getRoomsByID($room_id) {
         $sql = " SELECT
-                room_id,
-                room_name
+                *
             FROM
                 `tb_room`
             WHERE

@@ -153,7 +153,7 @@
                 </div>
                 <div class="row px-3">
                     <div class="col-6 pl-0 pr-1">
-                        <a href="javascript:fbShare('<?php echo $roomlink,'room.php?id=',$rooms[$i]['room_id']; ?>','<?php echo $rooms[$i]['room_id']; ?>')">
+                        <a href="javascript:fbShare('<?php echo $roomlink,'room.php?id=',$rooms[$i]['room_id']; ?>')">
                             <button type="button" class="btn btn-secondary btn-lg btn-block room-btn-font" style="background-color: #4267b2">
                             <i class="fab fa-facebook-square"></i> <?PHP if ($lng == TH) {  echo "แชร์"; } else {  echo "share"; }?>
 
@@ -187,11 +187,10 @@
     </div>
 </div>
 <script>
-    function fbShare(url,roomId) {
-		$.post( "controls/setRoomIdShare.php", { roomId: roomId })
-			.done(function( data ) {
+    function fbShare(url) {
+
                 window.open('http://www.facebook.com/sharer.php?&p	[url]=' + url);
-		});
+
     }
 </script>
 <script type="text/javascript">
