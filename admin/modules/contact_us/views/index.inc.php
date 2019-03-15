@@ -150,6 +150,7 @@ $id =($_GET['id']);
         $check = true;
         $data = [];
         $data['contact_us_title_th'] = $_POST['contact_us_title_th'];
+        $data['contact_us_url'] = $_POST['contact_us_url'];
         $data['contact_us_sub_title_th'] = $_POST['contact_us_sub_title_th'];
         $data['contact_us_title_en'] = $_POST['contact_us_title_en'];
         $data['contact_us_sub_title_en'] = $_POST['contact_us_sub_title_en'];

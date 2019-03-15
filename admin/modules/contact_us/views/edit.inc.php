@@ -42,16 +42,28 @@ function readURL(input) {
             <div class="row ">
 
                 <div class="col-lg-2">
-                    <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP 
-                            if ($contact_us[$id]['contact_us_img'] != "" || $contact_us[$id]['contact_us_img'] != null) { 
-                                echo $img_path . $contact_us[$id]['contact_us_img']; 
-                                } else {
-                                    echo $img_path . 'default.png';
-                                }  ?> " class="img-fluid" alt="">
-                        <input accept=".jpg , .png" type="file" id="contact_us_img" name="contact_us_img"
-                            class="form-control" style="margin: 14px 0 0 0 ;" onChange="readURL(this);"
-                            value="<?php echo  $contact_us[$id]['contact_us_img']; ?>">
+                    <div class="row p-0 m-0">
+                    <div class="col-12 p-0 m-0">
+                            <div class="form-group p-0 m-0" align="center">
+                                <img id="_img" width="400" src="<?PHP 
+                                    if ($contact_us[$id]['contact_us_img'] != "" || $contact_us[$id]['contact_us_img'] != null) { 
+                                        echo $img_path . $contact_us[$id]['contact_us_img']; 
+                                        } else {
+                                            echo $img_path . 'default.png';
+                                        }  ?> " class="img-fluid" alt="">
+                                <input accept=".jpg , .png" type="file" id="contact_us_img" name="contact_us_img"
+                                    class="form-control" style="margin: 14px 0 0 0 ;" onChange="readURL(this);"
+                                    value="<?php echo  $contact_us[$id]['contact_us_img']; ?>">
+                            </div>
+                        </div>
+                        <div class="col-12 p-0 m-0">
+                            <div class="form-group">
+                                <label> URL<font color="#F00"><b>*</b></font></label>
+                                <input id="contact_us_url" name="contact_us_url" class="form-control"
+                                    value="<?PHP echo $contact_us[$id]['contact_us_url'];?>" />
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

@@ -94,6 +94,7 @@ class Contact_us extends BaseModel{
         $data['contact_us_map_latitude'] =mysqli_real_escape_string(static::$db,$data['contact_us_map_latitude']);
         $data['contact_us_map_longitude'] =mysqli_real_escape_string(static::$db,$data['contact_us_map_longitude']);
         $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_img']);
+        $data['contact_us_img']=mysqli_real_escape_string(static::$db,$data['contact_us_url']);
 
         $sql = "UPDATE `tb_contact_us` 
         SET
@@ -129,7 +130,8 @@ class Contact_us extends BaseModel{
          `contact_us_map` = '".$data['contact_us_map']."',
          `contact_us_map_latitude` = '".$data['contact_us_map_latitude']."',
          `contact_us_map_longitude` = '".$data['contact_us_map_longitude']."',
-         `contact_us_img` = '".$data['contact_us_img']."'
+         `contact_us_img` = '".$data['contact_us_img']."',
+         `contact_us_url` = '".$data['contact_us_url']."'
         WHERE `tb_contact_us`.`contact_us_id` = '$contact_us_id'
         ";
         // echo "<pre>";

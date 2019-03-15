@@ -18,7 +18,7 @@ require_once('models/GalleryModel.php');
 $gallery_model = new Gallery;
 $gallery = $gallery_model -> getgallery() ;
 
-$roomlink = "http://support.revelsoft.co.th/gunthpat/";
+
 
 if(isset($_COOKIE['language'])){
     $lng = $_COOKIE['language'];
@@ -42,7 +42,7 @@ $page = $page_model->getPageByID('3');
 <?PHP require_once('view/header.inc.php'); ?>
 
     
-    <meta property="og:url"           content="<?php echo $roomlink."room.php?id=".$_GET['id']; ?>">
+    <meta property="og:url"           content="<?php echo $contact_us[0]['contact_us_url']."room.php?id=".$_GET['id']; ?>">
     <meta property="og:type"          content="website">
     <meta property="og:title"         content="<?php echo $roomId[0]['room_name_en']; ?>">
     <meta property="og:description"   content="<?php echo "ขนาดห้อง ",$roomId[0]['room_size_th'],$roomId[0]['room_detail_1_th']; ?>">
