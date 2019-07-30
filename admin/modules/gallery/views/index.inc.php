@@ -223,9 +223,6 @@ window.location = "index.php?content=rooms&action=edit&id=<?PHP echo $_POST['roo
 </script>
 <?PHP
 }?>
-
-            }else{
-                ?>
 <script>
 window.history.back();
 </script>

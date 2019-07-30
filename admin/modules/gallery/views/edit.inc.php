@@ -82,7 +82,7 @@ echo $gallery[$id]['gallery_name'];  ?>
                                 for ($i=0; $i < count($gallery_type); $i++) { 
                                     # code...
                                 ?>
-                                    <option  value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"  <?PHP if ($gallery_type[$type-1]['gallery_type_id'] == $gallery_type[$i]['gallery_type_id'])  { echo 'selected'; } ?>>
+                                    <option  value="<?PHP echo $gallery_type[$i]['gallery_type_id'];?>"  <?PHP if ($gallery[$id]['gallery_type_id'] == $gallery_type[$i]['gallery_type_id'])  { echo 'selected'; } ?>>
                                         <?PHP echo $gallery_type[$i]['gallery_type_name_th'];?>
                                         <?PHP echo $gallery_type[$i]['gallery_type_name_en'];?>
                                         <?PHP echo $gallery_type[$i]['gallery_type_name'];?>
@@ -100,7 +100,11 @@ echo $gallery[$id]['gallery_name'];  ?>
 
                                 <label> ROOM <font color="#F00"><b>*</b></font></label> <br />
                                 <select class="form-control  custom-select" id="room_id" name="room_id">
-                                <option  value=""> อื่น ๆ </option> <?PHP for ($i=0; $i < count($rooms); $i++) { ?>
+                                <option  value=""> อื่น ๆ 
+                                </option> 
+                                <?PHP 
+                                for ($i=0; $i < count($rooms); $i++) { 
+                                    ?>
                                     <option  value="<?PHP echo $rooms[$i]['room_id'];?>" <?PHP if ($room_id == $rooms[$i]['room_id'])  { echo 'selected'; } ?>>
                                         <?PHP echo $rooms[$i]['room_name_th'];?>
                                         <?PHP echo $rooms[$i]['room_name_en'];?>

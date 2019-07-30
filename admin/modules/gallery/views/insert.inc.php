@@ -25,7 +25,6 @@
                     </h1>
                 </div>
                 <div class="col-lg-6">
-
                     <button type="submit" class="btn btn-primary float-right">เพิ่ม</button>
                 </div>
             </div>

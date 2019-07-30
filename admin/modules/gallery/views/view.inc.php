@@ -1,4 +1,4 @@
-<h1> Gallery Titlle</h1>
+<h1> Gallery Title</h1>
 
 <h2> แก้ไข Sub Title</h2>
 <hr>
@@ -34,8 +34,8 @@
                     <th width="10">#</th>
                     <th width="80">Title TH</th>
                     <th width="80">Title EN</th>
-                    <th width="10"></th>
-                    <th width="10"></th>
+                    <th width="10">แก้ไข</th>
+                    <th width="10">ลบ</th>
                 </tr>
             </thead>
             <?PHP 
@@ -102,9 +102,9 @@
             <!-- <th width="100">Name EN</th> -->
             <th width="100"> Type TH</th>
             <th width="100"> Type EN</th>
-            <th width="10"></th>
-            <th width="10"></th>
-            <th width="10"></th>
+            <th width="10">แก้ไข</th>
+            <th width="10">นิยม</th>
+            <th width="10">ลบ</th>
         </tr>
     </thead>
     <?PHP 
