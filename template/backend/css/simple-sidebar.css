@@ -118,3 +118,18 @@ body {
         margin-right: 0;
     }
 }
+.btn-close{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    margin: 0!important;
+    padding: 0!important;
+    padding-right: 15px !important;
+    background: unset;
+    border: unset;
+    color: red;
+    font-size: 1.2rem;
+  }
+  .btn-close:active{
+    color: black;
+  }

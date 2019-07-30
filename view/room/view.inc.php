@@ -51,14 +51,15 @@
         <div class="col-lg-4 col-md-6">
             <div class="shadow-lg p-3 mb-5 bg-white rounded;">
                 <section class="slide" style="padding:0%; margin:-16">
-                    <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$i]['room_id'])); ++$j) {    ?>
+                    <!-- <?php for ($j = 0; $j < count($roomBy = $rooms_model -> getRoomsBy($rooms[$i]['room_id'])); ++$j) {    ?>
                     <img style=" width: 100px; height: 200px; object-fit: cover;"
                         src="<?php if ($roomBy[$j]['gallery_img'] == null ) {
                             echo $img_path_room . $roomBy[$j]['room_img'];
                         }else {
                             echo $img_path_gallery. $roomBy[$j]['gallery_img'];
                          } ?>">
-                    <?php } ?>
+                    <?php } ?> -->
+                    <img style=" width: 100px; height: 200px; object-fit: cover;" src="<?php echo $img_path_room.$rooms[$i]['room_img'];?>">
                 </section>
 
 

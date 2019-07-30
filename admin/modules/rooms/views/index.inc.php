@@ -35,6 +35,7 @@ $id =($_GET['id']);
 // ECHO "</PRE>";
 
 $target_dir = "../img_upload/rooms/";
+$target_dirdelete = "../img_upload/rooms/";
 
     //---------------------ฟังก์ชั่นวันที่------------------------------------
     date_default_timezone_set("Asia/Bangkok");
@@ -60,6 +61,22 @@ $target_dir = "../img_upload/rooms/";
         ?>
 <script>
 window.location = "index.php?content=rooms"
+</script>
+<?PHP
+
+
+}else if( $_GET['action'] == "delete_img") {
+    
+    $rooms_gallery = $gallery_model -> getgallerybyRoom($id) ;
+    $target_file = $target_dirdelete .$rooms_gallery;
+    if (file_exists($target_file)) {
+        unlink($target_file);
+    }
+    $rooms_gallery = $gallery_model->deleteGallery($id);
+    // require_once($path.'view.inc.php');
+    ?>
+<script>
+window.history.back();
 </script>
 <?PHP
 
