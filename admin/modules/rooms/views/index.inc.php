@@ -150,7 +150,8 @@ window.location = "index.php?content=rooms"
         $data['room_name_en'] = $_POST['room_name_en'];
         $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
         $data['room_type_id'] = $_POST['room_type_id'];
-        $data['room_price'] = $_POST['room_price'];
+        $data['room_price_th'] = $_POST['room_price_th'];
+        // $data['room_price_en'] = $_POST['room_price_en'];
         $data['room_amout'] = $_POST['room_amout'];
         $data['room_img'] = $_POST['room_img'];
         $data['room_size_th'] = $_POST['room_size_th'];
@@ -246,7 +247,7 @@ window.history.back();
             if($result){
                 ?>
 <script>
-window.location = "index.php?content=rooms&action=edit&id=<?PHP echo $rooms_totle+1; ?>"
+window.location = "index.php?content=rooms"
 </script>
 <?php
             }else{
@@ -264,6 +265,7 @@ window.history.back();
     } else if( $_GET['action'] == "edit") {
                
     if(isset($_POST['room_id'])){
+        $data['room_price_th'] = $_POST['room_price_th'];
         $check = true;
         $data = [];
         $data['room_id'] = $_POST['room_id'];
@@ -272,7 +274,9 @@ window.history.back();
         $data['room_name_en'] = $_POST['room_name_en'];
         $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
         $data['room_type_id'] = $_POST['room_type_id'];
-        $data['room_price'] = $_POST['room_price'];
+        $data['room_price_th'] = $_POST['room_price_th'];
+        
+        // $data['room_price_en'] = $_POST['room_price_en'];
         $data['room_amout'] = $_POST['room_amout'];
         $data['room_img'] = $_POST['room_img'];
         $data['room_size_th'] = $_POST['room_size_th'];
@@ -361,7 +365,13 @@ window.history.back();
 <?php }else{
             $result = $rooms_model-> editRoom($id ,$data);
             if($result){
+                // echo "555",$id;
+                 
+                // echo "<pre>";
+                // print_r($data);
+                // echo "</pre>";
                 ?>
+
 <script>
 window.location = "index.php?content=rooms"
 </script>
@@ -377,9 +387,12 @@ window.history.back();
     }else{
         // echo $_GET['id'];
         $img_path_room = "../img_upload/room/"; 
-        $roomBy = $rooms_model -> getRoomsBy($_GET['id']);
+        $roomBy = $rooms_model -> getRoomsByID($_GET['id']);
         // print_r($roomBy);
         require_once($path . 'edit.inc.php');
+//         echo "<PRE>";
+// print_r( $roomBy);
+// echo "</PRE>";
     }
     
 }

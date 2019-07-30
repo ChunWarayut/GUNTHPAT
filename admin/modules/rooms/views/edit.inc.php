@@ -40,16 +40,22 @@ function readURL(input) {
             <div class="row ">
                 <div class="col-lg-3">
                     <div class="form-group" align="center">
-                        <img id="_img" width="400" src="<?PHP 
+                        <img id="_img" width="400" 
+                        src="<?PHP 
                         if ($roomBy[0]['room_img'] != "" || $roomBy[0]['room_img'] != null) { 
                             echo $img_path . $roomBy[0]['room_img']; 
                             } else {
                                 echo $img_path . 'default.jpg';
-                            }  ?> " class="img-fluid" alt="">
+                            }  ?> " 
+                            class="img-fluid" alt="">
+                        
                         <input accept=".jpg , .png" type="file" id="room_img" name="room_img" class="form-control"
                             style="margin: 14px 0 0 0 ;" onChange="readURL(this);"
                             value="<?php echo  $roomBy[0]['room_img']; ?>">
-                        <br>
+                            <input  type="hidden" id="room_id" name="room_id" class="form-control"
+                            value="<?php echo  $roomBy[0]['room_id']; ?>">
+                    </div>
+                </div>
                         <div class="text-left">
                             <div class="form-group">
                                 <label>Room Type <font color="#F00"><b>*</b></font></label> <br />
@@ -69,10 +75,10 @@ function readURL(input) {
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>Price <font color="#F00"><b>*</b></font></label>
-                                        <input type="number" id="room_price" name="room_price" class="form-control"
-                                            value="<?PHP echo  $roomBy[0]['room_price'];?>" />
-                                        <p class="help-block">Example : 2,000 </p>
+                                        <label>Price TH<font color="#F00"><b>*</b></font></label>
+                                        <input type="text" id="room_price_th" name="room_price_th" class="form-control"
+                                            value="<?PHP echo  $roomBy[0]['room_price_th'];?>" />
+                                        <p class="help-block">Example : 2,000 / วัน </p>
                                     </div>
                                 </div>
 
@@ -95,13 +101,12 @@ function readURL(input) {
 
 
                     </div>
-                </div> 
+                </div>
 
 
 
                 <div class="col-lg-9">
                     <div class="row">
-
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Room Name TH <font color="#F00"><b>*</b></font></label>
@@ -168,7 +173,7 @@ function readURL(input) {
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
+                                                    <input type="checkbox" class="custom-control-input" <?php if ($roomBy[0]['room_detail_2_th']!=""||$roomBy[0]['room_detail_2_th']!=null){echo 'checked="checked"';} ?>
                                                         id="room_detail_2_th" name="room_detail_2_th">
                                                     <label class="custom-control-label" for="room_detail_2_th">
                                                         ระเบียงส่วนตัว /
@@ -181,7 +186,7 @@ function readURL(input) {
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
+                                                    <input type="checkbox" class="custom-control-input"<?php if ($roomBy[0]['room_detail_3_th']!=""||$roomBy[0]['room_detail_3_th']!=null){echo 'checked="checked"';} ?>
                                                         id="room_detail_3_th" name="room_detail_3_th">
                                                     <label class="custom-control-label" for="room_detail_3_th">
                                                         WIFI
@@ -193,10 +198,10 @@ function readURL(input) {
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
+                                                    <input type="checkbox" class="custom-control-input"<?php if ($roomBy[0]['room_facility_1_th']!=""||$roomBy[0]['room_facility_1_th']!=null){echo 'checked="checked"';} ?>
                                                         id="room_facility_1_th" name="room_facility_1_th">
                                                     <label class="custom-control-label" for="room_facility_1_th">
-                                                    เครื่องปรับอากาศ / air
+                                                        เครื่องปรับอากาศ / air
                                                     </label>
                                                 </div>
                                             </div>
@@ -205,10 +210,10 @@ function readURL(input) {
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
+                                                    <input type="checkbox" class="custom-control-input"<?php if ($roomBy[0]['room_facility_2_th']!=""||$roomBy[0]['room_facility_2_th']!=null){echo 'checked="checked"';} ?>
                                                         id="room_facility_2_th" name="room_facility_2_th">
                                                     <label class="custom-control-label" for="room_facility_2_th">
-                                                    โทรศัพท์ / Tel
+                                                        โทรศัพท์ / Tel
                                                     </label>
                                                 </div>
                                             </div>

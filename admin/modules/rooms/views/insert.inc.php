@@ -63,12 +63,22 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>Price <font color="#F00"><b>*</b></font></label>
-                                        <input type="number" id="room_price" name="room_price" class="form-control"
-                                            value="<?PHP echo  $roomBy[0]['room_price'];?>" />
-                                        <p class="help-block">Example : 2,000 </p>
+                                        <label>Price TH <font color="#F00"><b>*</b></font></label>
+                                        <input type="text" id="room_price_th" name="room_price_th" class="form-control"
+                                            value="<?PHP echo  $roomBy[0]['room_price_th'];?>" />
+                                        <p class="help-block">Example : 2,000 / วัน </p>
                                     </div>
                                 </div>
+                                <!-- <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Price EN<font color="#F00"><b>*</b></font></label>
+                                        <input type="text" id="room_price_en" name="room_price_en" class="form-control"
+                                            value="<?PHP 
+                                            // echo  $roomBy[0]['room_price_en'];
+                                            ?>" />
+                                        <p class="help-block">Example : 2,000 / Day </p>
+                                    </div>
+                                </div> -->
 
 <!-- 
                                 <div class="col-12">

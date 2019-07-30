@@ -79,11 +79,13 @@
                     <!-- <th width="10">#</th> -->
                     <!-- <th width="80">Title TH</th> -->
                     <th width="80">Title EN</th>
-                    <th width="10"></th>
-                    <th width="10"></th>
+                    <th width="5">แก้ไข</th>
+                    <th width="5">ลบ</th>
                 </tr>
             </thead>
-            <?PHP 
+          <?PHP  
+          
+            
     for ($i=0; $i < count($room_type); $i++) { 
         # code...
         
@@ -146,9 +148,9 @@
             <th width="500px"> Detail EN</th>
             <th width="500px"> Facility TH</th>
             <th width="500px"> Facility EN</th>
-            <th width=""></th>
-            <th width=""></th>
-            <th width=""></th>
+            <th width="">แก้ไข</th>
+            <th width="">นิยม</th>
+            <th width="">ลบ</th>
         </tr>
     </thead>
     <?PHP 
@@ -181,7 +183,7 @@
 
 
         <td class="text-right">
-            <?PHP echo   number_format($rooms[$i]['room_price']);  ?>
+            <?PHP echo   $rooms[$i]['room_price_th'];  ?>
         </td>
 
         <td class="text-right">
@@ -229,7 +231,7 @@
 
 
         <td>
-            <a href="?content=rooms&action=edit&id=<?PHP echo $rooms[$i]['room_id'];?>&type=<?PHP echo $rooms[$i]['room_type_id'];  ?> ">
+            <a href="?content=rooms&action=edit&id=<?PHP echo $rooms[$i]['room_id'];?> ">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
         </td>
