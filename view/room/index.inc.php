@@ -8,6 +8,9 @@ $book_model = new BookModel;
 if(isset($_GET['id']) && (!isset($_GET['action']))){
     $id = $_GET['id'];
     $roomBy = $rooms_model -> getRoomsBy($id);
+    $roomByList = $rooms_model -> getRoomsBy($id);
+    // echo $id;
+
     require_once($path.'detail.inc.php');
 } else if( $_GET['action'] == "book") {
     $id = ($_GET['id']);

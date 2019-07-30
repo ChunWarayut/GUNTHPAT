@@ -21,9 +21,8 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 </div>
                 <div class="row">
                     <div class="col-12 justify-content-end d-flex align-items-center">
-                        <span class="h4 m-0 mr-2">$ <?php echo $rooms[$i]['room_price']; ?> /
-                            <?php if ($lng == TH) {  echo "วัน";   }else { echo "Day";  }  ?> </span>
-                        <a class="btn btn-orange" href="room.php?id=<?PHP echo $rooms[$i]['room_id']; ?>#detail">
+                        <span class="h4 m-0 mr-2"><?php echo $rooms[$i]['room_price_th']; ?> </span>
+                        <a class="btn btn-orange" href="room.php?id=<?PHP echo $rooms[$i]['room_id']-1; ?>#detail">
                             <?php if ($lng == TH) {  echo "ดูเพิ่มเติม";   }else { echo "See More";  }  ?>
                         </a>
                     </div>
@@ -66,9 +65,9 @@ for ($i = 0; $i < count($rooms); ++$i) {
                 </div>
                 <div class="row">
                     <div class="col-12 justify-content-end d-flex align-items-center">
-                        <span class="h4 m-0 mr-2">$ <?php echo $rooms[$i]['room_price']; ?> /
-                            <?php if ($lng == TH) {  echo "วัน";   }else { echo "Day";  }  ?> </span>
-                        <a class="btn btn-orange" href="room.php?action=detail&id=<?PHP echo $rooms[$i]['room_id']; ?>">
+                        <span class="h4 m-0 mr-2"><?php echo $rooms[$i]['room_price_th']; ?>
+                        </span>
+                            <a class="btn btn-orange" href="room.php?id=<?PHP echo $rooms[$i]['room_id']-1; ?>#detail">
                             <?php if ($lng == TH) {  echo "ดูเพิ่มเติม";   }else { echo "See More";  }  ?>
                         </a>
                     </div>
