@@ -147,6 +147,15 @@ window.location = "index.php?content=gallery"
 <?PHP
     } else if( $_GET['action'] == "insert") {
     if(isset($_POST['gallery_id'])){
+        if($_POST['gallery_img'] == ''&&$_FILES['gallery_img']['name'] == ''){
+            ?>
+            <script>
+                alert('<?php echo "กรุณาเพิ่มรูปภาพ"; ?>');
+                window.history.back();
+            </script>
+        <?php
+        }else{
+
         $check = true;
         $data = [];
         $data['gallery_id'] = $_POST['gallery_id'];
@@ -229,6 +238,7 @@ window.history.back();
 <?php
             }
         }
+    }
     }else{
         require_once($path . 'insert.inc.php');
     }
