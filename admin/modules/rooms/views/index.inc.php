@@ -48,25 +48,21 @@ $target_dirdelete = "../img_upload/rooms/";
     $date="$d1$d2$d3$d4$d5$d6";
     //---------------------------------------------------------------------
 
-    if( !isset($_GET['action']) ) {
-        require_once($path.'view.inc.php');
-    } else if( $_GET['action'] == "delete") {
-        
-        $target_file = $target_dir . $_POST['room_img_o'];
-        if (file_exists($target_file)) {
-            unlink($target_file);
-        }
-        $result = $rooms_model-> deleteRooms($id);
-        require_once($path.'view.inc.php');
-        ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?PHP
-
-
+if( !isset($_GET['action']) ) {
+    require_once($path.'view.inc.php');
+} else if( $_GET['action'] == "delete") {
+    $target_file = $target_dir . $_POST['room_img_o'];
+    if (file_exists($target_file)) {
+        unlink($target_file);
+    }
+    $result = $rooms_model-> deleteRooms($id);
+    require_once($path.'view.inc.php');
+    ?>
+        <script>
+        window.location = "index.php?content=rooms"
+        </script>
+    <?PHP
 }else if( $_GET['action'] == "delete_img") {
-    
     $rooms_gallery = $gallery_model -> getgallerybyRoom($id) ;
     $target_file = $target_dirdelete .$rooms_gallery;
     if (file_exists($target_file)) {
@@ -75,77 +71,73 @@ window.location = "index.php?content=rooms"
     $rooms_gallery = $gallery_model->deleteGallery($id);
     // require_once($path.'view.inc.php');
     ?>
-<script>
-window.history.back();
-</script>
-<?PHP
-
-
+        <script>
+        window.history.back();
+        </script>
+    <?PHP
 } else if( $_GET['action'] == "delete_type") {
     $result = $room_type_model-> deleteRoomType($id);
     require_once($path.'view.inc.php');
     ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?PHP
-
-    } else if( $_GET['action'] == "insert_type") {
-        // echo $_POST['room_type_name'];
-        if(isset($_POST['room_type_id'])){
-        $check = true;
+        <script>
+        window.location = "index.php?content=rooms"
+        </script>
+    <?PHP
+} else if( $_GET['action'] == "insert_type") {
+    if(isset($_POST['room_type_id'])){
+    $check = true;
         if($check == false){ ?>
-<script>
-alert('<?php echo $error_msg; ?>');
-window.history.back();
-</script>
-<?php
-            
+            <script>
+                alert('<?php echo $error_msg; ?>');
+                window.history.back();
+            </script>
+            <?php
         }else{
-            
             $result = $room_type_model-> insertRoomType($_POST['room_type_name_th'], $_POST['room_type_name_en']);
-            
             if($result){
                 ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?php
-                }else{
-                    ?>
-<script>
-window.history.back();
-</script>
-<?php
-                }
+                    <script>
+                        window.location = "index.php?content=rooms"
+                    </script>
+                <?php
+            }else{
+                ?>
+                    <script>
+                        window.history.back();
+                    </script>
+                <?php
             }
-        }else{
-            require_once($path . 'insert_type.inc.php');
         }
-
-    } else if( $_GET['action'] == "edit_type") {
-        if(isset($_POST['room_type_id'])){
-            $check = true;
-            if($check == false){ ?>
-<script>
-alert('<?php echo $error_msg; ?>');
-window.history.back();
-</script>
-<?php
+    }else{
+        require_once($path . 'insert_type.inc.php');
+    }
+} else if( $_GET['action'] == "edit_type") {
+    if(isset($_POST['room_type_id'])){
+        $check = true;
+        if($check == false){ 
+            ?>
+                <script>
+                    alert('<?php echo $error_msg; ?>');
+                    window.history.back();
+                </script>
+            <?php
+        }else{
+            $result = $room_type_model-> editRoomType($_POST['room_type_id'],$_POST['room_type_name_th'],$_POST['room_type_name_en']);
+            if($result){
+                ?>
+                    <script>
+                        window.location = "index.php?content=rooms"
+                    </script>
+                <?php 
             }else{
-                $result = $room_type_model-> editRoomType($_POST['room_type_id'],$_POST['room_type_name_th'],$_POST['room_type_name_en']);
-                if($result){
-                    ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?php }else{    ?>
-<script>
-window.history.back();
-</script>
-<?php  }
+                ?>
+                    <script>
+                        window.history.back();
+                    </script>
+                <?php
             }
-            }else{
+        }
+    }else{
                 require_once($path . 'edit_type.inc.php');
             }
     } else if( $_GET['action'] == "recommened") {
@@ -153,134 +145,128 @@ window.history.back();
             $result = $rooms_model-> editRoomRecommened($id, $_GET['recommened']);        
 
         ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?PHP
+            <script>
+            window.location = "index.php?content=rooms"
+            </script>
+        <?PHP
     } else if( $_GET['action'] == "insert") {
-    if(isset($_POST['room_id'])){
-        $check = true;
-        $data = [];
-        $data['room_id'] = $_POST['room_id'];
-        $data['room_name_th'] = $_POST['room_name_th'];
-        $data['room_sub_title_th'] = $_POST['room_sub_title_th'];
-        $data['room_name_en'] = $_POST['room_name_en'];
-        $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
-        $data['room_type_id'] = $_POST['room_type_id'];
-        $data['room_price_th'] = $_POST['room_price_th'];
-        // $data['room_price_en'] = $_POST['room_price_en'];
-        $data['room_amout'] = $_POST['room_amout'];
-        $data['room_img'] = $_POST['room_img'];
-        $data['room_size_th'] = $_POST['room_size_th'];
-        $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
-        
-        $data['room_size_en'] = $_POST['room_size_en'];
-        $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
+        if(isset($_POST['room_id'])){
+            $check = true;
+            $data = [];
+            $data['room_id'] = $_POST['room_id'];
+            $data['room_name_th'] = $_POST['room_name_th'];
+            $data['room_sub_title_th'] = $_POST['room_sub_title_th'];
+            $data['room_name_en'] = $_POST['room_name_en'];
+            $data['room_sub_title_en'] = $_POST['room_sub_title_en'];
+            $data['room_type_id'] = $_POST['room_type_id'];
+            $data['room_price_th'] = $_POST['room_price_th'];
+            // $data['room_price_en'] = $_POST['room_price_en'];
+            $data['room_amout'] = $_POST['room_amout'];
+            $data['room_img'] = $_POST['room_img'];
+            $data['room_size_th'] = $_POST['room_size_th'];
+            $data['room_detail_1_th'] = $_POST['room_detail_1_th'];
+            
+            $data['room_size_en'] = $_POST['room_size_en'];
+            $data['room_detail_1_en'] = $_POST['room_detail_1_en'];
 
 
-        if ($_POST['room_detail_2_th'] != null) {
+            if ($_POST['room_detail_2_th'] != null) {
 
-        $data['room_detail_2_th'] = 'ระเบียงส่วนตัว' ;
-        $data['room_detail_2_en'] = 'Balcony';
+            $data['room_detail_2_th'] = 'ระเบียงส่วนตัว' ;
+            $data['room_detail_2_en'] = 'Balcony';
 
-        }  
+            }  
 
-        if ($_POST['room_detail_3_th'] != null) {
+            if ($_POST['room_detail_3_th'] != null) {
 
-        $data['room_detail_3_th'] = 'WIFI' ;
-        $data['room_detail_3_en'] = 'WIFI';
+            $data['room_detail_3_th'] = 'WIFI' ;
+            $data['room_detail_3_en'] = 'WIFI';
 
-        }   
+            }   
 
-        if ($_POST['room_facility_1_th'] != null) {
+            if ($_POST['room_facility_1_th'] != null) {
 
-        $data['room_facility_1_th'] = 'โทรศัพท์' ;
-        $data['room_facility_1_en'] = 'TEL';
+            $data['room_facility_1_th'] = 'โทรศัพท์' ;
+            $data['room_facility_1_en'] = 'TEL';
 
-        }   
+            }   
 
-        if ($_POST['room_facility_2_th'] != null) {
+            if ($_POST['room_facility_2_th'] != null) {
 
-        $data['room_facility_2_th'] = 'เครื่องปรับอากาศ' ;
-        $data['room_facility_2_en'] = 'AIR';
+            $data['room_facility_2_th'] = 'เครื่องปรับอากาศ' ;
+            $data['room_facility_2_en'] = 'AIR';
 
-        }   
+            }   
 
-        //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
-        $numrand = (mt_rand());
-        //-----------------------------------------------
-        if($_FILES['room_img']['name'] == ""){
-             $data['room_img'] = $_POST['room_img_o'];
-        }else {
-            //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
-            $type = strrchr($_FILES['room_img']['name'],".");
-            //--------------------------------------------------
-            //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
-            $newname = $date.$numrand.$type;
-            $path_copy=$path.$newname;
-            $path_link=$target_dir.$newname;
-            //-------------------------------------------------
-            $target_file = $target_dir .$date.$newname;
-             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-            // Check if file already exists
-            if (file_exists($target_file)) {
-                $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
-                $check = false;
-            }else if ($_FILES["room_img"]["size"] > 5000000000000) {
-                $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
-                $check = false;
-            }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
-                $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
-                $check = false;
-            }else if (move_uploaded_file($_FILES["room_img"]["tmp_name"], $target_file)) {
-                //-----------------------------------
-                $data['room_img'] = $date.$newname;
-                //-----------------------------------
-                if( $_POST['room_img_o'] != null){
-                    $target_file = $target_dir . $_POST['room_img_o'];
-                    if (file_exists($target_file)) {
-                        unlink($target_file);
+            //-----------------ฟังก์ชั่นสุ่มตัวเลข----------------
+            $numrand = (mt_rand());
+            //-----------------------------------------------
+            if($_FILES['room_img']['name'] == ""){
+                $data['room_img'] = $_POST['room_img_o'];
+            }else {
+                //---------เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล----------
+                $type = strrchr($_FILES['room_img']['name'],".");
+                //--------------------------------------------------
+                //-----ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม---------
+                $newname = $date.$numrand.$type;
+                $path_copy=$path.$newname;
+                $path_link=$target_dir.$newname;
+                //-------------------------------------------------
+                $target_file = $target_dir .$date.$newname;
+                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                // Check if file already exists
+                if (file_exists($target_file)) {
+                    $error_msg =  "ขอโทษด้วย. มีไฟล์นี้ในระบบแล้ว";
+                    $check = false;
+                }else if ($_FILES["room_img"]["size"] > 5000000000000) {
+                    $error_msg = "ขอโทษด้วย. ไฟล์ของคุณต้องมีขนาดน้อยกว่า 5 MB.";
+                    $check = false;
+                }else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
+                    $error_msg = "ขอโทษด้วย. ระบบสามารถอัพโหลดไฟล์นามสกุล JPG, JPEG, PNG & GIF เท่านั้น.";
+                    $check = false;
+                }else if (move_uploaded_file($_FILES["room_img"]["tmp_name"], $target_file)) {
+                    //-----------------------------------
+                    $data['room_img'] = $date.$newname;
+                    //-----------------------------------
+                    if( $_POST['room_img_o'] != null){
+                        $target_file = $target_dir . $_POST['room_img_o'];
+                        if (file_exists($target_file)) {
+                            unlink($target_file);
+                        }
                     }
-                }
-            } else {
-                $error_msg =  "ขอโทษด้วย. ระบบไม่สามารถอัพโหลดไฟล์ได้.";
-                $check = false;
-            } 
-        }
-        //------------------------------------------------------------------------------
+                } else {
+                    $error_msg =  "ขอโทษด้วย. ระบบไม่สามารถอัพโหลดไฟล์ได้.";
+                    $check = false;
+                } 
+            }
+            //------------------------------------------------------------------------------
         if($check == false){
-           
             ?>
-<script>
-alert('<?php echo $error_msg; ?>');
-window.history.back();
-</script>
-<?php
-          
+                <script>
+                    alert('<?php echo $error_msg; ?>');
+                    window.history.back();
+                </script>
+            <?php
         }else{
-           
             $result = $rooms_model-> addRoom($data);
-           
             if($result){
                 ?>
-<script>
-window.location = "index.php?content=rooms"
-</script>
-<?php
+                <script>
+                    window.location = "index.php?content=rooms"
+                </script>
+                <?php
             }else{
                 ?>
-<script>
-window.history.back();
-</script>
-<?php
+                    <script>
+                        window.history.back();
+                    </script>
+                <?php
             }
         }
     }else{
         require_once($path . 'insert.inc.php');
     }
-    
-    } else if( $_GET['action'] == "edit") {
-               
+} else if( $_GET['action'] == "edit") {
     if(isset($_POST['room_id'])){
         $data['room_price_th'] = $_POST['room_price_th'];
         $check = true;
