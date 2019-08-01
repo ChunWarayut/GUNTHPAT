@@ -138,7 +138,7 @@ class Rooms extends BaseModel{
         $data['room_name_en']=mysqli_real_escape_string(static::$db,$data['room_name_en']);
         $data['room_sub_title_en']=mysqli_real_escape_string(static::$db,$data['room_sub_title_en']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
-        $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
+        $data['room_price_th']=mysqli_real_escape_string(static::$db,$data['room_price_th']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
         $data['room_size_th']=mysqli_real_escape_string(static::$db,$data['room_size_th']);
         $data['room_detail_1_th']=mysqli_real_escape_string(static::$db,$data['room_detail_1_th']);
@@ -160,7 +160,7 @@ class Rooms extends BaseModel{
         `room_name_th` = '".$data['room_name_th']."', 
         `room_sub_title_th` = '".$data['room_sub_title_th']."', 
         `room_type_id` = '".$data['room_type_id']."', 
-        `room_price` = '".$data['room_price']."' ,
+        `room_price` = '".$data['room_price_th']."' ,
         `room_amout` = '".$data['room_amout']."' ,
         `room_size_th` = '".$data['room_size_th']."' ,
         `room_detail_1_th` = '".$data['room_detail_1_th']."' ,
@@ -210,7 +210,7 @@ class Rooms extends BaseModel{
         $data['room_name_en']=mysqli_real_escape_string(static::$db,$data['room_name_en']);
         $data['room_sub_title_en']=mysqli_real_escape_string(static::$db,$data['room_sub_title_en']);
         $data['room_type_id']=mysqli_real_escape_string(static::$db,$data['room_type_id']);
-        $data['room_price']=mysqli_real_escape_string(static::$db,$data['room_price']);
+        $data['room_price_th']=mysqli_real_escape_string(static::$db,$data['room_price_th']);
         $data['room_amout']=mysqli_real_escape_string(static::$db,$data['room_amout']);
         $data['room_size_th']=mysqli_real_escape_string(static::$db,$data['room_size_th']);
         $data['room_detail_1_th']=mysqli_real_escape_string(static::$db,$data['room_detail_1_th']);
@@ -233,7 +233,7 @@ class Rooms extends BaseModel{
             `room_sub_title_en`, 
             `room_name_th`, 
             `room_sub_title_th`, 
-            `room_price`, 
+            `room_price_th`, 
             `room_amout`, 
             `room_img`, 
             `room_size_th`, 
@@ -256,7 +256,7 @@ class Rooms extends BaseModel{
             '".$data['room_sub_title_en']."', 
             '".$data['room_name_th']."', 
             '".$data['room_sub_title_th']."', 
-            '".$data['room_price']."' ,
+            '".$data['room_price_th']."',
             '".$data['room_amout']."' ,
             '".$data['room_img']."', 
             '".$data['room_size_th']."' , 
