@@ -226,15 +226,13 @@ class Rooms extends BaseModel{
         $data['room_facility_2_en']=mysqli_real_escape_string(static::$db,$data['room_facility_2_en']);
 
         $sql = "INSERT INTO `tb_room` 
-        (
-            `room_id`, 
+        ( 
             `room_type_id`, 
             `room_name_en`, 
             `room_sub_title_en`, 
             `room_name_th`, 
             `room_sub_title_th`, 
-            `room_price_th`, 
-            `room_amout`, 
+            `room_price_th`,  
             `room_img`, 
             `room_size_th`, 
             `room_detail_1_th`, 
@@ -247,17 +245,15 @@ class Rooms extends BaseModel{
              `room_detail_2_en`, 
              `room_detail_3_en`, 
              `room_facility_1_en`, 
-             `room_facility_2_en`
+             `room_facility_2_en` 
         ) 
-        VALUES (
-            NULL, 
+        VALUES ( 
             '".$data['room_type_id']."', 
             '".$data['room_name_en']."', 
             '".$data['room_sub_title_en']."', 
             '".$data['room_name_th']."', 
             '".$data['room_sub_title_th']."', 
-            '".$data['room_price_th']."',
-            '".$data['room_amout']."' ,
+            '".$data['room_price_th']."', 
             '".$data['room_img']."', 
             '".$data['room_size_th']."' , 
             '".$data['room_detail_1_th']."' ,
@@ -270,13 +266,12 @@ class Rooms extends BaseModel{
             '".$data['room_detail_2_en']."' ,
             '".$data['room_detail_3_en']."' ,
             '".$data['room_facility_1_en']."' ,
-            '".$data['room_facility_2_en']."'
+            '".$data['room_facility_2_en']."' 
         )
         ";
         // echo "<pre>";
         // print_r( $sql);
         // echo "</pre>";
-
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
         }else {

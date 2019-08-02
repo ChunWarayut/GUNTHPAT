@@ -246,7 +246,7 @@ class Gallery extends BaseModel{
         // echo "<pre>";
         // print_r( $sql);
         // echo "</pre>";
-
+        // echo $sql;
         if (mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             return 1;
         }else {
